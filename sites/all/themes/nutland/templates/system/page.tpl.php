@@ -73,28 +73,12 @@
  *
  * @ingroup templates
  */
+drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.carousel.min.css');
+drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min.css');
+
 ?>
 <header id="navbar" role="banner" class="<?php print $navbar_classes; ?> border-0 m-0">
   <div class="<?php print $container_class; ?> px-5">
-    <div class="user-menu">
-      <?php if(!user_is_logged_in()):?>
-        <ul class="nav navbar-nav navbar-right p-0">
-          <li><a href="/user/register"><i class="mdi mdi-account-plus pl-3"></i>ثبت نام</a></li>
-          <li><a href="/user/login"><i class="mdi mdi-login-variant pl-3" style="vertical-align: sub;"></i>ورود</a></li>
-        </ul>
-      <?php else:?>
-      <?php global $user; ?>
-      <ul class="nav navbar-nav navbar-right">
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><?php echo $user->name; ?><span class="caret"></span></a>
-          <ul class="dropdown-menu">
-            <li><a href="/user">profile</a></li>
-          </ul>
-        </li>
-      </ul>
-      <?php endif;?>
-    </div>
-
     <div class="navbar-header">
       <?php if ($logo): ?>
         <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
@@ -116,11 +100,6 @@
       <?php endif; ?>
     </div>
 
-    <a href="https://www.instagram.com/nutland_co/" target="_blank" class="btn btn-default instagram-link border-0 px-4">
-      <i class="mdi mdi-instagram pl-2"></i>
-      اینستاگرام ناتلند
-    </a>
-
     <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
       <div class="navbar-collapse collapse" id="navbar-collapse">
         <nav role="navigation">
@@ -135,6 +114,22 @@
           <?php endif; ?>
         </nav>
       </div>
+        <div class="left-menu">
+            <ul>
+                <li>
+                    <i class="mdi mdi-magnify"></i>
+                </li>
+                <li>
+                    <select id="lang">
+                        <option value="فارسی">فارسی</option>
+                        <option value="انگلیسی">انگلیسی</option>
+                    </select>
+                </li>
+                <li>
+                    <a href="#">مرکز تماس</a>
+                </li>
+            </ul>
+        </div>
     <?php endif; ?>
   </div>
 </header>
@@ -187,3 +182,19 @@
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
+
+<script src="/sites/all/themes/nutland/js/owl.carousel.min.js"></script>
+<script>
+    const $ = jQuery
+    $(document).ready(function(){
+
+        $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
+            items:2,
+            loop: true,
+            rtl:true,
+            nav: true,
+            dots:true,
+            autoWidth:true,
+        });
+    });
+</script>

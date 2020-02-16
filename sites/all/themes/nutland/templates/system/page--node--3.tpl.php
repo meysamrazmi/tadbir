@@ -73,122 +73,50 @@
  *
  * @ingroup templates
  */
-drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.carousel.min.css');
-drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min.css');
 
 ?>
-<header id="navbar" role="banner" class="<?php print $navbar_classes; ?> border-0 m-0">
-  <div class="<?php print $container_class; ?> px-5">
-    <div class="user-menu">
-      <?php if(!user_is_logged_in()):?>
-        <ul class="nav navbar-nav navbar-right login-link p-0">
-          <li><a href="/user/register"><i class="mdi mdi-account-plus pl-3"></i>ثبت نام</a></li>
-          <li><a href="/user/login"><i class="mdi mdi-login-variant pl-3" style="vertical-align: sub;"></i>ورود</a></li>
-        </ul>
-      <?php else:?>
-      <?php global $user; ?>
-      <ul class="nav navbar-nav navbar-right user-links">
-        <button class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
-          <?php echo $user->name; ?><span class="caret"></span>
-        </button>
-        <ul class="dropdown-menu">
-          <li><a href="/user">پروفایل</a></li>
-          <li><a href="/logout">خروج</a></li>
-        </ul>
-      </ul>
-      <?php endif;?>
-    </div>
-
-    <div class="navbar-header">
-      <?php if ($logo): ?>
-        <a class="logo navbar-btn pull-left" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>">
-          <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="py-2"/>
-        </a>
-      <?php endif; ?>
-
-      <?php if (!empty($site_name)): ?>
-        <a class="name navbar-brand" href="<?php print $front_page; ?>" title="<?php print t('Home'); ?>"><?php print $site_name; ?></a>
-      <?php endif; ?>
-
-      <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
-          <span class="sr-only"><?php print t('Toggle navigation'); ?></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      <?php endif; ?>
-    </div>
-
-    <a href="https://www.instagram.com/nutland_co/" target="_blank" class="btn btn-default instagram-link border-0 px-4">
-      <i class="mdi mdi-instagram pl-2"></i>
-      اینستاگرام ناتلند
-    </a>
-
-    <?php if (!empty($primary_nav) || !empty($secondary_nav) || !empty($page['navigation'])): ?>
-      <div class="navbar-collapse collapse" id="navbar-collapse">
-        <nav role="navigation">
-          <?php if (!empty($primary_nav)): ?>
-            <?php print render($primary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($secondary_nav)): ?>
-            <?php print render($secondary_nav); ?>
-          <?php endif; ?>
-          <?php if (!empty($page['navigation'])): ?>
-            <?php print render($page['navigation']); ?>
-          <?php endif; ?>
-        </nav>
-      </div>
-    <?php endif; ?>
-  </div>
-</header>
-
 <div class="main-container <?php print $container_class; ?>">
-  <div class="row">
-    <?php print views_embed_view('slideshow', 'block'); ?>
+    <div class="row">
+        <?php print views_embed_view('slideshow', 'block'); ?>
 
-    <link href=/sites/all/themes/nutland/vue/css/app.cb2b9190.css rel=preload as=style>
-    <link href=/sites/all/themes/nutland/vue/css/chunk-vendors.388ca547.css rel=preload as=style>
-    <link href=/sites/all/themes/nutland/vue/js/app.4ce37162.js rel=preload as=script>
-    <link href=/sites/all/themes/nutland/vue/js/chunk-vendors.c3a3cd61.js rel=preload as=script>
-    <link href=/sites/all/themes/nutland/vue/css/chunk-vendors.388ca547.css rel=stylesheet>
-    <link href=/sites/all/themes/nutland/vue/css/app.cb2b9190.css rel=stylesheet>
+        <link href=/sites/all/themes/nutland/vue/css/app.cb2b9190.css rel=preload as=style>
+        <link href=/sites/all/themes/nutland/vue/css/chunk-vendors.388ca547.css rel=preload as=style>
+        <link href=/sites/all/themes/nutland/vue/js/app.4ce37162.js rel=preload as=script>
+        <link href=/sites/all/themes/nutland/vue/js/chunk-vendors.c3a3cd61.js rel=preload as=script>
+        <link href=/sites/all/themes/nutland/vue/css/chunk-vendors.388ca547.css rel=stylesheet>
+        <link href=/sites/all/themes/nutland/vue/css/app.cb2b9190.css rel=stylesheet>
 
-    <div id=app></div>
-    <script src=/sites/all/themes/nutland/vue/js/chunk-vendors.c3a3cd61.js></script>
-    <script src=/sites/all/themes/nutland/vue/js/app.4ce37162.js></script>
+        <script src=/sites/all/themes/nutland/vue/js/chunk-vendors.c3a3cd61.js></script>
+        <script src=/sites/all/themes/nutland/vue/js/app.4ce37162.js></script>
 
-    <section<?php print $content_column_class; ?>>
-      <?php print render($page['content']); ?>
-    </section>
 
-    <?php if (!empty($page['sidebar_second'])): ?>
-      <aside class="col-sm-3" role="complementary">
-        <?php print render($page['sidebar_second']); ?>
-      </aside>  <!-- /#sidebar-second -->
-    <?php endif; ?>
+        <?php if (!empty($page['sidebar_second'])): ?>
+            <aside class="col-sm-3" role="complementary">
+                <?php print render($page['sidebar_second']); ?>
+            </aside>  <!-- /#sidebar-second -->
+        <?php endif; ?>
 
-  </div>
+    </div>
 </div>
 
 <?php if (!empty($page['footer'])): ?>
-  <footer class="footer p-0 <?php print $container_class; ?>">
-    <?php print render($page['footer']); ?>
-  </footer>
+    <footer class="footer p-0 <?php print $container_class; ?>">
+        <?php print render($page['footer']); ?>
+    </footer>
 <?php endif; ?>
 
 <script src="/sites/all/themes/nutland/js/owl.carousel.min.js"></script>
 <script>
-  const $ = jQuery
-  $(document).ready(function(){
+    const $ = jQuery
+    $(document).ready(function(){
 
-      $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
-          items:2,
-          loop: true,
-          rtl:true,
-          nav: true,
-          dots:true,
-          autoWidth:true,
-      });
-  });
+        $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
+            items:2,
+            loop: true,
+            rtl:true,
+            nav: true,
+            dots:true,
+            autoWidth:true,
+        });
+    });
 </script>

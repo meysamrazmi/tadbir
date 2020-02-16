@@ -54,47 +54,82 @@
   <?php endif;?>
   <?php print render($title_suffix); ?>
 
-  <span class="top-bg"></span>
-  <div class="footer-sections d-flex justify-content-between">
-    <div class="footer-logo">
-      <a href="/"><img src="/sites/all/themes/nutland/images/logo.png"></a>
-    </div>
 
-    <?php
-      $menu = menu_tree('menu-footer');
-      print drupal_render($menu);
-    ?>
-    <div class="addresses">
-      <p>
-        <i class="mdi mdi-map-marker pl-3"></i>
-        <span>تهران/خ۱۵ خرداد/انتهای بازار آهنگران/سرای دالان دراز پلاک ۴۷</span>
-      </p>
-      <p>
-        <i class="mdi mdi-phone pl-3"></i>
-        <span style="direction: ltr;unicode-bidi: embed;">۰۲۱ - ۵۵۱۵۹۷۰۸</span>
-      </p>
-      <p>
-        <i class="mdi mdi-email pl-3"></i>
-        <span>info@zigno.ir</span>
-      </p>
-      <div>
-        <p class="pr-4 mt-2">ما را در شبکه‌های اجتماعی دنبال کنید</p>
-        <div>
-          <a href="https://www.instagram.com/nutland_co/" target="_blank"><i class="mdi mdi-instagram"></i></a>
-<!--          <a href=""><i class="mdi mdi-linkedin"></i></a>-->
-<!--          <a href=""><i class="mdi mdi-twitter"></i></a>-->
-<!--          <a href=""><i class="mdi mdi-facebook"></i></a>-->
-        </div>
-      </div>
-    </div>
+    <footer id="footer">
+        <section id="cards_footer">
+            <div class="container">
+                <div class="row mx-n4">
+                    <div class="col-md-5 px-4">
+                        <article class="cards card-none">
+                            <div class="card-header">
+                                <a href="/" class="logo_footer">
+                                    <img src="/sites/all/themes/nutland/images/logo_footer.png" alt="">
+                                </a>
+                            </div>
+                            <div class="card-body">
+                                <p class="text-justify"> لورم ایپسوم متن
+                                    ساختگی با تولید سادگی نامفهوم از صنعت
+                                    چاپ و با استفاده از طراحان گرافیک است.
+                                    چاپگرها و متون بلکه روزنامه و مجله در
+                                    ستون و سطرآنچنان که لازم است و برای
+                                    شرایط فعلی تکنولوژی مورد نیاز و
+                                    کاربردهای متنوع با هدف بهبود ابزارهای
+                                    کاربردی می باشد.</p>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-3 mt-md-0 mt-3 px-4">
+                        <article class="cards card-none">
+                            <div class="card-header">
+                                <h4 class="card-title">لینکهای مفید</h4>
+                            </div>
+                            <div class="card-body">
 
-    <div class="align-items-start d-flex justify-content-around outer-links">
-      <a href="/" class="ml-4"><img src="/sites/all/themes/nutland/images/samandehi.png"></a>
-      <a href="/"><img src="/sites/all/themes/nutland/images/etehadie.png"></a>
-    </div>
-  </div>
-  <span class="backtotop"></span>
-  <span class="bottom-bg top-bg"></span>
-  <p class="end-footer pb-5 text-center">.تمامی حقوق مادی و معنوی این سامانه به متعلق است</p>
+                                <?php
+                                $menu = menu_tree('menu-footer');
+                                print drupal_render($menu);
+                                ?>
+                            </div>
+                        </article>
+                    </div>
+                    <div class="col-md-4">
+                        <article class="cards card-none">
+                            <div class="card-header">
+                                <h4 class="card-title">تماس با ما</h4>
+                            </div>
+                            <address class="card-body card-address">
+                                <ul class="items-contact">
+                                    <li>
+                                        <!-- <i class="icon-map-marker-alt"></i> -->
+                                        <span>تهران خیابان احمد شهید قصیر
+                                        (بخارست) ، خیابان هشتم ، شماره ۶</span></li>
+                                    <li>
+                                        <!-- <i class="icon-mailbox"></i> -->
+                                        <span><strong>نشانی
+                                            رایانامه :</strong></span><a class="mail" href="#">info@siteName.com
+                                        </a></li>
+                                    <li>
+                                        <!-- <i class="icon-phone-rotary"></i> -->
+                                        <span><strong>شماره
+                                            های تماس :</strong></span><a class="fs-20 text-nowrap" href="tel:0211234567" dir="ltr">021
+                                            - 1234567</a></li>
+                                    <li>
+                                        <!-- <i class="icon-phone-office"></i> -->
+                                        <span><strong>شماره
+                                            نمابر :</strong></span><b dir="ltr">021 - 1234567</b></li>
+                                </ul>
+                            </address>
+                        </article>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="copyright">
+            <div class="container">
+                <p class="text-center"><a class="name-co" href="https://siteName.com/" target="_blank">طراحی
+                        سایت شرکت نرم افزاری عنوان متن </a></p>
+            </div>
+        </section>
+    </footer>
 
 </section>
