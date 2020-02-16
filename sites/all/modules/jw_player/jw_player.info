@@ -1,0 +1,22 @@
+name = JW Player
+description = Adds a theme function which allows theme developers to use the JW Player
+version = VERSION
+core = 7.x
+dependencies[] = file
+dependencies[] = libraries
+dependencies[] = ctools
+configure = admin/config/media/jw_player/settings
+
+; Information added by drupal.org packaging script on 2013-01-26
+version = "7.x-1.0-alpha1+11-dev"
+core = "7.x"
+project = "jw_player"
+datestamp = "1359162701"
+
+
+; Information added by Drupal.org packaging script on 2014-08-21
+version = "7.x-2.0-beta2"
+core = "7.x"
+project = "jw_player"
+datestamp = "1408642729"
+

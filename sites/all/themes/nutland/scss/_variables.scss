@@ -1,0 +1,19 @@
+$brand-primary: #ccb873;
+$x768: 'all and (max-width: 768px)';
+$x600: 'all and (max-width: 600px)';
+
+@mixin flex($dir:'', $align:'', $justify:''){
+  display: flex;
+  @if $dir != '' {flex-direction: $dir;}
+  @if $align != '' {align-items: $align;}
+  @if $justify != '' {justify-content: $justify;}
+}
+@mixin absolute($w:'', $h:'', $t:'', $r:'', $b:'', $l:'') {
+  position: absolute;
+  @if $w != '' {width: $w;}
+  @if $h != '' {height: $h;}
+  @if $t != '' {top: $t;}
+  @if $r != '' {right: $r;}
+  @if $b != '' {bottom: $b;}
+  @if $l != '' {left: $l;}
+}

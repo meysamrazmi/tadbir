@@ -1,0 +1,209 @@
+<?php
+
+/**
+ * Implements hook_uc_payment_gateway().
+ */
+function uc_vandar_uc_payment_gateway() {
+  $gateways['uc_vandar'] = array(
+    'title' => t('vandar.io Gateway'),
+    'description' => t('Process payments through vandar.io gateway'),
+  );
+  return $gateways;
+}
+
+/**
+ * Implements hook_uc_payment_method().
+ */
+function uc_vandar_uc_payment_method() {
+  $title_logo = theme('image', array(
+    'path' => drupal_get_path('module', 'uc_vandar') . '/vandar.svg',
+    'attributes' => array('class' => array('uc-credit-cctype')),
+  ));
+
+  $methods = array();
+  $methods['vandar'] = array(
+    'id' => 'vandar_wps',
+    'name' => t('vandar.io - online payment'),
+    'title' => $title_logo . t(' online payment'),
+    'desc' => t('Redirect to vandar.io Gateway to process payment.'),
+    'callback' => 'uc_payment_method_vandar',
+    'redirect' => 'uc_vandar_form',
+    'weight' => 4,
+    'checkout' => True,
+    'no_gateway' => TRUE,
+  );
+
+  return $methods;
+}
+
+/**
+ * Payment method callback
+ */
+function uc_payment_method_vandar($op, &$order) {
+  switch ($op) {
+    case 'settings':
+      $form['uc_vandar_API_key'] = array(
+        '#type' => 'textfield',
+        '#title' => t('vandar.io API Key'),
+        '#default_value' => variable_get('uc_vandar_API_key', ''),
+        '#size' => 64,
+      );
+
+      $currency_options = array('toman' => t('toman'), 'rial' => t('rial'));
+      $form['currency_options'] = array(
+        '#type'          => 'radios',
+        '#description'   => t('Choose the currency type of your Ubercart store products'),
+        '#title'         => t('Currency Type'),
+        '#default_value' => variable_get('uc_vandar_currency', 'toman'),
+        '#options'       => $currency_options,
+        '#required'      => TRUE,
+      );
+
+      return $form;
+      break;
+    case 'cart-process':
+      $_SESSION['pay_method'] = 'vandar';
+      return NULL;
+      break;
+  }
+}
+
+/**
+ * Form Builder.
+ *
+ * The payment form which will be submitted to the gateway.
+ */
+function uc_vandar_form($form, &$form_state, $order) {
+  $api = variable_get('uc_vandar_API_key', '');
+  if(variable_get('uc_vandar_currency', 'toman') == 'toman'){
+    $amount = $order->order_total * 10;
+  }else{
+    $amount = $order->order_total;
+  }
+  $redirect = url('cart/vandar/complete', array('absolute' => true));
+  $factorNumber = $order->order_id;
+  $user = user_load($order->uid);
+  $mobile = $user->field_text_mobile['und'][0]? $user->field_text_mobile['und'][0]['value'] : '';
+
+  $result = vandar_send($api, $amount, $redirect, $mobile, null, $factorNumber);
+  $result = json_decode($result);
+  if($result->status == 1) {
+    $form['#action'] = "https://vandar.io/ipg/$result->token";
+    $form['#method'] = 'get';
+
+    $form['submit'] = array(
+      '#type'  => 'submit',
+      '#value' => t('Submit Order')
+    );
+
+    return $form;
+  } else {
+    foreach ($result->errors as $key=>$error){
+      drupal_set_message(t('Error : @error', array('@error' => $error)), 'error');
+    }
+    return array();
+  }
+}
+
+/**
+ * Implements hook_menu()
+ */
+function uc_vandar_menu() {
+  $items['cart/vandar/complete'] = array(
+    'title' => t('Payment Complete'),
+    'page callback' => 'uc_vandar_complete',
+    'access callback' => 'uc_vandar_access',
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Access callback for cart/vandar/complete
+ */
+function uc_vandar_access() {
+  // All user have access
+  return TRUE;
+}
+
+/**
+ * Menu callback for cart/vandar/complete
+ */
+function uc_vandar_complete() {
+  // Get api from module settings.
+  $api = variable_get('uc_vandar_API_key', '');
+  if (empty($api)) {
+    $msg = t('vandar.io gateway is not configured.');
+    drupal_set_message($msg, 'error');
+    return $msg;
+    drupal_goto('cart');
+  }
+
+  $token = $_GET['token'];
+  $result = vandar_verify($api, $token);
+  $result = json_decode($result);
+//  mdump($result);
+  if ($result->status == 1){
+    $order = uc_order_load($result->factorNumber);
+    uc_payment_enter(
+      $order->order_id,
+      t('vandar.io - online payment'), //payment method
+      $order->order_total,
+      $order->uid,
+      NULL,
+      t('vandar.io transaction ID: @transaction, card Number: @cardNumber', array('@transaction' => $result->transId, @cardNumber => $result->cardNumber))
+    );
+
+    $output = uc_cart_complete_sale($order, variable_get('uc_new_customer_login', FALSE));
+    $message = t('Payment was successful. Your transaction ID: @number', array('@number' => $result->transId));
+    drupal_set_message($message);
+    watchdog('vandar.io', 'vandar.io payment #%refid verification succeeded', array('%refid' => $result->transId), WATCHDOG_INFO);
+
+    $page = variable_get('uc_cart_checkout_complete_page', '');
+    if (!empty($page)) {
+      drupal_goto($page);
+    }
+
+    return '<p>' . $message . '</p>' . drupal_render($output);
+
+  } else {
+    $msg = t('Payment was Unsuccessful.');
+    foreach ($result->errors as $key=>$error){
+      $msg .= '<br>'. t('Error : @error', array('@error' => $error));
+    }
+    drupal_set_message($msg, 'error');
+    drupal_goto('cart');
+  }
+}
+
+function vandar_send($api, $amount, $redirect, $mobile = null, $description = null, $factorNumber = null) {
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, 'https://vandar.io/api/ipg/send');
+  curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode(array(
+                'api_key' => $api,
+                'amount'  => $amount,
+                'callback_url' => $redirect,
+                'mobile_number' => $mobile,
+                'factorNumber' => $factorNumber,
+                'description' => $description,
+  )));
+  curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, false);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+  curl_setopt($ch, CURLOPT_HTTPHEADER, ['Content-Type: application/json']);
+  $res = curl_exec($ch);
+  curl_close($ch);
+  return $res;
+}
+
+function vandar_verify($api, $token) {
+  $ch = curl_init();
+  curl_setopt($ch, CURLOPT_URL, 'https://vandar.io/api/ipg/verify');
+  curl_setopt($ch, CURLOPT_POSTFIELDS, "api_key=$api&token=$token");
+  curl_setopt($ch, CURLOPT_POST, 1);
+  curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+  curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+  $res = curl_exec($ch);
+  curl_close($ch);
+  return $res;
+}

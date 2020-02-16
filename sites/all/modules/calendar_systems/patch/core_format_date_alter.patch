@@ -1,0 +1,120 @@
+diff --git a/includes/common.inc b/includes/common.inc
+index c6303ef..f93f75e 100644
+--- a/includes/common.inc
++++ b/includes/common.inc
+@@ -2057,16 +2057,30 @@ function format_date($timestamp, $type = 'medium', $format = '', $timezone = NUL
+   // input string.
+   // Paired backslashes are isolated to prevent errors in read-ahead evaluation.
+   // The read-ahead expression ensures that A matches, but not \A.
++  $original_format = $format;
+   $format = preg_replace(array('/\\\\\\\\/', '/(?<!\\\\)([AaeDlMTF])/'), array("\xEF\\\\\\\\\xFF", "\xEF\\\\\$1\$1\xFF"), $format);
+ 
+   // Call date_format().
+-  $format = date_format($date_time, $format);
++  $formatted_date = date_format($date_time, $format);
+ 
+   // Pass the langcode to _format_date_callback().
+   _format_date_callback(NULL, $langcode);
+ 
+   // Translate the marked sequences.
+-  return preg_replace_callback('/\xEF([AaeDlMTF]?)(.*?)\xFF/', '_format_date_callback', $format);
++  $formatted_date = preg_replace_callback('/\xEF([AaeDlMTF]?)(.*?)\xFF/', '_format_date_callback', $formatted_date);
++
++  // Allow modules to alter the result.
++  $context = array(
++    'date_time' => $date_time,
++    'timestamp' => $timestamp,
++    'type' => $type,
++    'format' => $original_format,
++    'timezone' => $timezone,
++    'langcode' => $langcode
++  );
++  drupal_alter('format_date', $formatted_date, $context);
++
++  return filter_xss_admin($formatted_date);
+ }
+ 
+ /**
+diff --git a/modules/simpletest/tests/system_test.module b/modules/simpletest/tests/system_test.module
+index 3d5a11a..53d4da5 100644
+--- a/modules/simpletest/tests/system_test.module
++++ b/modules/simpletest/tests/system_test.module
+@@ -482,3 +482,11 @@ function system_test_request_destination() {
+   // information.
+   exit;
+ }
++
++/**
++ * Implements hook_format_date_alter().
++ */
++function system_test_format_date_alter(&$formatted_date, array $context) {
++  // Reverse the date string for testing purposes.
++  $formatted_date = strrev($formatted_date);
++}
+\ No newline at end of file
+diff --git a/modules/system/system.api.php b/modules/system/system.api.php
+index 4576f81..c02af5f 100644
+--- a/modules/system/system.api.php
++++ b/modules/system/system.api.php
+@@ -4788,6 +4788,26 @@ function hook_filetransfer_info_alter(&$filetransfer_info) {
+ }
+ 
+ /**
++ * Alter the formatted date.
++ *
++ * @param string $formatted_date
++ *   The formatted date.
++ * @param array $context
++ *   An associative array containing:
++ *   - date_time: The PHP DateTime object with the date to format.
++ *   - timestamp: The Unix timestamp.
++ *   - type: The format to use as passed to format_date().
++ *   - format: If type is 'custom', a PHP date format string suitable for input
++ *     to date().
++ *   - langcode: The language code as passed to format_date().
++ *
++ * @see format_date()
++ */
++function hook_format_date_alter(&$formatted_date, array $context) {
++  $formatted_date .= ' ' . $context['type'];
++}
++
++/**
+  * @} End of "addtogroup hooks".
+  */
+ 
+diff --git a/modules/system/system.test b/modules/system/system.test
+index 95b4353..7172bd0 100644
+--- a/modules/system/system.test
++++ b/modules/system/system.test
+@@ -1440,6 +1440,30 @@ class DateTimeFunctionalTest extends DrupalWebTestCase {
+       ->fetchColumn();
+     $this->assertFalse($format, 'Localized date format for disabled language is ignored.');
+   }
++
++  /**
++   * Test format_date_alter.
++   */
++  function testFormatDateAlter() {
++    module_enable(array('system_test'));
++	// Setup date/time settings for Honolulu time.
++    variable_set('date_default_timezone', 'Pacific/Honolulu');
++    variable_set('configurable_timezones', 0);
++    variable_set('date_format_medium', 'Y-m-d H:i:s O');
++
++    // Create some nodes with different authored-on dates.
++    $date1 = '2007-01-31 21:00:00 -1000';
++    $date2 = '2007-07-31 21:00:00 -1000';
++    $node1 = $this->drupalCreateNode(array('created' => strtotime($date1), 'type' => 'article'));
++    $node2 = $this->drupalCreateNode(array('created' => strtotime($date2), 'type' => 'article'));
++
++    // Confirm date format was changed by implemented hook function.
++    $this->drupalGet("node/$node1->nid");
++    $this->assertText('0001- 00:00:12 13-10-7002', 'Date was reversed successfully.');
++    $this->drupalGet("node/$node2->nid");
++    $this->assertText('0001- 00:00:12 13-70-7002', 'Date was reversed successfully.');
++	module_disable(array('system_test'));
++  }
+ }
+ 
+ class PageTitleFiltering extends DrupalWebTestCase {

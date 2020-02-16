@@ -1,0 +1,704 @@
+@font-face {
+font-family: "yekan";
+src: 	url('../fonts/bYekan.eot');
+src: 	url('../fonts/bYekan.eot?#iefix') format("embedded-opentype"), 
+		url('../fonts/bYekan.woff') format("woff"), 
+		url('../fonts/bYekan.ttf') format("truetype"), 
+		url('../fonts/bYekan.svg#BYekan') format("svg");
+font-weight: normal;
+font-style: normal
+}
+@font-face {
+  font-family: 'glyphi';
+
+  src: url('../fonts/glyphicons-halflings-regular.eot');
+  src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+		 url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), 
+		 url('../fonts/glyphicons-halflings-regular.woff') format('woff'), 
+		 url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+		 url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
+}
+@font-face {
+    font-family: "iransans";
+    src: local('☺☺☺'), url("../fonts/iransans.eot") format('eot'),
+         url("../fonts/iransans.woff") format("woff"),
+         url("../fonts/iransans.ttf") format("truetype"),
+         url("../fonts/iransans.svg") format("svg");
+    /*font-weight: bold;*/
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face{
+	font-family:"iransans";
+	font-weight:bold;
+	src:url("../fonts/iransans_light.woff") format("woff")
+}
+#admin-menu .dropdown li li.expandable ul {
+  margin-left: 0;
+  margin-right: 160px;
+}
+#admin-menu .dropdown li ul {
+  left: auto;
+  right: inherit;
+}
+.shortcut-toolbar #toolbar {
+  display: none;
+}
+.shortcut-toolbar.active #toolbar {
+    display: block;
+	  position: relative;
+}
+#admin-menu,
+#toolbar {
+  font: normal small "Lucida Grande",iransans, Verdana, sans-serif !important;
+    font-size: 12px !important;
+}
+#admin-menu .shortcut-toolbar li {
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+#branding h1.page-title {
+  font-family: yekan !important;
+  font-size: 28px !important;
+}  
+body {
+  font: normal 12px/1.8em Open Sans, iransans, "Segoe UI", "Helvetica", sans-serif !important;
+}  
+ul.action-links a {
+  font-family: yekan, "Helvetica", sans-serif !important;
+  padding-bottom: 4px !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", iransans, "Segoe UI", "Helvetica", sans-serif !important;
+  font-weight: bold !important;
+}
+html body.page-admin-appearance fieldset legend {
+  font-family: "Open Sans", iransans, "Segoe UI", "Helvetica", sans-serif !important;
+  font-weight: bold !important;
+}
+.form-item label {
+  font-family: "Open Sans",iransans, "Segoe UI", "Helvetica", sans-serif !important;
+}
+input[type="submit"][id^="edit-submit"],
+input#edit-actions-submit,
+input[id^="save-continue"],
+input[type="submit"][id^="edit-save"],
+input#edit-save, input#edit-submit,
+input#edit-actions-save,
+.field-widget-inline-entity-form .container-inline .form-submit,
+#media-browser-page a.button-yes,
+input.add-new-condition,
+#edit-field-product-und-form-actions input.ief-entity-submit{
+  font-family: "Lucida Grande",iransans,Verdana,sans-serif !important;
+}
+#backtotop {
+  height: 50px !important;
+  width: 50px !important;
+  background-size: cover !important;
+}  
+#toolbar {
+  font: normal small "Lucida Grande",iransans, Verdana, sans-serif !important;
+    font-size: 12px !important;
+}
+input.form-submit, a.button, div.exposed-filters input#edit-submit{
+  font-family: "Lucida Grande",iransans,Verdana,sans-serif !important;
+}
+table th {
+  font-family: "Open Sans", "Segoe UI",iransans, "Helvetica", sans-serif !important;
+}
+input, select, textarea {
+  font-family: "Helvetica Neue",iransans, Helvetica, Arial, sans-serif !important;
+  font-size: 12px !important;
+}
+td.ctools-export-ui-operations {
+  position: relative !important;
+}
+fieldset legend,
+fieldset legend a {
+  font-family: "Open Sans",iransans, "Segoe UI", "Helvetica", sans-serif !important;
+}
+body div.warning,
+body div.status,
+body div.error {
+  background-position: 99% 50% !important;
+    padding: 10px 50px 10px 10px;
+}
+.views-exposed-form label {
+  font-family: Sans-serif,iransans !important;
+}
+.views-ui-display-tab-bucket .ctools-button-processed {
+  right: -5px !important;
+  float: left !important;
+}
+.ctools-dropbutton .ctools-content {
+  border-right: 1px solid #e8e8e8;
+  border-left: 0 !important;
+  margin-right: 1px;
+}
+body.adminimal-theme .views-ui-display-tab-bucket h3 {
+  border-right: 5px solid #ddd;
+  border-left: 0 !important;
+  font-size: 16px;
+}
+body.adminimal-theme ul#views-display-menu-tabs {
+  float: right !important;
+background-color: transparent;
+  margin-left: 18em !important;
+  margin-right: 0 !important;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Open Sans", "Segoe UI",iransans, "Helvetica", sans-serif;
+}
+.views-exposed-widget.views-submit-button {
+  clear: both;
+}
+table th {
+  font-size: 15px;
+  padding: 5px 10px;
+}
+body strong {
+  font-family: iransans !important;
+}
+/*-----------------------------------------imported from seven css-------------------------------------------*/
+.ds-2col-stacked-fluid > .group-left {
+  float: left;
+}
+.ds-2col-stacked-fluid > .group-right {
+  float: right;
+}
+#edit-field-gallery-tags .form-type-checkbox {
+  width: 30%;
+  display: inline-block;
+}
+div#edit-field-filmtags-und .form-item {
+  display: inline-block;
+  width: 49%;
+  margin: 3px 0;
+}
+div#edit-field-enable {
+  background-color: #f5f5f5;
+  padding: 10px;
+  font: 18px b yekan;
+}
+div#edit-field-course-undertype, div#edit-field-course-field, div#edit-field-course-type {
+width: 30%;
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 1%;
+  margin-left: 2%;
+  border-right: 1px solid #ddd;
+}
+div#edit-field-course-code, div#edit-field-edu-duration, div#edit-field-edu-price {
+  display: inline-block;
+  width: 32%;
+  vertical-align: top;
+}
+.page-node-edit .field-name-field-pictags,
+.page-node-edit .field-name-field-filmtags,
+.page-node-edit .field-name-field-gallery-tags,
+.page-node-add .field-name-field-pictags,
+.page-node-add .field-name-field-filmtags,
+.page-node-add .field-name-field-gallery-tags {
+  background: #f5f5f5;
+  border: solid #aaa;
+  border-width: 1px;
+  border-radius: 5px;
+  margin: 1px;
+  padding: 5px;
+    height: 280px;
+  overflow-y: overlay;
+}
+.page-node-edit .field-name-field-pictags .description,
+.page-node-edit .field-name-field-filmtags .description,
+.page-node-edit .field-name-field-gallery-tags .description,
+.page-node-add .field-name-field-pictags .description,
+.page-node-add .field-name-field-filmtags .description,
+.page-node-add .field-name-field-gallery-tags .description  {
+  line-height: 30px !important;
+  padding: 0 10px !important;
+  color: #f35 !important;
+}
+#body-add-more-wrapper .tips {
+  display: none;
+}
+#block-webform-client-block-3403 .fieldset-wrapper * {
+  margin: 0;
+}
+#block-webform-client-block-3403 fieldset {
+  display: inline-block;
+  width: 90%;
+  background: #fefefe;
+}
+#block-webform-client-block-3403 .form-actions {
+  display: inline-block;
+  vertical-align: top;
+  margin: 10px 15px;
+}
+#block-webform-client-block-3403 .webform-component--support--field, 
+#block-webform-client-block-3403 .webform-component--support--content-type {
+  display: inline-block;
+  width: 45%;
+  vertical-align: top;
+  font-size: 13px;
+}
+.group-right #edit-field-files div#edit-field-files-und-ajax-wrapper {
+  max-width: 99%;
+  overflow: overlay;
+}
+div#block-webform-client-block-3403 {
+  background: #f5f5f5;
+  padding: 3px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+div#block-webform-client-block-3403 .form-submit {
+  padding: 3px 15px;
+  border-radius: 3px;
+  background: #07f;
+  color: #fff;
+  font-family: b yekan;
+  border: 0;
+  margin: 5px 0 -2px 0;
+}
+div#block-webform-client-block-3403 a.fieldset-title {
+  color: #666;
+  text-decoration: none;
+  font-family: b yekan;
+  font-size: 17px;
+  font-weight: normal;
+}
+#block-webform-client-block-3403 .form-actions:after {
+  content: "صفحه reload نخواهد شد !";
+  position: absolute;
+  width: 150px;
+  left: -30px;
+  top: 43px;
+}
+div#edit-field-posterfilm{
+  border: 1px solid #ccc;
+  margin: 13px 2px 0 0;
+  padding: 10px;
+}
+.chzn-container-single-nosearch .chzn-search {
+  left: 0;
+}
+div#edit-field-backend {
+  /*display: none;*/
+}
+div#edit-field-difficulty-und > div {
+  width: 15%;
+  display: inline-block;
+    min-width: 150px;
+}
+div#edit-field-difficulty-und > div:nth-child(1):before, div#edit-field-difficulty-und > div:nth-child(6):before, div#edit-field-difficulty-und > div:nth-child(11):before {
+  height: 21px;
+  content: "";
+  position: absolute;
+  border-right: 1px dashed #999;
+  margin: 18px 8px 0 0;
+}
+div#edit-field-difficulty-und > div:nth-child(2):before, div#edit-field-difficulty-und > div:nth-child(7):before, div#edit-field-difficulty-und > div:nth-child(12):before {
+  content: "";
+  position: absolute;
+  width: 87px;
+  border-bottom: 1px dashed #999;
+  right: 9px;
+  margin-top: 9px;
+}
+div#edit-field-difficulty-und > div:nth-child(2), div#edit-field-difficulty-und > div:nth-child(7), div#edit-field-difficulty-und > div:nth-child(12) {
+  margin-right: 100px;
+}
+div#edit-field-difficulty-und > div:nth-child(1), div#edit-field-difficulty-und > div:nth-child(6), div#edit-field-difficulty-und > div:nth-child(11) {
+  display: block;
+}
+div#edit-field-difficulty-und > div:nth-child(1) input, div#edit-field-difficulty-und > div:nth-child(6) input, div#edit-field-difficulty-und > div:nth-child(11) input {
+  display: none;
+}
+div#edit-field-backend-und > * {
+  display: inline-block;
+    min-width: 19%;
+}
+.page-admin-content .views-field-field-siteinfo-stu .field div{
+	display:inline-block;
+}
+
+/*-----------------------------------------imported from seven css-------------------------------------------*/
+table.dblog-event tr:nth-child(4) td:nth-child(2), table.dblog-event tr:nth-child(6) td:nth-child(2) {
+  direction: ltr;
+}
+.page-admin-structure-views-expose-tables .form-item .form-item {
+  direction: ltr;
+}
+.node-product_kit-form select#edit-products,
+.page-node-add-product-kit select#edit-products {
+  width: 98%;
+  height: 600px;
+}
+.dblog-event tr:nth-child(4) td, .dblog-event tr:nth-child(6) td {
+  direction: ltr;
+}
+.no-term-reference-tree-button {
+  visibility: hidden;
+}
+ul.term-reference-tree-level label {
+  font-size: 13px !important;
+  margin: 5px 0 !important;
+  display: inline-block;
+}
+ul.term-reference-tree-level {
+  margin: 0;
+}
+.term-reference-track-list-label {
+  background: #f5f5f5;
+  padding: 10px;
+  clear: both;
+}
+.term-reference-track-list-container {
+  background: #fcfcfc;
+  padding: 10px;
+  clear: both;
+  border-right: 5px solid #d5d;
+  border-left: 5px solid #c5c;
+  box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px -2px rgba(0,0,0,0.12);
+}
+ul.term-reference-tree-track-list {
+  margin-right: 5px;
+}
+.term-reference-tree-track-list li.track-item:hover {
+  background-position: center right;
+  border-color: #f00;
+}
+.term-reference-tree-track-list li.track-item {
+  border-right: 2px solid #0df;
+  padding-right: 20px;
+  margin-right: 5px;
+}
+ul.term-reference-tree-level {
+  margin: 0;
+}
+.form-item.form-type-checkbox-tree.form-item-taxonomy-catalog-und {
+  padding: 0;
+}
+th.views-field.views-field-taxonomy-catalog {
+  min-width: 200px;
+}
+div#views-ajax-body .views-messages {
+  font-size: 10px;
+  line-height: 15px;
+}
+.views-ui-dialog .form-buttons {
+  padding: 2px 10px;
+}
+.views-override.clearfix.container-inline {
+  padding: 0;
+}
+.field-name-field-image table tr ,
+.field-name-field-pictures table tr {
+  display: inline-flex;
+  width: 60%;
+  min-width: 300px;
+  position: relative;
+  margin-left: 1%;
+  margin-bottom: 15px;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 12px;
+}
+.field-name-field-image tbody,
+.field-name-field-pictures tbody{
+  width: 100%;
+  display: block;
+}
+fieldset#edit-field-image-und thead,
+fieldset#edit-field-pictures-und thead,
+.field-name-field-image table thead,
+.field-name-field-pictures table thead,
+.field-name-field-image table .image-widget-data .description,
+.field-name-field-pictures table .image-widget-data .description {
+  display: none !important;
+}
+.field-name-field-image table tr > td:last-child,
+.field-name-field-pictures table tr > td:last-child {
+  margin: 0 !important;
+  position: absolute !important;
+  display: inline-block !important;
+  left: 0;
+  border: none;
+  padding: 10px 0px;
+  opacity: 0;
+}
+.field-name-field-image table tr:hover > td:last-child ,
+.field-name-field-pictures table tr:hover > td:last-child {
+  opacity: 1;
+}
+.field-name-field-image table,
+.field-name-field-pictures table {
+  background: #eee;
+  padding: 10px;
+  display: block;
+  box-sizing: border-box;
+} 
+.field-name-field-image table tr:first-child .image-widget-data label,
+.field-name-field-pictures table tr:first-child .image-widget-data label {
+  opacity: 1;
+  font-size: 15px;
+  margin-top: 5px;
+}
+.field-name-field-image table .image-widget-data label,
+.field-name-field-pictures table .image-widget-data label {
+  opacity: 0;
+  font-size: 1px;
+}
+.field-name-field-image table .image-widget.form-managed-file,
+.field-name-field-pictures table .image-widget.form-managed-file {
+  display: flex;
+}
+.field-name-field-image table tr td ,
+.field-name-field-pictures table tr td {
+  box-sizing: border-box;
+  display: inline-block;
+  max-width: 100%;
+  overflow: overlay;
+}
+.field-name-field-image table .image-widget-data input.form-text,
+.field-name-field-pictures table .image-widget-data input.form-text {
+  max-width: 250px;
+}
+span.for-alt a {
+  border: 1px solid #06f;
+  padding: 5px;
+}
+span.for-alt {
+  position: absolute;
+  left: 0;
+  margin: 20px;
+  font-size: 13px;
+}
+fieldset, .field-type-list-boolean, .field-type-hms-field, .field-type-image, .field-type-file, .field-type-taxonomy-term-reference {
+  background: rgba(138, 138, 138, 0.03);
+  padding: 1%;
+  margin: 2% 0;
+  border: 1px solid #f0f1f2;
+  position: relative;
+  box-shadow: 0 2px 10px -6px #000 !important;
+}
+.image-widget .image-preview {
+  float: right !important;
+}
+div#edit-body {
+  margin: 15px 0;
+}
+fieldset legend {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+.field-type-node-reference.field-name-field-comment-nid {
+	display:none;
+}
+.role-administrator .field-type-node-reference.field-name-field-comment-nid {
+	display:block !important;
+}
+fieldset {
+  border-top: 1px solid #0074BD;
+}
+#tinymce p {
+  font-family: iransans;
+}
+.field-collection-view th {
+  display: none;
+}
+.field-collection-view * {
+  background: #f9f9f9;
+  border: none !important;
+  font-size: 12px;
+  padding: 0.1px 1px;
+}
+ul.ui-autocomplete {
+  right: 66px;
+}
+span.autocomplete-deluxe-item {
+  margin: 1px 2px !important;
+  border-radius: 5px !important;
+  font-size: 12px;
+}
+
+.page-admin-store-orders-view td {
+    text-align: right !important;
+}
+.node-type-product .field-name-taxonomy-catalog .description,
+.page-node-add-product .field-name-taxonomy-catalog .description{
+    position: absolute;
+    top: 1330px;
+    left: 4%;
+    padding: 17px 20px 0px 20px;
+    /* border-right: 4px solid #ff0000; */
+    background: #f5f5f5;
+    width: 55%;
+    line-height: 29px;
+    text-align: center;
+}
+.node-type-product .field-name-taxonomy-catalog .description b,
+.page-node-add-product .field-name-taxonomy-catalog .description b {
+    color: #ea0000;
+    font-size: 15px;
+}
+#field-percent-values td:not(.draggable) {
+  display: inline-flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  overflow: auto;
+}
+#field-percent-values td > div {
+  margin: 0 10px;
+  background: transparent !important;
+  box-shadow: none !important;
+  border: none;
+}
+#field-percent-values td > div label {
+  font-size: 15px;
+}
+#field-percent-values td > input {
+  margin: 3px 10px;
+}
+.order-pane-table th {
+  padding: 10px;
+  font-weight: 500;
+  font-size: 15px;
+background: #fbfbfb !important;
+  border-bottom: 1px solid #eee;
+  text-align: center;
+}
+.order-pane-table td {
+  padding: 15px;
+  border: none !important;
+}
+.order-pane-table {
+  border: 1px solid #eee;
+}
+table tr.even {
+  background: #fbfbfb;
+}
+div#order-pane-line_items td {
+  padding: 3px 10px;
+  border: none;
+border: none !important;
+}
+div#order-pane-line_items {
+  width: 200px;
+  margin-right: auto;
+  border: solid #6d0;
+  border-width: 0 2px;
+  box-shadow: rgba(0, 0, 0, 0.117647) 0px 1px 6px, rgba(0, 0, 0, 0.117647) 0px 1px 4px;
+}
+form div#order-pane-line_items {
+  width: inherit;
+}
+.order-pane {
+  border-color: #eee;
+}
+.page-admin-store-orders fieldset#edit-redirect,
+div#order-pane-admin_comments,
+fieldset#edit-admin-comment-field,
+div#order-pane-update .order-pane-title,
+div#order-pane-packages,
+div#order-pane-ship_to .order-pane-title,
+div#order-pane-order_comments .order-pane-title,
+div#order-pane-products .order-pane-title {
+  display: none;
+}
+div#order-pane-payment,
+div#order-pane-customer {
+  border: none;
+  border-right: 5px solid #2196F3;
+  background: #fbfbfb;
+  padding: 10px;
+}
+div#order-pane-payment {
+  border-color: #8BC34A;
+}
+div#order-pane-ship_to ~div#order-pane-bill_to {
+  display: none;
+}
+.ADRES-CONTEINER ~ br,
+.order-pane br ~ br {
+  display: none;
+}
+.POSTI, .PHON {
+  display: inline-block;
+  margin-left: 10px;
+  padding: 3px 5px;
+}
+.ADRES {
+  padding: 0px 5px 0px !important;
+  margin: 8px 0 5px 0;
+}
+.order-pane br ~strong {
+  font-weight: normal !important;
+  padding: 0 5px;
+}
+.ADRES-CONTEINER > div:first-child {
+  font-size: 15px !important;
+  padding: 0 5px;
+}
+div#order-pane-bill_to,
+div#order-pane-ship_to {
+  border: none;
+  border-right: 5px solid #FF9800;
+  background: #fbfbfb;
+}
+.order-pane {
+  line-height: initial;
+}
+table.line-item-table {
+  margin: 0;
+}
+.page-admin-store-orders- div#block-system-main >.content > .field-name-field-text {
+  background: #fbfbfb;
+  float: right;
+  margin: 6px;
+  padding: 10px;
+  border-right: 5px solid #F44336;
+}
+select#edit-ship-to-select-address {
+  max-width: 800px;
+}
+.pos-left {
+  float: right;
+}
+.uc-inline-form .form-item {
+  float: right;
+  margin-left: 1em;
+}
+td.views-field.views-field-name span {
+  color: #F44336;
+}
+span.file {
+    unicode-bidi: embed;
+}
+
+a.btn.btn-primary {
+    color: #fff !important;
+    background: #0074BD;
+    transition: all, 0.3s;
+}
+a.btn.btn-primary:hover {
+    background: #004c99;
+}
+.view-admin-views-user .feed-icon {
+    position: absolute;
+    top: 0;
+    left: 30px;
+}
+.field-type-user-reference.field-name-field-user thead, 
+.field-type-user-reference.field-name-field-user .tabledrag-toggle-weight-wrapper{
+    display: none;
+}
+tr:not(.groupClass) .field-type-user-reference.field-name-field-user .field-add-more-submit,
+tr:not(.groupClass) .field-type-user-reference.field-name-field-user tr:nth-child(n + 2){
+    display: none;
+}
+
+
+
+
+

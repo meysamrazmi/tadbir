@@ -1,0 +1,18 @@
+name = Calendar systems
+description = Support for various calendar systems like Jalali , Gregorian , Hijri , etc
+core = 7.x
+package = Calendar Systems
+
+test_dependencies[] = date
+test_dependencies[] = jquery_calendar
+recommends[] = date
+recommends[] = jquery_calendar
+supports[] = view
+
+files[] = simpletest_calendar_systems.test
+configure = admin/config/regionals/calendar-systems
+; Information added by Drupal.org packaging script on 2018-05-22
+version = "7.x-2.0"
+core = "7.x"
+project = "calendar_systems"
+datestamp = "1526981475"

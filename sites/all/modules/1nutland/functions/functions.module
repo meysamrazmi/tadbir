@@ -1,0 +1,299 @@
+<?php
+if(!function_exists('in_array_r')) {
+	function in_array_r($needle, $haystack, $strict = false) {
+		foreach ($haystack as $item) {
+			if (($strict ? $item === $needle : $item == $needle) || (is_array($item) && in_array_r($needle, $item, $strict))) {
+				return true;
+			}
+		}
+		return false;
+	}
+}
+
+function mdump($var, $depth = 0){
+	global $user;
+	if($user->uid == 1){
+    if($depth > 0){
+      $new_array = array_map(function ($v) use ($depth) {
+        return parse($v, "...", $depth);
+      }, $var);
+      $var = $new_array;
+    }
+		echo '<pre>';
+		print_r($var);
+		echo '</pre>';
+    die();
+	}
+}
+
+/*
+ * example:
+ 	$new_array = array_map(function ($v) {
+		return parse($v, "...", 3);
+	}, $orginal_array);
+ */
+function parse($v, $r, $max_d = 1, $d = 0) {
+  if (is_array($v) || is_object($v)) {
+    if ($d >= $max_d) {
+      return $r;
+    } else {
+      $d++;
+      return array_map(function ($v) use ($max_d, $r,  $d) {
+        return parse($v, $r, $max_d, $d);
+      }, $v);
+    }
+  } else {
+    return $v;
+  }
+}
+
+/**
+ * Implements hook_menu().
+ */
+function functions_menu() {
+  $items['api/filters'] = array(
+    'page callback' => 'filters',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  $items['api/products'] = array(
+    'page callback' => 'products',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Implements hook_init().
+ */
+function functions_init(){
+	global $user;
+	$path = drupal_get_path_alias();
+	$aliases = explode('/', $path);
+  drupal_add_js(array('UID' => $user->uid), 'setting');
+
+}
+
+/**
+ * Pre-processes variables for the "html" theme hook.
+ * See template for list of available variables.
+ * @see html.tpl.php
+ */
+function functions_preprocess_html(&$variables) {
+  $path = drupal_get_path_alias();
+  $aliases = explode('/', $path);
+  foreach($aliases as $alias) {
+    $variables['classes_array'][] = 'page-' . drupal_clean_css_identifier($alias);
+  }
+}
+
+/**
+ * Implementation of hook_preprocess_node();
+ */
+function functions_preprocess_node(&$variables) {
+  $variables['theme_hook_suggestions'][] = 'node__' . $variables['type'] . '__' . $variables['view_mode'];
+}
+
+/**
+ * use for exposed filters on shop/product page
+ * @return array
+ * function returns catalog taxonomies and their names for front-end
+ */
+function filters(){
+  /*select catalogs that have no parent*/
+  $query = db_select("taxonomy_term_data" , "taxonomy");
+  $query->join("field_data_field_icon" , "icon" , "taxonomy.tid = icon.entity_id");
+  $query->join("file_managed" , "file" , "icon.field_icon_fid = file.fid");
+  $query->fields("taxonomy" , array("tid" , "name"));
+  $query->fields("file" , array("uri"));
+  $query->condition("taxonomy.vid" , 1);
+  $query->condition("icon.bundle" , 'tags');
+  $results = $query->execute()->fetchAll();
+
+  foreach ($results as $key=>$row){
+    $results[$key]->uri = file_create_url($row->uri);
+  }
+
+  drupal_json_output($results);
+  drupal_exit();
+  return $results;
+}
+
+/**
+ * return the list of products
+ * it is applying filters too
+ * @return array
+ * response is an array of:
+ * 1.total number of products
+ * 2.the page number that is used
+ * 3.product data for user
+ */
+function products(){
+  /*Select products form DB*/
+  $query = db_select("node" , "node");
+  $query->leftJoin("field_data_uc_product_image" , "product_image" , "node.nid = product_image.entity_id and product_image.delta = '0' ");
+  $query->leftJoin("file_managed" , "image" , "image.fid = product_image.uc_product_image_fid");
+  $query->join("uc_products" , "product" , "product.nid = node.nid");
+  $query->leftJoin("uc_product_stock" , "stock" , "product.model = stock.sku");
+  $query->leftJoin("field_data_field_qnt" , "qnt" , "product.nid = qnt.entity_id");
+  $query->fields("node" , array("nid" , "type" , "title" , "created" , "changed"));
+  $query->addField("image" , "uri" , "picture");
+  $query->addField("product" , "sell_price" , "price");
+  $query->addField("product" , "list_price" , "list_price");
+  $query->addField("qnt" , "field_qnt_value" , "qty");
+  $query->fields("stock" , array("active" , "stock"));
+  $query->condition("node.type" , array("product" , "product_kit") , "IN");
+  $query->condition("node.status" , 1);
+
+  $get_result = true; //flag for check if there is result or not
+
+  /*filter products according to input*/
+  if (isset($_GET['tags']))                 filter('tags', $query, $get_result);
+//  if (isset($_GET['product_kind']))          filter('product_kind', $query, $get_result);
+//  if (isset($_GET['exam']))                  filter('exam', $query, $get_result);
+//  if (isset($_GET['education_kind']))        filter('education_kind', $query, $get_result);
+//  if (isset($_GET['publication_name']))      filter('publication_name', $query, $get_result);
+//  if (isset($_GET['academic_orientation']))  filter('academic_orientation', $query, $get_result);
+//  if (isset($_GET['producer']))              filter('producer', $query, $get_result);
+  /*------------------------------------*/
+  /*filter just existing products*/
+  if(isset($_GET['stock'])){
+    /* active = 0 or active = 1 and stock > 0 */
+    $and_1 = db_and()->condition("stock.active" , 0);
+    $and_2 = db_and()->condition("stock.active" , 1)->condition("stock.stock" , 0 , '>');
+    $query->condition(db_or()->condition($and_1)->condition($and_2));
+  }
+  /*filter products that contain the value that search on it*/
+  if(isset($_GET['search'])){
+    $custom_nodes =  searched_product($_GET['search']);
+    if(empty($custom_nodes)) $get_result = false;
+    else $query->condition("node.nid" , $custom_nodes , "IN");
+  }
+
+  /**
+   * execute array of products if exist
+   * else return empty array
+   */
+  if($get_result) {
+    /*--------sort result on demand-------------*/
+    isset($_GET["sort"]) ? $sort = $_GET["sort"] : $sort = "node.nid";
+    isset($_GET["order"]) ? $order = $_GET["sort"] : $order = "DESC";
+    $query->orderBy($sort , $order);
+    /*------------------------------------------*/
+
+    $page = isset($_GET['page']) ? $_GET['page'] : 0; //use page for get part of result
+    $response["page"] = $page; //return the number of page for front-end
+    $count_query = clone($query); //copy the query before execute for getting the total number of products
+    $query->range(30 * $page, 30);
+
+    $products = $query->execute()->fetchAll();
+
+    /*get total number of products and return it for front-end*/
+    $count_query = $count_query->countQuery()->execute()->fetchField();
+    $response["count"] = (int)$count_query;
+
+    /*select the nids that has "test" taxonomy*/
+//    $query = db_select("field_data_taxonomy_catalog" , "catalog");
+//    $query->fields("catalog" , array("entity_id"));
+//    $query->condition("catalog.taxonomy_catalog_tid" , 2308);
+//    $forbiden_tids = $query->execute()->fetchAll();
+    $forbiden_nodes = array();
+//    foreach($forbiden_tids as $row) array_push($forbiden_nodes , $row->entity_id);
+
+    /*post-processing for prepare final result*/
+    foreach($products as $key => $value){
+      /*remove "test" taxonomy*/
+      if(in_array($value->nid , $forbiden_nodes)){
+        unset($products[$key]);
+        continue;
+      }
+      /*change date format from time stamp*/
+      $products[$key]->created = format_date($value->created);
+      $products[$key]->changed = format_date($value->changed);
+
+      /*convert picture to custom style*/
+      $products[$key]->picture = image_style_url("320x320", $products[$key]->picture);
+
+      /*check the each product is available or not and remove unnecessary fields*/
+      if($value->active == 0 || ($value->active == 1 && $value->stock > 0)) $products[$key]->status = "available";
+      else $products[$key]->status = "unavailable";
+      unset($products[$key]->active);
+      unset($products[$key]->stock);
+    }
+  }
+  else
+    $products = array();
+
+  $response["products"] = $products;
+
+  drupal_json_output($response);
+  drupal_exit();
+  return $products;
+}
+
+/**
+ * search in products for the value that is searched for
+ * @return array
+ * return the array of nid that contain this value
+ */
+function searched_product($value){
+  $nodes = array();
+
+  /*search in product title*/
+  $query = db_select("node" , "node");
+  $query->fields("node" , array("nid"));
+  $query->condition("node.type" , array("product" , "product_kit") , "IN");
+  $query->condition('node.title', '%' . db_like($value) . '%' , 'LIKE');
+  $nid1 = $query->execute()->fetchAll();
+  foreach ($nid1 as $row) array_push($nodes , $row->nid);
+
+  /*search in product body field*/
+  $query = db_select("field_data_body" , "body");
+  $query->fields("body" , array("entity_id"));
+  $query->condition("body.bundle" , array("product" , "product_kit") , "IN");
+  $query->condition('body.body_value', '%' . db_like($value) . '%' , 'LIKE');
+  $nid2 = $query->execute()->fetchAll();
+  foreach ($nid2 as $row) array_push($nodes , $row->entity_id);
+
+  /*search in product custom content field*/
+  $query = db_select("field_data_field_qnt" , "costum_content");
+  $query->fields("costum_content" , array("entity_id"));
+  $query->condition("costum_content.bundle" , array("product" , "product_kit") , "IN");
+  $query->condition('costum_content.field_qnt_value', '%' . db_like($value) . '%' , 'LIKE');
+  $nid3 = $query->execute()->fetchAll();
+  foreach ($nid3 as $row) array_push($nodes , $row->entity_id);
+
+  /*search in catalog taxonomy name*/
+  $query = db_select("field_data_field_tags" , "tag");
+  $query->join("taxonomy_term_data" , "taxonomy_term" , "tag.field_tags_tid = taxonomy_term.tid");
+  $query->fields("tag" , array("entity_id"));
+  $query->condition("tag.bundle" , array("product" , "product_kit") , "IN");
+  $query->condition('taxonomy_term.name', '%' . db_like($value) . '%' , 'LIKE');
+  $nid4 = $query->execute()->fetchAll();
+  foreach ($nid4 as $row) array_push($nodes , $row->entity_id);
+
+  $nodes = array_unique($nodes);
+
+  return $nodes;
+}
+
+/**
+ * apply filters on products
+ * it filters query that is passed by reference
+ * no return
+ */
+function filter($name, &$query, &$get_result){
+  $tids = explode("," , $_GET[$name]);
+  $filter = db_select("field_data_field_tags" , "tag");
+  $filter->fields("tag" , array("entity_id"));
+  $filter->condition("tag.field_tags_tid" , $tids , "IN");
+  $filter = $filter->execute()->fetchAll();
+  $nids = array();
+  foreach($filter as $row) array_push($nids , $row->entity_id);
+
+  if(!empty($nids))
+    $query->condition("node.nid" , $nids , "IN");
+  else
+    $get_result = false;
+}

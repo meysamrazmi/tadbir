@@ -1,0 +1,115 @@
+<?php
+/**
+ * @file
+ * Install, update and uninstall functions for the JW Player module.
+ */
+
+/**
+ * Implements hook_schema().
+ */
+function jw_player_schema() {
+  $schema['jwplayer_preset'] = array(
+    'description' => 'Stores information of JW Player presets',
+    'export' => array(
+      'key' => 'machine_name',
+      'identifier' => 'jw_player_preset',
+      'default hook' => 'default_jw_player_presets', // Function hook name
+      'api' => array(
+        'owner' => 'jw_player',
+        'api' => 'jw_player_presets', // Base name for api include files.
+        'minimum_version' => 1,
+        'current_version' => 1,
+      ),
+    ),
+    'fields' => array(
+      'preset_name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'description' => 'Name for the preset.'
+      ),
+      'machine_name' => array(
+        'type' => 'varchar',
+        'length' => 255,
+        'description' => 'Unique machine name for every configuration preset.'
+      ),
+      'description' => array(
+          'description' => "Provide text summary for the preset",
+          'type' => 'text',
+      ),
+      'settings' => array(
+        'description' => 'Serialized settings array of a given preset.',
+        'type' => 'blob',
+        'size' => 'big',
+        'not null' => FALSE,
+        'serialize' => TRUE,
+      ),
+    ),
+    'unique keys' => array(
+    'machine_name' => array('machine_name'),
+    ),
+    'primary key' => array('machine_name'),
+  );
+
+  return $schema;
+}
+
+/**
+ * Set jw player version to 5, display message.
+ */
+function jw_player_update_7000() {
+  variable_set('jw_player_version', 5);
+  drupal_set_message(t('JW Player version has been set to 5.'));
+}
+
+/**
+ * Implements hook_requirements().
+ */
+function jw_player_requirements($phase) {
+  $requirements = array();
+
+  // Ensure translations don't break at install time
+  $t = get_t();
+
+  //drupal_load('module', 'libraries');
+
+  $requirements['jw_player'] = array(
+    'title' => $t('JW Player'),
+    'severity' => REQUIREMENT_OK,
+  );
+  /*$info = libraries_detect('jwplayer');
+  if ($info['installed']) {
+    $requirements['jw_player']['value'] = t('Self-Hosted') . " (v{$info['version']})";
+    if (!($key = variable_get('jw_player_key', NULL))) {
+      $requirements['jw_player']['severity'] = REQUIREMENT_ERROR;
+      $requirements['jw_player']['description'] = t('Please configure your Self-Hosted Player License Key from the <a href="@url">JW Player settings page</a>.', array(
+        '@url' => url('admin/config/media/jw_player/settings'),
+      ));
+	     }
+	}
+	*/
+	// Player could be cloud-hosted so no reason to check in other phases.
+		if ($phase === 'runtime') {
+		if ($account_token = variable_get('jw_player_account_token', false)) {
+		// Cloud-hosted is a priority over self-hosted.
+		$requirements['jw_player']['value'] = t('Cloud-Hosted');
+		}
+		else {
+		$info = libraries_detect('jwplayer');
+		if ($info['installed']) {
+			$value = t('Self-Hosted') . " (v{$info['version']})";
+			if (!($key = variable_get('jw_player_key', NULL))) {
+			$requirements['jw_player']['severity'] = REQUIREMENT_ERROR;
+			$requirements['jw_player']['description'] = t('Please configure your Self-Hosted Player License Key from the <a href="@url">JW Player settings page</a>.', array(
+				'@url' => url('admin/config/media/jw_player/settings'),
+			));
+			}
+		}
+		else {
+			$value = t('Not found');
+			$requirements['jw_player']['description'] = t('Please consult README.txt for installation instructions.');
+			$requirements['jw_player']['severity'] = REQUIREMENT_ERROR;
+		}
+		$requirements['jw_player']['value'] = $value;
+		}
+	}
+} 

@@ -1,0 +1,269 @@
+
+#login-message {
+  margin-bottom: 50px;
+  font-size: 17px !important;
+}
+
+#login-message span {
+  font-size: 15px;
+  display: block;
+  margin-top: 20px;
+}
+
+.toboggan-unified #login-links a.lt-active,.toboggan-unified #login-links a.lt-active:hover {
+  background-color: transparent;
+  cursor: default;
+  border-bottom: 3px solid #bcaa6a;
+  border-width: 0 0 3px 0;
+  opacity: 1 !important;
+}
+
+.toboggan-unified {
+  margin: 30px 0;
+}
+
+.toboggan-unified #login-links a {
+  background-color: transparent;
+  color: #555;
+  display: inline-block;
+  font-size: 17px;
+  line-height: 35px;
+  font-weight: bold !important;
+  padding: 0 10px;
+  width: 200px;
+  transition: all 0.2s ease 0s;
+  border-bottom: 3px solid #ddd;
+  border-width: 0 0 3px 0;
+}
+
+.toboggan-unified #login-links a:hover {
+  background: #eee;
+}
+
+body.page-user-password form#user-pass {
+  position: relative;
+  margin-top: 140px;
+}
+
+form#user-login .form-item {
+  margin-bottom: 20px;
+}
+
+form#user-login .form-item > label {
+  text-align: right;
+  width: 100%;
+  margin-bottom: 14px;
+}
+
+form#user-login .form-item > input {
+  width: 100%;
+  max-width: calc(96vw - 26px);
+  direction: initial;
+}
+
+#user-pass input.form-text {
+  direction: initial;
+}
+
+form#user-pass > div,form#user-login {
+  margin: 0px auto !important;
+}
+
+.login-forgot {
+  display: inline-block;
+  left: 150px;
+  border-bottom: 1px dotted #2196F3;
+  padding: 5px 10px;
+  position: absolute;
+  bottom: 25px;
+}
+
+#user-login #edit-actions {
+  border-radius: 10px;
+  vertical-align: top;
+  margin-right: auto;
+  display: block;
+  width: 100px;
+}
+
+#user-pass #edit-actions {
+  display: block;
+  float: none;
+}
+
+#user-login #edit-actions #edit-submit {
+  background-color: #D81B60;
+  //background: linear-gradient(to bottom left,#1bd8f1,#8828da);
+  background: linear-gradient(70deg, #e8d183 50%, #bcaa6a 95%);
+  border-color: transparent;
+  border: none;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12),0 1px 4px rgba(0,0,0,0.12);
+  padding: 6px 25px;
+}
+
+#user-register-form #edit-submit--2,.page-user-password #block-system-main form #edit-submit,.page-user-reset #block-system-main form #edit-submit {
+  background-color: #D81B60;
+  //background: linear-gradient(to bottom left,#1bd8f1,#8828da);
+  background: linear-gradient(70deg, #e8d183 50%, #bcaa6a 95%);
+  border: none;
+  border-color: transparent;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.12),0 1px 4px rgba(0,0,0,0.12);
+  color: white;
+  border-radius: 3px;
+  padding: 8px 25px;
+}
+
+.form-item-captcha-response input,.form-item-captcha-response label {
+  width: auto !important;
+  display: inline-block !important;
+}
+
+#register-form .form-actions {
+  text-align: left;
+}
+
+.page-user #user-login,
+.page-user #user-register-form,
+.page-user-password #user-pass {
+  float: none;
+  margin: auto;
+  background-color: white;
+  padding: 25px;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.12),0px 1px 4px rgba(0,0,0,0.12) !important;
+  border: medium none;
+  border-radius: 0px;
+  max-width: 500px;
+  position: relative;
+  @media all and (max-width: 600px){
+    padding: 25px 10px;
+  }
+}
+
+#user-register-form .panel {
+  background-color: transparent;
+  border: 0px;
+  border-radius: 0px;
+  box-shadow: none;
+}
+
+#user-register-form fieldset .panel-body {
+  background-color: #FFF;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.12),0px 1px 4px rgba(0,0,0,0.12) !important;
+  border: medium none;
+  border-radius: 0px;
+  padding: 25px 7px;
+  position: relative;
+}
+
+#user-register-form fieldset legend {
+  background-color: transparent;
+  border: 0px;
+  margin: 0;
+  position: relative;
+  font-weight: 500;
+}
+
+#user-register-form .group-primaryinfo legend {
+  display: none;
+}
+
+#user-register-form .group-specific-info legend:before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 3px;
+  width: 250px;
+  background: #03A9F4;
+  //background: linear-gradient(to bottom left,#1bd8f1,#8828da);
+  background: linear-gradient(70deg, #e8d183 50%, #bcaa6a 95%);
+  z-index: 1;
+}
+
+html.js fieldset.collapsed .fieldset-legend {
+  background-position: 100% 50%;
+}
+
+#user-register-form .group-coaprate legend {
+  background-color: #F5F5F5;
+  box-shadow: 0px 1px 6px rgba(0,0,0,0.12),0px 1px 4px rgba(0,0,0,0.12);
+}
+
+#user-register-form fieldset legend span {
+  font-size: 18px;
+}
+
+#user-register-form .panel-body .form-wrapper {
+  display: inline-block;
+  vertical-align: top;
+  width: 33%;
+  min-width: 250px;
+  margin-bottom: 5px;
+  float: right;
+  padding: 0px 29px;
+}
+
+#user-register-form .panel-body #edit-account .form-type-password-confirm .row {
+  position: relative;
+}
+
+#user-register-form .panel-body #edit-account .form-type-password-confirm .row .form-item {
+  display: block;
+  width: 100%;
+}
+
+#user-register-form .panel-body #edit-account .form-type-password-confirm .row .help-block {
+  position: absolute;
+  right: 111%;
+  top: 36px;
+  width: 100%;
+  z-index: 3;
+  padding: 10px;
+}
+
+#user-register-form .panel-body #edit-account .form-type-password {
+  margin-bottom: 0px;
+  margin-top: 15px;
+}
+
+#user-register-form .panel-body #edit-account .form-type-password-confirm {
+  margin-bottom: 0px;
+}
+
+#user-register-form .panel-body #edit-account .form-type-password-confirm > label {
+  display: none;
+}
+
+#user-register-form #edit-field-more {
+  width: 60%;
+}
+
+#user-register-form #edit-field-coapratefield {
+  width: 36%;
+}
+
+#user-register-form .panel-body .form-wrapper label {
+}
+
+#user-register-form .panel-body .form-wrapper input {
+  display: inline-block;
+}
+
+#user-register-form .panel-body #edit-field-rezoome input {
+  padding: 0px 0px;
+}
+
+#user-register-form #edit-account .form-item-mail label {
+  width: 100%;
+}
+fieldset.panel {
+  border: 0px;
+}
+
+html.js fieldset.collapsed {
+  height: auto;
+}
+
+.page-user h1.page-header {
+  display: none;
+}

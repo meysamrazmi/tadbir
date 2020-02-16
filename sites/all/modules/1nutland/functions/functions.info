@@ -1,0 +1,4 @@
+name = Nutland
+description = "Nutland custom functions and use cases"
+core = 7.x
+package = 1Nutland

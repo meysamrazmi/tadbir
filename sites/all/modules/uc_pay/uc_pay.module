@@ -1,0 +1,202 @@
+﻿<?php
+function uc_pay_uc_payment_gateway() {
+  $gateways['uc_pay'] = array(
+    'title' => t('pay.ir Gateway'),
+    'description' => t('Process payments through pay.ir gateway'),
+  );
+  return $gateways;
+}
+
+/**
+ * Implements hook_uc_payment_method().
+ */
+function uc_pay_uc_payment_method() {
+  $title_logo = theme('image', array(
+    'path' => drupal_get_path('module', 'uc_pay') . '/pay.png',
+    'attributes' => array('class' => array('uc-credit-cctype')),
+  ));
+
+  $methods = array();
+  $methods['pay'] = array(
+    'id' => 'pay_wps',
+    'name' => t('pay.ir - online payment'),
+    'title' => $title_logo . ' پرداخت آنلاین',
+    'desc' => t('Redirect to pay.ir Gateway to pay by credit card.'),
+    'callback' => 'uc_pay_method_callback',
+    'redirect' => 'uc_pay_form',
+    'weight' => 2,
+    'checkout' => FALSE,
+    'no_gateway' => TRUE,
+  );
+
+  return $methods;
+}
+
+/**
+ * Payment method callback
+ */
+function uc_pay_method_callback($op, &$order) {
+  switch ($op) {
+    case 'settings':
+		$form['uc_pay_api'] = array(
+			'#type' => 'textfield',
+			'#title' => t('pay.ir API'),
+			'#default_value' => variable_get('uc_pay_api', ''),
+			'#size' => 11,
+		);
+	       
+		$currency_options = array('toman' => 'تومان', 'rial' => 'ریال');
+		$form['currency_options'] = array(
+			'#type'          => 'radios',
+			'#title'         => t('Currency Type'),
+			'#default_value' => variable_get('uc_pay_currency', 'toman'),
+			'#options'       => $currency_options,
+			'#required'      => TRUE,
+		);
+		
+		return $form;
+    break;
+    case 'cart-process':
+      $_SESSION['pay_method'] = 'pay';
+      return NULL;
+      break;	
+  }
+}
+
+/**
+ * Form Builder.
+ *
+ * The payment form which will be submitted to the gateway.
+ */
+function uc_pay_form($form, &$form_state, $order) {
+	$api = variable_get('uc_pay_api', '');
+	if(variable_get('uc_pay_currency', 'toman') == 'toman'){
+		$amount = $order->order_total * 10;
+	}else{
+		$amount = $order->order_total;
+	}
+	$redirect = url('cart/pay/complete', array('absolute' => true));
+	$factorNumber = $order->order_id;
+	
+	$result = send($api,$amount,$redirect,$factorNumber);
+	$result = json_decode($result);
+	if($result->status) {
+		$form['#action'] = "https://pay.ir/payment/gateway/$result->transId";
+		$form['#method'] = 'get';
+		
+		$form['submit'] = array(
+			'#type'  => 'submit',
+			'#value' => t('Submit Order')
+		);
+		
+		return $form;
+	} else {
+		drupal_set_message(t('خطا : @error', array(
+			'@error' => $result->errorMessage
+		)), 'error');
+		return array();
+	}
+}
+
+/**
+ * Implements hook_menu()
+ */
+function uc_pay_menu() {
+  $items['cart/pay/complete'] = array(
+    'title' => t('Payment Complete'),
+    'page callback' => 'uc_pay_complete',
+    'access callback' => 'uc_pay_access',
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+/**
+ * Access callback for cart/pay/complete
+ */
+function uc_pay_access() {
+  // All user have access
+  return TRUE;
+}
+
+/**
+ * Menu callback for cart/pay/complete
+ */
+function uc_pay_complete() {
+	$order_id = (int) $_POST['factorNumber'];
+	$order = uc_order_load($order_id);
+	$transId = $_POST['transId'];
+	
+	// Get api from module settings.
+	$api = variable_get('uc_pay_api', '');
+	if (empty($api)) {
+		$msg = t('pay.ir payment is not configured.');
+		drupal_set_message($msg, 'error');
+		return $msg;
+		drupal_goto('cart');		
+	}
+	
+	$result = verify($api,$transId);
+	$result = json_decode($result);
+  
+	if ($result->status){
+		$params = array(
+		'uid' => $order->uid,
+		'points' => ($order->order_total / 5),
+		'operation' => 'شارژ هدیه به مناسبت عید فطر',
+		);
+		// userpoints_userpointsapi($params); // شارژ اضافه برای جشنواره		
+		
+		uc_payment_enter(
+			$order_id, 
+			'pay.ir - پرداخت آنلاین', //payment method
+			$order->order_total, 
+			$order->uid, 
+			NULL, 
+			t('pay.ir transaction ID: @transaction', array('@transaction' => $transId))
+		);
+	
+		$output = uc_cart_complete_sale($order, variable_get('uc_new_customer_login', FALSE));
+		$message = t('پرداخت شما با موفقیت انجام شد. شماره تراکنش: @number', array('@number' => $transId));
+		drupal_set_message($message);
+		watchdog('pay.ir', 'pay.ir payment #%refid verification succeeded', array('%refid' => $transId), WATCHDOG_INFO);
+
+		// $_SESSION['do_complete'] = TRUE;
+		// drupal_goto('cart/checkout/complete');
+		
+		$page = variable_get('uc_cart_checkout_complete_page', '');
+		if (!empty($page)) {
+			drupal_goto($page);
+		}
+		
+		return '<p>' . $message . '</p>' . drupal_render($output);
+  
+	} else {
+		drupal_set_message(t('پرداخت شما ناموفق بود. پیغام خطا : @error', array(
+			'@error' => $result->errorMessage
+		)), 'error');
+		drupal_goto('cart');
+	}
+}
+
+function send($api, $amount, $redirect, $factorNumber=null) {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, 'https://pay.ir/payment/send');
+	curl_setopt($ch, CURLOPT_POSTFIELDS,"api=$api&amount=$amount&redirect=$redirect&factorNumber=$factorNumber");
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+	$res = curl_exec($ch);
+	curl_close($ch);
+	return $res;
+}
+
+function verify($api, $transId) {
+	$ch = curl_init();
+	curl_setopt($ch, CURLOPT_URL, 'https://pay.ir/payment/verify');
+	curl_setopt($ch, CURLOPT_POSTFIELDS, "api=$api&transId=$transId");
+	curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, FALSE);
+	curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+	$res = curl_exec($ch);
+	curl_close($ch);
+	return $res;
+}

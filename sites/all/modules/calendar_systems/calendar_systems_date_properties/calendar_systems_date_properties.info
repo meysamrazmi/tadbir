@@ -1,0 +1,14 @@
+name = Calendar systems date properties (Experimental/Unstable)
+description = Adds extra date fields to all entities to simplify date based calculation and filtering for all calendar systems. WARNING: Experimental module, use it at your own risk
+core = 7.x
+package = Calendar Systems
+
+dependencies[] = entity
+dependencies[] = calendar_systems
+
+configure = admin/config/regional/calendar-systems/date_properties
+; Information added by Drupal.org packaging script on 2018-05-22
+version = "7.x-2.0"
+core = "7.x"
+project = "calendar_systems"
+datestamp = "1526981475"

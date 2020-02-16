@@ -1,0 +1,105 @@
+# $Id$
+#
+# Persian translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  uc_vandar.module: n/a
+#  uc_vandar.info: n/a
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2014-10-06 20:33+0330\n"
+"PO-Revision-Date: 2014-10-06 21:02+0330\n"
+"Last-Translator: Meysam Razmi <m.razmi.92@gmail.com>\n"
+"Language-Team: Persian <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"Language: fa\n"
+"X-Generator: Poedit 1.6.9\n"
+
+#: uc_vandar.module:8
+msgid "vandar.io Gateway"
+msgstr "درگاه پرداخت vandar.io"
+
+#: uc_vandar.module:9
+msgid "Process payments through vandar.io gateway"
+msgstr "انجام پرداخت آنلاین از طریق درگاه پرداخت vandar.io"
+
+#: uc_vandar.module:26;152
+msgid "vandar.io - online payment"
+msgstr "vandar.io - پرداخت آنلاین"
+
+#: uc_vandar.module:27
+msgid " online payment"
+msgstr " پرداخت آنلاین"
+
+#: uc_vandar.module:28
+msgid "Redirect to vandar.io Gateway to process payment."
+msgstr "ریدایرکت به vandar.io برای انجام پرداخت آنلاین"
+
+#: uc_vandar.module:47
+msgid "vandar.io API Key"
+msgstr "کلید API از سایت وندار"
+
+#: uc_vandar.module:52
+msgid "toman"
+msgstr "تومان"
+
+#: uc_vandar.module:52
+msgid "rial"
+msgstr "ریال"
+
+#: uc_vandar.module:55
+msgid "Choose the currency type of your Ubercart store products"
+msgstr "واحد پول محصولات فروشگاه خود را انتخاب کنید"
+
+#: uc_vandar.module:56
+msgid "Currency Type"
+msgstr "واحد پول"
+
+#: uc_vandar.module:96
+msgid "Submit Order"
+msgstr "ثبت سفارش"
+
+#: uc_vandar.module:102;174
+msgid "Error : @error"
+msgstr "خطا : @error"
+
+#: uc_vandar.module:113
+msgid "Payment Complete"
+msgstr "تکمیل سفارش"
+
+#: uc_vandar.module:140
+msgid "vandar.io gateway is not configured."
+msgstr "درگاه وندار پیکربندی نشده است."
+
+#: uc_vandar.module:156
+msgid "vandar.io transaction ID: @transaction, card Number: @cardNumber"
+msgstr "vandar.io شناسه تراکنش: @transaction, شماره کارت: @cardNumber"
+
+#: uc_vandar.module:160
+msgid "Payment was successful. Your transaction ID: @number"
+msgstr "پرداخت شما با موفقیت انجام شد. شماره تراکنش: @number"
+
+#: uc_vandar.module:162
+msgid "vandar.io payment #%refid verification succeeded"
+msgstr "vandar.io تایید تراکنش شماره #%refid موفق بود"
+
+#: uc_vandar.module:170
+msgid "Payment was Unsuccessful."
+msgstr "پرداخت شما ناموفق بود."
+
+#: uc_vandar.info:0
+msgid "Vandar Payment Gateway"
+msgstr "درگاه پرداخت وندار"
+
+#: uc_vandar.info:0
+msgid "Vandar Payment Gateway for Ubercart 3.x"
+msgstr "درگاه پرداخت وندار برای ماژول Ubercart 3.x"
+
+#: uc_vandar.info:0
+msgid "Ubercart - payment"
+msgstr "آبرکارت - پرداخت"

@@ -1,0 +1,37 @@
+# Ignore configuration files that may contain sensitive information.
+sites/*/settings*.php
+.idea/
+
+# Ignore paths that contain generated content.
+files/
+sites/*/files
+sites/*/private
+sites/default/
+
+# Ignore default text files
+robots.txt
+/CHANGELOG.txt
+/COPYRIGHT.txt
+/INSTALL*.txt
+/LICENSE.txt
+/MAINTAINERS.txt
+/UPGRADE.txt
+/README.txt
+sites/README.txt
+sites/all/modules/README.txt
+sites/all/themes/README.txt
+lock/logs/att.txt
+lock/log.txt
+sites/all/modules/808/custom_services/pbd.json
+
+#ignore third part added scripts
+google*.html
+.ftpquota
+
+#ignore some file types
+*.zip
+*.rar
+*.mov
+*.mp4
+*.webm
+*.mp3
