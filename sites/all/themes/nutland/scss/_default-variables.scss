@@ -104,11 +104,6 @@ body{
   }
   .owl-dots {
     display: block !important;
-    background: url(../images/slide-bg.png);
-    background-size: cover;
-    background-position: center 0;
-    height: 55px;
-    padding-top: 30px;
     margin-top: -45px !important;
     z-index: 400;
     position: relative;
@@ -121,7 +116,7 @@ body{
     @media #{$x768}{display: none !important;}
   }
   .owl-nav {
-    display: none;
+    display: block !important;
   }
 }
 
@@ -859,13 +854,11 @@ form#uc-cart-empty-confirm {
 }
 
 .front{
-  section#block-system-main {
-    display: none;
-  }
   .main-container.container {
     width: inherit;
     max-width: inherit;
     padding: 0;
+    overflow-x: hidden;
   }
 }
 @media all and (max-width: 600px){

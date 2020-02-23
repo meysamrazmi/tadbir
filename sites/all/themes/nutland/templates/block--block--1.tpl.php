@@ -55,6 +55,9 @@
   <?php print render($title_suffix); ?>
 
 
+  <?php
+  $node1 = node_load(29);
+  ?>
     <footer id="footer">
         <section id="cards_footer">
             <div class="container">
@@ -67,14 +70,9 @@
                                 </a>
                             </div>
                             <div class="card-body">
-                                <p class="text-justify"> لورم ایپسوم متن
-                                    ساختگی با تولید سادگی نامفهوم از صنعت
-                                    چاپ و با استفاده از طراحان گرافیک است.
-                                    چاپگرها و متون بلکه روزنامه و مجله در
-                                    ستون و سطرآنچنان که لازم است و برای
-                                    شرایط فعلی تکنولوژی مورد نیاز و
-                                    کاربردهای متنوع با هدف بهبود ابزارهای
-                                    کاربردی می باشد.</p>
+                                <p class="text-justify">
+                                  <?php print $node1->body['und'][0]['value']; ?>
+                                </p>
                             </div>
                         </article>
                     </div>
