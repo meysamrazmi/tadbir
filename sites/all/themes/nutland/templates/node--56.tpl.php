@@ -114,49 +114,49 @@
     <div class="container">
       <ul class="accordion">
         <li>
-          <a href="<?php print $node1->field_link['und'][0]? $node1->field_link['und'][0]['value'] : ''; ?>" class="figures">
+          <a href="<?php print $node1->field_link['und'][0]['url']; ?>" class="figures">
             <img src="<?php print image_style_url("320x320", $node1->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption"><?php print $node1->title; ?></div>
           </a>
         </li>
         <li>
-          <a href="<?php print $node2->field_link['und'][0]? $node2->field_link['und'][0]['value'] : ''; ?>" class="figures">
+          <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="figures">
             <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption"><?php print $node2->title; ?></div>
           </a>
         </li>
         <li>
-          <a href="<?php print $node3->field_link['und'][0]? $node3->field_link['und'][0]['value'] : ''; ?>" class="figures">
+          <a href="<?php print $node3->field_link['und'][0]['url']; ?>" class="figures">
             <img src="<?php print image_style_url("320x320", $node3->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption"><?php print $node3->title; ?></div>
           </a>
         </li>
         <li>
-          <a href="<?php print $node4->field_link['und'][0]? $node4->field_link['und'][0]['value'] : ''; ?>" class="figures">
+          <a href="<?php print $node4->field_link['und'][0]['url']; ?>" class="figures">
             <img src="<?php print image_style_url("320x320", $node4->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption"><?php print $node4->title; ?></div>
           </a>
         </li>
         <li>
-          <a href="<?php print $node5->field_link['und'][0]? $node5->field_link['und'][0]['value'] : ''; ?>" class="figures">
+          <a href="<?php print $node5->field_link['und'][0]['url']; ?>" class="figures">
             <img src="<?php print image_style_url("320x320", $node5->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption"><?php print $node5->title; ?></div>
           </a>
         </li>
         <li>
-          <a href="<?php print $node6->field_link['und'][0]? $node6->field_link['und'][0]['value'] : ''; ?>" class="figures">
+          <a href="<?php print $node6->field_link['und'][0]['url']; ?>" class="figures">
             <img src="<?php print image_style_url("320x320", $node6->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption"><?php print $node6->title; ?></div>
           </a>
         </li>
         <li>
-          <a href="<?php print $node7->field_link['und'][0]? $node7->field_link['und'][0]['value'] : ''; ?>" class="figures">
+          <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="figures">
             <img src="<?php print image_style_url("320x320", $node7->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption"><?php print $node7->title; ?></div>
           </a>
         </li>
         <li>
-          <a href="<?php print $node8->field_link['und'][0]? $node8->field_link['und'][0]['value'] : ''; ?>" class="figures">
+          <a href="<?php print $node8->field_link['und'][0]['url']; ?>" class="figures">
             <img src="<?php print image_style_url("320x320", $node8->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption"><?php print $node8->title; ?></div>
           </a>

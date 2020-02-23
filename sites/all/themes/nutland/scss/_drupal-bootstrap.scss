@@ -3,7 +3,7 @@ $tablet:              "screen and (min-width: #{$screen-sm-min})";
 $normal:              "screen and (min-width: #{$screen-md-min})";
 $wide:                "screen and (min-width: #{$screen-lg-min})";
 $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
-
+@import url('/sites/all/libraries/persiandatepicker/persian-datepicker.min.css');
 // Drop shadows.
 @mixin box-shadow($shadow) {
   -webkit-box-shadow: $shadow;
@@ -45,6 +45,7 @@ html {
 }
 body {
   background-color: white !important;
+  font-family: fanum !important;
   // Fix horizontal scrolling on iOS devices.
   // https://www.drupal.org/node/1870076
   position: relative;
@@ -1013,6 +1014,7 @@ a {
       padding: 0px 4px;
       min-width: 50px;
       text-align: center;
+      cursor: pointer;
       #lang{
         border: none;
         outline: none;
@@ -1060,13 +1062,30 @@ a {
           }
         }
         .owl-item{
-          p{
+          .views-field-field-body{
             position: absolute;
-            top: 50%;
-            right: 10%;
-            transform: translate(-50%, -50%);
+            width: 100%;
+            height: 100%;
+            display: flex;
+            top: 0;
+            right: auto;
+            justify-content: center;
+            align-items: center;
+          }
+          .field-content{
             color: white;
             font-size: 32px;
+            width: 70%;
+            padding: 20px 20px 150px;
+            border: 1px solid #fff;
+            background-color: rgba(255, 255, 255, .2);
+            p{
+              border-right: 4px solid;
+              border-left: 4px solid;
+              display: table;
+              padding: 30px;
+              margin-right: -24px;
+            }
           }
         }
       }
@@ -1209,7 +1228,7 @@ a {
     @media (max-width: 768px) {
       .view-id-slideshow{
         img{
-          height: calc(90vh - 200px);
+          height: calc(90vh);
         }
         .owl-item{
           p{
@@ -1254,6 +1273,30 @@ a {
   }
   #block-system-main{
     .group-header{
+      .field-type-addthis{
+        position: absolute;
+        left: 1%;
+        top: 8%;
+        &:hover{
+          .field-items{
+            opacity: 1;
+          }
+        }
+        .field-items{
+          margin-left: 30px;
+          opacity: 0;
+        }
+        &:before{
+          content: '\e066';
+          font-family: "Glyphicons Halflings";
+          position: absolute;
+          left: 0;
+          margin-left: 5px;
+          font-size: 24px;
+          color: #6b6b6b;
+          cursor: pointer;
+        }
+      }
       .field-name-post-date{
         .even{
           float: left;
@@ -1381,7 +1424,45 @@ a {
       margin-bottom: 30px;
       padding-bottom: 30px;
       border-bottom: 1px solid #ccc;
-
+      form{
+        background-color: #eee;
+        padding: 5px 30px;
+        label{
+          display: none!important;
+        }
+        .form-control{
+          width: 200px!important;
+        }
+        .btn{
+          margin-top: 0 !important;
+        }
+        #edit-reset{
+          background: none;
+          border: none;
+          box-shadow: none;
+          &:before{
+            content: '\e030';
+            font-family: "Glyphicons Halflings";
+            margin: 7px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #4a4a4a;
+          }
+        }
+        #edit-created-wrapper{
+          .form-type-textfield{
+              &:after{
+                content: "\e109";
+                font-family: "Glyphicons Halflings";
+                position: relative;
+                left: 20px;
+                top: 5px;
+                color: #807d7d;
+              }
+            display: inline-flex;
+          }
+        }
+      }
     }
   }
   @media (max-width: 768px) {
@@ -1389,6 +1470,16 @@ a {
       .views-row{
         img{
           width: 100% !important;
+        }
+      }
+    }
+    .view-filters{
+      .form-control{
+        width: 100%;
+      }
+      #edit-created-wrapper{
+        .form-type-textfield{
+          margin: 5px 0 !important;
         }
       }
     }
@@ -1577,6 +1668,9 @@ a {
       }
     }
   }
+  @media (max-width: 768px) {
+
+  }
 }
 //index 2
 .page-node-56{
@@ -1584,5 +1678,70 @@ a {
     .page-header, .element-invisible, .tabs--primary, .action-links, .breadcrumb{
       display: none;
     }
+  }
+}
+// search in menu
+#block-google-cse-google-cse{
+  position: absolute;
+  top: 3.5%;
+  z-index: 100;
+  left: 10%;
+  max-width: 300px;
+  display: none;
+  .block-title{
+    display: none;
+  }
+  form{
+    padding: 10px;
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    div{
+      display: flex!important;
+      & .form-type-textfield{
+        margin-right: -30px;
+        &:before{
+          position: relative;
+          content: "";
+          border-style: solid;
+          top: -35px;
+          border-width: 0 15px 15px 15px;
+          border-color: transparent transparent #ffffff transparent;
+          right: 100%;
+        }
+      }
+    }
+    .control-label{
+      display: none!important;
+    }
+    input{
+      border: 1px solid #ccc !important;
+      background: none !important;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+    button{
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+      background-color: #00247a!important;
+    }
+  }
+  .gsc-control-cse{
+    border: none !important;
+    background: none !important;
+    height: 300px;
+    width: 100%;
+    overflow: auto;
+  }
+  ::-webkit-scrollbar {
+    width: 7px;
+    background-color: #00247a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #00247a;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #e9edf0;
+    border-right: 1px solid #ededed;
   }
 }

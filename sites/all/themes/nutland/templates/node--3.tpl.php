@@ -122,7 +122,7 @@
 
       <div class="col-md-4">
         <div class="in">
-          <a href="<?php print $node1->field_link['und'][0]['value']; ?>" class="items border_image">
+          <a href="<?php print $node1->field_link['und'][0]['url']; ?>" class="items border_image">
             <img src="<?php print image_style_url("320x320", $node1->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
@@ -137,7 +137,7 @@
 
       <div class="col-md-4">
         <div class="in">
-          <a href="<?php print $node2->field_link['und'][0]['value']; ?>" class="items border_image">
+          <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items border_image">
             <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
@@ -152,7 +152,7 @@
 
       <div class="col-md-4">
         <div class="in">
-          <a href="<?php print $node3->field_link['und'][0]? $node3->field_link['und'][0]['value'] : ''; ?>" class="items border_image">
+          <a href="<?php print $node3->field_link['und'][0]['url']; ?>" class="items border_image">
             <img src="<?php print image_style_url("320x320", $node3->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
@@ -191,7 +191,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <a href="<?php print $node1->field_link['und'][0]['value']; ?>" class="items_text border_image">
+          <a href="<?php print $node1->field_link['und'][0]['url'] ?>" class="items_text border_image">
             <img src="<?php print image_style_url("555x300", $node1->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
@@ -202,8 +202,8 @@
           </a>
         </div>
         <div class="col-md-6">
-          <a href="<?php print $node2->field_link['und'][0]['value']; ?>" class="items_text border_image">
-            <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
+          <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items_text border_image">
+            <img src="<?php print image_style_url("555x300", $node2->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
                 <h4><?php print $node2->title; ?></h4>
@@ -213,8 +213,8 @@
           </a>
         </div>
         <div class="col-md-6 mt-3">
-          <a href="<?php print $node5->field_link['und'][0]['value']; ?>" class="items_text border_image">
-            <img src="<?php print image_style_url("320x320", $node5->field_image['und'][0]['uri']); ?>" alt="">
+          <a href="<?php print $node5->field_link['und'][0]['url']; ?>" class="items_text border_image">
+            <img src="<?php print image_style_url("555x300", $node5->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
                 <h4><?php print $node5->title; ?></h4>
@@ -223,11 +223,11 @@
           </a>
         </div>
         <div class="col-md-6 mt-3">
-          <a href="<?php print $node6->field_link['und'][0]['value']; ?>" class="items_text border_image">
-            <img src="<?php print image_style_url("320x320", $node6->field_image['und'][0]['uri']); ?>" alt="">
+          <a href="<?php print $node6->field_link['und'][0]['url']; ?>" class="items_text border_image">
+            <img src="<?php print image_style_url("555x300", $node6->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
-                <h4>ب<?php print $node6->title; ?></h4>
+                <h4><?php print $node6->title; ?></h4>
               </div>
             </div>
           </a>
@@ -258,32 +258,32 @@
         </div>
         <div class="container">
           <div class="col-md-2 col-xs-6 col-sm-6">
-            <a href="<?php print $node7->field_link['und'][0]['value']; ?>" class="items_img">
+            <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="items_img">
               <img src="<?php print image_style_url("320x320", $node7->field_image['und'][0]['uri']); ?>" alt="">
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
-            <a href="<?php print $node8->field_link['und'][0]['value']; ?>" class="items_img">
+            <a href="<?php print $node8->field_link['und'][0]['url']; ?>" class="items_img">
               <img src="<?php print image_style_url("320x320", $node8->field_image['und'][0]['uri']); ?>" alt="">
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
-            <a href="<?php print $node9->field_link['und'][0]['value']; ?>" class="items_img">
+            <a href="<?php print $node9->field_link['und'][0]['url']; ?>" class="items_img">
               <img src="<?php print image_style_url("320x320", $node9->field_image['und'][0]['uri']); ?>" alt="">
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
-            <a href="<?php print $node10->field_link['und'][0]['value']; ?>" class="items_img">
+            <a href="<?php print $node10->field_link['und'][0]['url']; ?>" class="items_img">
               <img src="<?php print image_style_url("320x320", $node10->field_image['und'][0]['uri']); ?>" alt="">
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
-            <a href="<?php print $node11->field_link['und'][0]['value']; ?>" class="items_img">
+            <a href="<?php print $node11->field_link['und'][0]['url']; ?>" class="items_img">
               <img src="<?php print image_style_url("320x320", $node11->field_image['und'][0]['uri']); ?>" alt="">
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
-            <a href="<?php print $node12->field_link['und'][0]['value']; ?>" class="items_img">
+            <a href="<?php print $node12->field_link['und'][0]['url']; ?>" class="items_img">
               <img src="<?php print image_style_url("320x320", $node12->field_image['und'][0]['uri']); ?>" alt="">
             </a>
           </div>
