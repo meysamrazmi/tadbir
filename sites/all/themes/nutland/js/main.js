@@ -6,11 +6,28 @@ $(document).ready(function () {
     }, 1000);
   })
   $('#navbar .user-menu .navbar-right button').click(function(){
-    $(this).parent().toggleClass('open')
-  })
+    $(this).parent().toggleClass('open');
+  });
 })
-//show search on click magnify
+//show collapse menu
 $(document).ready(function(){
+  var isShow = false;
+  $("body").click(function(){
+    if(isShow) {
+      $(".px-5 div#navbar-collapse").addClass("collapse");
+      isShow = false;
+    }
+  });
+  $("#navbar .navbar-header button").click(function () {
+    if(!isShow) {
+      $(".px-5 div#navbar-collapse").removeClass("collapse");
+      $("#block-system-main-menu").css('transform', 'translate(10px,10px)');
+      setTimeout(function () {
+        isShow = true;
+      },1000);
+    }
+  });
+
   $(".mdi-magnify").click(function(){
     $("#block-google-cse-google-cse").css("display" ,"inline");
   });
