@@ -10,6 +10,9 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;
 }
+.main-container{
+  overflow-x: hidden!important;
+}
 html {
   &.overlay-open .navbar-fixed-top {
     z-index: 400;
@@ -945,6 +948,9 @@ a {
 }
 //main menu
 #navbar {
+  .collapse{
+    display: block !important;
+  }
   button{
     position: absolute;
     right: 0;
@@ -961,6 +967,7 @@ a {
     }
   }
   .navbar-collapse {
+    z-index: 100;
     .block-title {
       display: none;
     }
@@ -1059,6 +1066,9 @@ a {
 }
 //front page
 .page-node-3, .page-node-37{
+  #block-google-cse-google-cse{
+    top: 3.5%!important;
+  }
   .main-container{
     .page-header, .element-invisible, .tabs--primary, .action-links{
       display: none;
@@ -1256,7 +1266,9 @@ a {
     @media (max-width: 768px) {
       .view-id-slideshow{
         img{
-          height: calc(90vh);
+          object-fit: cover;
+          height: calc(90vh - 3.75rem);
+          max-height: calc(50vmax - 3.125rem);
         }
         .owl-item{
           p{
@@ -1738,16 +1750,13 @@ a {
   }
 }
 // search in menu
-#block-google-cse-google-cse{
+.form-search-menu{
   position: absolute;
-  top: 3.5%;
   z-index: 100;
   left: 10%;
   max-width: 300px;
+  bottom: -85%;
   display: none;
-  .block-title{
-    display: none;
-  }
   form{
     padding: 10px;
     background: white;
@@ -1755,21 +1764,19 @@ a {
     border-radius: 3px;
     div{
       display: flex!important;
+      margin-bottom: 0;
       & .form-type-textfield{
         margin-right: -30px;
         &:before{
           position: relative;
           content: "";
           border-style: solid;
-          top: -35px;
+          top: -40px;
           border-width: 0 15px 15px 15px;
           border-color: transparent transparent #ffffff transparent;
-          right: 100%;
+          right: 85%;
         }
       }
-    }
-    .control-label{
-      display: none!important;
     }
     input{
       border: 1px solid #ccc !important;
@@ -1781,24 +1788,68 @@ a {
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       background-color: #00247a!important;
+      max-height: 34px;
+      position: relative !important;
     }
   }
-  .gsc-control-cse{
-    border: none !important;
-    background: none !important;
-    height: 300px;
-    width: 100%;
-    overflow: auto;
-  }
-  ::-webkit-scrollbar {
-    width: 7px;
-    background-color: #00247a;
-  }
-  ::-webkit-scrollbar-thumb {
-    background-color: #00247a;
-  }
-  ::-webkit-scrollbar-track {
-    background-color: #e9edf0;
-    border-right: 1px solid #ededed;
+}
+//page-search
+.page-search-node, .page-search-google{
+  background-color: whitesmoke!important;
+  .main-container{
+    .page-header{
+      font-size: 21px;
+      font-weight: bold;
+      margin-top: 50px;
+      border-bottom: 0;
+    }
+    .breadcrumb{
+      display: none;
+    }
+    .tabs--primary{
+      display: flex;
+      background: whitesmoke;
+      border: navajowhite;
+      justify-content: center;
+      margin-bottom: 0;
+    }
+    #block-system-main{
+      background: white;
+      box-shadow: 0 0 5px 0 #ccc;
+      a{
+        color: #00247a;
+        text-decoration: none;
+      }
+      h2{
+        font-size: 20px;
+        text-align: center;
+      }
+      form{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        input{
+          background: #f5f5f5 !important;
+          border-radius: 0;
+          border: none;
+          box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+          margin: 25px 0;
+          text-align: center;
+          color: #00247a;
+        }
+        button{
+          background-color: #00247a;
+          border-color: #00247a;
+          z-index: 100;
+          position: relative;
+          left: 40px;
+          border-radius: 0;
+          box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 0 3px 1px -2px rgba(0,0,0,0.12), 0 1px 5px 0 rgba(0,0,0,0.2);
+        }
+        fieldset{
+          display: none;
+        }
+      }
+    }
   }
 }

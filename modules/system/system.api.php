@@ -4818,6 +4818,29 @@ function hook_filetransfer_info_alter(&$filetransfer_info) {
 }
 
 /**
+ * Alter the formatted date.
+ *
+ * @param string $formatted_date
+ *   The formatted date.
+ * @param array $context
+ *   An associative array containing:
+ *   - date_time: The PHP DateTime object with the date to format.
+ *   - timestamp: The Unix timestamp.
+ *   - type: The format to use as passed to format_date().
+ *   - format: If type is 'custom', a PHP date format string suitable for input
+ *     to date().
+ *   - langcode: The language code as passed to format_date().
+ *
+ * @see format_date()
+ */
+function hook_format_date_alter(&$formatted_date, array $context) {
+    $formatted_date .= ' ' . $context['type'];
+  }
+
+/**
+ * @} End of "addtogroup hooks".
+ */
+/**
  * @} End of "addtogroup hooks".
  */
 

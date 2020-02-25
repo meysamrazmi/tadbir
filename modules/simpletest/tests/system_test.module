@@ -498,6 +498,13 @@ function system_test_request_destination() {
 }
 
 /**
+ * Implements hook_format_date_alter().
+ */
+function system_test_format_date_alter(&$formatted_date, array $context) {
+    // Reverse the date string for testing purposes.
+    $formatted_date = strrev($formatted_date);
+  }
+/**
  * Page callback to run drupal_get_filename() on a particular module.
  */
 function system_test_drupal_get_filename() {

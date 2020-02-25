@@ -1264,7 +1264,29 @@ class DateTimeFunctionalTest extends DrupalWebTestCase {
       'group' => 'System',
     );
   }
+  /**
+   * Test format_date_alter.
+   */
+  function testFormatDateAlter() {
+    module_enable(array('system_test'));
+	// Setup date/time settings for Honolulu time.
+    variable_set('date_default_timezone', 'Pacific/Honolulu');
+    variable_set('configurable_timezones', 0);
+    variable_set('date_format_medium', 'Y-m-d H:i:s O');
 
+    // Create some nodes with different authored-on dates.
+    $date1 = '2007-01-31 21:00:00 -1000';
+    $date2 = '2007-07-31 21:00:00 -1000';
+    $node1 = $this->drupalCreateNode(array('created' => strtotime($date1), 'type' => 'article'));
+    $node2 = $this->drupalCreateNode(array('created' => strtotime($date2), 'type' => 'article'));
+
+    // Confirm date format was changed by implemented hook function.
+    $this->drupalGet("node/$node1->nid");
+    $this->assertText('0001- 00:00:12 13-10-7002', 'Date was reversed successfully.');
+    $this->drupalGet("node/$node2->nid");
+    $this->assertText('0001- 00:00:12 13-70-7002', 'Date was reversed successfully.');
+	module_disable(array('system_test'));
+  }
   function setUp() {
     parent::setUp(array('locale'));
 

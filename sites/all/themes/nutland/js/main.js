@@ -15,6 +15,7 @@ $(document).ready(function(){
   $("body").click(function(){
     if(isShow) {
       $(".px-5 div#navbar-collapse").addClass("collapse");
+      $("#block-system-main-menu").css('transform', 'translate(100%,0)');
       isShow = false;
     }
   });
@@ -29,27 +30,23 @@ $(document).ready(function(){
   });
 
   $(".mdi-magnify").click(function(){
-    $("#block-google-cse-google-cse").css("display" ,"inline");
-  });
-  $("#edit-sa").click(function(){
-    $("#block-google-cse-google-cse").css("background" , "white");
+    $(".form-search-menu").css("display" ,"inline");
   });
 });
 // search box in page news
-$.getScript("/sites/all/libraries/persiandatepicker/persian-date.min.js");
-$.getScript("/sites/all/libraries/persiandatepicker/persian-datepicker.min.js");
 $(".page-news .view-filters").ready(function(){
   $("#edit-title").attr("placeholder", "محصول مورد نظر را جستجو کنید");
-  $("input#edit-created-min").attr({ "value":" ", "placeholder": "از تاریخ"});
-  $("input#edit-created-max").attr({ "value":" ", "placeholder": "تا تاریخ"});
-  $("input#edit-created-min").persianDatepicker({
-    observer: true,
-    format: 'YYYY/MM/DD',
-    altField: '.observer-example-alt'
-  });
-  $("input#edit-created-max").persianDatepicker({
-    observer: true,
-    format: 'YYYY/MM/DD',
-    altField: '.observer-example-alt'
+  // $("input#edit-created-min").attr({ "value":" ", "placeholder": "از تاریخ"});
+  // $("input#edit-created-max").attr({ "value":" ", "placeholder": "تا تاریخ"});
+  $.getScript("/sites/all/libraries/persiandatepicker/persian-date.min.js").done(function(){
+    $.getScript("/sites/all/libraries/persiandatepicker/persian-datepicker.min.js").done(function(){
+      $("input#edit-created-min, input#edit-created-max").blur(function () {
+        $(this).persianDatepicker({
+          observer: true,
+          format: 'YYYY/MM/DD',
+          altField: '.observer-example-alt',
+        });
+      });
+    });
   });
 });

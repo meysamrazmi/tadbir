@@ -2084,16 +2084,29 @@ function format_date($timestamp, $type = 'medium', $format = '', $timezone = NUL
   // input string.
   // Paired backslashes are isolated to prevent errors in read-ahead evaluation.
   // The read-ahead expression ensures that A matches, but not \A.
+  $original_format = $format;
   $format = preg_replace(array('/\\\\\\\\/', '/(?<!\\\\)([AaeDlMTF])/'), array("\xEF\\\\\\\\\xFF", "\xEF\\\\\$1\$1\xFF"), $format);
 
   // Call date_format().
-  $format = date_format($date_time, $format);
+  $formatted_date = date_format($date_time, $format);
 
   // Pass the langcode to _format_date_callback().
   _format_date_callback(NULL, $langcode);
 
   // Translate the marked sequences.
-  return preg_replace_callback('/\xEF([AaeDlMTF]?)(.*?)\xFF/', '_format_date_callback', $format);
+  $formatted_date = preg_replace_callback('/\xEF([AaeDlMTF]?)(.*?)\xFF/', '_format_date_callback', $formatted_date);
+
+  // Allow modules to alter the result.
+  $context = array(
+    'date_time' => $date_time,
+    'timestamp' => $timestamp,
+    'type' => $type,
+    'format' => $original_format,
+    'timezone' => $timezone,
+    'langcode' => $langcode
+  );
+  drupal_alter('format_date', $formatted_date, $context);
+  return filter_xss_admin($formatted_date);
 }
 
 /**
