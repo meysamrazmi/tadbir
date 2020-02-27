@@ -13,6 +13,9 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
 .main-container{
   overflow-x: hidden!important;
 }
+.breadcrumb{
+  opacity: 0!important;
+}
 html {
   &.overlay-open .navbar-fixed-top {
     z-index: 400;
@@ -1027,6 +1030,9 @@ a {
       min-width: 50px;
       text-align: center;
       cursor: pointer;
+      &:before{
+        content: " ";
+      }
       #lang{
         border: none;
         outline: none;
@@ -1154,6 +1160,21 @@ a {
         .in{
           position: relative;
           overflow: hidden;
+          &:hover{
+            &:before{
+              border: 1px solid rgba(255, 255, 255, 1);
+            }
+          }
+          &:before{
+            content: "";
+            position: absolute;
+            top: 0.3125rem;
+            bottom: 0.3125rem;
+            right: 0.3125rem;
+            left: 0.3125rem;
+            border: 1px solid rgba(255, 255, 255, .5);
+            transition: all1 1s ease-in-out;
+          }
         }
         .items{
           &:hover{
@@ -1251,6 +1272,21 @@ a {
                   color: white;
                   border-top: 3px solid;
                   font-size: 18px;
+                }
+              }
+            }
+            .views-field-field-image{
+
+              .field-content{
+                &:before{
+                  content: "";
+                  position: absolute;
+                  top: 0.3125rem;
+                  bottom: 8rem;
+                  right: 0.3125rem;
+                  left: 0.3125rem;
+                  border: 1px solid rgba(255, 255, 255, 0.5);
+                  transition: all1 1s ease-in-out;
                 }
               }
             }
@@ -1373,7 +1409,7 @@ a {
             color: #212529;
             padding: 6px 8px;
             border-radius: 4px;
-            margin: 0 10px;
+            margin: 0 3px;
             text-decoration: none;
           }
         }
@@ -1389,15 +1425,26 @@ a {
       padding: 0.625rem;
       margin: 20px 0;
       line-height: 2;
+      &:before{
+        content: "\e257";
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        font-family: "Glyphicons Halflings";
+      }
       .views-field-field-news-category a{
         color: #fa3939 !important;
         text-decoration: none;
+        padding-right: 25px;
       }
       .views-field-title a{
         color: black;
         font-size: 16px;
         font-weight: bold;
         text-decoration: none;
+        padding-right: 25px;
       }
     }
   }
@@ -1407,6 +1454,11 @@ a {
   background: white;
   .main-container{
     overflow-x: hidden;
+  }
+  .view-header{
+    position: relative;
+    top: 75px;
+    float: left;
   }
   #block-system-main{
     margin-top: 200px;
@@ -1467,6 +1519,9 @@ a {
       form{
         background-color: #eee;
         padding: 5px 30px;
+        .views-exposed-widgets{
+          margin-bottom: 0!important;
+        }
         label{
           display: none!important;
         }
@@ -1522,6 +1577,9 @@ a {
           margin: 5px 0 !important;
         }
       }
+    }
+    .view-header{
+      display: none;
     }
   }
 }

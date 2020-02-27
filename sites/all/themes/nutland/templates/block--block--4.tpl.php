@@ -79,6 +79,12 @@
     top: 75px;
     padding: 50px 0;
   }
+  #sectionBanner .container{
+    max-width: 1000px;
+  }
+  #sectionBanner h1{
+    font-size: 2em;
+  }
   .block-title{
     display: none;
   }
@@ -95,11 +101,12 @@
     color: #fff
   }
   [dir] .caption_write {
-    padding: 1.25rem
+    padding: 2.25rem
   }
   [dir=rtl] .caption_write {
     border-right: 4px solid #fff;
     border-left: 4px solid #fff;
-    margin-right: -0.25rem
+    margin-right: -0.5rem
   }
+
 </style>

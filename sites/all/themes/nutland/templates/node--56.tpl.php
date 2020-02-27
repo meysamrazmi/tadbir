@@ -221,13 +221,13 @@
     position: absolute;
     bottom: 0.625rem;
     color: #00247a;
-    font-size: 1.25rem;
+    font-size: 18px;
     white-space: nowrap;
     display: none
   }
   [dir] .figures .caption {
     background-color: rgba(255, 255, 255, .8);
-    padding: 0.625rem
+    padding: 15px;
   }
   [dir=rtl] .figures .caption {
     right: 0;

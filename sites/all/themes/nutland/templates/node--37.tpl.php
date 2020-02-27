@@ -130,7 +130,7 @@
       </div>
       <div class="container">
         <div class="col-md-6">
-          <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
+          <img src="<?php print image_style_url("555x300", $node2->field_image['und'][0]['uri']); ?>" alt="">
         </div>
         <div class="col-md-6">
           <h6 class="text-primary"><?php print $node2->title; ?></h6>
