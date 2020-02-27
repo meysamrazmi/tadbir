@@ -8342,6 +8342,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   position: absolute;
   top: 50%;
   font-size: 72px;
+  transform: translate(0px, -50%);
   color: white;
   font-weight: 100;
 }
@@ -8556,7 +8557,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   overflow-x: hidden;
   padding: 0 15px;
 }
-.node-type-news .page-header, .node-type-news .tabs--primary, .node-type-news .action-links {
+.node-type-news .page-header, .node-type-news .action-links {
   display: none;
 }
 .node-type-news #block-system-main .group-header .field-type-addthis {
@@ -8612,6 +8613,26 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border-radius: 4px;
   margin: 0 3px;
   text-decoration: none;
+}
+.node-type-news #block-system-main .group-header .field-type-image .owl-next:hover span, .node-type-news #block-system-main .group-header .field-type-image .owl-prev:hover span {
+  color: #00247a;
+}
+.node-type-news #block-system-main .group-header .field-type-image .owl-next span, .node-type-news #block-system-main .group-header .field-type-image .owl-prev span {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  font-size: 72px;
+  color: #ccc;
+  font-weight: 100;
+}
+.node-type-news #block-system-main .group-header .field-type-image .owl-next span {
+  left: 0;
+}
+.node-type-news #block-system-main .group-header .field-type-image .owl-prev span {
+  right: 0;
+}
+.node-type-news #block-system-main .group-header .field-type-image .owl-item img {
+  width: inherit !important;
 }
 .node-type-news h2.block-title {
   opacity: 0;

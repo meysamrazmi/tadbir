@@ -50,3 +50,22 @@ $(".page-news .view-filters").ready(function(){
     });
   });
 });
+//carousel in node news
+$(".node-type-news").ready(function () {
+
+  $(document).ready(function () {
+    $(".field-type-image .field-items").addClass("owl-carousel owl-theme").owlCarousel({
+      rtl: true,
+      loop: true,
+      margin: 15,
+      responsiveClass: true,
+      nav: true,
+      autoplayTimeout: 3200,
+      responsive: {
+        0: { items: 1 },
+        600: { items: 1 },
+        1000: { items: 1 }
+      }
+    });
+  });
+});

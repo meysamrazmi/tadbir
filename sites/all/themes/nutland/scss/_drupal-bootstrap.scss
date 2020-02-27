@@ -1091,6 +1091,7 @@ a {
             position: absolute;
             top: 50%;
             font-size: 72px;
+            transform: translate(0px, -50%);
             color: white;
             font-weight: 100;
           }
@@ -1344,7 +1345,7 @@ a {
     overflow-x: hidden;
     padding: 0 15px;
   }
-  .page-header, .tabs--primary, .action-links{
+  .page-header, .action-links{
     display: none;
   }
   #block-system-main{
@@ -1411,6 +1412,39 @@ a {
             border-radius: 4px;
             margin: 0 3px;
             text-decoration: none;
+          }
+        }
+      }
+
+      .field-type-image{
+        .owl-next, .owl-prev{
+          &:hover{
+            span{
+              color: #00247a;
+            }
+          }
+          span{
+            position: absolute;
+            top: 50%;
+            transform: translate(0, -50%);
+            font-size: 72px;
+            color: #ccc;
+            font-weight: 100;
+          }
+        }
+        .owl-next{
+          span{
+            left: 0;
+          }
+        }
+        .owl-prev{
+          span{
+            right: 0;
+          }
+        }
+        .owl-item{
+          img{
+            width: inherit!important;
           }
         }
       }
