@@ -62,7 +62,7 @@
         <section id="cards_footer">
             <div class="container">
                 <div class="row mx-n4">
-                    <div class="col-md-5 px-4">
+                    <div class="col-md-5 px-4 col-sm-12 col-xs-12">
                         <article class="cards card-none">
                             <div class="card-header">
                                 <a href="/" class="logo_footer">
@@ -76,7 +76,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-3 mt-md-0 mt-3 px-4">
+                    <div class="col-md-3 mt-md-0 mt-3 px-4  col-sm-12 col-xs-12" >
                         <article class="cards card-none">
                             <div class="card-header">
                                 <h4 class="card-title">لینکهای مفید</h4>
@@ -90,7 +90,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-4">
+                    <div class="col-md-4 col-sm-12 col-xs-12">
                         <article class="cards card-none">
                             <div class="card-header">
                                 <h4 class="card-title">تماس با ما</h4>

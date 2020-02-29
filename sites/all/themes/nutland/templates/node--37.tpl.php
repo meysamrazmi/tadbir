@@ -95,7 +95,7 @@
     </span>
       <?php endif; ?>
     </header>
-    <?php print views_embed_view('slideshow', 'block'); ?>
+    <?php print views_embed_view('slideshow', 'block_1'); ?>
   <?php endif; ?>
 
     <?php

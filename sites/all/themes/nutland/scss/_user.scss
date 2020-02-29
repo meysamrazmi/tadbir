@@ -2,6 +2,7 @@
 #login-message {
   margin-bottom: 50px;
   font-size: 17px !important;
+  display: none;
 }
 
 #login-message span {
@@ -71,11 +72,13 @@ form#user-pass > div,form#user-login {
 
 .login-forgot {
   display: inline-block;
-  left: 150px;
-  border-bottom: 1px dotted #2196F3;
+  left: 23px;
   padding: 5px 10px;
   position: absolute;
-  bottom: 0px;
+  bottom: 100px;
+  a{
+    color: inherit;
+  }
 }
 
 #user-login #edit-actions {

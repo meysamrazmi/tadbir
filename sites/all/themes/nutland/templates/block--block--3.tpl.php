@@ -74,10 +74,24 @@
 <style>
   #block-block-3{
     position: absolute;
-    background: #7f7f7f;
     width: 100%;
     top: 75px;
     padding: 50px 0;
+    background: url(/sites/all/themes/nutland/images/sktemplate1.jpg);
+    background-position: center;
+    background-size: 100% 100%;
+  }
+  #block3{
+    z-index: 10;
+    position: relative;
+  }
+  #block-block-3:before{
+    content: " ";
+    background: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
   }
   #sectionBanner .container{
     max-width: 1000px;
