@@ -23,7 +23,7 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
   }
 }
 .main-container{
-  overflow-x: hidden!important;
+  overflow-x: hidden;
 }
 .breadcrumb{
   opacity: 0!important;
@@ -967,12 +967,10 @@ a {
   .container.px-5{
     padding: 0!important;
   }
-  .collapse{
-    display: block !important;
-  }
   button{
     position: absolute;
     right: 0;
+    top: 7px;
   }
   a.logo{
     margin-left: -15px;
@@ -1047,7 +1045,6 @@ a {
     }
   }
   .left-menu{
-    min-width: 220px;
     position: relative;
     ul{
       height: 85px;
@@ -1084,7 +1081,14 @@ a {
       }
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 768px) {
+      min-height: 65px;
+      a.logo{
+        img{
+          width: 150px;
+          max-height: 100px !important;
+        }
+      }
     ul.menu.nav{
       display: block!important;
       li .dropdown-menu{
@@ -1099,7 +1103,7 @@ a {
     .left-menu {
       position: absolute;
       left: 0;
-      top: -10px;
+      top: 5px;
       ul{
         height: 59px;
       }
@@ -1123,7 +1127,6 @@ a {
         min-width: 220px;
         padding-top: 25px;
         transition: all 1s ease;
-        transform: translate(100%, 0px);
         z-index: 100;
       }
     }
@@ -1133,12 +1136,12 @@ a {
       top: -10px;
     }
   }
-  @media (min-width: 768px) and (max-width: 999px) {
+  @media (min-width: 769px) and (max-width: 899px) {
     .container.px-5{
       li{
         padding: 0!important;
         font-size:12px ;
-        width: 80px;
+        width: 65px;
         a{
           padding: 10px 0;
         }
@@ -1147,24 +1150,28 @@ a {
         }
       }
       .left-menu{
-        width: 200px !important;
+        width: 190px !important;
       }
     }
+    a.logo img{
+      width: 90px;
+    }
   }
-  @media (min-width: 1000px) and (max-width: 1275px) {
+  @media (min-width: 900px) and (max-width: 1200px) {
     .container.px-5{
       padding: 0!important;
       .menu.nav{
         display: flex;
         justify-content: center;
         align-items: stretch;
+        max-height: 50px;
         li{
           display: flex;
           align-items: stretch;
           a{
             position: relative;
             display: flex;
-            padding: 10px 0.7vw;
+            padding: 10px 0.45vw;
             max-width: 98px;
             text-align: center;
             align-items: center;
@@ -1263,6 +1270,7 @@ a {
         }
       }
       .gozideha{
+        text-align: -webkit-center;
         .col-md-4{
           float: right;
         }
@@ -1429,6 +1437,8 @@ a {
         .col-md-4{
           margin: 10px;
           float: none!important;
+          max-width: 450px;
+          text-align: right;
         }
       }
       #sectionText{
@@ -1480,8 +1490,7 @@ a {
           opacity: 0;
         }
         &:before{
-          content: '\e066';
-          font-family: "Glyphicons Halflings";
+          content: url(/sites/all/themes/nutland/images/share.png);
           position: absolute;
           left: 0;
           margin-left: 5px;
@@ -1597,6 +1606,16 @@ a {
         padding-right: 25px;
       }
     }
+  }
+}
+.admin-menu{
+  .field-type-addthis{
+    top: 12% !important;
+  }
+}
+.not-logged-in{
+  ul.menu.nav li .dropdown-menu {
+    top: 80px!important;
   }
 }
 //news main page
@@ -2099,5 +2118,34 @@ a {
 .node-type-projects{
   .submitted{
     display: none;
+  }
+}
+//page-taxonomy-term
+.page-taxonomy-term{
+  .main-container.container{
+    #block-system-main{
+      .ds-2col-fluid{
+        box-shadow: 0px 0 3px 0px #ccc;
+        margin-bottom: 50px;
+        .group-left{
+          width: 25%!important;
+          .owl-dots, .owl-nav{
+            display: none;
+          }
+        }
+        .group-right{
+          width: 73%!important;
+          .field-name-post-date, .field-name-field-kholase{
+            color: #a2a2a2;
+            margin-top: 10px ;
+          }
+          a{
+            font-size: 18px;
+            text-decoration: none;
+            color: #00247a;
+          }
+        }
+      }
+    }
   }
 }

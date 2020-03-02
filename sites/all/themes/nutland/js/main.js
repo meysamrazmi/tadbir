@@ -11,24 +11,17 @@ $(document).ready(function () {
 })
 //show collapse menu
 $(document).ready(function(){
-  var isShow = false;
   $("body").click(function(){
-    if(isShow) {
       $(".px-5 div#navbar-collapse").addClass("collapse");
-      $("#block-system-main-menu").css('transform', 'translate(100%,0)');
       $("body").removeClass("over-open-menu");
-      isShow = false;
-    }
   });
-  $("#navbar .navbar-header button").click(function () {
-    if(!isShow) {
-      $(".px-5 div#navbar-collapse").removeClass("collapse");
-      $("#block-system-main-menu").css('transform', 'translate(10px,10px)');
+  $("#block-system-main-menu").click(function (ev) {
+    ev.stopPropagation();
+  });
+  $("#navbar .navbar-header button").click(function (ev) {
+    $(".px-5 div#navbar-collapse").removeClass("collapse");
       $("body").addClass("over-open-menu");
-      setTimeout(function () {
-        isShow = true;
-      },1000);
-    }
+      ev.stopPropagation();
   });
 
   $(".mdi-magnify").click(function(){

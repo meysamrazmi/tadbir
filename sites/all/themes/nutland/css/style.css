@@ -7312,7 +7312,7 @@ td.visible-print {
 }
 
 .main-container {
-  overflow-x: hidden !important;
+  overflow-x: hidden;
 }
 
 .breadcrumb {
@@ -8240,12 +8240,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 #navbar .container.px-5 {
   padding: 0 !important;
 }
-#navbar .collapse {
-  display: block !important;
-}
 #navbar button {
   position: absolute;
   right: 0;
+  top: 7px;
 }
 #navbar a.logo {
   margin-left: -15px;
@@ -8312,7 +8310,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   background: #00247a !important;
 }
 #navbar .left-menu {
-  min-width: 220px;
   position: relative;
 }
 #navbar .left-menu ul {
@@ -8347,7 +8344,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border: none;
   outline: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 768px) {
+  #navbar {
+    min-height: 65px;
+  }
+  #navbar a.logo img {
+    width: 150px;
+    max-height: 100px !important;
+  }
   #navbar ul.menu.nav {
     display: block !important;
   }
@@ -8362,7 +8366,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   #navbar .left-menu {
     position: absolute;
     left: 0;
-    top: -10px;
+    top: 5px;
   }
   #navbar .left-menu ul {
     height: 59px;
@@ -8383,7 +8387,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     min-width: 220px;
     padding-top: 25px;
     transition: all 1s ease;
-    transform: translate(100%, 0px);
     z-index: 100;
   }
   #navbar .logo.navbar-btn.pull-left {
@@ -8392,11 +8395,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     top: -10px;
   }
 }
-@media (min-width: 768px) and (max-width: 999px) {
+@media (min-width: 769px) and (max-width: 899px) {
   #navbar .container.px-5 li {
     padding: 0 !important;
     font-size: 12px;
-    width: 80px;
+    width: 65px;
   }
   #navbar .container.px-5 li a {
     padding: 10px 0;
@@ -8405,10 +8408,13 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     display: none;
   }
   #navbar .container.px-5 .left-menu {
-    width: 200px !important;
+    width: 190px !important;
+  }
+  #navbar a.logo img {
+    width: 90px;
   }
 }
-@media (min-width: 1000px) and (max-width: 1275px) {
+@media (min-width: 900px) and (max-width: 1200px) {
   #navbar .container.px-5 {
     padding: 0 !important;
   }
@@ -8416,6 +8422,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     display: flex;
     justify-content: center;
     align-items: stretch;
+    max-height: 50px;
   }
   #navbar .container.px-5 .menu.nav li {
     display: flex;
@@ -8424,7 +8431,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   #navbar .container.px-5 .menu.nav li a {
     position: relative;
     display: flex;
-    padding: 10px 0.7vw;
+    padding: 10px 0.45vw;
     max-width: 98px;
     text-align: center;
     align-items: center;
@@ -8502,6 +8509,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   flex: auto;
   display: block;
   background-color: #ccc;
+}
+.page-node-3 .main-container #node-3 .gozideha, .page-node-3 .main-container #node-37 .gozideha, .page-node-37 .main-container #node-3 .gozideha, .page-node-37 .main-container #node-37 .gozideha {
+  text-align: -webkit-center;
 }
 .page-node-3 .main-container #node-3 .gozideha .col-md-4, .page-node-3 .main-container #node-37 .gozideha .col-md-4, .page-node-37 .main-container #node-3 .gozideha .col-md-4, .page-node-37 .main-container #node-37 .gozideha .col-md-4 {
   float: right;
@@ -8645,6 +8655,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .page-node-3 .main-container .gozideha .col-md-4, .page-node-37 .main-container .gozideha .col-md-4 {
     margin: 10px;
     float: none !important;
+    max-width: 450px;
+    text-align: right;
   }
   .page-node-3 .main-container #sectionText .article, .page-node-37 .main-container #sectionText .article {
     margin: 0 10px;
@@ -8684,8 +8696,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   opacity: 0;
 }
 .node-type-news #block-system-main .group-header .field-type-addthis:before {
-  content: "";
-  font-family: "Glyphicons Halflings";
+  content: url(/sites/all/themes/nutland/images/share.png);
   position: absolute;
   left: 0;
   margin-left: 5px;
@@ -8774,6 +8785,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-weight: bold;
   text-decoration: none;
   padding-right: 25px;
+}
+
+.admin-menu .field-type-addthis {
+  top: 12% !important;
+}
+
+.not-logged-in ul.menu.nav li .dropdown-menu {
+  top: 80px !important;
 }
 
 .page-news {
@@ -9223,6 +9242,29 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 
 .node-type-projects .submitted {
   display: none;
+}
+
+.page-taxonomy-term .main-container.container #block-system-main .ds-2col-fluid {
+  box-shadow: 0px 0 3px 0px #ccc;
+  margin-bottom: 50px;
+}
+.page-taxonomy-term .main-container.container #block-system-main .ds-2col-fluid .group-left {
+  width: 25% !important;
+}
+.page-taxonomy-term .main-container.container #block-system-main .ds-2col-fluid .group-left .owl-dots, .page-taxonomy-term .main-container.container #block-system-main .ds-2col-fluid .group-left .owl-nav {
+  display: none;
+}
+.page-taxonomy-term .main-container.container #block-system-main .ds-2col-fluid .group-right {
+  width: 73% !important;
+}
+.page-taxonomy-term .main-container.container #block-system-main .ds-2col-fluid .group-right .field-name-post-date, .page-taxonomy-term .main-container.container #block-system-main .ds-2col-fluid .group-right .field-name-field-kholase {
+  color: #a2a2a2;
+  margin-top: 10px;
+}
+.page-taxonomy-term .main-container.container #block-system-main .ds-2col-fluid .group-right a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #00247a;
 }
 
 @font-face {
