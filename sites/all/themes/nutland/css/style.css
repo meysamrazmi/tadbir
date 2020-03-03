@@ -9267,6 +9267,95 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: #00247a;
 }
 
+.page-node-21 {
+  font-family: fanum !important;
+}
+.page-node-21 .main-container.container {
+  max-width: 1000px !important;
+}
+.page-node-21 .main-container.container .page-header {
+  display: none;
+}
+.page-node-21 .main-container.container #node-21 {
+  display: flex;
+  direction: ltr;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+.page-node-21 .main-container.container #node-21 .field-name-field-tozihat .field-items {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 25px;
+}
+.page-node-21 .main-container.container #node-21 form {
+  padding: 1.25rem;
+  background-color: #eee;
+  border-radius: 0.1875rem;
+  direction: rtl;
+  max-width: 50%;
+}
+.page-node-21 .main-container.container #node-21 form .control-label {
+  font-weight: 300 !important;
+}
+.page-node-21 .main-container.container #node-21 form .form-control {
+  padding: 0.375rem 0.75rem;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-shadow: none !important;
+}
+.page-node-21 .main-container.container #node-21 form .webform-component--name, .page-node-21 .main-container.container #node-21 form .webform-component--company, .page-node-21 .main-container.container #node-21 form .webform-component--email, .page-node-21 .main-container.container #node-21 form .webform-component--number {
+  width: 225px;
+  display: inline-block;
+}
+.page-node-21 .main-container.container #node-21 form .webform-component--name, .page-node-21 .main-container.container #node-21 form .webform-component--email {
+  margin-left: 10px;
+}
+.page-node-21 .main-container.container #node-21 form .form-actions {
+  text-align: -webkit-center;
+}
+.page-node-21 .main-container.container #node-21 form button {
+  background-color: #f90707 !important;
+  border-color: #ed0606 !important;
+  color: white;
+  width: 130px;
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
+    width: 215px !important;
+  }
+}
+@media (min-width: 769px) and (max-width: 999px) {
+  .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
+    width: 160px !important;
+  }
+}
+@media (min-width: 601px) and (max-width: 768px) {
+  .page-node-21 .main-container.container #node-21 {
+    display: block !important;
+    text-align: -webkit-center;
+  }
+  .page-node-21 .main-container.container #node-21 form {
+    max-width: 500px;
+  }
+  .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
+    width: 230px !important;
+  }
+}
+@media (max-width: 600px) {
+  .page-node-21 .main-container.container #node-21 {
+    display: block !important;
+    text-align: -webkit-center;
+  }
+  .page-node-21 .main-container.container #node-21 form {
+    max-width: 90%;
+  }
+  .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
+    width: inherit !important;
+    margin-left: 0 !important;
+  }
+}
+
 @font-face {
   font-family: "mat";
   src: url("../fonts/material/material.eot");

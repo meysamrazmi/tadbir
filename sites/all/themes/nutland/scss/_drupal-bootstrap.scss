@@ -2149,3 +2149,92 @@ a {
     }
   }
 }
+//contact us
+.page-node-21{
+  font-family: fanum!important;
+  .main-container.container{
+    max-width: 1000px!important;
+    .page-header{
+      display: none;
+    }
+    #node-21{
+      display: flex;
+      direction: ltr;
+      justify-content: space-around;
+      margin-top: 30px;
+      .field-name-field-tozihat{
+        .field-items{
+          border-bottom: 1px solid #ccc;
+          padding-bottom: 25px;
+        }
+      }
+      form{
+        padding: 1.25rem;
+        background-color: #eee;
+        border-radius: 0.1875rem;
+        direction: rtl;
+        max-width: 50%;
+        .control-label{
+          font-weight: 300!important;
+        }
+        .form-control{
+          padding: .375rem .75rem;
+          background-color: #fff;
+          background-clip: padding-box;
+          border: 1px solid #ced4da;
+          border-radius: .25rem;
+          box-shadow: none!important;
+        }
+        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number{
+          width: 225px;
+          display: inline-block;
+        }
+        .webform-component--name, .webform-component--email{
+          margin-left: 10px;
+        }
+        .form-actions{
+          text-align: -webkit-center;
+        }
+        button{
+          background-color: #f90707 !important;
+          border-color: #ed0606 !important;
+          color: white;
+          width: 130px;
+        }
+      }
+      @media (min-width: 1000px) and (max-width: 1200px) {
+
+        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
+          width: 215px !important;
+        }
+      }
+      @media (min-width: 769px) and (max-width: 999px) {
+        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
+          width: 160px !important;
+        }
+      }
+      @media (min-width: 601px) and (max-width: 768px) {
+        display: block!important;
+        text-align: -webkit-center;
+        form{
+          max-width: 500px;
+        }
+        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
+          width: 230px !important;
+        }
+      }
+
+      @media (max-width: 600px) {
+        display: block!important;
+        text-align: -webkit-center;
+        form{
+          max-width: 90%;
+        }
+        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
+          width: inherit !important;
+          margin-left: 0!important;
+        }
+      }
+    }
+  }
+}
