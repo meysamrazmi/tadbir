@@ -62,3 +62,10 @@ $(".page-news .view-filters").ready(function(){
        }
      });
  });
+ // page form
+
+$(".page-node-59 #block-system-main, #node-59").ready(function () {
+  $("form").addClass("container");
+  $(".webform-progressbar").addClass("col-md-3 col-sm-3 col-xs-12");
+
+});

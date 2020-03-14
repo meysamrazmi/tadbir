@@ -2159,7 +2159,6 @@ a {
     }
     #node-21{
       display: flex;
-      direction: ltr;
       justify-content: space-around;
       margin-top: 30px;
       .field-name-field-tozihat{
@@ -2235,6 +2234,105 @@ a {
           margin-left: 0!important;
         }
       }
+    }
+  }
+}
+// form
+.page-node-59{
+  .page-header{
+    display: none;
+  }
+  .main-container{
+    overflow-x: initial;
+  }
+  #block-system-main{
+     .col-md-3, .col-md-9{
+      float: right;
+    }
+    form{
+      max-width: 950px;
+      padding: 2rem 0 3rem 0;
+      background-color: #eee;
+      border-radius: 3px;
+      .webform-progressbar{
+        height: 100vh;
+        .webform-progressbar-outer{
+          padding: 2rem 0 3rem 0;
+          background-color: #eee;
+          border-radius: 3px;
+        }
+        .webform-progressbar-page{
+          padding: 10px 0;
+          &:hover{
+            color: #00247a;
+          }
+        }
+      }
+      .webform-progressbar:after{
+        content: '';
+        position: absolute;
+        top: -30px;
+        z-index: 5;
+        left: 0;
+        width: 20px;
+        height: 766px;
+        background: white;
+      }
+      .webform-progressbar:before {
+        content: "";
+        position: absolute;
+        top: 55%;
+        z-index: 5;
+        left: 0;
+        width: 253px;
+        height: 375px;
+        background: white;
+      }
+      .control-label{
+        font-weight: 300!important;
+      }
+      .form-control{
+        padding:6px 10px;
+        background-color: #fff;
+        background-clip: padding-box;
+        border: 1px solid #ced4da;
+        border-radius: .25rem;
+        box-shadow: none!important;
+      }
+      .form-actions{
+        text-align: left;
+        margin-left: 15px;
+        padding-top: 15px;
+        button{
+          background-color: #f90707!important;
+          border-color: #ed0606!important;
+          width: 200px;
+        }
+      }
+    }
+  }
+  @media (max-width: 1000px) and (min-width: 769px) {
+
+    .webform-progressbar:after{
+      height: 585px !important;
+    }
+    .webform-progressbar:before {
+      top: 110% !important;
+      height: 175px !important;
+    }
+    .webform-component--txt7, .webform-component--txt8, .webform-component--txt9{
+      float: left !important;
+    }
+    .form-actions button{
+      width: 150px!important;
+    }
+  }
+  @media (max-width: 768px){
+    .webform-progressbar:after{
+      display: none;
+    }
+    .webform-progressbar:before {
+      display: none;
     }
   }
 }

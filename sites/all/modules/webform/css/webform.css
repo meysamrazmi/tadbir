@@ -43,10 +43,14 @@ html.js input.webform-calendar {
   text-align: center;
 }
 .webform-progressbar-inner {
+  display: none;
+/*
   height: 1em;
   background-color: #74c421;
   height: 3px;
+ */
 }
+/*
 .webform-progressbar-outer {
   position: relative;
   border: 1px solid #356900;
@@ -55,7 +59,9 @@ html.js input.webform-calendar {
   margin: 0.35em -1px 2em;
   background-color: white;
 }
+ */
 .webform-progressbar-page {
+  /*
   position: absolute;
   width: 7px;
   height: 7px;
@@ -63,13 +69,17 @@ html.js input.webform-calendar {
   border: 1px solid #356900;
   background-color: white;
   border-radius: 5px;
+  */
+  display: block;
 }
+/*
 .webform-progressbar-page.completed {
   background-color: #74c421;
 }
 .webform-progressbar-page.current {
   background-color: #74c421;
 }
+*/
 .webform-progressbar-page .webform-progressbar-page-number {
   display: none;
 }

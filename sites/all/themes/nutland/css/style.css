@@ -9278,7 +9278,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .page-node-21 .main-container.container #node-21 {
   display: flex;
-  direction: ltr;
   justify-content: space-around;
   margin-top: 30px;
 }
@@ -9353,6 +9352,100 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
     width: inherit !important;
     margin-left: 0 !important;
+  }
+}
+
+.page-node-59 .page-header {
+  display: none;
+}
+.page-node-59 .main-container {
+  overflow-x: initial;
+}
+.page-node-59 #block-system-main .col-md-3, .page-node-59 #block-system-main .col-md-9 {
+  float: right;
+}
+.page-node-59 #block-system-main form {
+  max-width: 950px;
+  padding: 2rem 0 3rem 0;
+  background-color: #eee;
+  border-radius: 3px;
+}
+.page-node-59 #block-system-main form .webform-progressbar {
+  height: 100vh;
+}
+.page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-outer {
+  padding: 2rem 0 3rem 0;
+  background-color: #eee;
+  border-radius: 3px;
+}
+.page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-page {
+  padding: 10px 0;
+}
+.page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-page:hover {
+  color: #00247a;
+}
+.page-node-59 #block-system-main form .webform-progressbar:after {
+  content: "";
+  position: absolute;
+  top: -30px;
+  z-index: 5;
+  left: 0;
+  width: 20px;
+  height: 766px;
+  background: white;
+}
+.page-node-59 #block-system-main form .webform-progressbar:before {
+  content: "";
+  position: absolute;
+  top: 55%;
+  z-index: 5;
+  left: 0;
+  width: 253px;
+  height: 375px;
+  background: white;
+}
+.page-node-59 #block-system-main form .control-label {
+  font-weight: 300 !important;
+}
+.page-node-59 #block-system-main form .form-control {
+  padding: 6px 10px;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  box-shadow: none !important;
+}
+.page-node-59 #block-system-main form .form-actions {
+  text-align: left;
+  margin-left: 15px;
+  padding-top: 15px;
+}
+.page-node-59 #block-system-main form .form-actions button {
+  background-color: #f90707 !important;
+  border-color: #ed0606 !important;
+  width: 200px;
+}
+@media (max-width: 1000px) and (min-width: 769px) {
+  .page-node-59 .webform-progressbar:after {
+    height: 585px !important;
+  }
+  .page-node-59 .webform-progressbar:before {
+    top: 110% !important;
+    height: 175px !important;
+  }
+  .page-node-59 .webform-component--txt7, .page-node-59 .webform-component--txt8, .page-node-59 .webform-component--txt9 {
+    float: left !important;
+  }
+  .page-node-59 .form-actions button {
+    width: 150px !important;
+  }
+}
+@media (max-width: 768px) {
+  .page-node-59 .webform-progressbar:after {
+    display: none;
+  }
+  .page-node-59 .webform-progressbar:before {
+    display: none;
   }
 }
 
