@@ -14,7 +14,7 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
   &:after{
     position: absolute;
     top: 0;
-    z-index: 1;
+    z-index: 5;
     background: rgba(0,0,0,0.7);
     width: 100%;
     height: 100%;
@@ -966,6 +966,7 @@ a {
 #navbar {
   .container.px-5{
     padding: 0!important;
+    max-height: 70px;
   }
   button{
     position: absolute;
@@ -993,8 +994,9 @@ a {
       display: flex;
       align-items: center;
       justify-content: center;
+      padding-right: 0!important;
       li {
-        padding: 20px 0;
+        padding: 15px 0;
         &:after{
           content: "";
           position: absolute;
@@ -1017,7 +1019,7 @@ a {
         }
         .dropdown-menu{
           position: fixed;
-          top: 105px;
+          top: 95px;
           right: 0;
           a{
             background: none!important;
@@ -1047,15 +1049,15 @@ a {
   .left-menu{
     position: relative;
     ul{
-      height: 85px;
+      height: 70px;
       display: flex;
       justify-content: center;
       align-items: stretch;
       margin: 0;
       li{
         list-style: none;
-        padding: 0px 4px;
-        min-width: 50px;
+        padding: 0px ;
+        min-width: 40px;
         cursor: pointer;
         border-right: 1px solid #eee;
         display: flex;
@@ -1098,6 +1100,8 @@ a {
       }
       .dropdown:hover .dropdown-menu{
         display: block!important;
+        margin-bottom: 20px;
+        text-align: right;
       }
     }
     .left-menu {
@@ -1132,16 +1136,16 @@ a {
     }
     .logo.navbar-btn.pull-left{
       position: absolute;
-      right: 20%;
+      right: 14%;
       top: -10px;
     }
   }
   @media (min-width: 769px) and (max-width: 899px) {
-    .container.px-5{
+    .container.px-5 .navbar-collapse{
       li{
         padding: 0!important;
         font-size:12px ;
-        width: 65px;
+        width: 75px;
         a{
           padding: 10px 0;
         }
@@ -1149,15 +1153,29 @@ a {
           display: none;
         }
       }
-      .left-menu{
-        width: 190px !important;
-      }
     }
     a.logo img{
       width: 90px;
     }
+    .left-menu{
+      width: 130px !important;
+    }
   }
-  @media (min-width: 900px) and (max-width: 1200px) {
+
+  @media (min-width: 900px) and (max-width: 999px) {
+    .container.px-5 .navbar-collapse{
+      li{
+        padding: 0!important;
+        font-size:12px ;
+        a{
+          padding: 10px ;
+          max-width: 90px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  @media (min-width: 1000px) and (max-width: 1200px) {
     .container.px-5{
       padding: 0!important;
       .menu.nav{
@@ -1171,8 +1189,8 @@ a {
           a{
             position: relative;
             display: flex;
-            padding: 10px 0.45vw;
-            max-width: 98px;
+            padding: 10px;
+            max-width: 110px;
             text-align: center;
             align-items: center;
           }
@@ -1626,7 +1644,7 @@ a {
   }
   .view-header{
     position: relative;
-    top: 75px;
+    top: 70px;
     float: left;
   }
   #block-system-main{
@@ -1687,31 +1705,41 @@ a {
       border-bottom: 1px solid #ccc;
       form{
         background-color: #eee;
-        padding: 5px 30px;
+        padding: 5px 0;
+        max-width: 1115px;
         .views-exposed-widgets{
           margin-bottom: 0!important;
         }
         label{
           display: none!important;
         }
-        .form-control{
-          width: 200px;
+        .form-control, .form-item-created-max{
+          width: 220px;
         }
-        .btn{
-          margin-top: 0 !important;
-        }
+
         #edit-reset{
           background: none;
           border: none;
           box-shadow: none;
-          position: absolute;
+          margin-top: -15px;
+          padding: 0;
           &:before{
             content: '\e030';
             font-family: "Glyphicons Halflings";
             margin: 7px;
             font-size: 16px;
-            font-weight: 700;
             color: #4a4a4a;
+          }
+        }
+        #edit-submit-news{
+          background-color: #f90707;
+          border-color: #ed0606;
+          font-size: 0;
+          &:before{
+            content: "\e003";
+            font-family: "Glyphicons Halflings";
+            font-size: 16px;
+            color: white;
           }
         }
         #edit-created-wrapper{
@@ -1731,23 +1759,20 @@ a {
     }
   }
   @media (max-width: 768px) {
-    .view-content{
-      .views-row{
-        .field-content{
-          display: flex;
-          align-items: center;
-          justify-content: center;
-        }
-      }
-    }
     .view-filters{
+      .form-item-created-max{
+        width: 300px!important;
+      }
       .form-control{
-        width: 100%;
+        width: 275px!important;
       }
       #edit-created-wrapper{
         .form-type-textfield{
           margin: 5px 0 !important;
         }
+      }
+      #edit-reset{
+        margin-top: 5px!important;
       }
     }
     .view-header{
@@ -1757,9 +1782,56 @@ a {
       top: 50px!important;
     }
   }
-  @media (min-width: 769px) and (max-width: 1200px) {
-    .form-control{
-      width: 200px;
+  @media (min-width: 1000px) and (max-width: 1200px) {
+    .form-control, .form-item-created-max{
+      width: 180px !important;
+    }
+    form{
+      max-width: 920px!important;
+      #edit-submit-news{
+        margin-top: -15px!important;
+      }
+    }
+  }
+
+  @media (min-width: 991px) and (max-width: 1000px) {
+    form{
+      max-width: 920px!important;
+      .form-control, .form-item-created-max{
+        width: 180px !important;
+      }
+      .views-submit-button{
+        margin-top: -15px;
+      }
+    }
+  }
+  @media (min-width: 769px) and (max-width: 990px) {
+    .form-control, .form-item-created-max{
+      width: 125px !important;
+    }
+    form{
+      max-width: 700px!important;
+      #edit-submit-news{
+        margin-top: -15px!important;
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .view-content{
+      .views-row{
+        .field-content{
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    #edit-title-wrapper{
+      width: 96% !important;
+    }
+    .form-type-textfield{
+      width: 100% !important;
     }
   }
 }
@@ -1977,7 +2049,7 @@ a {
       }
     }
     .mejs-container{
-      width: 100%!important;
+      max-width: 100%!important;
     }
     .mediaelement-video{
       width: 100%;
@@ -2015,7 +2087,7 @@ a {
 .form-search-menu{
   position: absolute;
   z-index: 100;
-  left: 10%;
+  left: 3%;
   max-width: 300px;
   bottom: -85%;
   display: none;
@@ -2051,6 +2123,7 @@ a {
       border-bottom-right-radius: 0;
       background-color: #00247a!important;
       max-height: 34px;
+      margin-top: -7px;
       position: relative !important;
     }
   }
@@ -2153,7 +2226,6 @@ a {
 .page-node-21{
   font-family: fanum!important;
   .main-container.container{
-    max-width: 1000px!important;
     .page-header{
       display: none;
     }
@@ -2161,7 +2233,9 @@ a {
       display: flex;
       justify-content: space-around;
       margin-top: 30px;
+      max-width: 1000px;
       .field-name-field-tozihat{
+        margin-right: -25px;
         .field-items{
           border-bottom: 1px solid #ccc;
           padding-bottom: 25px;
@@ -2173,6 +2247,7 @@ a {
         border-radius: 0.1875rem;
         direction: rtl;
         max-width: 50%;
+        margin: 0;
         .control-label{
           font-weight: 300!important;
         }
@@ -2185,7 +2260,7 @@ a {
           box-shadow: none!important;
         }
         .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number{
-          width: 225px;
+          width: 232px;
           display: inline-block;
         }
         .webform-component--name, .webform-component--email{
@@ -2204,17 +2279,21 @@ a {
       @media (min-width: 1000px) and (max-width: 1200px) {
 
         .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
-          width: 215px !important;
+          width: 217px !important;
         }
       }
       @media (min-width: 769px) and (max-width: 999px) {
         .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
           width: 160px !important;
         }
+        .field-name-field-tozihat {
+          margin-right: 0 !important;
+        }
       }
       @media (min-width: 601px) and (max-width: 768px) {
         display: block!important;
         text-align: -webkit-center;
+
         form{
           max-width: 500px;
         }
@@ -2255,9 +2334,9 @@ a {
       background-color: #eee;
       border-radius: 3px;
       .webform-progressbar{
-        height: 100vh;
+        height: 68vh;
         .webform-progressbar-outer{
-          padding: 2rem 0 3rem 0;
+          padding: 0 20px;
           background-color: #eee;
           border-radius: 3px;
         }
@@ -2267,6 +2346,11 @@ a {
             color: #00247a;
           }
         }
+        .webform-progressbar-page.current{
+          color: #00247a;
+          margin-right: 5px;
+          font-weight: bold;
+        }
       }
       .webform-progressbar:after{
         content: '';
@@ -2275,17 +2359,17 @@ a {
         z-index: 5;
         left: 0;
         width: 20px;
-        height: 766px;
+        height: 400px;
         background: white;
       }
       .webform-progressbar:before {
         content: "";
         position: absolute;
-        top: 55%;
+        top: 75%;
         z-index: 5;
         left: 0;
         width: 253px;
-        height: 375px;
+        height: 200px;
         background: white;
       }
       .control-label{
@@ -2312,13 +2396,14 @@ a {
     }
   }
   @media (max-width: 1000px) and (min-width: 769px) {
-
+    .webform-progressbar-outer{
+      padding: 0!important;
+    }
     .webform-progressbar:after{
       height: 585px !important;
     }
     .webform-progressbar:before {
-      top: 110% !important;
-      height: 175px !important;
+      height: 220px !important;
     }
     .webform-component--txt7, .webform-component--txt8, .webform-component--txt9{
       float: left !important;
@@ -2328,11 +2413,62 @@ a {
     }
   }
   @media (max-width: 768px){
+    form{
+      margin: 0 10px;
+
+      .webform-progressbar {
+        height: 60vh!important;
+      }
+    }
+
+    .main-container{
+      overflow-x: hidden!important;
+    }
     .webform-progressbar:after{
       display: none;
     }
     .webform-progressbar:before {
       display: none;
+    }
+  }
+}
+.page-node-done{
+  .main-container{
+    .webform-progressbar{
+      display: none;
+    }
+    .webform-confirmation{
+      margin: 50px 0;
+      border-right: 2px solid #00247a;
+      font-size: 16px;
+      border-top-right-radius: 25px;
+      padding-right: 15px;
+      border-bottom-right-radius: 25px;
+      border-top-left-radius: 25px;
+      border-bottom-left-radius: 25px;
+      border-left: 2px solid;
+      text-align: center;
+    }
+    .links{
+      text-align: center;
+      a{
+        background: white;
+        color: #00247a;
+        text-decoration: none;
+        padding: 8px 20px;
+        border-radius: 20px;
+        border: 1px solid #00247a;
+        transition: all .3s ease-in-out;
+        &:hover{
+          background: #00247a;
+          color: white;
+        }
+      }
+    }
+  }
+  @media (max-width: 768px) {
+    .webform-confirmation{
+      border: none!important;
     }
   }
 }

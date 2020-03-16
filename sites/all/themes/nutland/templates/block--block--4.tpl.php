@@ -76,7 +76,7 @@
     position: absolute;
     width: 100%;
     top: 75px;
-    padding: 50px 0;
+    padding: 40px 0;
     background: url(/sites/all/themes/nutland/images/sktemplate1.jpg);
     background-position: center;
     background-size: 100% 100%;
@@ -90,7 +90,7 @@
     width: 100%;
   }
   #block4{
-    z-index: 10;
+    z-index: 5;
     position: relative;
   }
   #sectionBanner .container{
@@ -103,7 +103,7 @@
     display: none;
   }
   .caption_slide {
-    min-height: 18.75rem
+    min-height: 160px
   }
   [dir] .caption_slide {
     border: 1px solid #fff;

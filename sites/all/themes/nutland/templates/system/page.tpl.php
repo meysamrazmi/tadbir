@@ -125,9 +125,6 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
                         <option value="انگلیسی">انگلیسی</option>
                     </select>
                 </li>
-                <li>
-                    <a href="#">مرکز تماس</a>
-                </li>
             </ul>
         </div>
     <div class="form-search-menu">

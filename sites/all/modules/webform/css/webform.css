@@ -40,7 +40,7 @@ html.js input.webform-calendar {
 .webform-progressbar {
   width: 90%;
   margin: 0 auto;
-  text-align: center;
+  text-align: justify;
 }
 .webform-progressbar-inner {
   display: none;
@@ -79,12 +79,12 @@ html.js input.webform-calendar {
 .webform-progressbar-page.current {
   background-color: #74c421;
 }
-*/
-.webform-progressbar-page .webform-progressbar-page-number {
-  display: none;
-}
 .webform-progressbar-page .webform-progressbar-page-label {
   position: relative;
   top: 10px;
-  margin: 0 -10em;
+  margin: 0 -50px 0 0px;
+}
+*/
+.webform-progressbar-page .webform-progressbar-page-number {
+  display: none;
 }

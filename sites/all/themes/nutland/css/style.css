@@ -7303,7 +7303,7 @@ td.visible-print {
 .over-open-menu:after {
   position: absolute;
   top: 0;
-  z-index: 1;
+  z-index: 5;
   background: rgba(0, 0, 0, 0.7);
   width: 100%;
   height: 100%;
@@ -8239,6 +8239,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 
 #navbar .container.px-5 {
   padding: 0 !important;
+  max-height: 70px;
 }
 #navbar button {
   position: absolute;
@@ -8267,9 +8268,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-right: 0 !important;
 }
 #navbar .navbar-collapse ul.menu.nav li {
-  padding: 20px 0;
+  padding: 15px 0;
 }
 #navbar .navbar-collapse ul.menu.nav li:after {
   content: "";
@@ -8291,7 +8293,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 #navbar .navbar-collapse ul.menu.nav li .dropdown-menu {
   position: fixed;
-  top: 105px;
+  top: 95px;
   right: 0;
 }
 #navbar .navbar-collapse ul.menu.nav li .dropdown-menu a {
@@ -8313,7 +8315,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   position: relative;
 }
 #navbar .left-menu ul {
-  height: 85px;
+  height: 70px;
   display: flex;
   justify-content: center;
   align-items: stretch;
@@ -8321,8 +8323,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 #navbar .left-menu ul li {
   list-style: none;
-  padding: 0px 4px;
-  min-width: 50px;
+  padding: 0px;
+  min-width: 40px;
   cursor: pointer;
   border-right: 1px solid #eee;
   display: flex;
@@ -8362,6 +8364,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
   #navbar ul.menu.nav .dropdown:hover .dropdown-menu {
     display: block !important;
+    margin-bottom: 20px;
+    text-align: right;
   }
   #navbar .left-menu {
     position: absolute;
@@ -8391,30 +8395,41 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
   #navbar .logo.navbar-btn.pull-left {
     position: absolute;
-    right: 20%;
+    right: 14%;
     top: -10px;
   }
 }
 @media (min-width: 769px) and (max-width: 899px) {
-  #navbar .container.px-5 li {
+  #navbar .container.px-5 .navbar-collapse li {
     padding: 0 !important;
     font-size: 12px;
-    width: 65px;
+    width: 75px;
   }
-  #navbar .container.px-5 li a {
+  #navbar .container.px-5 .navbar-collapse li a {
     padding: 10px 0;
   }
-  #navbar .container.px-5 li:nth-child(7) {
+  #navbar .container.px-5 .navbar-collapse li:nth-child(7) {
     display: none;
-  }
-  #navbar .container.px-5 .left-menu {
-    width: 190px !important;
   }
   #navbar a.logo img {
     width: 90px;
   }
+  #navbar .left-menu {
+    width: 130px !important;
+  }
 }
-@media (min-width: 900px) and (max-width: 1200px) {
+@media (min-width: 900px) and (max-width: 999px) {
+  #navbar .container.px-5 .navbar-collapse li {
+    padding: 0 !important;
+    font-size: 12px;
+  }
+  #navbar .container.px-5 .navbar-collapse li a {
+    padding: 10px;
+    max-width: 90px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
   #navbar .container.px-5 {
     padding: 0 !important;
   }
@@ -8431,8 +8446,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   #navbar .container.px-5 .menu.nav li a {
     position: relative;
     display: flex;
-    padding: 10px 0.45vw;
-    max-width: 98px;
+    padding: 10px;
+    max-width: 110px;
     text-align: center;
     align-items: center;
   }
@@ -8803,7 +8818,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .page-news .view-header {
   position: relative;
-  top: 75px;
+  top: 70px;
   float: left;
 }
 .page-news #block-system-main {
@@ -8860,7 +8875,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .page-news #block-system-main .view-filters form {
   background-color: #eee;
-  padding: 5px 30px;
+  padding: 5px 0;
+  max-width: 1115px;
 }
 .page-news #block-system-main .view-filters form .views-exposed-widgets {
   margin-bottom: 0 !important;
@@ -8868,25 +8884,33 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-news #block-system-main .view-filters form label {
   display: none !important;
 }
-.page-news #block-system-main .view-filters form .form-control {
-  width: 200px;
-}
-.page-news #block-system-main .view-filters form .btn {
-  margin-top: 0 !important;
+.page-news #block-system-main .view-filters form .form-control, .page-news #block-system-main .view-filters form .form-item-created-max {
+  width: 220px;
 }
 .page-news #block-system-main .view-filters form #edit-reset {
   background: none;
   border: none;
   box-shadow: none;
-  position: absolute;
+  margin-top: -15px;
+  padding: 0;
 }
 .page-news #block-system-main .view-filters form #edit-reset:before {
   content: "";
   font-family: "Glyphicons Halflings";
   margin: 7px;
   font-size: 16px;
-  font-weight: 700;
   color: #4a4a4a;
+}
+.page-news #block-system-main .view-filters form #edit-submit-news {
+  background-color: #f90707;
+  border-color: #ed0606;
+  font-size: 0;
+}
+.page-news #block-system-main .view-filters form #edit-submit-news:before {
+  content: "";
+  font-family: "Glyphicons Halflings";
+  font-size: 16px;
+  color: white;
 }
 .page-news #block-system-main .view-filters form #edit-created-wrapper .form-type-textfield {
   display: inline-flex;
@@ -8900,16 +8924,17 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: #807d7d;
 }
 @media (max-width: 768px) {
-  .page-news .view-content .views-row .field-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .page-news .view-filters .form-item-created-max {
+    width: 300px !important;
   }
   .page-news .view-filters .form-control {
-    width: 100%;
+    width: 275px !important;
   }
   .page-news .view-filters #edit-created-wrapper .form-type-textfield {
     margin: 5px 0 !important;
+  }
+  .page-news .view-filters #edit-reset {
+    margin-top: 5px !important;
   }
   .page-news .view-header {
     display: none;
@@ -8918,9 +8943,50 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     top: 50px !important;
   }
 }
-@media (min-width: 769px) and (max-width: 1200px) {
-  .page-news .form-control {
-    width: 200px;
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .page-news .form-control, .page-news .form-item-created-max {
+    width: 180px !important;
+  }
+  .page-news form {
+    max-width: 920px !important;
+  }
+  .page-news form #edit-submit-news {
+    margin-top: -15px !important;
+  }
+}
+@media (min-width: 991px) and (max-width: 1000px) {
+  .page-news form {
+    max-width: 920px !important;
+  }
+  .page-news form .form-control, .page-news form .form-item-created-max {
+    width: 180px !important;
+  }
+  .page-news form .views-submit-button {
+    margin-top: -15px;
+  }
+}
+@media (min-width: 769px) and (max-width: 990px) {
+  .page-news .form-control, .page-news .form-item-created-max {
+    width: 125px !important;
+  }
+  .page-news form {
+    max-width: 700px !important;
+  }
+  .page-news form #edit-submit-news {
+    margin-top: -15px !important;
+  }
+}
+@media (max-width: 600px) {
+  .page-news .view-content .views-row .field-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .page-news #edit-title-wrapper {
+    width: 96% !important;
+  }
+  .page-news .form-type-textfield {
+    width: 100% !important;
   }
 }
 
@@ -9108,7 +9174,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     display: block !important;
   }
   .page-videos .mejs-container {
-    width: 100% !important;
+    max-width: 100% !important;
   }
   .page-videos .mediaelement-video {
     width: 100%;
@@ -9141,7 +9207,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .form-search-menu {
   position: absolute;
   z-index: 100;
-  left: 10%;
+  left: 3%;
   max-width: 300px;
   bottom: -85%;
   display: none;
@@ -9179,6 +9245,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border-bottom-right-radius: 0;
   background-color: #00247a !important;
   max-height: 34px;
+  margin-top: -7px;
   position: relative !important;
 }
 
@@ -9270,9 +9337,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-21 {
   font-family: fanum !important;
 }
-.page-node-21 .main-container.container {
-  max-width: 1000px !important;
-}
 .page-node-21 .main-container.container .page-header {
   display: none;
 }
@@ -9280,6 +9344,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: flex;
   justify-content: space-around;
   margin-top: 30px;
+  max-width: 1000px;
+}
+.page-node-21 .main-container.container #node-21 .field-name-field-tozihat {
+  margin-right: -25px;
 }
 .page-node-21 .main-container.container #node-21 .field-name-field-tozihat .field-items {
   border-bottom: 1px solid #ccc;
@@ -9291,6 +9359,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border-radius: 0.1875rem;
   direction: rtl;
   max-width: 50%;
+  margin: 0;
 }
 .page-node-21 .main-container.container #node-21 form .control-label {
   font-weight: 300 !important;
@@ -9304,7 +9373,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   box-shadow: none !important;
 }
 .page-node-21 .main-container.container #node-21 form .webform-component--name, .page-node-21 .main-container.container #node-21 form .webform-component--company, .page-node-21 .main-container.container #node-21 form .webform-component--email, .page-node-21 .main-container.container #node-21 form .webform-component--number {
-  width: 225px;
+  width: 232px;
   display: inline-block;
 }
 .page-node-21 .main-container.container #node-21 form .webform-component--name, .page-node-21 .main-container.container #node-21 form .webform-component--email {
@@ -9321,12 +9390,15 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 @media (min-width: 1000px) and (max-width: 1200px) {
   .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
-    width: 215px !important;
+    width: 217px !important;
   }
 }
 @media (min-width: 769px) and (max-width: 999px) {
   .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
     width: 160px !important;
+  }
+  .page-node-21 .main-container.container #node-21 .field-name-field-tozihat {
+    margin-right: 0 !important;
   }
 }
 @media (min-width: 601px) and (max-width: 768px) {
@@ -9371,10 +9443,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border-radius: 3px;
 }
 .page-node-59 #block-system-main form .webform-progressbar {
-  height: 100vh;
+  height: 68vh;
 }
 .page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-outer {
-  padding: 2rem 0 3rem 0;
+  padding: 0 20px;
   background-color: #eee;
   border-radius: 3px;
 }
@@ -9384,6 +9456,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-page:hover {
   color: #00247a;
 }
+.page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-page.current {
+  color: #00247a;
+  margin-right: 5px;
+  font-weight: bold;
+}
 .page-node-59 #block-system-main form .webform-progressbar:after {
   content: "";
   position: absolute;
@@ -9391,17 +9468,17 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   z-index: 5;
   left: 0;
   width: 20px;
-  height: 766px;
+  height: 400px;
   background: white;
 }
 .page-node-59 #block-system-main form .webform-progressbar:before {
   content: "";
   position: absolute;
-  top: 55%;
+  top: 75%;
   z-index: 5;
   left: 0;
   width: 253px;
-  height: 375px;
+  height: 200px;
   background: white;
 }
 .page-node-59 #block-system-main form .control-label {
@@ -9426,12 +9503,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   width: 200px;
 }
 @media (max-width: 1000px) and (min-width: 769px) {
+  .page-node-59 .webform-progressbar-outer {
+    padding: 0 !important;
+  }
   .page-node-59 .webform-progressbar:after {
     height: 585px !important;
   }
   .page-node-59 .webform-progressbar:before {
-    top: 110% !important;
-    height: 175px !important;
+    height: 220px !important;
   }
   .page-node-59 .webform-component--txt7, .page-node-59 .webform-component--txt8, .page-node-59 .webform-component--txt9 {
     float: left !important;
@@ -9441,11 +9520,57 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
 }
 @media (max-width: 768px) {
+  .page-node-59 form {
+    margin: 0 10px;
+  }
+  .page-node-59 form .webform-progressbar {
+    height: 60vh !important;
+  }
+  .page-node-59 .main-container {
+    overflow-x: hidden !important;
+  }
   .page-node-59 .webform-progressbar:after {
     display: none;
   }
   .page-node-59 .webform-progressbar:before {
     display: none;
+  }
+}
+
+.page-node-done .main-container .webform-progressbar {
+  display: none;
+}
+.page-node-done .main-container .webform-confirmation {
+  margin: 50px 0;
+  border-right: 2px solid #00247a;
+  font-size: 16px;
+  border-top-right-radius: 25px;
+  padding-right: 15px;
+  border-bottom-right-radius: 25px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  border-left: 2px solid;
+  text-align: center;
+}
+.page-node-done .main-container .links {
+  text-align: center;
+}
+.page-node-done .main-container .links a {
+  background: white;
+  color: #00247a;
+  text-decoration: none;
+  padding: 8px 20px;
+  border-radius: 20px;
+  border: 1px solid #00247a;
+  transition: all 0.3s ease-in-out;
+}
+.page-node-done .main-container .links a:hover {
+  background: #00247a;
+  color: white;
+}
+@media (max-width: 768px) {
+  .page-node-done .webform-confirmation {
+    border: none !important;
   }
 }
 
