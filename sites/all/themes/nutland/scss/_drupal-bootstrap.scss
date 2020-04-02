@@ -1483,7 +1483,7 @@ a {
   }
 }
 //type news
-.node-type-news{
+.node-type-news, .node-type-article{
   background: white;
   .main-container{
     overflow-x: hidden;
@@ -2470,5 +2470,120 @@ a {
     .webform-confirmation{
       border: none!important;
     }
+  }
+}
+//article
+.node-type-article{
+  background: white;
+  .main-container{
+    overflow-x: unset !important;
+    padding: 0 15px;
+  }
+  .page-header, .action-links{
+    display: none;
+  }
+  #block-system-main{
+    .group-header{
+      .field-type-addthis{
+        position: absolute;
+        left: 1%;
+        top: 8%;
+        &:hover{
+          .field-items{
+            opacity: 1;
+          }
+        }
+        .field-items{
+          margin-left: 30px;
+          opacity: 0;
+        }
+        &:before{
+          content: url(/sites/all/themes/nutland/images/share.png);
+          position: absolute;
+          left: 0;
+          margin-left: 5px;
+          font-size: 24px;
+          color: #6b6b6b;
+          cursor: pointer;
+        }
+      }
+      .field-name-post-date{
+        .even{
+          float: left;
+          color: #a2a2a2;
+        }
+      }
+      .field-name-field-article-category{
+        a{
+          color: #fa3939 !important;
+        }
+      }
+      .field-name-title{
+        h5{
+          font-size: 18px;
+          border-bottom: 1px solid #ddd;
+          margin-bottom: 25px;
+          padding-bottom: 15px;
+        }
+      }
+      .field-name-field-image{
+        text-align: -webkit-center;
+      }
+      .field-name-field-article-body{
+        text-align: justify !important;
+        line-height: 2;
+        margin: 30px 0;
+      }
+      .field-name-field-article-tags{
+        .field-items{
+          display: flex;
+          a{
+            border: 1px solid #ccc;
+            color: #212529;
+            padding: 6px 8px;
+            border-radius: 4px;
+            margin: 0 3px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+  }
+  h2.block-title{
+    opacity: 0;
+  }
+  .view-display-id-block_1{
+    .views-row{
+      border: 1px solid #ccc;
+      padding: 0.625rem;
+      margin: 20px 0;
+      line-height: 2;
+      &:before{
+        content: "\e257";
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 15px;
+        font-family: "Glyphicons Halflings";
+      }
+      .views-field-field-article-category a{
+        color: #fa3939 !important;
+        text-decoration: none;
+        padding-right: 25px;
+      }
+      .views-field-title a{
+        color: black;
+        font-size: 16px;
+        font-weight: bold;
+        text-decoration: none;
+        padding-right: 25px;
+      }
+    }
+  }
+}
+.admin-menu{
+  .field-type-addthis{
+    top: 12% !important;
   }
 }
