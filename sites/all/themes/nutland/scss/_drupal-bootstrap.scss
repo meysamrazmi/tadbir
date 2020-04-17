@@ -2210,100 +2210,6 @@ a {
     }
   }
 }
-//contact us
-.page-node-21{
-  font-family: fanum!important;
-  .main-container.container{
-    .page-header{
-      display: none;
-    }
-    #node-21{
-      display: flex;
-      justify-content: space-around;
-      margin-top: 30px;
-      max-width: 1000px;
-      .field-name-field-tozihat{
-        margin-right: -25px;
-        .field-items{
-          border-bottom: 1px solid #ccc;
-          padding-bottom: 25px;
-        }
-      }
-      form{
-        padding: 1.25rem;
-        background-color: #eee;
-        border-radius: 0.1875rem;
-        direction: rtl;
-        max-width: 50%;
-        margin: 0;
-        .control-label{
-          font-weight: 300!important;
-        }
-        .form-control{
-          padding: .375rem .75rem;
-          background-color: #fff;
-          background-clip: padding-box;
-          border: 1px solid #ced4da;
-          border-radius: .25rem;
-          box-shadow: none!important;
-        }
-        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number{
-          width: 232px;
-          display: inline-block;
-        }
-        .webform-component--name, .webform-component--email{
-          margin-left: 10px;
-        }
-        .form-actions{
-          text-align: -webkit-center;
-        }
-        button{
-          background-color: #f90707 !important;
-          border-color: #ed0606 !important;
-          color: white;
-          width: 130px;
-        }
-      }
-      @media (min-width: 1000px) and (max-width: 1200px) {
-
-        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
-          width: 217px !important;
-        }
-      }
-      @media (min-width: 769px) and (max-width: 999px) {
-        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
-          width: 160px !important;
-        }
-        .field-name-field-tozihat {
-          margin-right: 0 !important;
-        }
-      }
-      @media (min-width: 601px) and (max-width: 768px) {
-        display: block!important;
-        text-align: -webkit-center;
-
-        form{
-          max-width: 500px;
-        }
-        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
-          width: 230px !important;
-        }
-      }
-
-      @media (max-width: 600px) {
-        display: block!important;
-        text-align: -webkit-center;
-        form{
-          max-width: 90%;
-        }
-        .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
-          width: inherit !important;
-          margin-left: 0!important;
-        }
-      }
-    }
-  }
-}
 // form
 .page-node-59{
   .page-header{
@@ -2583,6 +2489,153 @@ a {
   ul.menu li:nth-child(2):hover{
     #block-block-5{
       display: block!important;
+    }
+  }
+}
+//contact us
+.page-node-5{
+  .main-container.container{
+    width: 100%;
+    padding-right:0!important;
+    .breadcrumb, .page-header, .tabs--primary, .action-links{
+      display: none;
+    }
+    #node-5{
+      #content{
+        max-width: 1100px;
+        margin: auto;
+        background: white;
+        position: relative;
+        top: -125px;
+        .text{
+          line-height: 2;
+          text-align: justify;
+          padding: 40px 25px;
+        }
+        h4{
+          border-bottom: 2px solid #ccc;
+          padding-bottom: 10px;
+          color: #00247a;
+        }
+        .tab-contact{
+          .tab-info {
+            position: relative;
+            padding: 50px 0;
+            .menu {
+              display:flex;
+              border-bottom: 2px solid #ccc;
+              max-width: 1100px;
+              div {
+                width:17%;
+                position: relative;
+                top: 10px;
+                text-align: center;
+                font-size: 16px;
+                &:hover {
+                  color: #00247a;
+                }
+              }
+              div.active {
+                font-weight: bold;
+              }
+            }
+            .tab--1-of-3 {
+              width: 100%;
+            }
+            .tab--2-of-3 {
+              width: 100%;
+              margin-bottom: 25px;
+              ul.nacc {
+                position: relative;
+                height: 0;
+                list-style: none;
+                margin: 0;
+                padding: 25px;
+                transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+                min-height:100px;
+                background: rgba(255, 255, 255, 0.55);
+                li {
+                  opacity: 0;
+                  transform: translateX(50px);
+                  position: absolute;
+                  list-style: none;
+                  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+                }
+                li.active {
+                  transition-delay: .3s;
+                  z-index: 2;
+                  opacity: 1;
+                  transform: translateX(0px);
+                }
+              }
+            }
+          }
+        }
+        .form{
+          text-align: -webkit-center;
+          form{
+            max-width: 65%;
+            margin-top:20px;
+            margin: 40px 0;
+            text-align: right;
+            .control-label{
+              font-weight: 300!important;
+            }
+            .form-control{
+              padding: 0.375rem 0.75rem;
+              background-color: #eee;
+              border: 1px solid #ced4da;
+              border-radius: 0;
+            }
+            .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number{
+              width: 49%;
+              display: inline-block;
+            }
+            .webform-component--name, .webform-component--email{
+              margin-left: 10px;
+            }
+            .form-actions{
+              text-align: -webkit-center;
+            }
+            button{
+              background-color: #00247a !important;
+              border-color: #00247a !important;
+              border-radius:0 ;
+              color: white;
+              width: 130px;
+              float: left;
+              position: relative;
+              top: -45px;
+
+            }
+          }
+        }
+        .social{
+          text-align: -webkit-center;
+          margin: 50px 0;
+          .list{
+            display: inline-flex;
+            a{
+              color: #484e4c;
+              font-size: 40px;
+              margin: 1px 10px;
+              text-decoration: none;
+            }
+            li{
+              list-style: none;
+              &:before{
+                font-family: icomoon !important;
+                content: "\e997";
+              }
+            }
+          }
+        }
+      }
+    }
+    @media (max-width: 830px) {
+      .webform-component--name, .webform-component--company, .webform-component--email, .webform-component--number {
+        width: 100% !important;
+      }
     }
   }
 }

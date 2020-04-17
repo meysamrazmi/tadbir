@@ -9325,99 +9325,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: #00247a;
 }
 
-.page-node-21 {
-  font-family: fanum !important;
-}
-.page-node-21 .main-container.container .page-header {
-  display: none;
-}
-.page-node-21 .main-container.container #node-21 {
-  display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
-  max-width: 1000px;
-}
-.page-node-21 .main-container.container #node-21 .field-name-field-tozihat {
-  margin-right: -25px;
-}
-.page-node-21 .main-container.container #node-21 .field-name-field-tozihat .field-items {
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 25px;
-}
-.page-node-21 .main-container.container #node-21 form {
-  padding: 1.25rem;
-  background-color: #eee;
-  border-radius: 0.1875rem;
-  direction: rtl;
-  max-width: 50%;
-  margin: 0;
-}
-.page-node-21 .main-container.container #node-21 form .control-label {
-  font-weight: 300 !important;
-}
-.page-node-21 .main-container.container #node-21 form .form-control {
-  padding: 0.375rem 0.75rem;
-  background-color: #fff;
-  background-clip: padding-box;
-  border: 1px solid #ced4da;
-  border-radius: 0.25rem;
-  box-shadow: none !important;
-}
-.page-node-21 .main-container.container #node-21 form .webform-component--name, .page-node-21 .main-container.container #node-21 form .webform-component--company, .page-node-21 .main-container.container #node-21 form .webform-component--email, .page-node-21 .main-container.container #node-21 form .webform-component--number {
-  width: 232px;
-  display: inline-block;
-}
-.page-node-21 .main-container.container #node-21 form .webform-component--name, .page-node-21 .main-container.container #node-21 form .webform-component--email {
-  margin-left: 10px;
-}
-.page-node-21 .main-container.container #node-21 form .form-actions {
-  text-align: -webkit-center;
-}
-.page-node-21 .main-container.container #node-21 form button {
-  background-color: #f90707 !important;
-  border-color: #ed0606 !important;
-  color: white;
-  width: 130px;
-}
-@media (min-width: 1000px) and (max-width: 1200px) {
-  .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
-    width: 217px !important;
-  }
-}
-@media (min-width: 769px) and (max-width: 999px) {
-  .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
-    width: 160px !important;
-  }
-  .page-node-21 .main-container.container #node-21 .field-name-field-tozihat {
-    margin-right: 0 !important;
-  }
-}
-@media (min-width: 601px) and (max-width: 768px) {
-  .page-node-21 .main-container.container #node-21 {
-    display: block !important;
-    text-align: -webkit-center;
-  }
-  .page-node-21 .main-container.container #node-21 form {
-    max-width: 500px;
-  }
-  .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
-    width: 230px !important;
-  }
-}
-@media (max-width: 600px) {
-  .page-node-21 .main-container.container #node-21 {
-    display: block !important;
-    text-align: -webkit-center;
-  }
-  .page-node-21 .main-container.container #node-21 form {
-    max-width: 90%;
-  }
-  .page-node-21 .main-container.container #node-21 .webform-component--name, .page-node-21 .main-container.container #node-21 .webform-component--company, .page-node-21 .main-container.container #node-21 .webform-component--email, .page-node-21 .main-container.container #node-21 .webform-component--number {
-    width: inherit !important;
-    margin-left: 0 !important;
-  }
-}
-
 .page-node-59 .page-header {
   display: none;
 }
@@ -9668,6 +9575,146 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .page-node ul.menu li:nth-child(2):hover #block-block-5 {
   display: block !important;
+}
+
+.page-node-5 .main-container.container {
+  width: 100%;
+  padding-right: 0 !important;
+}
+.page-node-5 .main-container.container .breadcrumb, .page-node-5 .main-container.container .page-header, .page-node-5 .main-container.container .tabs--primary, .page-node-5 .main-container.container .action-links {
+  display: none;
+}
+.page-node-5 .main-container.container #node-5 #content {
+  max-width: 1100px;
+  margin: auto;
+  background: white;
+  position: relative;
+  top: -125px;
+}
+.page-node-5 .main-container.container #node-5 #content .text {
+  line-height: 2;
+  text-align: justify;
+  padding: 40px 25px;
+}
+.page-node-5 .main-container.container #node-5 #content h4 {
+  border-bottom: 2px solid #ccc;
+  padding-bottom: 10px;
+  color: #00247a;
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info {
+  position: relative;
+  padding: 50px 0;
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .menu {
+  display: flex;
+  border-bottom: 2px solid #ccc;
+  max-width: 1100px;
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .menu div {
+  width: 17%;
+  position: relative;
+  top: 10px;
+  text-align: center;
+  font-size: 16px;
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .menu div:hover {
+  color: #00247a;
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .menu div.active {
+  font-weight: bold;
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .tab--1-of-3 {
+  width: 100%;
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .tab--2-of-3 {
+  width: 100%;
+  margin-bottom: 25px;
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .tab--2-of-3 ul.nacc {
+  position: relative;
+  height: 0;
+  list-style: none;
+  margin: 0;
+  padding: 25px;
+  transition: 0.5s all cubic-bezier(0.075, 0.82, 0.165, 1);
+  min-height: 100px;
+  background: rgba(255, 255, 255, 0.55);
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .tab--2-of-3 ul.nacc li {
+  opacity: 0;
+  transform: translateX(50px);
+  position: absolute;
+  list-style: none;
+  transition: 1s all cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .tab--2-of-3 ul.nacc li.active {
+  transition-delay: 0.3s;
+  z-index: 2;
+  opacity: 1;
+  transform: translateX(0px);
+}
+.page-node-5 .main-container.container #node-5 #content .form {
+  text-align: -webkit-center;
+}
+.page-node-5 .main-container.container #node-5 #content .form form {
+  max-width: 65%;
+  margin-top: 20px;
+  margin: 40px 0;
+  text-align: right;
+}
+.page-node-5 .main-container.container #node-5 #content .form form .control-label {
+  font-weight: 300 !important;
+}
+.page-node-5 .main-container.container #node-5 #content .form form .form-control {
+  padding: 0.375rem 0.75rem;
+  background-color: #eee;
+  border: 1px solid #ced4da;
+  border-radius: 0;
+}
+.page-node-5 .main-container.container #node-5 #content .form form .webform-component--name, .page-node-5 .main-container.container #node-5 #content .form form .webform-component--company, .page-node-5 .main-container.container #node-5 #content .form form .webform-component--email, .page-node-5 .main-container.container #node-5 #content .form form .webform-component--number {
+  width: 49%;
+  display: inline-block;
+}
+.page-node-5 .main-container.container #node-5 #content .form form .webform-component--name, .page-node-5 .main-container.container #node-5 #content .form form .webform-component--email {
+  margin-left: 10px;
+}
+.page-node-5 .main-container.container #node-5 #content .form form .form-actions {
+  text-align: -webkit-center;
+}
+.page-node-5 .main-container.container #node-5 #content .form form button {
+  background-color: #00247a !important;
+  border-color: #00247a !important;
+  border-radius: 0;
+  color: white;
+  width: 130px;
+  float: left;
+  position: relative;
+  top: -45px;
+}
+.page-node-5 .main-container.container #node-5 #content .social {
+  text-align: -webkit-center;
+  margin: 50px 0;
+}
+.page-node-5 .main-container.container #node-5 #content .social .list {
+  display: inline-flex;
+}
+.page-node-5 .main-container.container #node-5 #content .social .list a {
+  color: #484e4c;
+  font-size: 40px;
+  margin: 1px 10px;
+  text-decoration: none;
+}
+.page-node-5 .main-container.container #node-5 #content .social .list li {
+  list-style: none;
+}
+.page-node-5 .main-container.container #node-5 #content .social .list li:before {
+  font-family: icomoon !important;
+  content: "";
+}
+@media (max-width: 830px) {
+  .page-node-5 .main-container.container .webform-component--name, .page-node-5 .main-container.container .webform-component--company, .page-node-5 .main-container.container .webform-component--email, .page-node-5 .main-container.container .webform-component--number {
+    width: 100% !important;
+  }
 }
 
 @font-face {

@@ -62,7 +62,7 @@
   $node1 = node_load(20);
   $node2 = node_load(10);
   $node3 = node_load(9);
-  $node4 = node_load(8);
+  $node4 = node_load(9);
   $node5 = node_load(7);
   $node6 = node_load(6);
   $node7 = node_load(31);
