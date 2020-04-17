@@ -97,7 +97,7 @@
     </header>
     <?php print views_embed_view('slideshow', 'block'); ?>
   <?php endif; ?>
-  <div class="container gozideha">
+  <div class="container" id="gozideha" >
 
     <div class="header_title">
       <h5 class="mb-0">گزیده ها</h5>
@@ -109,61 +109,54 @@
     $node4 = node_load(8);
     $node5 = node_load(7);
     $node6 = node_load(6);
-    $node7 = node_load(31);
-    $node8 = node_load(32);
-    $node9 = node_load(33);
-    $node10 = node_load(34);
+    $node7 = node_load(36);
+    $node8 = node_load(34);
+    $node9 = node_load(31);
+    $node10 = node_load(32);
     $node11 = node_load(35);
-    $node12 = node_load(36);
+    $node12 = node_load(33);
     //    print $node->title;
     //    print '<img src="'. image_style_url("320x320", $node->field_image['und'][0]['uri']) .'">';
     ?>
     <div class="row">
 
       <div class="col-md-4">
-        <div class="in">
-          <a href="<?php print $node1->field_link['und'][0]['url']; ?>" class="items border_image">
-            <img src="<?php print image_style_url("320x320", $node1->field_image['und'][0]['uri']); ?>" alt="">
-            <div class="caption_wrap">
-              <div class="caption">
-                <h4><?php print $node1->title; ?></h4>
-                <span><?php print $node1->field_tozih['und'][0]['value']; ?></span>
-              </div>
+        <a href="<?php print $node1->field_link['und'][0]['url']; ?>" class="items border_image">
+          <img src="<?php print image_style_url("320x320", $node1->field_image['und'][0]['uri']); ?>" alt="">
+          <div class="caption_wrap">
+            <div class="caption">
+              <h4><?php print $node1->title; ?></h4>
+              <span><?php print $node1->field_tozih['und'][0]['value']; ?></span>
             </div>
-            <div class="line_effect"><span class="lineInner"></span></div>
-          </a>
-        </div>
+          </div>
+          <div class="line_effect"><span class="lineInner"></span></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items border_image">
+          <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
+          <div class="caption_wrap">
+            <div class="caption">
+              <h4><?php print $node2->title; ?></h4>
+              <span><?php print $node2->field_tozih['und'][0]['value']; ?></span>
+            </div>
+          </div>
+          <div class="line_effect"><span class="lineInner"></span></div>
+        </a>
+      </div>
+      <div class="col-md-4">
+        <a href="<?php print $node3->field_link['und'][0]['url']; ?>" class="items border_image">
+          <img src="<?php print image_style_url("320x320", $node3->field_image['und'][0]['uri']); ?>" alt="">
+          <div class="caption_wrap">
+            <div class="caption">
+              <h4><?php print $node3->title; ?></h4>
+              <span><?php print $node3->field_tozih['und'][0]['value']; ?></span>
+            </div>
+          </div>
+          <div class="line_effect"><span class="lineInner"></span></div>
+        </a>
       </div>
 
-      <div class="col-md-4">
-        <div class="in">
-          <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items border_image">
-            <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
-            <div class="caption_wrap">
-              <div class="caption">
-                <h4><?php print $node2->title; ?></h4>
-                <span><?php print $node2->field_tozih['und'][0]['value']; ?></span>
-              </div>
-            </div>
-            <div class="line_effect"><span class="lineInner"></span></div>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-md-4">
-        <div class="in">
-          <a href="<?php print $node3->field_link['und'][0]['url']; ?>" class="items border_image">
-            <img src="<?php print image_style_url("320x320", $node3->field_image['und'][0]['uri']); ?>" alt="">
-            <div class="caption_wrap">
-              <div class="caption">
-                <h4><?php print $node3->title; ?></h4>
-                <span><?php print $node3->field_tozih['und'][0]['value']; ?></span>
-              </div>
-            </div>
-            <div class="line_effect"><span class="lineInner"></span></div>
-          </a>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -173,7 +166,7 @@
     <section>
       <div class="container">
         <div class="article">
-          <h4><?php print $node4->title; ?></h4>
+          <h4 style="font-weight: 700"><?php print $node4->title; ?></h4>
           <h4><?php print $node4->field_tozih['und'][0]['value']; ?></h4>
           <P class="caption_article">
             <?php print $node4->body['und'][0]['value']; ?>
@@ -191,7 +184,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <a href="<?php print $node1->field_link['und'][0]['url'] ?>" class="items_text border_image">
+          <a href="<?php print $node1->field_link['und'][0]['url'] ?>" class="items_text border_image items">
             <img src="<?php print image_style_url("555x300", $node1->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
@@ -199,10 +192,11 @@
                 <span><?php print $node1->field_tozih['und'][0]['value']; ?></span>
               </div>
             </div>
+            <div class="line_effect"><span class="lineInner"></span></div>
           </a>
         </div>
         <div class="col-md-6">
-          <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items_text border_image">
+          <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items_text border_image items">
             <img src="<?php print image_style_url("555x300", $node2->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
@@ -210,26 +204,29 @@
                 <span><?php print $node2->field_tozih['und'][0]['value']; ?></span>
               </div>
             </div>
+            <div class="line_effect"><span class="lineInner"></span></div>
           </a>
         </div>
         <div class="col-md-6 mt-3">
-          <a href="<?php print $node5->field_link['und'][0]['url']; ?>" class="items_text border_image">
+          <a href="<?php print $node5->field_link['und'][0]['url']; ?>" class="items_text border_image items">
             <img src="<?php print image_style_url("555x300", $node5->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
                 <h4><?php print $node5->title; ?></h4>
               </div>
             </div>
+            <div class="line_effect"><span class="lineInner"></span></div>
           </a>
         </div>
         <div class="col-md-6 mt-3">
-          <a href="<?php print $node6->field_link['und'][0]['url']; ?>" class="items_text border_image">
+          <a href="<?php print $node6->field_link['und'][0]['url']; ?>" class="items_text border_image items">
             <img src="<?php print image_style_url("555x300", $node6->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
                 <h4><?php print $node6->title; ?></h4>
               </div>
             </div>
+            <div class="line_effect"><span class="lineInner"></span></div>
           </a>
         </div>
       </div>
@@ -259,32 +256,50 @@
         <div class="container">
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("320x320", $node7->field_image['und'][0]['uri']); ?>" alt="">
+              <img src="<?php print image_style_url("medium", $node7->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node7->title; ?></h4>
+              </div>
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node8->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("320x320", $node8->field_image['und'][0]['uri']); ?>" alt="">
+              <img src="<?php print image_style_url("medium", $node8->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node8->title; ?></h4>
+              </div>
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node9->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("320x320", $node9->field_image['und'][0]['uri']); ?>" alt="">
+              <img src="<?php print image_style_url("medium", $node9->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node9->title; ?></h4>
+              </div>
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node10->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("320x320", $node10->field_image['und'][0]['uri']); ?>" alt="">
+              <img src="<?php print image_style_url("medium", $node10->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node10->title; ?></h4>
+              </div>
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node11->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("320x320", $node11->field_image['und'][0]['uri']); ?>" alt="">
+              <img src="<?php print image_style_url("medium", $node11->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node11->title; ?></h4>
+              </div>
             </a>
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node12->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("320x320", $node12->field_image['und'][0]['uri']); ?>" alt="">
+              <img src="<?php print image_style_url("medium", $node12->field_image['und'][0]['uri']); ?>" alt="">
+              <div class="text">
+                <h4><?php print $node12->title; ?></h4>
+              </div>
             </a>
           </div>
         </div>
@@ -380,80 +395,307 @@
   [dir] #last .caption span:after {
     background-color: rgba(255, 255, 255, .4)
   }
-  .line_effect {
-    position: absolute;
-    top: 0.3125rem;
-    bottom: 0.3125rem
-  }
-  [dir=rtl] .line_effect {
-    right: 0.3125rem;
-    left: 0.3125rem
-  }
-  .items_text {
+  #last .items_text {
     position: relative;
     height: 300px;
     color: #fff !important;
     overflow: hidden
   }
-  .items_text img {
+  #last .items_text img {
     height: 100%;
     width: 100%;
     transition: -webkit-transform .5s ease-in-out;
     transition: transform .5s ease-in-out;
     transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out
   }
-  [dir] .items_text img {
-    -webkit-transition: -webkit-transform .5s ease-in-out
-  }
-  .items_text .caption {
+  #last .items_text .caption {
     top: auto;
     bottom: 1.25rem
   }
-  .items_text .caption_wrap {
+  #last .items_text .caption_wrap {
     top: 0.3125rem;
     bottom: 0.3125rem;
     width: 180px;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
     justify-content: flex-end;
-    transition: width .5s ease-in-out
-  }
-  [dir] .items_text .caption_wrap {
+    transition: width .5s ease-in-out;
     background-color: rgba(0, 36, 122, .5);
     padding-bottom: 1.875rem;
-    -webkit-transition: width .5s ease-in-out
-  }
-  [dir=rtl] .items_text .caption_wrap {
+    -webkit-transition: width .5s ease-in-out;
     right: 0.3125rem
   }
-  [dir] .items_text .caption_wrap .caption {
+  [dir] #last  .items_text .caption_wrap .caption {
     margin: 0
   }
-  .items_text:hover img {
+  #last .items_text:hover img {
     -webkit-transform: scale(1.1)
   }
-  [dir] .items_text:hover img {
+  [dir] #last .items_text:hover img {
     transform: scale(1.1)
   }
-  .items_text:hover .caption_wrap {
+  #last .items_text:hover .caption_wrap {
     width: 200px
   }
-  [dir] .items_text:hover .caption_wrap {
+  [dir] #last .items_text:hover .caption_wrap {
     background-color: rgba(0, 36, 122, .9)
   }
-  .items_text:before {
+  #last .items_text:before {
     content: "";
     position: absolute;
     top: 0.3125rem;
     bottom: 0.3125rem
   }
-  [dir] .items_text:before {
+  [dir] #last .items_text:before {
     border: 1px solid rgba(255, 255, 255, .5)
   }
-  [dir=rtl] .items_text:before {
+  [dir=rtl] #last .items_text:before {
     right: 0.3125rem;
     left: 0.3125rem
   }
+
+
+  /* #gozideha  */
+
+  #gozideha .row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap
+  }
+  #gozideha .row .col-md-4 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 33.3333333333%;
+    flex: 0 0 33.3333333333%;
+    max-width: 33.3333333333%
+  }
+  [dir=rtl] #gozideha .caption span {
+    line-height: 1.2;
+    font-size: 14px !important;
+  }
+  #gozideha .row .col-md-4
+  [class^=col-sm-],
+  [class^=col-md-],
+  [class^=col-lg-],
+  [class^=col-xl-] {
+    display: inherit;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  #gozideha  .caption_wrap {
+    position: absolute;
+    z-index: 3;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column
+  }
+  [dir=rtl] #gozideha .caption {
+    border-right: 3px solid rgba(255, 255, 255, .9);
+    padding-right: 0.625rem
+  }
+  #gozideha .caption span {
+    display: table
+  }
+  #gozideha .caption span:before {
+    content: "";
+    height: 0.125rem;
+    position: relative;
+    top: 2rem;
+    display: block;
+    width: 0;
+    transition: width .3s ease-in-out
+  }
+  [dir] #gozideha .caption span:before {
+    background-color: rgba(255, 255, 255, .8);
+    -webkit-transition: width .3s ease-in-out
+  }
+  #gozideha .caption span:after {
+    content: "";
+    width: 100%;
+    height: 0.0625rem;
+    position: relative;
+    top: 0.3125rem;
+    display: block
+  }
+  [dir] #gozideha .caption span:after {
+    background-color: rgba(255, 255, 255, .4)
+  }
+   .line_effect {
+    position: absolute;
+    top: 0.3125rem;
+    bottom: 0.3125rem
+  }
+   .line_effect {
+    right: 0.3125rem;
+    left: 0.3125rem
+  }
+  .lineInner:after,
+  .lineInner:before,
+  .line_effect:after,
+  .line_effect:before {
+    content: "";
+    display: block;
+    transition: all .5s ease-in-out;
+    position: absolute;
+    background-color: #fff;
+    -webkit-transition: all .5s ease-in-out
+  }
+  .lineInner:after, .line_effect:after {
+    bottom: 0;
+    width: 0;
+    height: 0.0625rem
+  }
+  .lineInner:before, .line_effect:before {
+    width: 0.0625rem;
+    height: 0;
+    left: 0
+  }
+  #gozideha .items {
+    position: relative;
+    height: 350px;
+    color: #fff
+  }
+  #gozideha .items img {
+    height: 100%;
+    width: 100%;
+    filter: grayscale(100%);
+  }
+  #gozideha .items:before {
+    content: "";
+    position: absolute;
+    top: 0.3125rem;
+    bottom: 0.3125rem;
+    border: 1px solid rgba(255, 255, 255, .5);
+    right: 0.3125rem;
+    left: 0.3125rem;
+    z-index: 10;
+  }
+  #gozideha .items:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    transition: transform .5s ease-in-out;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    background-color: rgba(0, 0, 0, .3);
+    -webkit-transition: -webkit-transform .5s ease-in-out;
+    right: 0;
+    left: 0
+  }
+  #gozideha .items:hover {
+    color: #00247a
+  }
+  #gozideha .items:hover::after,
+  #gozideha .items:focus::after {
+    -webkit-transform: scale(0)
+  }
+  #gozideha .items .caption_wrap {
+    top: 3.125rem;
+    margin: 0.3125rem
+  }
+  #gozideha .items:hover .caption span:before {
+    width: 100%
+  }
+  #gozideha .items:hover img {
+    filter: none;
+  }
+  #gozideha .items_text {
+    position: relative;
+    height: 15.625rem;
+    color: #fff !important;
+    overflow: hidden
+  }
+  #gozideha .items_text img {
+    height: 100%;
+    width: 100%;
+    transition: -webkit-transform .5s ease-in-out;
+    transition: transform .5s ease-in-out;
+    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
+    -webkit-transition: -webkit-transform .5s ease-in-out
+  }
+  #gozideha .items_text .caption {
+    top: auto;
+    bottom: 1.25rem
+  }
+  #gozideha .items_text .caption_wrap {
+    top: 0.3125rem;
+    bottom: 0.3125rem;
+    width: 11.25rem;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    transition: width .5s ease-in-out;
+    background-color: rgba(0, 36, 122, .5);
+    padding-bottom: 1.875rem;
+    -webkit-transition: width .5s ease-in-out;
+    right: 0.3125rem
+  }
+  [dir] #gozideha .items_text .caption_wrap .caption {
+    margin: 0
+  }
+  #gozideha .items_text:hover img {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+  #gozideha .items_text:hover .caption_wrap {
+    width: 14.375rem;
+    background-color: rgba(0, 36, 122, .9)
+  }
+  #gozideha .items_text:before {
+    content: "";
+    position: absolute;
+    top: 0.3125rem;
+    bottom: 0.3125rem;
+    border: 1px solid rgba(255, 255, 255, .5);
+    right: 0.3125rem;
+    left: 0.3125rem
+  }
+   .lineInner:before,  .line_effect:before {
+    content: "";
+    display: block;
+    transition: all .5s ease-in-out;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 0;
+    background-color: #fff;
+    -webkit-transition: all .5s ease-in-out;
+  }
+   .line_effect:before {
+    right: 0;
+  }
+   .items:hover .line_effect:before,  .items:hover .lineInner:before,
+   .items:focus .line_effect:before,  .items:focus .lineInner:before {
+    height: 100%;
+  }
+   .lineInner:after,  .line_effect:after {
+    content: "";
+    display: block;
+    transition: all .5s ease-in-out;
+    position: absolute;
+    background-color: #fff;
+    -webkit-transition: all .5s ease-in-out;
+    width: 0;
+    height: 1px;
+    top: 0;
+  }
+   .lineInner:after {
+    bottom: 0;
+    top: inherit;
+  }
+   .items:hover .line_effect:after,  .items:hover .lineInner:after,
+   .items:focus .line_effect:after,  .items:focus .lineInner:after {
+    width: 100%;
+  }
+
 </style>
 <script src="/sites/all/themes/nutland/js/owl.carousel.min.js"></script>
 <script>

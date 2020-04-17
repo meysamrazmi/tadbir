@@ -9,62 +9,60 @@
   font-style:normal;
 }
 @font-face {
-  font-family: irans;
+  font-family: "icomoon";
+  src: url('../fonts/icomoon/icomoon.eot');
+  src: url('../fonts/icomoon/icomoon.eot?#iefix') format('embedded-opentype'), url('../fonts/icomoon/icomoon.woff')
+  format('woff'), url('../fonts/icomoon/icomoon.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: dana;
   font-style: normal;
   font-weight: bold;
-  src: url('../fonts/sans/eot/IRANSansWeb_Bold.eot');
-  src: url('../fonts/sans/eot/IRANSansWeb_Bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/sans/woff2/IRANSansWeb_Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/sans/woff/IRANSansWeb_Bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-  url('../fonts/sans/ttf/IRANSansWeb_Bold.ttf') format('truetype');
+  src: url('../fonts/dana/eot/dana-bold.eot');
+  src: url('../fonts/dana/eot/dana-bold.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('../fonts/dana/woff2/dana-bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/dana/woff/dana-bold.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/dana/ttf/Dana-Bold.ttf') format('truetype');
 }
 @font-face {
-  font-family: irans;
+  font-family: dana;
   font-style: normal;
   font-weight: 500;
-  src: url('../fonts/sans/eot/IRANSansWeb_Medium.eot');
-  src: url('../fonts/sans/eot/IRANSansWeb_Medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/sans/woff2/IRANSansWeb_Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/sans/woff/IRANSansWeb_Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-  url('../fonts/sans/ttf/IRANSansWeb_Medium.ttf') format('truetype');
+  src: url('../fonts/dana/eot/dana-medium.eot');
+  src: url('../fonts/dana/eot/dana-medium.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('../fonts/dana/woff2/dana-medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/dana/woff/dana-medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/dana/ttf/Dana-Medium.ttf') format('truetype');
 }
 @font-face {
-  font-family: irans;
-  font-style: normal;
-  font-weight: normal;
-  src: url('../fonts/sans/eot/IRANSansWeb.eot');
-  src: url('../fonts/sans/eot/IRANSansWeb.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/sans/woff2/IRANSansWeb.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/sans/woff/IRANSansWeb.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-  url('../fonts/sans/ttf/IRANSansWeb.ttf') format('truetype');
-}
-@font-face {
-  font-family: irans;
+  font-family: dana;
   font-style: normal;
   font-weight: 200;
-  src: url('../fonts/sans/eot/IRANSansWeb_Light.eot');
-  src: url('../fonts/sans/eot/IRANSansWeb_Light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
-  url('../fonts/sans/woff2/IRANSansWeb_Light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/sans/woff/IRANSansWeb_Light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-  url('../fonts/sans/ttf/IRANSansWeb_Light.ttf') format('truetype');
+  src: url('../fonts/dana/eot/dana-light.eot');
+  src: url('../fonts/dana/eot/dana-light.eot?#iefix') format('embedded-opentype'),  /* IE6-8 */
+  url('../fonts/dana/woff2/dana-light.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/dana/woff/dana-light.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/dana/ttf/Dana-Light.ttf') format('truetype');
 }
 @font-face {
-  font-family: irans;
+  font-family: dana;
   font-style: normal;
   font-weight: 100;
-  src: url('../fonts/sans/eot/IRANSansWeb_UltraLight.eot');
-  src: url('../fonts/sans/eot/IRANSansWeb_UltraLight.eot?#iefix') format('embedded-opentype'),  /* IE6-8*/
-  url('../fonts/sans/woff2/IRANSansWeb_UltraLight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/sans/woff/IRANSansWeb_UltraLight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-  url('../fonts/sans/ttf/IRANSansWeb_UltraLight.ttf') format('truetype');
+  src: url('../fonts/dana/eot/dana-extralight.eot');
+  src: url('../fonts/dana/eot/dana-extralight.eot?#iefix') format('embedded-opentype'),  /* IE6-8*/
+  url('../fonts/dana/woff2/dana-extralight.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/dana/woff/dana-extralight.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/dana/ttf/Dana-ExtraLight.ttf') format('truetype');
 }
 @font-face {
   font-family: fanum;
   font-style: normal;
   font-weight: 100;
-  src: url('../fonts/sans/fanum/fanum.eot');
-  src: url('../fonts/sans/fanum/fanum.eot?#iefix') format('embedded-opentype'),  /* IE6-8*/
-  url('../fonts/sans/fanum/fanum.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-  url('../fonts/sans/fanum/fanum.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
-  url('../fonts/sans/fanum/fanum.ttf') format('truetype');
+  src: url('../fonts/dana/fanum/dana-fanum-regular.eot');
+  src: url('../fonts/dana/fanum/dana-fanum-regular.eot?#iefix') format('embedded-opentype'),  /* IE6-8*/
+  url('../fonts/dana/fanum/dana-fanum-regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+  url('../fonts/dana/fanum/dana-fanum-regular.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+  url('../fonts/dana/ttf/Dana-FaNum-Medium.ttf') format('truetype');
 }

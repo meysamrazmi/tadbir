@@ -98,23 +98,23 @@
                             <address class="card-body card-address">
                                 <ul class="items-contact">
                                     <li>
-                                        <!-- <i class="icon-map-marker-alt"></i> -->
-                                        <span>تهران خیابان احمد شهید قصیر
+                                        <span>تهران، خیابان شهید احمد  قصیر
                                         (بخارست) ، خیابان هشتم ، شماره ۶</span></li>
                                     <li>
-                                        <!-- <i class="icon-mailbox"></i> -->
-                                        <span><strong>نشانی
-                                            رایانامه :</strong></span><a class="mail" href="#">info@siteName.com
-                                        </a></li>
+                                        <span>کد پستی : 1514716711</span>
+                                    </li>
                                     <li>
-                                        <!-- <i class="icon-phone-rotary"></i> -->
-                                        <span><strong>شماره
-                                            های تماس :</strong></span><a class="fs-20 text-nowrap" href="tel:0211234567" dir="ltr">021
-                                            - 1234567</a></li>
-                                    <li>
-                                        <!-- <i class="icon-phone-office"></i> -->
-                                        <span><strong>شماره
-                                            نمابر :</strong></span><b dir="ltr">021 - 1234567</b></li>
+                                        <span>تلفن بنیاد برکت : </span><a class="fs-20 text-nowrap" href="tel:02188532300" dir="ltr">(021)
+                                            88532300 - 15</a></li>
+                                  <li>
+                                    <span>نمابر بنیاد برکت :</span><span dir="ltr"> (021) - 88532316</span>
+                                  </li>
+                                  <li>
+                                    <span>تلفن حراست :</span><span dir="ltr"> (021) - 88532229</span>
+                                  </li>
+                                  <li>
+                                    <span>تلفن روابط عمومی :</span><span dir="ltr"> (021) - 88480016 / 88480025</span>
+                                  </li>
                                 </ul>
                             </address>
                         </article>
