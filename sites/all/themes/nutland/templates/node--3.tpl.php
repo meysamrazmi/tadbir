@@ -527,36 +527,6 @@
   [dir] #gozideha .caption span:after {
     background-color: rgba(255, 255, 255, .4)
   }
-   .line_effect {
-    position: absolute;
-    top: 0.3125rem;
-    bottom: 0.3125rem
-  }
-   .line_effect {
-    right: 0.3125rem;
-    left: 0.3125rem
-  }
-  .lineInner:after,
-  .lineInner:before,
-  .line_effect:after,
-  .line_effect:before {
-    content: "";
-    display: block;
-    transition: all .5s ease-in-out;
-    position: absolute;
-    background-color: #fff;
-    -webkit-transition: all .5s ease-in-out
-  }
-  .lineInner:after, .line_effect:after {
-    bottom: 0;
-    width: 0;
-    height: 0.0625rem
-  }
-  .lineInner:before, .line_effect:before {
-    width: 0.0625rem;
-    height: 0;
-    left: 0
-  }
   #gozideha .items {
     position: relative;
     height: 350px;
@@ -658,43 +628,7 @@
     right: 0.3125rem;
     left: 0.3125rem
   }
-   .lineInner:before,  .line_effect:before {
-    content: "";
-    display: block;
-    transition: all .5s ease-in-out;
-    position: absolute;
-    top: 0;
-    width: 1px;
-    height: 0;
-    background-color: #fff;
-    -webkit-transition: all .5s ease-in-out;
-  }
-   .line_effect:before {
-    right: 0;
-  }
-   .items:hover .line_effect:before,  .items:hover .lineInner:before,
-   .items:focus .line_effect:before,  .items:focus .lineInner:before {
-    height: 100%;
-  }
-   .lineInner:after,  .line_effect:after {
-    content: "";
-    display: block;
-    transition: all .5s ease-in-out;
-    position: absolute;
-    background-color: #fff;
-    -webkit-transition: all .5s ease-in-out;
-    width: 0;
-    height: 1px;
-    top: 0;
-  }
-   .lineInner:after {
-    bottom: 0;
-    top: inherit;
-  }
-   .items:hover .line_effect:after,  .items:hover .lineInner:after,
-   .items:focus .line_effect:after,  .items:focus .lineInner:after {
-    width: 100%;
-  }
+
 
 </style>
 <script src="/sites/all/themes/nutland/js/owl.carousel.min.js"></script>

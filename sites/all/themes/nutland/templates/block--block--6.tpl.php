@@ -57,13 +57,13 @@
 
   <?php
   ?>
-  <div id="block4">
+  <div id="block6">
 
     <section id="sectionBanner">
       <div class="container" style="padding: 25px 10px;">
         <div class="caption_slide">
           <div class="caption_write">
-            <h1>مرکز ویدئوها</h1>
+            <h1>فرم همکاری</h1>
           </div>
         </div>
       </div>
@@ -72,7 +72,7 @@
 
 </section>
 <style>
-  #block-block-4{
+  #block-block-6{
     position: absolute;
     width: 100%;
     top: 75px;
@@ -81,7 +81,7 @@
     background-position: center;
     background-size: 100% 100%;
   }
-  #block-block-4:before{
+  #block-block-6:before{
     content: " ";
     background: rgba(0,0,0,0.5);
     position: absolute;
@@ -89,7 +89,7 @@
     height: 100%;
     width: 100%;
   }
-  #block4{
+  #block6{
     z-index: 5;
     position: relative;
   }

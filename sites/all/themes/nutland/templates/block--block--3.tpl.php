@@ -60,7 +60,7 @@
   <div id="block3">
 
     <section id="sectionBanner">
-      <div class="container" style="padding: 0 10px;">
+      <div class="container" style="padding: 25px 10px;">
         <div class="caption_slide">
           <div class="caption_write">
             <h1>مرکز اخبار</h1>
@@ -77,7 +77,7 @@
     width: 100%;
     top: 75px;
     padding: 40px 0;
-    background: url(/sites/all/themes/nutland/images/sktemplate1.jpg);
+    background: url("/sites/all/themes/nutland/images/sktemplate1.jpg");
     background-position: center;
     background-size: 100% 100%;
   }
@@ -97,7 +97,7 @@
     max-width: 1000px;
   }
   #sectionBanner h1{
-    font-size: 2em;
+    font-size: 26px;
   }
   .block-title{
     display: none;
