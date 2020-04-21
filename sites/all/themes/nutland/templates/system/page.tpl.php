@@ -116,7 +116,7 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
       </div>
         <div class="left-menu">
             <ul>
-                <li>
+                <li class="grob">
                     <i class="mdi mdi-magnify"></i>
                 </li>
                 <li>

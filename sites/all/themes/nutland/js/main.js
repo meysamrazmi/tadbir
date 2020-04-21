@@ -43,18 +43,15 @@ $(document).ready(function(){
     $(" .view-content .views-field-field-image-video .field-content").addClass("items");
   });
 
-  $(".node-type-gallery").ready(function () {
-    $(" .view-content .views-field-field-main-image .field-content").addClass("items");
-  });
-
   $(".node-type-news").ready(function () {
-    $(" .view-content .views-field-field-news-image .field-content").addmClass("items");
+    $(".group-footer .view-content .views-field-field-news-image .field-content").addClass("items");
   });
 
 });
 // search box in page news
 $(".page-news .view-filters").ready(function(){
-  $("#edit-title").attr("placeholder", "محصول مورد نظر را جستجو کنید");
+  $("#edit-title").attr("placeholder", "کلمه مورد نظر را جستجو کنید");
+  $("#edit-body-value").attr("placeholder", "در محتوا");
   // $("input#edit-created-min").attr({ "value":" ", "placeholder": "از تاریخ"});
   // $("input#edit-created-max").attr({ "value":" ", "placeholder": "تا تاریخ"});
   $.getScript("/sites/all/libraries/persiandatepicker/persian-date.min.js").done(function(){
@@ -91,5 +88,6 @@ $(".page-news .view-filters").ready(function(){
 $(".page-node-59 #block-system-main, #node-59").ready(function () {
   $("form").addClass("container");
   $(".webform-progressbar").addClass("col-md-3 col-sm-3 col-xs-12");
-
 });
+//comment form
+$("form.comment-form .form-submit").text("ارسال پیام");
