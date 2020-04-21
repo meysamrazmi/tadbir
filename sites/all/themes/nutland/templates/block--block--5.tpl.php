@@ -130,7 +130,7 @@
 
     #block-block-5{
       position: absolute;
-      top: 11%;
+      top: 2%;
       z-index: 100;
       width: 100%;
     }

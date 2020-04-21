@@ -27,6 +27,30 @@ $(document).ready(function(){
   $(".mdi-magnify").click(function(){
     $(".form-search-menu").css("display" ,"inline");
   });
+  //close alert box
+  $( "body .close" ).click(function() {
+    $(".alert-block").hide();
+  });
+
+//add class item
+  $("#node-3").ready(function () {
+    $("#projects .view-content .views-field-field-image .field-content").addClass("items");
+  });
+  $(".page-gallery").ready(function () {
+    $(" .view-content .views-field-field-main-image .field-content").addClass("items");
+  });
+  $(".page-videos").ready(function () {
+    $(" .view-content .views-field-field-image-video .field-content").addClass("items");
+  });
+
+  $(".node-type-gallery").ready(function () {
+    $(" .view-content .views-field-field-main-image .field-content").addClass("items");
+  });
+
+  $(".node-type-news").ready(function () {
+    $(" .view-content .views-field-field-news-image .field-content").addmClass("items");
+  });
+
 });
 // search box in page news
 $(".page-news .view-filters").ready(function(){

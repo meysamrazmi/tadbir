@@ -124,8 +124,8 @@
         </section>
         <section id="copyright">
             <div class="container">
-                <p class="text-center"><a class="name-co" href="https://siteName.com/" target="_blank">طراحی
-                        سایت شرکت نرم افزاری عنوان متن </a></p>
+                <p class="text-center"><a class="name-co" href="https://siteName.com/" target="_blank">
+                        تمامی حقوق این وبسایت متعلق به گروه توسعه اقتصادی تدبیر می باشد </a></p>
             </div>
         </section>
     </footer>
