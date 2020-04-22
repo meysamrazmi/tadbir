@@ -106,7 +106,7 @@
   ?>
   <section id="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7561093010218!2d51.41780451634272!3d35.73221623057533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e06b4c28eed93%3A0x2df56dbfdf9b9fbc!2z2KjZhtuM2KfYryDYqNix2qnYqg!5e0!3m2!1sen!2s!4v1587106093726!5m2!1sen!2s"
-            width="1366" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+            width="1920" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
     </iframe>
   </section>
   <section id="content">
@@ -139,7 +139,7 @@
         </div>
       </div>
     </div>
-    <h4>فرم تماس</h4>
+    <h4 style="margin: 10px 50px;">فرم تماس</h4>
     <div class="form">
       <?php
       $block = module_invoke('webform', 'block_view', 'client-block-21');

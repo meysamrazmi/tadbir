@@ -422,7 +422,7 @@
     transition: width .5s ease-in-out;
     background-color: rgba(0, 36, 122, .5);
     padding-bottom: 1.875rem;
-    -webkit-transition: width .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
     right: 0.3125rem
   }
   [dir] #last  .items_text .caption_wrap .caption {
@@ -535,37 +535,11 @@
   #gozideha .items img {
     height: 100%;
     width: 100%;
+    transition: all .4s ease-in-out;
     filter: grayscale(100%);
   }
-  #gozideha .items:before {
-    content: "";
-    position: absolute;
-    top: 0.3125rem;
-    bottom: 0.3125rem;
-    border: 1px solid rgba(255, 255, 255, .5);
-    right: 0.3125rem;
-    left: 0.3125rem;
-    z-index: 10;
-  }
-  #gozideha .items:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    transition: transform .5s ease-in-out;
-    transition: -webkit-transform .5s ease-in-out;
-    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
-    background-color: rgba(0, 0, 0, .3);
-    -webkit-transition: -webkit-transform .5s ease-in-out;
-    right: 0;
-    left: 0
-  }
   #gozideha .items:hover {
-    color: #00247a
-  }
-  #gozideha .items:hover::after,
-  #gozideha .items:focus::after {
-    -webkit-transform: scale(0)
+    text-shadow: 1px 1px #000000;
   }
   #gozideha .items .caption_wrap {
     top: 3.125rem;

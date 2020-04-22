@@ -130,7 +130,7 @@
 
     #block-block-5{
       position: absolute;
-      top: 11%;
+      top: 2%;
       z-index: 100;
       width: 100%;
     }
@@ -138,7 +138,7 @@
       display: none;
     }
     #main{
-      padding-top: 50px;
+      padding-top: 25px;
       background: white;
     }
     .figures {

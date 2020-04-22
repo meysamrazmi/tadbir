@@ -98,102 +98,61 @@
     <?php print views_embed_view('slideshow', 'block_1'); ?>
   <?php endif; ?>
 
-    <?php
-    $node1 = node_load(38);
-    $node2 = node_load(39);
-    $node3 = node_load(40);
-    $node4 = node_load(41);
-    $node5 = node_load(42);
-    $node6 = node_load(43);
-    $node7 = node_load(44);
-    //    print $node->title;
-    //    print '<img src="'. image_style_url("320x320", $node->field_image['und'][0]['uri']) .'">';
-    ?>
+  <?php
+  $node1 = node_load(38);
+  $node2 = node_load(75);
+  $node3 = node_load(39);
+  //    print $node->title;
+  //    print '<img src="'. image_style_url("320x320", $node->field_image['und'][0]['uri']) .'">';
+  ?>
 
   <section id="top">
-    <div class="container">
-      <div class="container mb-4">
-        <div class="col-md-3">
-          <figure class="logo_tadbir">
-            <img src="<?php print image_style_url("555x300", $node2->field_image['und'][0]['uri']); ?>" alt="">
-          </figure>
-        </div>
-        <div class="col-md-9">
-          <div>
-            <span class="text-primary">شرکت نواندیشان کشت و صنعت تدبیر</span>
-            <?php print $node1->body['und'][0]['value']; ?>
-          </div>
-        </div>
+    <div class="container intro">
+      <div>
+        <span class="text-primary"><?php print $node1->title; ?></span>
+        <?php print $node1->body['und'][0]['value']; ?>
       </div>
     </div>
-  </section>
-
-  <section id="sectionJobs">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          <div class="card_jobs flex-none"><h5 class="mb-0">فعالیت ها</h5></div>
-          <div class="card_jobs mt3">
-            <h6 class="title"><?php print $node3->title; ?></h6>
-            <p>
-              <?php print $node3->body['und'][0]['value']; ?>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card_jobs">
-            <h6 class="title"><?php print $node4->title; ?></h6>
-            <p>
-              <?php print $node4->body['und'][0]['value']; ?>
-            </p>
-          </div>
-          <div class="card_jobs mt-3">
-            <h6 class="title"><?php print $node5->title; ?></h6>
-            <p>
-              <?php print $node5->body['und'][0]['value']; ?>
-            </p>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="card_jobs">
-            <h6 class="title"><?php print $node6->title; ?></h6>
-            <p>
-              <?php print $node6->body['und'][0]['value']; ?>
-            </p>
-          </div>
-          <div class="card_jobs mt-3">
-            <h6 class="title"><?php print $node7->title; ?></h6>
-            <p>
-              <?php print $node7->body['und'][0]['value']; ?>
-            </p>
-          </div>
-        </div>
-        </divc>
-      </div>
   </section>
 
   <section id="custom">
-    <div class="container swiper_frame">
+    <div class="container">
       <div class="header_title text-primary">
-        <h5 class="mb-0"> شرکت های تابعه</h5>
+        <h5 class="mb-0">درباره تدبیر</h5>
       </div>
-      <div class="container">
-        <?php $block = module_invoke('views', 'block_view', 'custom-block_1'); print render($block['content']);; ?>
+      <div class="about container">
+        <div class="col-md-4">
+          <img src="<?php print image_style_url("555x300", $node2->field_image['und'][0]['uri']); ?>" alt="">
+        </div>
+        <div class="col-md-8">
+          <h4>
+            <span class="text-primary"><?php print $node2->title; ?></span>
+          </h4>
+          <p>
+            <?php print $node2->body['und'][0]['value']; ?>
+          </p>
+        </div>
       </div>
     </div>
   </section>
-  <div id="projects">
-    <section>
-      <div class="container">
-        <div class="header_title text-primary">
-          <h5 class="mb-0">پروژه ها</h5>
+
+  <section id="custom2">
+    <div class="container">
+      <div class="header_title text-primary">
+        <h5 class="mb-0">ارزش های تدبیر</h5>
+      </div>
+      <div class="about container">
+        <div class="col-md-4 col-sm-6 col-xs-12" style="text-align: -webkit-center">
+          <img src="<?php print image_style_url("555x300", $node3->field_image['und'][0]['uri']); ?>" alt="">
+        </div>
+        <div class="col-md-8 col-sm-6 col-xs-12">
+          <p>
+            <?php print $node3->body['und'][0]['value']; ?>
+          </p>
         </div>
       </div>
-      <div class="container">
-        <?php $block = module_invoke('views', 'block_view', 'projects-block'); print render($block['content']);; ?>
-      </div>
-    </section>
-  </div>
+    </div>
+  </section>
 
 
   <?php
