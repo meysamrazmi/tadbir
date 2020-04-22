@@ -138,7 +138,7 @@
       display: none;
     }
     #main{
-      padding-top: 50px;
+      padding-top: 25px;
       background: white;
     }
     .figures {

@@ -1616,19 +1616,6 @@ a {
       .field-name-field-news-image{
         text-align: -webkit-center;
       }
-      .field-name-field-slide{
-        max-width: 588px;
-        margin: auto;
-        .field-item{
-          position: relative;
-          bottom: 90px;
-          text-align: center;
-          z-index: 10;
-          background: rgba(0,0,0,0.7);
-          color: white;
-          padding: 6px 0;
-        }
-      }
       .field-name-body{
         text-align: justify !important;
         line-height: 2;
@@ -1637,6 +1624,19 @@ a {
         margin: auto;
       }
       .field-type-image{
+        .owl-stage span{
+          position: relative;
+          bottom: 31px;
+          text-align: center;
+          z-index: 10;
+          background: rgba(0, 0, 0, 0.7);
+          color: white;
+          padding: 6px 0;
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          max-width: 588px;
+        }
         .owl-next, .owl-prev{
           &:hover{
             span{
@@ -1656,7 +1656,7 @@ a {
               font-size: 60px;
               position: absolute;
               color: #ccc;
-              top: 50%;
+              top: 40%;
               transition: all 0.2s ease-in-out;
               transform: translate(0%, -50%);
             }
@@ -1766,9 +1766,7 @@ a {
     .view-content{
       .views-row{
         .field-content{
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          //
         }
       }
     }
@@ -2380,15 +2378,6 @@ a {
     }
   }
 }
-//show block-5
-  #block-block-5{
-    display: none;
-  }
-  ul.menu li:nth-child(2):hover{
-    #block-block-5{
-      display: block!important;
-    }
-  }
 //contact us
 .page-node-5{
   .main-container.container{
@@ -2396,6 +2385,12 @@ a {
     padding-right:0!important;
     .breadcrumb, .page-header, .tabs--primary, .action-links{
       display: none;
+    }
+    #map{
+      iframe{
+        width: 100%;
+        margin: auto;
+      }
     }
     #node-5{
       #content{
@@ -2695,7 +2690,8 @@ a {
 }
 .line_effect {
   right: 0.3125rem;
-  left: 0.3125rem
+  left: 0.3125rem;
+  pointer-events: none;
 }
 .lineInner:after,
 .lineInner:before,
@@ -2736,6 +2732,7 @@ a {
   right: 0.3125rem;
   left: 0.3125rem;
   z-index: 4;
+  pointer-events: none;
 }
 .items:after {
   content: "";
@@ -2748,7 +2745,8 @@ a {
   background-color: rgba(0, 0, 0, .3);
   -webkit-transition: -webkit-transform .5s ease-in-out;
   right: 0;
-  left: 0
+  left: 0;
+  pointer-events: none;
 }
 
 .lineInner:before,  .line_effect:before {
@@ -3158,9 +3156,6 @@ a {
             margin: 2px 2px -6px;
             display: inline-block;
             width: 24%;
-            img{
-              width: 100%;
-            }
           }
         }
       }
@@ -3172,9 +3167,6 @@ a {
         .field-items{
           .field-item{
             width: 49% !important;
-            img{
-              height: 190px;
-            }
           }
         }
       }
