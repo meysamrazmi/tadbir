@@ -10,7 +10,7 @@
 * 	- ability to enabled disabled passing events to observers and command handlers, via setOption('observingEnabled',false) and setOption('commandingEnabled',false)
 * @todo support cmfcException::isError() method
 * @todo CMF_ERROR_RETURN and other raiseError constants should become CMF_
-* 	
+*
 */
 
 
@@ -20,8 +20,8 @@ if (!class_exists('cmfcExceptionStandAlone')) {
 }
 
 
-define('CMF_ClassesCore_Ok',true,true);
-define('CMF_ClassesCore_Error',2,true);
+define('CMF_ClassesCore_Ok',true);
+define('CMF_ClassesCore_Error',2);
 define('CMF_Error',     1);
 define('CMF_Ln_English',     'en');
 
@@ -39,12 +39,12 @@ class cmfcClassesCoreStandAlone
 	 */
     var $_oLog = null;
 	var $_version='$Id: classesCore.class.inc.php 663 2010-11-16 09:19:55Z salek $';
-    
-	/** 
+
+	/**
 	* @var cmfcStorage instance
 	*/
 	var $_oStorage=null;
-	
+
 	var $_observers=array();
 	var $_observeringEnabled=true;
 	var $_commandHandlers=array();
@@ -60,17 +60,17 @@ class cmfcClassesCoreStandAlone
 		CMF_ClassesCore_Error=>'unknown error'
 	);
 	var $_errorsStack=array();
-		
-	/**
-	* @desc 
-	*/
-	//var $_propertiesValues
-	
 
 	/**
-	 * there is no __construct function in php4 or down , so this function is solution , now it's possible 
+	* @desc
+	*/
+	//var $_propertiesValues
+
+
+	/**
+	 * there is no __construct function in php4 or down , so this function is solution , now it's possible
 	 * for all chid of this base class to have __construct functions
-	 * 
+	 *
 	 */
 	function cmfcClassesCore() {
 		$args = func_get_args();
@@ -82,13 +82,13 @@ class cmfcClassesCoreStandAlone
 	function getVersion() {
 		return $this->_version;
 	}
-	
+
 	/**
 	 * This function calculates the base location of package in filesystem and in browser
 	 * This is a critical function for other packages to work properly
 	 * By default it points to the real path when symlinks are used
-	 * 
-	 * Site with subdomain should set siteFolderPath manually and also pass siteFolderPathBrowser (http://domain.com) 
+	 *
+	 * Site with subdomain should set siteFolderPath manually and also pass siteFolderPathBrowser (http://domain.com)
 	 */
 	function getCalculatedLocations($options,$parameters) {
 		$server=$_SERVER;
@@ -115,7 +115,7 @@ class cmfcClassesCoreStandAlone
 			if (is_link($options['siteFolderPath'])) {
 				$options['siteFolderPath']=readlink($options['siteFolderPath']);
 			}
-		} 
+		}
 		if (!isset($options['siteFolderPathBrowser'])) {
 			$options['siteFolderPathBrowser']='';
 		}
@@ -135,10 +135,10 @@ class cmfcClassesCoreStandAlone
 			$fileRelativePath=$options['siteFolderPathBrowser'].'/'.str_replace($options['siteFolderPath'],'',$options['cmfFolderPath']);
 			$options['cmfFolderPathBrowser']=cmfcDirectory::normalizePath($fileRelativePath);
 		}
-		
+
 		return $options;
 	}
-	
+
 	/**
 	 * @NOTICE child classed definition should apply the byReference version of function
 	 * to pass by reference to work correctly
@@ -163,7 +163,7 @@ class cmfcClassesCoreStandAlone
 			}
 		}
 	}
-	
+
 	/**
 	 * @NOTICE child classed definition should apply the byReference version of function
 	 * @param $name
@@ -173,7 +173,7 @@ class cmfcClassesCoreStandAlone
 	 */
 	function setOption($name,$value,$merge=false) {
 		return $this->setOptionByReference($name,$value,$merge);
-	}	
+	}
 	function setOptionByReference($name,&$value,$merge=false) {
 		$r=null;
 		if ($name=='storage') {
@@ -187,29 +187,29 @@ class cmfcClassesCoreStandAlone
 			$this->{'_'.$name}=&$value;
 		}
 		$this->_options[$name]=&$value;
-		return $r;		
+		return $r;
 	}
-	
+
 	function setStorage(&$value) {
-		$this->_oStorage=&$value; 
+		$this->_oStorage=&$value;
 	}
-	
+
 	/**
 	* works fine in both php4 & 5. but you should use & when you call the function. $b=&$ins->getOption('property')
 	*/
 	function &getOption($name) {
 		return $this->{'_'.$name};
 	}
-	
+
 	function setLog(&$value) {
 		//if (!empty($this->_oLog))
 			//$this->_oLog=&Log::singleton('file', 'out.log', 'CreativeMindFramework');
 		$this->_oLog=&$value;
 	}
-	
-	
+
+
 	function getMessageValue($msgCode,$parameters=null) {
-		if (isset($this->_messagesValue[$msgCode]))	
+		if (isset($this->_messagesValue[$msgCode]))
 			$message=$this->_messagesValue[$msgCode];
 		else
 			$message=$this->_messagesValue[$this->_defaultError];
@@ -217,8 +217,8 @@ class cmfcClassesCoreStandAlone
 			$message=sprintf($message,$parameters);
 		return $message;
 	}
-	
-	
+
+
 	/**
 	*	fill all of object variables with their default values except $base_properties
 	*	$base_properties=array('local_language_name','db','event_system','configurations','table_name_prefix');
@@ -237,8 +237,8 @@ class cmfcClassesCoreStandAlone
 			}
 		}
 	}
-	
-	
+
+
 	function arrayToProperties($propertiesValues,$exceptNulls=false,$prefix=null) {
 		if (is_array($propertiesValues)) {
 			if ($this->_dynamicSystemEnabled) {
@@ -260,7 +260,7 @@ class cmfcClassesCoreStandAlone
 	function propertiesToArray($exceptNulls=false,$prefix=null) {
 		$propertiesValues=array();
 
-		if ($this->_dynamicSystemEnabled) {			
+		if ($this->_dynamicSystemEnabled) {
 			$vars=get_object_vars($this);
 			foreach ($vars as $varName=>$varValue) {
 				if (preg_match('/^'.$prefix.'.*/',$varName) or is_null($prefix))
@@ -279,7 +279,7 @@ class cmfcClassesCoreStandAlone
 
 	function clearProperties($prefix=null)
 	{
-		if ($this->_dynamicSystemEnabled) {	
+		if ($this->_dynamicSystemEnabled) {
 			$vars=get_object_vars($this);
 			foreach ($vars as $varName=>$varValue) {
 				if (preg_match('/^'.$prefix.'.*/',$varName) or is_null($prefix))
@@ -292,7 +292,7 @@ class cmfcClassesCoreStandAlone
 			*/
 		}
 	}
-	
+
 
     // }}}
     // {{{ raiseError()
@@ -302,7 +302,7 @@ class cmfcClassesCoreStandAlone
      * @example
      * <code>
      * 		return $this->raiseError('', CMF_Language_Error_Unknown_Short_Name,
-	 *						CMF_ERROR_RETURN,NULL, 
+	 *						CMF_ERROR_RETURN,NULL,
 	 *						array('shortName'=>$shortName)
 	 *		);
      * </code>
@@ -314,7 +314,7 @@ class cmfcClassesCoreStandAlone
                          $userinfo = null, $error_class = null, $skipmsg = false) {
 		if (isset($this->_messagesValue[$code]) && empty($message))
 			$message=$this->_messagesValue[$code];
-			
+
 		if (is_array($userinfo) && !empty($message)) {
 			if (is_array($userinfo))
 			foreach ($userinfo as $key=>$value) {
@@ -324,19 +324,19 @@ class cmfcClassesCoreStandAlone
 		}
 		return cmfcExceptionStandAlone:: raiseError($message, $code, $mode, $options, $userinfo, $error_class, $skipmsg);
 	}
-	
-	
+
+
 	public static function isError($obj,$code=null) {
 		return cmfcExceptionStandAlone::isError($obj,$code);
 	}
-	
-	
+
+
     //! An accessor
     /**
     * Calls the update() function using the reference to each
     * registered observer - used by children of Observable
     * @return void
-    */ 
+    */
     function notifyObservers ($event,$params=null) {
     	if ($this->_observeringEnabled==true)
     	if (is_array($this->_observers[$event]))
@@ -344,27 +344,27 @@ class cmfcClassesCoreStandAlone
             call_user_func_array($observer,array(&$this,$params));
         }
     }
- 
+
     //! An accessor
     /**
     * Register the reference to an object object
     * @param $observer array|string //like call_user_func first param
     * @return void
-    */ 
+    */
     function addObserver($event, $observer,$parameters=null) {
        	$this->_observers[$event][]=$observer;
     }
-    
-    
+
+
     function prependObserver($event, $observer,$parameters=null) {
     	if (empty($this->_observers[$event])) $this->_observers[$event]=array();
     	array_unshift($this->_observers[$event],$observer);
     }
-    
+
     function removeObservers($cmd) {
        	$this->_commandHandlers[$cmd]=array();
     }
-	
+
 	/**
 	* @example
 	* <code>
@@ -381,14 +381,14 @@ class cmfcClassesCoreStandAlone
 			}
         }
     }
-    
+
     function hasCommandHandler($cmd) {
        	if (is_array($this->_commandHandlers[$cmd]))
        		if (!empty($this->_commandHandlers[$cmd]))
        			return true;
        	return false;
     }
- 
+
  	/**
  	* @example
  	* <code>
@@ -399,27 +399,27 @@ class cmfcClassesCoreStandAlone
     function addCommandHandler ($cmd, $commandHandler,$parameters=null) {
        	$this->_commandHandlers[$cmd][]=$commandHandler;
     }
-    
-    
+
+
     function removeCommandHandlers ($cmd) {
        	$this->_commandHandlers[$cmd]=array();
     }
-    
+
     function prependCommandHandler ($cmd, $commandHandler,$parameters=null) {
     	if (empty($this->_commandHandlers[$cmd])) $this->_commandHandlers[$cmd]=array();
     	array_unshift($this->_commandHandlers[$cmd],$commandHandler);
     }
-    
+
     /**
     * memento design pattern
     * will clone the object for adding undo ability.
     * @todo
-    * 	- should become complete 
+    * 	- should become complete
     */
     function saveToMemento() {
     	return clone($this);
 	}
-	
+
     /**
     * memento design pattern
     * will load the object previous state
