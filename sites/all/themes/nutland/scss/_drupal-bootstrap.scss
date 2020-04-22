@@ -1187,14 +1187,13 @@ a {
       display: inline-block;
       vertical-align: middle;
       margin: auto 10px;
-      @media (max-width: 769px) {
+      @media (max-width: 450px) {
         width: 90px !important;
-
       }
     }
     .container,
     .container-fluid {
-      flex-direction: row ;
+      flex-direction: row !important ;
       padding: 0;
     }
   }
