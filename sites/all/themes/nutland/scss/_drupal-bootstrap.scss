@@ -985,11 +985,14 @@ a {
   .container.px-5{
     padding: 0!important;
     height: 85px;
+    justify-content: start;
+  }
+  #block-system-main-menu.contextual-links-region {
+    position: static;
   }
   button{
     position: absolute;
     right: 0;
-    top: 7px;
   }
   a.logo{
     img{
@@ -1004,6 +1007,7 @@ a {
   .navbar-collapse {
     z-index: 100;
     max-width: calc(100% - 245px - 120px);
+    margin-right: 1.5%;
     .block-title {
       display: none;
     }
@@ -1088,6 +1092,7 @@ a {
   }
   .left-menu{
     position: relative;
+    margin-right: auto;
     ul{
       height: 85px;
       display: flex;
@@ -1178,9 +1183,6 @@ a {
         padding-top: 25px;
         transition: all 1s ease;
         z-index: 100;
-        &.contextual-links-region {
-          position: static;
-        }
       }
     }
     .logo.navbar-btn.pull-left{
@@ -1970,15 +1972,17 @@ a {
 .form-search-menu{
   position: absolute;
   bottom: -50px;
-  width: 100%;
+  width: calc(100vw - 16px);
   padding: 8px;
   height: 50px;
   background: #012379;
+  left: 0;
+  display: none;
   &.open{
     display: inline-block;
   }
   form{
-    padding: 10px;
+    padding: 0px;
     background: white;
     border-radius: 3px;
     max-width: 300px !important;
