@@ -995,36 +995,41 @@ a {
       align-items: center;
       justify-content: center;
       padding-right: 0!important;
-      margin-top: 18px;
+      margin-top: 45px;
       font-weight: 500;
       li {
-        padding: 15px 0;
-        &:after{
-          content: "";
-          position: absolute;
-          bottom: 0;
-          width: 0;
-          height: 0.125rem;
-          -webkit-transition: width .3s ease-in-out;
-          background-color: #00247a;
-        }
-        &:hover{
-          &:after{
-            width: 100%;
-          }
-        }
+        position: static;
         a {
           color: #444;
+          &:after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 0;
+            height: 1px;
+            -webkit-transition: width 0.3s ease-in-out;
+            background-color: #00247a;
+          }
           &:hover{
             background: none;
+            &:after{
+              width: 100%;
+            }
           }
         }
         .dropdown-menu{
-          position: fixed;
-          top: 95px;
+          position: absolute;
+          background: #00247a !important;
+          padding: 0 0!important;
+          border-radius: 0;
+          width: 100%;
           right: 0;
+          top: auto;
+          margin: 0;
           a{
             background: none!important;
+            padding: 10px 25px !important;
           }
           &:hover{
             li:after{
