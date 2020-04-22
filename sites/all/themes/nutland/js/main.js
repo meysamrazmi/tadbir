@@ -68,7 +68,9 @@ $(".page-news .view-filters").ready(function(){
 });
 //carousel in node news//carousel in node news
  $(".node-type-news.not-front").ready(function () {
-
+   $(".field-name-field-news-image .field-items img").each(function(){
+     $(this).after("<span>" + $(this).attr("title") + "</span>");
+   })
      $(".field-name-field-news-image .field-items").addClass("owl-carousel owl-theme").owlCarousel({
        rtl: true,
        loop: true,
