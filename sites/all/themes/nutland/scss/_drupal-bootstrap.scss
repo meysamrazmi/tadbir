@@ -990,10 +990,6 @@ a {
   #block-system-main-menu.contextual-links-region {
     position: static;
   }
-  button{
-    position: absolute;
-    right: 0;
-  }
   a.logo{
     img{
       width: 230px;
@@ -1187,14 +1183,17 @@ a {
     }
     .logo.navbar-btn.pull-left{
       float: none !important;
-      width: 90px !important;
       overflow: hidden;
       display: inline-block;
       vertical-align: middle;
       margin: auto 10px;
+      @media (max-width: 769px) {
+        width: 90px !important;
+
+      }
     }
-    #navbar .container,
-    #navbar .container-fluid {
+    .container,
+    .container-fluid {
       flex-direction: row ;
       padding: 0;
     }
