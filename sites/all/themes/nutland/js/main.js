@@ -47,6 +47,10 @@ $(document).ready(function(){
     $(".group-footer .view-content .views-field-field-news-image .field-content").addClass("items");
   });
 
+  $(".node-type-projects").ready(function () {
+    $(".group-footer .view-content .views-field-field-image .field-content").addClass("items");
+  });
+
 });
 // search box in page news
 $(".page-news .view-filters").ready(function(){
@@ -93,3 +97,24 @@ $(".page-node-59 #block-system-main, #node-59").ready(function () {
 });
 //comment form
 $("form.comment-form .form-submit").text("ارسال پیام");
+
+
+//carousel in node project//carousel in node news
+$(".node-type-projects.not-front").ready(function () {
+  $(".field-name-field-main-slide .field-items img, .field-name-field-middle-slide .field-items img").each(function(){
+    $(this).after("<span>" + $(this).attr("title") + "</span>");
+  })
+  $(".field-name-field-slides .field-items, .field-name-field-middle-slide .field-items ").addClass("owl-carousel owl-theme").owlCarousel({
+    rtl: true,
+    loop: true,
+    margin: 15,
+    responsiveClass: true,
+    nav: true,
+    autoplayTimeout: 3200,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 1 },
+      1000: { items: 1 }
+    }
+  });
+});
