@@ -25,7 +25,7 @@ $(document).ready(function(){
   });
 
   $(".mdi-magnify").click(function(){
-    $(".form-search-menu").css("display" ,"inline");
+    $(".form-search-menu").toggleClass("open");
   });
   //close alert box
   $( "body .close" ).click(function() {
