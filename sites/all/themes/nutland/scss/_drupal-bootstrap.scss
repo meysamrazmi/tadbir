@@ -1063,6 +1063,9 @@ a {
             box-shadow: none;
             a{color: #444}
           }
+          .accordion a{
+            padding: 0!important;
+          }
           a{
             background: none!important;
             padding: 10px 25px !important;
@@ -1459,7 +1462,7 @@ a {
                 }
               }
             }
-            .views-field-field-image{
+            .views-field-field-ima{
               .line_effect{
                 bottom: 80px !important;
               }
@@ -2409,7 +2412,7 @@ a {
                 font-weight: bold;
               }
               h4{
-                margin: 0 0 0 75px !important;
+                margin: 0 0 0 75px;
               }
             }
             .tab--1-of-3 {
@@ -2514,7 +2517,7 @@ a {
       #content{
         .menu{
           h4{
-            margin-right: 50px!important;
+            margin: 0 0 0 45px;
           }
         }
       }
@@ -3011,7 +3014,7 @@ a {
           display: none;
         }
         .form-actions{
-          #edit-submit{
+          .btn-success{
             background-color: #00247a !important;
             border-color: #00247a !important;
             border-radius: 0;
@@ -3409,7 +3412,7 @@ a {
               font-size: 60px;
               position: absolute;
               color: white;
-              top: 50%;
+              top: 28%;
               transition: all 0.2s ease-in-out;
               transform: translate(0%, -50%);
             }
@@ -3431,18 +3434,23 @@ a {
             }
           }
         }
+        .owl-dots{
+          display: none!important;
+        }
       }
       .field-name-field-body{
         position: absolute;
         width: 100%;
         height: 100%;
         display: flex;
-        top: 0;
+        top: -20%;
         right: auto;
         justify-content: center;
         align-items: center;
+        text-align: -webkit-center;
         .field-item{
           color: white;
+          text-align: right;
           width: 73%;
           padding: 20px 20px 130px;
           border: 1px solid #fff;
@@ -3459,14 +3467,26 @@ a {
         }
       }
       .field-collection-container{
+        .field-collection-view{
+          border-bottom: none!important;
+        }
         background: rgba(0,0,0,0.5);
         position: relative;
-        bottom: 200px;
+        margin-top: -221px;
         z-index: 2;
+        margin-bottom: 200px !important;
+        color: white;
+        padding: 35px 75px;
+        border-bottom: none!important;
         .field-items{
           display: flex;
+          max-width: 1000px;
+          margin: auto;
           .content{
             .field-name-field-img{
+              display: inline-block;
+              float: right;
+              margin-left: 20px;
               img{
                 width: 64px;
               }
@@ -3474,7 +3494,81 @@ a {
           }
         }
       }
+      .field-name-field-projec-tag{
+        .field-items{
+          display: flex;
+          margin: 45px 0;
+          a{
+            border: 1px solid #ccc;
+            color: #212529;
+            padding: 6px 8px;
+            border-radius: 4px;
+            margin: 0 3px;
+          }
+        }
+      }
+      .group-middle{
+        float: none!important;
+        margin: auto;
+        min-width: 588px;
+        .field-name-field-middle-slide{
+          .owl-prev{
+            span:before{
+              right: -45%!important;
+              color: #ccc!important;
+              top: 40%;
+            }
+          }
+          .owl-next{
+            span:before{
+              left: -45%!important;
+              color: #ccc!important;
+              top: 40%;
+            }
+          }
+          .field-item span{
+            position: relative;
+            bottom: 31px;
+            text-align: center;
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 6px 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            max-width: 588px;
+          }
+        }
+        .field-name-body{
+          line-height: 2;
+          text-align: justify;
+          span{
+            font-family: fanum !important;
+          }
+        }
+      }
       .group-footer{
+        max-width: 1100px;
+        margin: auto;
+        .field-label{
+          display: block!important;
+          color: #00247a;
+          font-size: 18px;
+          margin-bottom: 30px;
+          position: relative;
+          max-width: 90%;
+          &:after{
+            content: '';
+            position: absolute;
+            z-index: -1;
+            width: 100%;
+            height: 2px;
+            background: #ccc;
+            top: 15px;
+            margin-right: 10px;
+          }
+        }
         .items{
           height: auto!important;
         }
@@ -3531,7 +3625,7 @@ a {
             display: none;
           }
           .form-actions{
-            #edit-submit{
+          button{
               background-color: #00247a !important;
               border-color: #00247a !important;
               border-radius: 0;

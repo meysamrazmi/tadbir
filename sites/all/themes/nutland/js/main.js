@@ -34,7 +34,7 @@ $(document).ready(function(){
 
 //add class item
   $("#node-3").ready(function () {
-    $("#projects .view-content .views-field-field-image .field-content").addClass("items");
+    $("#projects .view-content .views-field-field-ima .field-content").addClass("items");
   });
   $(".page-gallery").ready(function () {
     $(" .view-content .views-field-field-main-image .field-content").addClass("items");
@@ -48,7 +48,7 @@ $(document).ready(function(){
   });
 
   $(".node-type-projects").ready(function () {
-    $(".group-footer .view-content .views-field-field-image .field-content").addClass("items");
+    $(".group-footer .view-content .views-field-field-ima .field-content").addClass("items");
   });
 
 });
@@ -96,15 +96,15 @@ $(".page-node-59 #block-system-main, #node-59").ready(function () {
   $(".webform-progressbar").addClass("col-md-3 col-sm-3 col-xs-12");
 });
 //comment form
-$("form.comment-form .form-submit").text("ارسال پیام");
+$("form.comment-form .form-actions span").text("ارسال پیام");
 
 
 //carousel in node project//carousel in node news
 $(".node-type-projects.not-front").ready(function () {
-  $(".field-name-field-main-slide .field-items img, .field-name-field-middle-slide .field-items img").each(function(){
+  $(".field-name-field-middle-slide .field-items img").each(function(){
     $(this).after("<span>" + $(this).attr("title") + "</span>");
   })
-  $(".field-name-field-slides .field-items, .field-name-field-middle-slide .field-items ").addClass("owl-carousel owl-theme").owlCarousel({
+  $(".field-name-field-middle-slide .field-items, .field-name-field-slides .field-items ").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
     loop: true,
     margin: 15,

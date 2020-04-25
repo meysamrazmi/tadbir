@@ -128,18 +128,18 @@
 
   <style>
 
-    #block-block-5{
-      position: absolute;
-      top: 2%;
-      z-index: 100;
+    #block-block-8{
       width: 100%;
+      background: white;
+      text-align: -webkit-center;
     }
     .block-title{
       display: none;
     }
     #main{
-      padding-top: 25px;
+      padding: 25px;
       background: white;
+      max-width: 1000px;
     }
     .figures {
       display: block;
@@ -221,6 +221,12 @@
     [dir=rtl] .accordion li {
       padding-left: 0.625rem;
       padding-right: 0.625rem
+    }
+    @media (max-width: 768px) {
+     #main{
+       max-width: 250px!important;
+       overflow: overlay;
+     }
     }
     @media only screen and (max-width: 36rem) {
       .accordion li {
