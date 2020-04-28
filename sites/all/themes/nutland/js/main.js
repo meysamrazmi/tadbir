@@ -51,6 +51,10 @@ $(document).ready(function(){
     $(".group-footer .view-content .views-field-field-ima .field-content").addClass("items");
   });
 
+  $(".node-type-subset").ready(function () {
+    $(".group-footer .field-name-field-tarh .field-name-field-ima").addClass("items");
+  });
+
 });
 // search box in page news
 $(".page-news .view-filters").ready(function(){
