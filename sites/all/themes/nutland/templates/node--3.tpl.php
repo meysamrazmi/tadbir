@@ -256,7 +256,7 @@
         <div class="container">
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("medium", $node7->field_image['und'][0]['uri']); ?>" alt="">
+              <img class="filter1" src="<?php print image_style_url("medium", $node7->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
                 <h4><?php print $node7->title; ?></h4>
               </div>
@@ -264,7 +264,7 @@
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node8->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("medium", $node8->field_image['und'][0]['uri']); ?>" alt="">
+              <img class="filter2" src="<?php print image_style_url("medium", $node8->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
                 <h4><?php print $node8->title; ?></h4>
               </div>
@@ -272,7 +272,7 @@
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node9->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("medium", $node9->field_image['und'][0]['uri']); ?>" alt="">
+              <img class="filter3" src="<?php print image_style_url("medium", $node9->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
                 <h4><?php print $node9->title; ?></h4>
               </div>
@@ -280,7 +280,7 @@
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node10->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("medium", $node10->field_image['und'][0]['uri']); ?>" alt="">
+              <img class="filter4" src="<?php print image_style_url("medium", $node10->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
                 <h4><?php print $node10->title; ?></h4>
               </div>
@@ -288,7 +288,7 @@
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node11->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("medium", $node11->field_image['und'][0]['uri']); ?>" alt="">
+              <img class="filter5" src="<?php print image_style_url("medium", $node11->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
                 <h4><?php print $node11->title; ?></h4>
               </div>
@@ -296,8 +296,8 @@
           </div>
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node12->field_link['und'][0]['url']; ?>" class="items_img">
-              <img src="<?php print image_style_url("medium", $node12->field_image['und'][0]['uri']); ?>" alt="">
-              <div class="text">
+              <img class="filter6" src="<?php print image_style_url("medium", $node12->field_image['und'][0]['uri']); ?>" alt="">
+              <div  class="text">
                 <h4><?php print $node12->title; ?></h4>
               </div>
             </a>

@@ -1036,7 +1036,7 @@ a {
             bottom: 0;
             right: 0;
             width: 0;
-            height: 1px;
+            height: 2px;
             -webkit-transition: width 0.3s ease-in-out;
             background-color: #00247a;
           }
@@ -1497,12 +1497,29 @@ a {
             font-size: 16px;
           }
         }
+        .filter1{
+          filter: sepia(1) hue-rotate(-60deg) saturate(0.5) brightness(0.9) ;
+        }
+        .filter2{
+          filter: sepia(1) hue-rotate(-90deg) saturate(1.5) brightness(0.9) ;
+        }
+        .filter3{
+          filter: sepia(1) hue-rotate(-40deg) saturate(1) brightness(0.9)  ;
+        }
+        .filter4{
+          filter: sepia(1) hue-rotate(30deg) saturate(1) brightness(0.9) ;
+        }
+        .filter5{
+          filter:sepia(1) hue-rotate(-10deg) saturate(1) brightness(0.9)  ;
+        }
+        .filter6{
+          filter: sepia(1) hue-rotate(-180deg) saturate(1.2) brightness(1);
+        }
         img{
           max-width: 100%;
           transition: all 0.4s ease-in-out;
-          filter: hue-rotate(60deg);
           &:hover{
-            filter: none;
+            filter: none !important;
           }
         }
       }
@@ -1713,6 +1730,23 @@ a {
     padding: 0 10px;
     .view-content{
       border-top: 1px solid #ccc;
+      .items{
+        display: inline-block;
+        max-width: 250px;
+        height: 220px!important;
+        float: right;
+        margin-left: 15px;
+        &:before{
+          height: 215px;
+        }
+        &:after{
+          height: 220px;
+        }
+        .line_effect{
+          max-width: 250px;
+          height: 215px;
+        }
+      }
       .views-row{
         display: inline-block;
         border-bottom: 1px solid #ccc;
@@ -1756,6 +1790,9 @@ a {
   @media (max-width: 600px) {
     .view-content{
       text-align: -webkit-center;
+      .items{
+        float: none !important;
+      }
       .views-row{
         .views-field-created{
           display: none !important;
@@ -2419,7 +2456,7 @@ a {
 .page-node-5{
   .main-container.container{
     width: 100%;
-    padding-right:0!important;
+    padding:0!important;
     .breadcrumb, .page-header, .tabs--primary, .action-links{
       display: none;
     }

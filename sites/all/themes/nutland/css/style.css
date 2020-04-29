@@ -8313,7 +8313,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   bottom: 0;
   right: 0;
   width: 0;
-  height: 1px;
+  height: 2px;
   -webkit-transition: width 0.3s ease-in-out;
   background-color: #00247a;
 }
@@ -8721,13 +8721,30 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-weight: bold;
   font-size: 16px;
 }
+.page-node-3 .main-container #node-3 #jobs .filter1, .page-node-3 .main-container #node-37 #jobs .filter1, .page-node-3 .main-container #node-74 #jobs .filter1, .page-node-37 .main-container #node-3 #jobs .filter1, .page-node-37 .main-container #node-37 #jobs .filter1, .page-node-37 .main-container #node-74 #jobs .filter1, .page-node-74 .main-container #node-3 #jobs .filter1, .page-node-74 .main-container #node-37 #jobs .filter1, .page-node-74 .main-container #node-74 #jobs .filter1 {
+  filter: sepia(1) hue-rotate(-60deg) saturate(0.5) brightness(0.9);
+}
+.page-node-3 .main-container #node-3 #jobs .filter2, .page-node-3 .main-container #node-37 #jobs .filter2, .page-node-3 .main-container #node-74 #jobs .filter2, .page-node-37 .main-container #node-3 #jobs .filter2, .page-node-37 .main-container #node-37 #jobs .filter2, .page-node-37 .main-container #node-74 #jobs .filter2, .page-node-74 .main-container #node-3 #jobs .filter2, .page-node-74 .main-container #node-37 #jobs .filter2, .page-node-74 .main-container #node-74 #jobs .filter2 {
+  filter: sepia(1) hue-rotate(-90deg) saturate(1.5) brightness(0.9);
+}
+.page-node-3 .main-container #node-3 #jobs .filter3, .page-node-3 .main-container #node-37 #jobs .filter3, .page-node-3 .main-container #node-74 #jobs .filter3, .page-node-37 .main-container #node-3 #jobs .filter3, .page-node-37 .main-container #node-37 #jobs .filter3, .page-node-37 .main-container #node-74 #jobs .filter3, .page-node-74 .main-container #node-3 #jobs .filter3, .page-node-74 .main-container #node-37 #jobs .filter3, .page-node-74 .main-container #node-74 #jobs .filter3 {
+  filter: sepia(1) hue-rotate(-40deg) saturate(1) brightness(0.9);
+}
+.page-node-3 .main-container #node-3 #jobs .filter4, .page-node-3 .main-container #node-37 #jobs .filter4, .page-node-3 .main-container #node-74 #jobs .filter4, .page-node-37 .main-container #node-3 #jobs .filter4, .page-node-37 .main-container #node-37 #jobs .filter4, .page-node-37 .main-container #node-74 #jobs .filter4, .page-node-74 .main-container #node-3 #jobs .filter4, .page-node-74 .main-container #node-37 #jobs .filter4, .page-node-74 .main-container #node-74 #jobs .filter4 {
+  filter: sepia(1) hue-rotate(30deg) saturate(1) brightness(0.9);
+}
+.page-node-3 .main-container #node-3 #jobs .filter5, .page-node-3 .main-container #node-37 #jobs .filter5, .page-node-3 .main-container #node-74 #jobs .filter5, .page-node-37 .main-container #node-3 #jobs .filter5, .page-node-37 .main-container #node-37 #jobs .filter5, .page-node-37 .main-container #node-74 #jobs .filter5, .page-node-74 .main-container #node-3 #jobs .filter5, .page-node-74 .main-container #node-37 #jobs .filter5, .page-node-74 .main-container #node-74 #jobs .filter5 {
+  filter: sepia(1) hue-rotate(-10deg) saturate(1) brightness(0.9);
+}
+.page-node-3 .main-container #node-3 #jobs .filter6, .page-node-3 .main-container #node-37 #jobs .filter6, .page-node-3 .main-container #node-74 #jobs .filter6, .page-node-37 .main-container #node-3 #jobs .filter6, .page-node-37 .main-container #node-37 #jobs .filter6, .page-node-37 .main-container #node-74 #jobs .filter6, .page-node-74 .main-container #node-3 #jobs .filter6, .page-node-74 .main-container #node-37 #jobs .filter6, .page-node-74 .main-container #node-74 #jobs .filter6 {
+  filter: sepia(1) hue-rotate(-180deg) saturate(1.2) brightness(1);
+}
 .page-node-3 .main-container #node-3 #jobs img, .page-node-3 .main-container #node-37 #jobs img, .page-node-3 .main-container #node-74 #jobs img, .page-node-37 .main-container #node-3 #jobs img, .page-node-37 .main-container #node-37 #jobs img, .page-node-37 .main-container #node-74 #jobs img, .page-node-74 .main-container #node-3 #jobs img, .page-node-74 .main-container #node-37 #jobs img, .page-node-74 .main-container #node-74 #jobs img {
   max-width: 100%;
   transition: all 0.4s ease-in-out;
-  filter: hue-rotate(60deg);
 }
 .page-node-3 .main-container #node-3 #jobs img:hover, .page-node-3 .main-container #node-37 #jobs img:hover, .page-node-3 .main-container #node-74 #jobs img:hover, .page-node-37 .main-container #node-3 #jobs img:hover, .page-node-37 .main-container #node-37 #jobs img:hover, .page-node-37 .main-container #node-74 #jobs img:hover, .page-node-74 .main-container #node-3 #jobs img:hover, .page-node-74 .main-container #node-37 #jobs img:hover, .page-node-74 .main-container #node-74 #jobs img:hover {
-  filter: none;
+  filter: none !important;
 }
 @media (max-width: 500px) {
   .page-node-3 .main-container .view-id-slideshow .owl-item .field-content, .page-node-37 .main-container .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content {
@@ -8883,6 +8900,23 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-news #block-system-main .view-content {
   border-top: 1px solid #ccc;
 }
+.page-news #block-system-main .view-content .items {
+  display: inline-block;
+  max-width: 250px;
+  height: 220px !important;
+  float: right;
+  margin-left: 15px;
+}
+.page-news #block-system-main .view-content .items:before {
+  height: 215px;
+}
+.page-news #block-system-main .view-content .items:after {
+  height: 220px;
+}
+.page-news #block-system-main .view-content .items .line_effect {
+  max-width: 250px;
+  height: 215px;
+}
 .page-news #block-system-main .view-content .views-row {
   display: inline-block;
   border-bottom: 1px solid #ccc;
@@ -8924,6 +8958,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 @media (max-width: 600px) {
   .page-news .view-content {
     text-align: -webkit-center;
+  }
+  .page-news .view-content .items {
+    float: none !important;
   }
   .page-news .view-content .views-row .views-field-created {
     display: none !important;
@@ -9517,7 +9554,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 
 .page-node-5 .main-container.container {
   width: 100%;
-  padding-right: 0 !important;
+  padding: 0 !important;
 }
 .page-node-5 .main-container.container .breadcrumb, .page-node-5 .main-container.container .page-header, .page-node-5 .main-container.container .tabs--primary, .page-node-5 .main-container.container .action-links {
   display: none;

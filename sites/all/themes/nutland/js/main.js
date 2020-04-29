@@ -42,6 +42,9 @@ $(document).ready(function(){
   $(".page-videos").ready(function () {
     $(" .view-content .views-field-field-image-video .field-content").addClass("items");
   });
+  $(".page-news").ready(function () {
+    $(".view-content .views-field-field-news-image").addClass("items");
+  });
 
   $(".node-type-news").ready(function () {
     $(".group-footer .view-content .views-field-field-news-image .field-content").addClass("items");
@@ -109,6 +112,22 @@ $(".node-type-projects.not-front").ready(function () {
     $(this).after("<span>" + $(this).attr("title") + "</span>");
   })
   $(".field-name-field-middle-slide .field-items, .field-name-field-slides .field-items ").addClass("owl-carousel owl-theme").owlCarousel({
+    rtl: true,
+    loop: true,
+    margin: 15,
+    responsiveClass: true,
+    nav: true,
+    autoplayTimeout: 3200,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 1 },
+      1000: { items: 1 }
+    }
+  });
+});
+//carousel in node subset
+$(".node-type-subset.not-front").ready(function () {
+  $(".field-name-field-slider .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
     loop: true,
     margin: 15,
