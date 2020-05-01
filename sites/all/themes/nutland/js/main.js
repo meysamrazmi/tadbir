@@ -141,3 +141,11 @@ $(".node-type-subset.not-front").ready(function () {
     }
   });
 });
+//fix header on scroll
+$(window).scroll(function(){
+  var sticky = $('.navbar-static-top'),
+    scroll = $(window).scrollTop();
+
+  if (scroll >= 100) sticky.addClass('fixed');
+  else sticky.removeClass('fixed');
+});

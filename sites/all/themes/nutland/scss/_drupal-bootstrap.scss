@@ -10,11 +10,37 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;
 }
+body li.active-trail a:after{
+  width: 100% !important;
+}
+.fixed {
+  position: fixed;
+  top:0; left:0;
+  width: 100%;
+}
 .alert-success {
   z-index: 6;
   margin: 0 50px;
   max-width: 450px;
   position: fixed;
+  bottom: 10px;
+  left: 0;
+  border-radius: 0;
+  color: white !important;
+  background-color: #006102 !important;
+}
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  color: white;
+  right: -21px;
+  text-shadow: none;
+  opacity: 1;
+  font-size: 24px;
+  &:hover{
+    color: white!important;
+    transform: scale(1.05);
+  }
 }
 .over-open-menu{
   &:after{
@@ -391,12 +417,15 @@ a.tabledrag-handle .handle {
 }
 div.error,
 table tr.error {
-  background-color: $state-danger-bg;
-  color: $state-danger-text;
-  position: absolute;
+  background-color: #cc0400;
+  color: #ffffff;
   z-index: 6;
   margin: 0 50px;
   max-width: 450px;
+  position: fixed;
+  left: 0;
+  border-radius: 0;
+  bottom: 10px;
 }
 .form-group.error,
 .form-group.has-error {
@@ -1278,7 +1307,7 @@ a {
   }
 }
 //front page
-.page-node-3, .page-node-37, .page-node-74{
+.page-node-3, .page-node-74{
   #block-google-cse-google-cse{
     top: 3.5%!important;
   }
@@ -1286,7 +1315,7 @@ a {
     .page-header, .element-invisible, .tabs--primary, .action-links{
       display: none;
     }
-    #node-3, #node-37, #node-74{
+    #node-3, #node-74{
       .view-id-slideshow{
         img{
           filter: brightness(0.65);
@@ -1812,97 +1841,6 @@ a {
     }
     .form-type-textfield{
       width: 100% !important;
-    }
-  }
-}
-//holding page
-
-.page-node-37{
-  .main-container{
-    padding: 0;
-    width: inherit;
-    overflow-x: hidden;
-    .page-header, .element-invisible, .tabs--primary, .action-links, .breadcrumb{
-      display: none;
-    }
-    #node-37{
-      #top{
-        .col-md-3{
-          float: right;
-          text-align: -webkit-center;
-          img{
-            max-width: 200px;
-            border: 1px solid #ccc;
-          }
-        }
-        .col-md-6{
-          float: right;
-          img{
-            width: 100%;
-            max-height: 300px;
-          }
-        }
-      }
-      #custom{
-        .view-content{
-          display: flex;
-        }
-      }
-      #sectionJobs {
-        background-image: url(/sites/all/themes/nutland/images/sktemplate3.jpg);
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        background-attachment: fixed;
-        padding: 50px 0;
-        margin: 30px 0;
-        .col-md-4{
-          float: right;
-        }
-        .flex-none{
-          min-height: 50px !important;
-        }
-        .mt3{
-          min-height: 210px !important;
-        }
-        .card_jobs {
-          background-color: rgba(255, 255, 255, .9);
-          border: 1px solid rgba(0, 0, 0, .1);
-          padding: 0.625rem;
-          min-height: 130px;
-          color: #adadad;
-          margin-bottom: 20px;
-          .title {
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            color: #00247a;
-
-            &:before {
-              content: "";
-              height: 0.0625rem;
-              width: 3.125rem;
-              display: block;
-              background-color: #00247a;
-            }
-          }
-        }
-      }
-    }
-    @media (max-width: 768px) {
-      #top{
-        .col-md-3{
-          float: none !important;
-        }
-        .col-md-6{
-          float: none !important;
-        }
-      }
-      #sectionJobs .col-md-4{
-        float: none!important;
-      }
     }
   }
 }
@@ -2702,7 +2640,7 @@ a {
       .items{
         height: auto!important;
       }
-      margin-top: 125px;
+      margin-top: 200px;
       .container{
         max-width: 1100px;
         text-align: justify;
@@ -2802,7 +2740,7 @@ a {
   position: absolute;
   top: 0.3125rem;
   bottom: 0.3125rem;
-  border: 1px solid rgba(255, 255, 255, .5);
+  border: 1px solid rgba(255, 255, 255, .25);
   right: 0.3125rem;
   left: 0.3125rem;
   z-index: 4;

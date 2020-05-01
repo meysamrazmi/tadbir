@@ -59,14 +59,14 @@
   ?>
 
   <?php
-  $node1 = node_load(20);
-  $node2 = node_load(10);
-  $node3 = node_load(9);
-  $node4 = node_load(9);
-  $node5 = node_load(7);
-  $node6 = node_load(6);
-  $node7 = node_load(31);
-  $node8 = node_load(39);
+  $node1 = node_load(41);
+  $node2 = node_load(42);
+  $node3 = node_load(43);
+  $node4 = node_load(44);
+  $node5 = node_load(50);
+  $node6 = node_load(51);
+  $node7 = node_load(53);
+  $node8 = node_load(49);
   //    print $node->title;
   //    print '<img src="'. image_style_url("320x320", $node->field_image['und'][0]['uri']) .'">';
   ?>

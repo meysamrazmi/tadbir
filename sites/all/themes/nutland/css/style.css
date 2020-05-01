@@ -7300,11 +7300,41 @@ td.visible-print {
     display: none !important;
   }
 }
+body li.active-trail a:after {
+  width: 100% !important;
+}
+
+.fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
 .alert-success {
   z-index: 6;
   margin: 0 50px;
   max-width: 450px;
   position: fixed;
+  bottom: 10px;
+  left: 0;
+  border-radius: 0;
+  color: white !important;
+  background-color: #006102 !important;
+}
+
+.alert-dismissible .close {
+  position: relative;
+  top: -2px;
+  color: white;
+  right: -21px;
+  text-shadow: none;
+  opacity: 1;
+  font-size: 24px;
+}
+.alert-dismissible .close:hover {
+  color: white !important;
+  transform: scale(1.05);
 }
 
 .over-open-menu:after {
@@ -7682,12 +7712,15 @@ a.tabledrag-handle .handle {
 
 div.error,
 table tr.error {
-  background-color: #f2dede;
-  color: #a94442;
-  position: absolute;
+  background-color: #cc0400;
+  color: #ffffff;
   z-index: 6;
   margin: 0 50px;
   max-width: 450px;
+  position: fixed;
+  left: 0;
+  border-radius: 0;
+  bottom: 10px;
 }
 
 .form-group.error,
@@ -8532,25 +8565,25 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
 }
 
-.page-node-3 #block-google-cse-google-cse, .page-node-37 #block-google-cse-google-cse, .page-node-74 #block-google-cse-google-cse {
+.page-node-3 #block-google-cse-google-cse, .page-node-74 #block-google-cse-google-cse {
   top: 3.5% !important;
 }
-.page-node-3 .main-container .page-header, .page-node-3 .main-container .element-invisible, .page-node-3 .main-container .tabs--primary, .page-node-3 .main-container .action-links, .page-node-37 .main-container .page-header, .page-node-37 .main-container .element-invisible, .page-node-37 .main-container .tabs--primary, .page-node-37 .main-container .action-links, .page-node-74 .main-container .page-header, .page-node-74 .main-container .element-invisible, .page-node-74 .main-container .tabs--primary, .page-node-74 .main-container .action-links {
+.page-node-3 .main-container .page-header, .page-node-3 .main-container .element-invisible, .page-node-3 .main-container .tabs--primary, .page-node-3 .main-container .action-links, .page-node-74 .main-container .page-header, .page-node-74 .main-container .element-invisible, .page-node-74 .main-container .tabs--primary, .page-node-74 .main-container .action-links {
   display: none;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow img, .page-node-3 .main-container #node-37 .view-id-slideshow img, .page-node-3 .main-container #node-74 .view-id-slideshow img, .page-node-37 .main-container #node-3 .view-id-slideshow img, .page-node-37 .main-container #node-37 .view-id-slideshow img, .page-node-37 .main-container #node-74 .view-id-slideshow img, .page-node-74 .main-container #node-3 .view-id-slideshow img, .page-node-74 .main-container #node-37 .view-id-slideshow img, .page-node-74 .main-container #node-74 .view-id-slideshow img {
+.page-node-3 .main-container #node-3 .view-id-slideshow img, .page-node-3 .main-container #node-74 .view-id-slideshow img, .page-node-74 .main-container #node-3 .view-id-slideshow img, .page-node-74 .main-container #node-74 .view-id-slideshow img {
   filter: brightness(0.65);
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next:hover span, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev:hover span, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-next:hover span, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-prev:hover span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next:hover span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev:hover span, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-next:hover span, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-prev:hover span, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-next:hover span, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-prev:hover span, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-next:hover span, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-prev:hover span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next:hover span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev:hover span, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-next:hover span, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-prev:hover span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next:hover span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev:hover span {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next:hover span, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev:hover span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next:hover span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev:hover span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next:hover span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev:hover span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next:hover span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev:hover span {
   color: #00247a;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next span, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev span, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-next span, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-prev span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev span, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-next span, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-prev span, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-next span, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-prev span, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-next span, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-prev span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev span, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-next span, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-prev span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev span {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next span, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev span {
   font-size: 0;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next span:hover:before, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev span:hover:before, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-next span:hover:before, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-prev span:hover:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next span:hover:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev span:hover:before, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-next span:hover:before, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-prev span:hover:before, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-next span:hover:before, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-prev span:hover:before, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-next span:hover:before, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-prev span:hover:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next span:hover:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev span:hover:before, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-next span:hover:before, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-prev span:hover:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next span:hover:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev span:hover:before {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next span:hover:before, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev span:hover:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next span:hover:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev span:hover:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next span:hover:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev span:hover:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next span:hover:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev span:hover:before {
   color: #ccc;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-next span:before, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next span:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev span:before, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-next span:before, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-prev span:before, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-next span:before, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev span:before {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next span:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev span:before {
   font-family: icomoon !important;
   line-height: 1;
   font-size: 60px;
@@ -8560,26 +8593,26 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   transition: all 0.2s ease-in-out;
   transform: translate(0%, -50%);
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-next span:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next span:before, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-next span:before, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next span:before {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next span:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next span:before {
   content: "";
   left: 20px;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev span:before, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-prev span:before, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev span:before {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev span:before {
   content: "";
   right: 20px;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-dots, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-dots, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-dots, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-dots, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-dots, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-dots, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-dots, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-dots, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-dots {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-dots, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-dots, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-dots, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-dots {
   bottom: 15px;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-dots .active span, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-dots .active span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-dots .active span, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-dots .active span, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-dots .active span, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-dots .active span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-dots .active span, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-dots .active span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-dots .active span {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-dots .active span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-dots .active span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-dots .active span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-dots .active span {
   background: #00000080 !important;
   opacity: 0.85;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-dots span, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-dots span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-dots span, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-dots span, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-dots span, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-dots span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-dots span, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-dots span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-dots span {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-dots span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-dots span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-dots span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-dots span {
   background: #ddd !important;
   margin: 2px;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .views-field-field-body, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-item .views-field-field-body, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .views-field-field-body, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-item .views-field-field-body, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-item .views-field-field-body, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-item .views-field-field-body, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .views-field-field-body, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-item .views-field-field-body, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .views-field-field-body {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .views-field-field-body, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .views-field-field-body, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .views-field-field-body, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .views-field-field-body {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -8589,14 +8622,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   justify-content: center;
   align-items: center;
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .field-content, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-item .field-content, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .field-content, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-item .field-content, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-item .field-content, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .field-content {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .field-content, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .field-content {
   color: white;
   width: 73%;
   padding: 20px 20px 130px;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.2);
 }
-.page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .field-content p, .page-node-3 .main-container #node-37 .view-id-slideshow .owl-item .field-content p, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .field-content p, .page-node-37 .main-container #node-3 .view-id-slideshow .owl-item .field-content p, .page-node-37 .main-container #node-37 .view-id-slideshow .owl-item .field-content p, .page-node-37 .main-container #node-74 .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container #node-37 .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .field-content p {
+.page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .field-content p, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .field-content p {
   border-right: 4px solid;
   border-left: 4px solid;
   display: table;
@@ -8605,21 +8638,21 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-size: 28px;
   line-height: 2;
 }
-.page-node-3 .main-container #node-3 .field.field-name-body, .page-node-3 .main-container #node-37 .field.field-name-body, .page-node-3 .main-container #node-74 .field.field-name-body, .page-node-37 .main-container #node-3 .field.field-name-body, .page-node-37 .main-container #node-37 .field.field-name-body, .page-node-37 .main-container #node-74 .field.field-name-body, .page-node-74 .main-container #node-3 .field.field-name-body, .page-node-74 .main-container #node-37 .field.field-name-body, .page-node-74 .main-container #node-74 .field.field-name-body {
+.page-node-3 .main-container #node-3 .field.field-name-body, .page-node-3 .main-container #node-74 .field.field-name-body, .page-node-74 .main-container #node-3 .field.field-name-body, .page-node-74 .main-container #node-74 .field.field-name-body {
   display: none;
 }
-.page-node-3 .main-container #node-3 .header_title, .page-node-3 .main-container #node-37 .header_title, .page-node-3 .main-container #node-74 .header_title, .page-node-37 .main-container #node-3 .header_title, .page-node-37 .main-container #node-37 .header_title, .page-node-37 .main-container #node-74 .header_title, .page-node-74 .main-container #node-3 .header_title, .page-node-74 .main-container #node-37 .header_title, .page-node-74 .main-container #node-74 .header_title {
+.page-node-3 .main-container #node-3 .header_title, .page-node-3 .main-container #node-74 .header_title, .page-node-74 .main-container #node-3 .header_title, .page-node-74 .main-container #node-74 .header_title {
   display: flex;
   margin-top: 20px;
   align-items: center;
   margin-bottom: 35px;
 }
-.page-node-3 .main-container #node-3 .header_title .mb-0, .page-node-3 .main-container #node-37 .header_title .mb-0, .page-node-3 .main-container #node-74 .header_title .mb-0, .page-node-37 .main-container #node-3 .header_title .mb-0, .page-node-37 .main-container #node-37 .header_title .mb-0, .page-node-37 .main-container #node-74 .header_title .mb-0, .page-node-74 .main-container #node-3 .header_title .mb-0, .page-node-74 .main-container #node-37 .header_title .mb-0, .page-node-74 .main-container #node-74 .header_title .mb-0 {
+.page-node-3 .main-container #node-3 .header_title .mb-0, .page-node-3 .main-container #node-74 .header_title .mb-0, .page-node-74 .main-container #node-3 .header_title .mb-0, .page-node-74 .main-container #node-74 .header_title .mb-0 {
   font-size: 18px;
   margin: 0 10px;
   color: #00247a;
 }
-.page-node-3 .main-container #node-3 .header_title:after, .page-node-3 .main-container #node-3 .header_title:before, .page-node-3 .main-container #node-37 .header_title:after, .page-node-3 .main-container #node-37 .header_title:before, .page-node-3 .main-container #node-74 .header_title:after, .page-node-3 .main-container #node-74 .header_title:before, .page-node-37 .main-container #node-3 .header_title:after, .page-node-37 .main-container #node-3 .header_title:before, .page-node-37 .main-container #node-37 .header_title:after, .page-node-37 .main-container #node-37 .header_title:before, .page-node-37 .main-container #node-74 .header_title:after, .page-node-37 .main-container #node-74 .header_title:before, .page-node-74 .main-container #node-3 .header_title:after, .page-node-74 .main-container #node-3 .header_title:before, .page-node-74 .main-container #node-37 .header_title:after, .page-node-74 .main-container #node-37 .header_title:before, .page-node-74 .main-container #node-74 .header_title:after, .page-node-74 .main-container #node-74 .header_title:before {
+.page-node-3 .main-container #node-3 .header_title:after, .page-node-3 .main-container #node-3 .header_title:before, .page-node-3 .main-container #node-74 .header_title:after, .page-node-3 .main-container #node-74 .header_title:before, .page-node-74 .main-container #node-3 .header_title:after, .page-node-74 .main-container #node-3 .header_title:before, .page-node-74 .main-container #node-74 .header_title:after, .page-node-74 .main-container #node-74 .header_title:before {
   content: "";
   height: 0.125rem;
   -webkit-box-flex: 1;
@@ -8628,7 +8661,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: block;
   background-color: #ccc;
 }
-.page-node-3 .main-container #node-3 #sectionText, .page-node-3 .main-container #node-37 #sectionText, .page-node-3 .main-container #node-74 #sectionText, .page-node-37 .main-container #node-3 #sectionText, .page-node-37 .main-container #node-37 #sectionText, .page-node-37 .main-container #node-74 #sectionText, .page-node-74 .main-container #node-3 #sectionText, .page-node-74 .main-container #node-37 #sectionText, .page-node-74 .main-container #node-74 #sectionText {
+.page-node-3 .main-container #node-3 #sectionText, .page-node-3 .main-container #node-74 #sectionText, .page-node-74 .main-container #node-3 #sectionText, .page-node-74 .main-container #node-74 #sectionText {
   background-image: url(/sites/all/themes/nutland/images/sktemplate1.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
@@ -8636,48 +8669,48 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   text-align: center;
   margin: 32px 0;
 }
-.page-node-3 .main-container #node-3 #sectionText section, .page-node-3 .main-container #node-37 #sectionText section, .page-node-3 .main-container #node-74 #sectionText section, .page-node-37 .main-container #node-3 #sectionText section, .page-node-37 .main-container #node-37 #sectionText section, .page-node-37 .main-container #node-74 #sectionText section, .page-node-74 .main-container #node-3 #sectionText section, .page-node-74 .main-container #node-37 #sectionText section, .page-node-74 .main-container #node-74 #sectionText section {
+.page-node-3 .main-container #node-3 #sectionText section, .page-node-3 .main-container #node-74 #sectionText section, .page-node-74 .main-container #node-3 #sectionText section, .page-node-74 .main-container #node-74 #sectionText section {
   background: rgba(255, 255, 255, 0.8);
 }
-.page-node-3 .main-container #node-3 #sectionText section .container, .page-node-3 .main-container #node-37 #sectionText section .container, .page-node-3 .main-container #node-74 #sectionText section .container, .page-node-37 .main-container #node-3 #sectionText section .container, .page-node-37 .main-container #node-37 #sectionText section .container, .page-node-37 .main-container #node-74 #sectionText section .container, .page-node-74 .main-container #node-3 #sectionText section .container, .page-node-74 .main-container #node-37 #sectionText section .container, .page-node-74 .main-container #node-74 #sectionText section .container {
+.page-node-3 .main-container #node-3 #sectionText section .container, .page-node-3 .main-container #node-74 #sectionText section .container, .page-node-74 .main-container #node-3 #sectionText section .container, .page-node-74 .main-container #node-74 #sectionText section .container {
   padding: 50px 0;
 }
-.page-node-3 .main-container #node-3 #sectionText section .container .article, .page-node-3 .main-container #node-37 #sectionText section .container .article, .page-node-3 .main-container #node-74 #sectionText section .container .article, .page-node-37 .main-container #node-3 #sectionText section .container .article, .page-node-37 .main-container #node-37 #sectionText section .container .article, .page-node-37 .main-container #node-74 #sectionText section .container .article, .page-node-74 .main-container #node-3 #sectionText section .container .article, .page-node-74 .main-container #node-37 #sectionText section .container .article, .page-node-74 .main-container #node-74 #sectionText section .container .article {
+.page-node-3 .main-container #node-3 #sectionText section .container .article, .page-node-3 .main-container #node-74 #sectionText section .container .article, .page-node-74 .main-container #node-3 #sectionText section .container .article, .page-node-74 .main-container #node-74 #sectionText section .container .article {
   border: 1px solid rgba(0, 0, 0, 0.4);
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.page-node-3 .main-container #node-3 #sectionText section .container .article h4, .page-node-3 .main-container #node-37 #sectionText section .container .article h4, .page-node-3 .main-container #node-74 #sectionText section .container .article h4, .page-node-37 .main-container #node-3 #sectionText section .container .article h4, .page-node-37 .main-container #node-37 #sectionText section .container .article h4, .page-node-37 .main-container #node-74 #sectionText section .container .article h4, .page-node-74 .main-container #node-3 #sectionText section .container .article h4, .page-node-74 .main-container #node-37 #sectionText section .container .article h4, .page-node-74 .main-container #node-74 #sectionText section .container .article h4 {
+.page-node-3 .main-container #node-3 #sectionText section .container .article h4, .page-node-3 .main-container #node-74 #sectionText section .container .article h4, .page-node-74 .main-container #node-3 #sectionText section .container .article h4, .page-node-74 .main-container #node-74 #sectionText section .container .article h4 {
   color: #00247a;
   margin-bottom: 20px;
 }
-.page-node-3 .main-container #node-3 #sectionText section .container .article .caption_article, .page-node-3 .main-container #node-37 #sectionText section .container .article .caption_article, .page-node-3 .main-container #node-74 #sectionText section .container .article .caption_article, .page-node-37 .main-container #node-3 #sectionText section .container .article .caption_article, .page-node-37 .main-container #node-37 #sectionText section .container .article .caption_article, .page-node-37 .main-container #node-74 #sectionText section .container .article .caption_article, .page-node-74 .main-container #node-3 #sectionText section .container .article .caption_article, .page-node-74 .main-container #node-37 #sectionText section .container .article .caption_article, .page-node-74 .main-container #node-74 #sectionText section .container .article .caption_article {
+.page-node-3 .main-container #node-3 #sectionText section .container .article .caption_article, .page-node-3 .main-container #node-74 #sectionText section .container .article .caption_article, .page-node-74 .main-container #node-3 #sectionText section .container .article .caption_article, .page-node-74 .main-container #node-74 #sectionText section .container .article .caption_article {
   border-right: 2px solid #333;
   border-left: 2px solid #333;
   line-height: 2;
   font-size: 14px;
   padding: 0 50px;
 }
-.page-node-3 .main-container #node-3 #projects .view-content, .page-node-3 .main-container #node-37 #projects .view-content, .page-node-3 .main-container #node-74 #projects .view-content, .page-node-37 .main-container #node-3 #projects .view-content, .page-node-37 .main-container #node-37 #projects .view-content, .page-node-37 .main-container #node-74 #projects .view-content, .page-node-74 .main-container #node-3 #projects .view-content, .page-node-74 .main-container #node-37 #projects .view-content, .page-node-74 .main-container #node-74 #projects .view-content {
+.page-node-3 .main-container #node-3 #projects .view-content, .page-node-3 .main-container #node-74 #projects .view-content, .page-node-74 .main-container #node-3 #projects .view-content, .page-node-74 .main-container #node-74 #projects .view-content {
   display: flex;
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row, .page-node-3 .main-container #node-37 #projects .view-content .views-row, .page-node-3 .main-container #node-74 #projects .view-content .views-row, .page-node-37 .main-container #node-3 #projects .view-content .views-row, .page-node-37 .main-container #node-37 #projects .view-content .views-row, .page-node-37 .main-container #node-74 #projects .view-content .views-row, .page-node-74 .main-container #node-3 #projects .view-content .views-row, .page-node-74 .main-container #node-37 #projects .view-content .views-row, .page-node-74 .main-container #node-74 #projects .view-content .views-row {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row, .page-node-3 .main-container #node-74 #projects .view-content .views-row, .page-node-74 .main-container #node-3 #projects .view-content .views-row, .page-node-74 .main-container #node-74 #projects .view-content .views-row {
   width: 33%;
   margin: 0 20px 20px 20px;
   position: relative;
   overflow: hidden;
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row:hover .views-field-title, .page-node-3 .main-container #node-37 #projects .view-content .views-row:hover .views-field-title, .page-node-3 .main-container #node-74 #projects .view-content .views-row:hover .views-field-title, .page-node-37 .main-container #node-3 #projects .view-content .views-row:hover .views-field-title, .page-node-37 .main-container #node-37 #projects .view-content .views-row:hover .views-field-title, .page-node-37 .main-container #node-74 #projects .view-content .views-row:hover .views-field-title, .page-node-74 .main-container #node-3 #projects .view-content .views-row:hover .views-field-title, .page-node-74 .main-container #node-37 #projects .view-content .views-row:hover .views-field-title, .page-node-74 .main-container #node-74 #projects .view-content .views-row:hover .views-field-title {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row:hover .views-field-title, .page-node-3 .main-container #node-74 #projects .view-content .views-row:hover .views-field-title, .page-node-74 .main-container #node-3 #projects .view-content .views-row:hover .views-field-title, .page-node-74 .main-container #node-74 #projects .view-content .views-row:hover .views-field-title {
   background: rgba(0, 36, 122, 0.9);
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row:hover img, .page-node-3 .main-container #node-37 #projects .view-content .views-row:hover img, .page-node-3 .main-container #node-74 #projects .view-content .views-row:hover img, .page-node-37 .main-container #node-3 #projects .view-content .views-row:hover img, .page-node-37 .main-container #node-37 #projects .view-content .views-row:hover img, .page-node-37 .main-container #node-74 #projects .view-content .views-row:hover img, .page-node-74 .main-container #node-3 #projects .view-content .views-row:hover img, .page-node-74 .main-container #node-37 #projects .view-content .views-row:hover img, .page-node-74 .main-container #node-74 #projects .view-content .views-row:hover img {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row:hover img, .page-node-3 .main-container #node-74 #projects .view-content .views-row:hover img, .page-node-74 .main-container #node-3 #projects .view-content .views-row:hover img, .page-node-74 .main-container #node-74 #projects .view-content .views-row:hover img {
   transform: scale(1.05);
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row img, .page-node-3 .main-container #node-37 #projects .view-content .views-row img, .page-node-3 .main-container #node-74 #projects .view-content .views-row img, .page-node-37 .main-container #node-3 #projects .view-content .views-row img, .page-node-37 .main-container #node-37 #projects .view-content .views-row img, .page-node-37 .main-container #node-74 #projects .view-content .views-row img, .page-node-74 .main-container #node-3 #projects .view-content .views-row img, .page-node-74 .main-container #node-37 #projects .view-content .views-row img, .page-node-74 .main-container #node-74 #projects .view-content .views-row img {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row img, .page-node-3 .main-container #node-74 #projects .view-content .views-row img, .page-node-74 .main-container #node-3 #projects .view-content .views-row img, .page-node-74 .main-container #node-74 #projects .view-content .views-row img {
   width: 100%;
   transition: all 0.4s ease-in-out;
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-title, .page-node-3 .main-container #node-37 #projects .view-content .views-row .views-field-title, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-title, .page-node-37 .main-container #node-3 #projects .view-content .views-row .views-field-title, .page-node-37 .main-container #node-37 #projects .view-content .views-row .views-field-title, .page-node-37 .main-container #node-74 #projects .view-content .views-row .views-field-title, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-title, .page-node-74 .main-container #node-37 #projects .view-content .views-row .views-field-title, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-title {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-title, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-title, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-title, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-title {
   width: 100%;
   bottom: 0;
   background: rgba(0, 36, 122, 0.5);
@@ -8686,19 +8719,19 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   min-height: 75px;
   transition: all 0.4s ease-in-out;
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-title span, .page-node-3 .main-container #node-37 #projects .view-content .views-row .views-field-title span, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-title span, .page-node-37 .main-container #node-3 #projects .view-content .views-row .views-field-title span, .page-node-37 .main-container #node-37 #projects .view-content .views-row .views-field-title span, .page-node-37 .main-container #node-74 #projects .view-content .views-row .views-field-title span, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-title span, .page-node-74 .main-container #node-37 #projects .view-content .views-row .views-field-title span, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-title span {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-title span, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-title span, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-title span, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-title span {
   padding: 0 10px;
   line-height: 1.2;
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-title span a, .page-node-3 .main-container #node-37 #projects .view-content .views-row .views-field-title span a, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-title span a, .page-node-37 .main-container #node-3 #projects .view-content .views-row .views-field-title span a, .page-node-37 .main-container #node-37 #projects .view-content .views-row .views-field-title span a, .page-node-37 .main-container #node-74 #projects .view-content .views-row .views-field-title span a, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-title span a, .page-node-74 .main-container #node-37 #projects .view-content .views-row .views-field-title span a, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-title span a {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-title span a, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-title span a, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-title span a, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-title span a {
   color: white;
   border-top: 3px solid;
   font-size: 18px;
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-3 .main-container #node-37 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-37 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-37 .main-container #node-37 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-37 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-74 .main-container #node-37 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .line_effect {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .line_effect, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .line_effect {
   bottom: 80px !important;
 }
-.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-3 .main-container #node-37 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-37 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-37 .main-container #node-37 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-37 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-74 .main-container #node-37 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .field-content:before {
+.page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-field-ima .field-content:before, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-field-ima .field-content:before {
   content: "";
   position: absolute;
   top: 0.3125rem;
@@ -8708,105 +8741,105 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border: 1px solid rgba(255, 255, 255, 0.5);
   transition: all 1s ease-in-out;
 }
-.page-node-3 .main-container #node-3 #jobs, .page-node-3 .main-container #node-37 #jobs, .page-node-3 .main-container #node-74 #jobs, .page-node-37 .main-container #node-3 #jobs, .page-node-37 .main-container #node-37 #jobs, .page-node-37 .main-container #node-74 #jobs, .page-node-74 .main-container #node-3 #jobs, .page-node-74 .main-container #node-37 #jobs, .page-node-74 .main-container #node-74 #jobs {
+.page-node-3 .main-container #node-3 #jobs, .page-node-3 .main-container #node-74 #jobs, .page-node-74 .main-container #node-3 #jobs, .page-node-74 .main-container #node-74 #jobs {
   margin-bottom: 30px;
 }
-.page-node-3 .main-container #node-3 #jobs .text, .page-node-3 .main-container #node-37 #jobs .text, .page-node-3 .main-container #node-74 #jobs .text, .page-node-37 .main-container #node-3 #jobs .text, .page-node-37 .main-container #node-37 #jobs .text, .page-node-37 .main-container #node-74 #jobs .text, .page-node-74 .main-container #node-3 #jobs .text, .page-node-74 .main-container #node-37 #jobs .text, .page-node-74 .main-container #node-74 #jobs .text {
+.page-node-3 .main-container #node-3 #jobs .text, .page-node-3 .main-container #node-74 #jobs .text, .page-node-74 .main-container #node-3 #jobs .text, .page-node-74 .main-container #node-74 #jobs .text {
   position: absolute;
   top: 73%;
   right: 15%;
   color: white;
 }
-.page-node-3 .main-container #node-3 #jobs .text h4, .page-node-3 .main-container #node-37 #jobs .text h4, .page-node-3 .main-container #node-74 #jobs .text h4, .page-node-37 .main-container #node-3 #jobs .text h4, .page-node-37 .main-container #node-37 #jobs .text h4, .page-node-37 .main-container #node-74 #jobs .text h4, .page-node-74 .main-container #node-3 #jobs .text h4, .page-node-74 .main-container #node-37 #jobs .text h4, .page-node-74 .main-container #node-74 #jobs .text h4 {
+.page-node-3 .main-container #node-3 #jobs .text h4, .page-node-3 .main-container #node-74 #jobs .text h4, .page-node-74 .main-container #node-3 #jobs .text h4, .page-node-74 .main-container #node-74 #jobs .text h4 {
   font-weight: bold;
   font-size: 16px;
 }
-.page-node-3 .main-container #node-3 #jobs .filter1, .page-node-3 .main-container #node-37 #jobs .filter1, .page-node-3 .main-container #node-74 #jobs .filter1, .page-node-37 .main-container #node-3 #jobs .filter1, .page-node-37 .main-container #node-37 #jobs .filter1, .page-node-37 .main-container #node-74 #jobs .filter1, .page-node-74 .main-container #node-3 #jobs .filter1, .page-node-74 .main-container #node-37 #jobs .filter1, .page-node-74 .main-container #node-74 #jobs .filter1 {
+.page-node-3 .main-container #node-3 #jobs .filter1, .page-node-3 .main-container #node-74 #jobs .filter1, .page-node-74 .main-container #node-3 #jobs .filter1, .page-node-74 .main-container #node-74 #jobs .filter1 {
   filter: sepia(1) hue-rotate(-60deg) saturate(0.5) brightness(0.9);
 }
-.page-node-3 .main-container #node-3 #jobs .filter2, .page-node-3 .main-container #node-37 #jobs .filter2, .page-node-3 .main-container #node-74 #jobs .filter2, .page-node-37 .main-container #node-3 #jobs .filter2, .page-node-37 .main-container #node-37 #jobs .filter2, .page-node-37 .main-container #node-74 #jobs .filter2, .page-node-74 .main-container #node-3 #jobs .filter2, .page-node-74 .main-container #node-37 #jobs .filter2, .page-node-74 .main-container #node-74 #jobs .filter2 {
+.page-node-3 .main-container #node-3 #jobs .filter2, .page-node-3 .main-container #node-74 #jobs .filter2, .page-node-74 .main-container #node-3 #jobs .filter2, .page-node-74 .main-container #node-74 #jobs .filter2 {
   filter: sepia(1) hue-rotate(-90deg) saturate(1.5) brightness(0.9);
 }
-.page-node-3 .main-container #node-3 #jobs .filter3, .page-node-3 .main-container #node-37 #jobs .filter3, .page-node-3 .main-container #node-74 #jobs .filter3, .page-node-37 .main-container #node-3 #jobs .filter3, .page-node-37 .main-container #node-37 #jobs .filter3, .page-node-37 .main-container #node-74 #jobs .filter3, .page-node-74 .main-container #node-3 #jobs .filter3, .page-node-74 .main-container #node-37 #jobs .filter3, .page-node-74 .main-container #node-74 #jobs .filter3 {
+.page-node-3 .main-container #node-3 #jobs .filter3, .page-node-3 .main-container #node-74 #jobs .filter3, .page-node-74 .main-container #node-3 #jobs .filter3, .page-node-74 .main-container #node-74 #jobs .filter3 {
   filter: sepia(1) hue-rotate(-40deg) saturate(1) brightness(0.9);
 }
-.page-node-3 .main-container #node-3 #jobs .filter4, .page-node-3 .main-container #node-37 #jobs .filter4, .page-node-3 .main-container #node-74 #jobs .filter4, .page-node-37 .main-container #node-3 #jobs .filter4, .page-node-37 .main-container #node-37 #jobs .filter4, .page-node-37 .main-container #node-74 #jobs .filter4, .page-node-74 .main-container #node-3 #jobs .filter4, .page-node-74 .main-container #node-37 #jobs .filter4, .page-node-74 .main-container #node-74 #jobs .filter4 {
+.page-node-3 .main-container #node-3 #jobs .filter4, .page-node-3 .main-container #node-74 #jobs .filter4, .page-node-74 .main-container #node-3 #jobs .filter4, .page-node-74 .main-container #node-74 #jobs .filter4 {
   filter: sepia(1) hue-rotate(30deg) saturate(1) brightness(0.9);
 }
-.page-node-3 .main-container #node-3 #jobs .filter5, .page-node-3 .main-container #node-37 #jobs .filter5, .page-node-3 .main-container #node-74 #jobs .filter5, .page-node-37 .main-container #node-3 #jobs .filter5, .page-node-37 .main-container #node-37 #jobs .filter5, .page-node-37 .main-container #node-74 #jobs .filter5, .page-node-74 .main-container #node-3 #jobs .filter5, .page-node-74 .main-container #node-37 #jobs .filter5, .page-node-74 .main-container #node-74 #jobs .filter5 {
+.page-node-3 .main-container #node-3 #jobs .filter5, .page-node-3 .main-container #node-74 #jobs .filter5, .page-node-74 .main-container #node-3 #jobs .filter5, .page-node-74 .main-container #node-74 #jobs .filter5 {
   filter: sepia(1) hue-rotate(-10deg) saturate(1) brightness(0.9);
 }
-.page-node-3 .main-container #node-3 #jobs .filter6, .page-node-3 .main-container #node-37 #jobs .filter6, .page-node-3 .main-container #node-74 #jobs .filter6, .page-node-37 .main-container #node-3 #jobs .filter6, .page-node-37 .main-container #node-37 #jobs .filter6, .page-node-37 .main-container #node-74 #jobs .filter6, .page-node-74 .main-container #node-3 #jobs .filter6, .page-node-74 .main-container #node-37 #jobs .filter6, .page-node-74 .main-container #node-74 #jobs .filter6 {
+.page-node-3 .main-container #node-3 #jobs .filter6, .page-node-3 .main-container #node-74 #jobs .filter6, .page-node-74 .main-container #node-3 #jobs .filter6, .page-node-74 .main-container #node-74 #jobs .filter6 {
   filter: sepia(1) hue-rotate(-180deg) saturate(1.2) brightness(1);
 }
-.page-node-3 .main-container #node-3 #jobs img, .page-node-3 .main-container #node-37 #jobs img, .page-node-3 .main-container #node-74 #jobs img, .page-node-37 .main-container #node-3 #jobs img, .page-node-37 .main-container #node-37 #jobs img, .page-node-37 .main-container #node-74 #jobs img, .page-node-74 .main-container #node-3 #jobs img, .page-node-74 .main-container #node-37 #jobs img, .page-node-74 .main-container #node-74 #jobs img {
+.page-node-3 .main-container #node-3 #jobs img, .page-node-3 .main-container #node-74 #jobs img, .page-node-74 .main-container #node-3 #jobs img, .page-node-74 .main-container #node-74 #jobs img {
   max-width: 100%;
   transition: all 0.4s ease-in-out;
 }
-.page-node-3 .main-container #node-3 #jobs img:hover, .page-node-3 .main-container #node-37 #jobs img:hover, .page-node-3 .main-container #node-74 #jobs img:hover, .page-node-37 .main-container #node-3 #jobs img:hover, .page-node-37 .main-container #node-37 #jobs img:hover, .page-node-37 .main-container #node-74 #jobs img:hover, .page-node-74 .main-container #node-3 #jobs img:hover, .page-node-74 .main-container #node-37 #jobs img:hover, .page-node-74 .main-container #node-74 #jobs img:hover {
+.page-node-3 .main-container #node-3 #jobs img:hover, .page-node-3 .main-container #node-74 #jobs img:hover, .page-node-74 .main-container #node-3 #jobs img:hover, .page-node-74 .main-container #node-74 #jobs img:hover {
   filter: none !important;
 }
 @media (max-width: 500px) {
-  .page-node-3 .main-container .view-id-slideshow .owl-item .field-content, .page-node-37 .main-container .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content {
+  .page-node-3 .main-container .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content {
     padding: 1px 20px 54px !important;
   }
-  .page-node-3 .main-container .view-id-slideshow .owl-item .field-content p, .page-node-37 .main-container .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content p {
+  .page-node-3 .main-container .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content p {
     font-size: 20px !important;
     margin-top: 10px;
   }
-  .page-node-3 .main-container .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container .view-id-slideshow .owl-next span:before, .page-node-37 .main-container .view-id-slideshow .owl-prev span:before, .page-node-37 .main-container .view-id-slideshow .owl-next span:before, .page-node-74 .main-container .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container .view-id-slideshow .owl-next span:before {
+  .page-node-3 .main-container .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container .view-id-slideshow .owl-next span:before, .page-node-74 .main-container .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container .view-id-slideshow .owl-next span:before {
     transform: translate(0%, -100%) !important;
     font-size: 32px !important;
   }
-  .page-node-3 .main-container #last .col-md-6, .page-node-37 .main-container #last .col-md-6, .page-node-74 .main-container #last .col-md-6 {
+  .page-node-3 .main-container #last .col-md-6, .page-node-74 .main-container #last .col-md-6 {
     max-height: 235px;
   }
 }
 @media (max-width: 768px) {
-  .page-node-3 .main-container .view-id-slideshow img, .page-node-37 .main-container .view-id-slideshow img, .page-node-74 .main-container .view-id-slideshow img {
+  .page-node-3 .main-container .view-id-slideshow img, .page-node-74 .main-container .view-id-slideshow img {
     object-fit: cover;
     height: calc(90vh - 3.75rem);
     max-height: calc(50vmax - 3.125rem);
   }
-  .page-node-3 .main-container .view-id-slideshow .owl-item p, .page-node-37 .main-container .view-id-slideshow .owl-item p, .page-node-74 .main-container .view-id-slideshow .owl-item p {
+  .page-node-3 .main-container .view-id-slideshow .owl-item p, .page-node-74 .main-container .view-id-slideshow .owl-item p {
     transform: translate(0px, 0px);
   }
-  .page-node-3 .main-container .header_title, .page-node-37 .main-container .header_title, .page-node-74 .main-container .header_title {
+  .page-node-3 .main-container .header_title, .page-node-74 .main-container .header_title {
     margin: 10px;
   }
-  .page-node-3 .main-container #gozideha .col-md-4, .page-node-37 .main-container #gozideha .col-md-4, .page-node-74 .main-container #gozideha .col-md-4 {
+  .page-node-3 .main-container #gozideha .col-md-4, .page-node-74 .main-container #gozideha .col-md-4 {
     flex: 0 0 100% !important;
     max-width: 450px !important;
     align-items: center;
     margin: auto auto 10px auto;
   }
-  .page-node-3 .main-container #sectionText .article, .page-node-37 .main-container #sectionText .article, .page-node-74 .main-container #sectionText .article {
+  .page-node-3 .main-container #sectionText .article, .page-node-74 .main-container #sectionText .article {
     margin: 0 10px;
   }
-  .page-node-3 .main-container #projects, .page-node-37 .main-container #projects, .page-node-74 .main-container #projects {
+  .page-node-3 .main-container #projects, .page-node-74 .main-container #projects {
     text-align: -webkit-center;
     padding-left: 20px;
   }
-  .page-node-3 .main-container #projects .view-content, .page-node-37 .main-container #projects .view-content, .page-node-74 .main-container #projects .view-content {
+  .page-node-3 .main-container #projects .view-content, .page-node-74 .main-container #projects .view-content {
     display: inline-block !important;
   }
-  .page-node-3 .main-container #projects .view-content .views-row, .page-node-37 .main-container #projects .view-content .views-row, .page-node-74 .main-container #projects .view-content .views-row {
+  .page-node-3 .main-container #projects .view-content .views-row, .page-node-74 .main-container #projects .view-content .views-row {
     width: 100% !important;
     margin: 10px !important;
   }
-  .page-node-3 .main-container #jobs .text, .page-node-37 .main-container #jobs .text, .page-node-74 .main-container #jobs .text {
+  .page-node-3 .main-container #jobs .text, .page-node-74 .main-container #jobs .text {
     max-width: 120px !important;
   }
-  .page-node-3 .main-container #jobs .container .container, .page-node-37 .main-container #jobs .container .container, .page-node-74 .main-container #jobs .container .container {
+  .page-node-3 .main-container #jobs .container .container, .page-node-74 .main-container #jobs .container .container {
     max-width: 500px;
     margin: auto;
   }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
-  .page-node-3 .main-container #jobs .text, .page-node-37 .main-container #jobs .text, .page-node-74 .main-container #jobs .text {
+  .page-node-3 .main-container #jobs .text, .page-node-74 .main-container #jobs .text {
     max-width: 120px !important;
   }
-  .page-node-3 .main-container #jobs .container .container, .page-node-37 .main-container #jobs .container .container, .page-node-74 .main-container #jobs .container .container {
+  .page-node-3 .main-container #jobs .container .container, .page-node-74 .main-container #jobs .container .container {
     margin: auto;
   }
 }
@@ -8975,85 +9008,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
   .page-news .form-type-textfield {
     width: 100% !important;
-  }
-}
-
-.page-node-37 .main-container {
-  padding: 0;
-  width: inherit;
-  overflow-x: hidden;
-}
-.page-node-37 .main-container .page-header, .page-node-37 .main-container .element-invisible, .page-node-37 .main-container .tabs--primary, .page-node-37 .main-container .action-links, .page-node-37 .main-container .breadcrumb {
-  display: none;
-}
-.page-node-37 .main-container #node-37 #top .col-md-3 {
-  float: right;
-  text-align: -webkit-center;
-}
-.page-node-37 .main-container #node-37 #top .col-md-3 img {
-  max-width: 200px;
-  border: 1px solid #ccc;
-}
-.page-node-37 .main-container #node-37 #top .col-md-6 {
-  float: right;
-}
-.page-node-37 .main-container #node-37 #top .col-md-6 img {
-  width: 100%;
-  max-height: 300px;
-}
-.page-node-37 .main-container #node-37 #custom .view-content {
-  display: flex;
-}
-.page-node-37 .main-container #node-37 #sectionJobs {
-  background-image: url(/sites/all/themes/nutland/images/sktemplate3.jpg);
-  background-repeat: no-repeat;
-  background-size: 100% 100%;
-  background-attachment: fixed;
-  padding: 50px 0;
-  margin: 30px 0;
-}
-.page-node-37 .main-container #node-37 #sectionJobs .col-md-4 {
-  float: right;
-}
-.page-node-37 .main-container #node-37 #sectionJobs .flex-none {
-  min-height: 50px !important;
-}
-.page-node-37 .main-container #node-37 #sectionJobs .mt3 {
-  min-height: 210px !important;
-}
-.page-node-37 .main-container #node-37 #sectionJobs .card_jobs {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0.625rem;
-  min-height: 130px;
-  color: #adadad;
-  margin-bottom: 20px;
-}
-.page-node-37 .main-container #node-37 #sectionJobs .card_jobs .title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  color: #00247a;
-}
-.page-node-37 .main-container #node-37 #sectionJobs .card_jobs .title:before {
-  content: "";
-  height: 0.0625rem;
-  width: 3.125rem;
-  display: block;
-  background-color: #00247a;
-}
-@media (max-width: 768px) {
-  .page-node-37 .main-container #top .col-md-3 {
-    float: none !important;
-  }
-  .page-node-37 .main-container #top .col-md-6 {
-    float: none !important;
-  }
-  .page-node-37 .main-container #sectionJobs .col-md-4 {
-    float: none !important;
   }
 }
 
@@ -9764,7 +9718,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 
 .page-node-67 .main-container.container #top {
-  margin-top: 125px;
+  margin-top: 200px;
 }
 .page-node-67 .main-container.container #top .items {
   height: auto !important;
@@ -9866,7 +9820,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   position: absolute;
   top: 0.3125rem;
   bottom: 0.3125rem;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   right: 0.3125rem;
   left: 0.3125rem;
   z-index: 4;
