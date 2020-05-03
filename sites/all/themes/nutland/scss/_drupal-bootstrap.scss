@@ -17,6 +17,18 @@ body li.active-trail a:after{
   position: fixed;
   top:0; left:0;
   width: 100%;
+  .px-5{
+    height: 50px !important;
+    overflow: hidden;
+  }
+  ul.menu.nav{
+    margin-top: 10px !important;
+    li{
+      .dropdown-menu{
+        top: 50px !important;
+      }
+    }
+  }
 }
 .alert-success {
   z-index: 6;
@@ -152,7 +164,7 @@ body {
     margin: 0;
     padding: 0;
     position: fixed;
-    z-index: 1600;
+    z-index: 4;
     .dropdown li {
       line-height: normal;
     }
@@ -1254,7 +1266,6 @@ a {
       }
     }
   }
-
   @media (min-width: 900px) and (max-width: 999px) {
     .container.px-5 .navbar-collapse{
       ul.dropdown-menu{
@@ -1303,6 +1314,12 @@ a {
           }
         }
       }
+    }
+  }
+  @media (min-width: 1500px) and (max-width: 1920px) {
+    ul.menu.nav{
+      position: relative;
+      right: 140px;
     }
   }
 }
@@ -1388,7 +1405,7 @@ a {
           .field-content{
             color: white;
             width: 73%;
-            padding: 20px 20px 130px;
+            padding: 50px 20px 180px;
             border: 1px solid #fff;
             background-color: rgba(255, 255, 255, .2);
             p{
@@ -1461,7 +1478,7 @@ a {
           display: flex;
           .views-row{
             width: 33%;
-            margin: 0 20px 20px 20px;
+            margin: 0 15px 15px 15px;
             position: relative;
             overflow: hidden;
             &:hover{
@@ -1523,7 +1540,7 @@ a {
           color: white;
           h4{
             font-weight: bold;
-            font-size: 16px;
+            max-width: 115px;
           }
         }
         .filter1{
@@ -1557,9 +1574,9 @@ a {
       .view-id-slideshow{
         .owl-item{
           .field-content{
-            padding: 1px 20px 54px!important;
+            padding: 1px 20px 10px!important;
             p{
-              font-size: 20px !important;
+              font-size: 16px !important;
               margin-top: 10px;
             }
           }
@@ -1587,8 +1604,12 @@ a {
           max-height: calc(50vmax - 3.125rem);
         }
         .owl-item{
+          .field-content{
+            padding: 0 20px 20px !important;
+          }
           p{
             transform: translate(0px,0px);
+            font-size: 25px !important;
           }
         }
       }
@@ -1632,6 +1653,12 @@ a {
       }
     }
     @media (max-width:1200px) and (min-width:768px){
+
+      .owl-item{
+        .field-content{
+          padding: 1px 20px 85px!important;
+        }
+      }
       #jobs{
         .text{
           max-width: 120px!important;
@@ -1745,7 +1772,7 @@ a {
 }
 .not-logged-in{
   ul.menu.nav li .dropdown-menu {
-    top: 80px!important;
+    top: 80px;
   }
 }
 //news main page
@@ -3497,7 +3524,7 @@ a {
           color: white;
           text-align: right;
           width: 73%;
-          padding: 20px 20px 130px;
+          padding: 50px 20px 180px;
           border: 1px solid #fff;
           background-color: rgba(255, 255, 255, 0.2);
           p{
@@ -3941,7 +3968,7 @@ a {
           color: white;
           text-align: right;
           width: 73%;
-          padding: 20px 20px 130px;
+          padding: 50px 20px 180px;
           border: 1px solid #fff;
           background-color: rgba(255, 255, 255, 0.2);
           p{

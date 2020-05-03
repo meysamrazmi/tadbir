@@ -240,7 +240,7 @@
           <h5 class="mb-0">پروژه ها</h5>
         </div>
       </div>
-      <div class="container">
+      <div class="container" style="padding: 0">
         <?php $block = module_invoke('views', 'block_view', 'projects-block'); print render($block['content']);; ?>
       </div>
     </section>
@@ -333,6 +333,11 @@
       flex: 0 0 96% !important;
       max-width: 100% !important;
       margin: 10px;
+    }
+  }
+  @media (min-width: 768px) and  (max-width: 992px){
+    #gozideha .items, #projects .items{
+      height: 250px !important;
     }
   }
   #last .row {

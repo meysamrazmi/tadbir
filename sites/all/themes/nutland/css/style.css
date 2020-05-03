@@ -7310,6 +7310,16 @@ body li.active-trail a:after {
   left: 0;
   width: 100%;
 }
+.fixed .px-5 {
+  height: 50px !important;
+  overflow: hidden;
+}
+.fixed ul.menu.nav {
+  margin-top: 10px !important;
+}
+.fixed ul.menu.nav li .dropdown-menu {
+  top: 50px !important;
+}
 
 .alert-success {
   z-index: 6;
@@ -7435,7 +7445,7 @@ body #admin-menu {
   margin: 0;
   padding: 0;
   position: fixed;
-  z-index: 1600;
+  z-index: 4;
 }
 body #admin-menu .dropdown li {
   line-height: normal;
@@ -8564,6 +8574,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     font-size: 13px;
   }
 }
+@media (min-width: 1500px) and (max-width: 1920px) {
+  #navbar ul.menu.nav {
+    position: relative;
+    right: 140px;
+  }
+}
 
 .page-node-3 #block-google-cse-google-cse, .page-node-74 #block-google-cse-google-cse {
   top: 3.5% !important;
@@ -8625,7 +8641,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .field-content, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .field-content {
   color: white;
   width: 73%;
-  padding: 20px 20px 130px;
+  padding: 50px 20px 180px;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -8696,7 +8712,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .page-node-3 .main-container #node-3 #projects .view-content .views-row, .page-node-3 .main-container #node-74 #projects .view-content .views-row, .page-node-74 .main-container #node-3 #projects .view-content .views-row, .page-node-74 .main-container #node-74 #projects .view-content .views-row {
   width: 33%;
-  margin: 0 20px 20px 20px;
+  margin: 0 15px 15px 15px;
   position: relative;
   overflow: hidden;
 }
@@ -8752,7 +8768,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .page-node-3 .main-container #node-3 #jobs .text h4, .page-node-3 .main-container #node-74 #jobs .text h4, .page-node-74 .main-container #node-3 #jobs .text h4, .page-node-74 .main-container #node-74 #jobs .text h4 {
   font-weight: bold;
-  font-size: 16px;
+  max-width: 115px;
 }
 .page-node-3 .main-container #node-3 #jobs .filter1, .page-node-3 .main-container #node-74 #jobs .filter1, .page-node-74 .main-container #node-3 #jobs .filter1, .page-node-74 .main-container #node-74 #jobs .filter1 {
   filter: sepia(1) hue-rotate(-60deg) saturate(0.5) brightness(0.9);
@@ -8781,10 +8797,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 @media (max-width: 500px) {
   .page-node-3 .main-container .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content {
-    padding: 1px 20px 54px !important;
+    padding: 1px 20px 10px !important;
   }
   .page-node-3 .main-container .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content p {
-    font-size: 20px !important;
+    font-size: 16px !important;
     margin-top: 10px;
   }
   .page-node-3 .main-container .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container .view-id-slideshow .owl-next span:before, .page-node-74 .main-container .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container .view-id-slideshow .owl-next span:before {
@@ -8801,8 +8817,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     height: calc(90vh - 3.75rem);
     max-height: calc(50vmax - 3.125rem);
   }
+  .page-node-3 .main-container .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content {
+    padding: 0 20px 20px !important;
+  }
   .page-node-3 .main-container .view-id-slideshow .owl-item p, .page-node-74 .main-container .view-id-slideshow .owl-item p {
     transform: translate(0px, 0px);
+    font-size: 25px !important;
   }
   .page-node-3 .main-container .header_title, .page-node-74 .main-container .header_title {
     margin: 10px;
@@ -8836,6 +8856,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
+  .page-node-3 .main-container .owl-item .field-content, .page-node-74 .main-container .owl-item .field-content {
+    padding: 1px 20px 85px !important;
+  }
   .page-node-3 .main-container #jobs .text, .page-node-74 .main-container #jobs .text {
     max-width: 120px !important;
   }
@@ -8917,7 +8940,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 
 .not-logged-in ul.menu.nav li .dropdown-menu {
-  top: 80px !important;
+  top: 80px;
 }
 
 .page-news {
@@ -10483,7 +10506,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: white;
   text-align: right;
   width: 73%;
-  padding: 20px 20px 130px;
+  padding: 50px 20px 180px;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.2);
 }
@@ -10869,7 +10892,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: white;
   text-align: right;
   width: 73%;
-  padding: 20px 20px 130px;
+  padding: 50px 20px 180px;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.2);
 }
