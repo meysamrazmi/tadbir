@@ -111,7 +111,7 @@ $(".node-type-projects.not-front").ready(function () {
   $(".field-name-field-middle-slide .field-items img").each(function(){
     $(this).after("<span>" + $(this).attr("title") + "</span>");
   })
-  $(".field-name-field-middle-slide .field-items, .field-name-field-slides .field-items ").addClass("owl-carousel owl-theme").owlCarousel({
+  $(".field-name-field-middle-slide .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
     loop: true,
     margin: 15,
@@ -127,7 +127,10 @@ $(".node-type-projects.not-front").ready(function () {
 });
 //carousel in node subset
 $(".node-type-subset.not-front").ready(function () {
-  $(".field-name-field-slider .field-items").addClass("owl-carousel owl-theme").owlCarousel({
+  $(".field-name-field-slider-main .field-items img, .field-name-field-slider-main .field-items video").each(function(){
+    $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
+  })
+  $(".field-name-field-slider-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
     loop: true,
     margin: 15,

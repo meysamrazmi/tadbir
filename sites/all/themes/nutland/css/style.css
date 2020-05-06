@@ -7359,7 +7359,7 @@ body li.active-trail a:after {
 }
 
 .main-container {
-  overflow-x: hidden;
+  overflow-x: unset;
 }
 .main-container span {
   font-family: fanum !important;
@@ -7445,7 +7445,7 @@ body #admin-menu {
   margin: 0;
   padding: 0;
   position: fixed;
-  z-index: 4;
+  z-index: 1600;
 }
 body #admin-menu .dropdown li {
   line-height: normal;
@@ -8574,10 +8574,22 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     font-size: 13px;
   }
 }
-@media (min-width: 1500px) and (max-width: 1920px) {
+@media (min-width: 1400px) and (max-width: 1600px) {
   #navbar ul.menu.nav {
     position: relative;
-    right: 140px;
+    right: 100px;
+  }
+}
+@media (min-width: 1600px) and (max-width: 1800px) {
+  #navbar ul.menu.nav {
+    position: relative;
+    right: 185px;
+  }
+}
+@media (min-width: 1800px) and (max-width: 1920px) {
+  #navbar ul.menu.nav {
+    position: relative;
+    right: 250px;
   }
 }
 
@@ -8760,15 +8772,18 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-3 .main-container #node-3 #jobs, .page-node-3 .main-container #node-74 #jobs, .page-node-74 .main-container #node-3 #jobs, .page-node-74 .main-container #node-74 #jobs {
   margin-bottom: 30px;
 }
+.page-node-3 .main-container #node-3 #jobs .col-md-2, .page-node-3 .main-container #node-74 #jobs .col-md-2, .page-node-74 .main-container #node-3 #jobs .col-md-2, .page-node-74 .main-container #node-74 #jobs .col-md-2 {
+  padding-right: 0;
+}
 .page-node-3 .main-container #node-3 #jobs .text, .page-node-3 .main-container #node-74 #jobs .text, .page-node-74 .main-container #node-3 #jobs .text, .page-node-74 .main-container #node-74 #jobs .text {
   position: absolute;
   top: 73%;
-  right: 15%;
+  right: 5%;
   color: white;
 }
 .page-node-3 .main-container #node-3 #jobs .text h4, .page-node-3 .main-container #node-74 #jobs .text h4, .page-node-74 .main-container #node-3 #jobs .text h4, .page-node-74 .main-container #node-74 #jobs .text h4 {
   font-weight: bold;
-  max-width: 115px;
+  max-width: 150px;
 }
 .page-node-3 .main-container #node-3 #jobs .filter1, .page-node-3 .main-container #node-74 #jobs .filter1, .page-node-74 .main-container #node-3 #jobs .filter1, .page-node-74 .main-container #node-74 #jobs .filter1 {
   filter: sepia(1) hue-rotate(-60deg) saturate(0.5) brightness(0.9);
@@ -10775,6 +10790,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .node-type-projects .main-container .field-name-field-body {
     top: 0 !important;
   }
+  .node-type-projects .main-container .field-name-field-body .field-item {
+    padding: 20px 20px 85px !important;
+  }
   .node-type-projects .main-container .field-name-field-slides .owl-prev span:before, .node-type-projects .main-container .field-name-field-slides .owl-next span:before {
     top: 40% !important;
   }
@@ -10841,22 +10859,23 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-subset .main-container .page-header, .node-type-subset .main-container .element-invisible, .node-type-subset .main-container .tabs--primary, .node-type-subset .main-container .action-links {
   display: none;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider img {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main img {
   filter: brightness(0.65);
+  height: 480px;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider header {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main header {
   display: none !important;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider .owl-next:hover span, .node-type-subset .main-container #block-system-main .field-name-field-slider .owl-prev:hover span {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-next:hover span, .node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-prev:hover span {
   color: #00247a;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider .owl-next span, .node-type-subset .main-container #block-system-main .field-name-field-slider .owl-prev span {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-next span, .node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-prev span {
   font-size: 0;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider .owl-next span:hover:before, .node-type-subset .main-container #block-system-main .field-name-field-slider .owl-prev span:hover:before {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-next span:hover:before, .node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-prev span:hover:before {
   color: #ccc;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider .owl-next span:before, .node-type-subset .main-container #block-system-main .field-name-field-slider .owl-prev span:before {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-next span:before, .node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-prev span:before {
   font-family: icomoon !important;
   line-height: 1;
   font-size: 60px;
@@ -10866,16 +10885,25 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   transition: all 0.2s ease-in-out;
   transform: translate(0%, -50%);
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider .owl-next span:before {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-next span:before {
   content: "";
   left: 20px;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider .owl-prev span:before {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-prev span:before {
   content: "";
   right: 20px;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-slider .owl-dots {
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .owl-dots {
   display: none !important;
+}
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .mejs-container {
+  width: 100% !important;
+}
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .mejs-container .mejs-controls {
+  display: none !important;
+}
+.node-type-subset .main-container #block-system-main .field-name-field-slider-main .mejs-container video {
+  width: 100% !important;
 }
 .node-type-subset .main-container #block-system-main .field-name-field-body {
   position: absolute;
@@ -11037,6 +11065,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
 }
 @media (max-width: 1000px) and (min-width: 768px) {
+  .node-type-subset .main-container .field-name-field-body .field-item {
+    padding: 50px 20px 85px !important;
+  }
   .node-type-subset .main-container .group-left {
     width: 33% !important;
     margin-right: 60px;
@@ -11050,6 +11081,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
 }
 @media (max-width: 768px) and (min-width: 600px) {
+  .node-type-subset .main-container .field-name-field-body .field-item {
+    padding: 50px 20px 35px !important;
+  }
   .node-type-subset .main-container .group-left {
     width: 30% !important;
     margin-right: 10px !important;
@@ -11070,7 +11104,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     font-size: 16px !important;
     padding: 0 10px !important;
   }
-  .node-type-subset .main-container .field-name-field-slider .owl-prev span:before, .node-type-subset .main-container .field-name-field-slider .owl-next span:before {
+  .node-type-subset .main-container .field-name-field-slider-main .owl-prev span:before, .node-type-subset .main-container .field-name-field-slider-main .owl-next span:before {
     font-size: 30px !important;
   }
   .node-type-subset .main-container .group-left {
@@ -11079,6 +11113,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
   .node-type-subset .main-container .group-left img {
     margin-bottom: 25px;
+    margin-top: 100px;
   }
   .node-type-subset .main-container .group-right {
     width: 95% !important;

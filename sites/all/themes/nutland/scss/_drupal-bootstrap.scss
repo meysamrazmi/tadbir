@@ -67,7 +67,7 @@ body li.active-trail a:after{
   }
 }
 .main-container{
-  overflow-x: hidden;
+  overflow-x: unset;
   span{
     font-family: fanum!important;
   }
@@ -164,7 +164,7 @@ body {
     margin: 0;
     padding: 0;
     position: fixed;
-    z-index: 4;
+    z-index: 1600;
     .dropdown li {
       line-height: normal;
     }
@@ -1316,10 +1316,22 @@ a {
       }
     }
   }
-  @media (min-width: 1500px) and (max-width: 1920px) {
+  @media (min-width: 1400px) and (max-width: 1600px) {
     ul.menu.nav{
       position: relative;
-      right: 140px;
+      right: 100px;
+    }
+  }
+  @media (min-width: 1600px) and (max-width: 1800px) {
+    ul.menu.nav{
+      position: relative;
+      right: 185px;
+    }
+  }
+  @media (min-width: 1800px) and (max-width: 1920px) {
+    ul.menu.nav{
+      position: relative;
+      right: 250px;
     }
   }
 }
@@ -1533,14 +1545,17 @@ a {
       }
       #jobs{
         margin-bottom: 30px;
+        .col-md-2{
+          padding-right: 0;
+        }
         .text{
           position: absolute;
           top: 73%;
-          right: 15%;
+          right: 5%;
           color: white;
           h4{
             font-weight: bold;
-            max-width: 115px;
+            max-width: 150px;
           }
         }
         .filter1{
@@ -3818,6 +3833,9 @@ a {
       }
       .field-name-field-body{
         top: 0!important;
+        .field-item{
+          padding: 20px 20px 85px!important;
+        }
       }
       .field-name-field-slides{
         .owl-prev, .owl-next{
@@ -3902,9 +3920,10 @@ a {
       display: none;
     }
     #block-system-main{
-      .field-name-field-slider{
+      .field-name-field-slider-main{
         img{
           filter: brightness(0.65);
+          height: 480px;
         }
         header{
           display: none!important;
@@ -3952,6 +3971,15 @@ a {
         }
         .owl-dots{
           display:none!important;
+        }
+        .mejs-container{
+          width: 100% !important;
+          .mejs-controls{
+            display: none !important;
+          }
+          video{
+            width: 100% !important;
+          }
         }
       }
       .field-name-field-body{
@@ -4120,6 +4148,11 @@ a {
       }
     }
     @media (max-width: 1000px) and (min-width: 768px) {
+      .field-name-field-body{
+        .field-item{
+          padding: 50px 20px 85px !important;
+        }
+      }
       .group-left{
         width: 33% !important;
         margin-right: 60px;
@@ -4135,6 +4168,11 @@ a {
       }
     }
     @media (max-width: 768px) and (min-width: 600px) {
+      .field-name-field-body{
+        .field-item{
+          padding: 50px 20px 35px !important;
+        }
+      }
       .group-left{
         width: 30% !important;
         margin-right: 10px!important;
@@ -4160,7 +4198,7 @@ a {
           }
         }
       }
-      .field-name-field-slider{
+      .field-name-field-slider-main{
         .owl-prev, .owl-next{
           span:before{
             font-size: 30px !important;
@@ -4172,6 +4210,7 @@ a {
         text-align: -webkit-center !important;
         img{
           margin-bottom: 25px;
+          margin-top: 100px;
         }
       }
       .group-right{

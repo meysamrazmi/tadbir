@@ -253,7 +253,7 @@
         <div class="header_title text-primary">
           <h5 class="mb-0">حوزه های اصلی فعالیت</h5>
         </div>
-        <div class="container">
+        <div class="container" style="padding: 0">
           <div class="col-md-2 col-xs-6 col-sm-6">
             <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter1" src="<?php print image_style_url("medium", $node7->field_image['und'][0]['uri']); ?>" alt="">
