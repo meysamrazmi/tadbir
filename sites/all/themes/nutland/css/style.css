@@ -8915,6 +8915,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     padding-right: auto !important;
     text-align: -webkit-center;
   }
+  .page-node-3 .main-container #jobs .col-md-2 .text, .page-node-74 .main-container #jobs .col-md-2 .text {
+    right: 15% !important;
+  }
 }
 @media (max-width: 768px) {
   .page-node-3 .main-container .view-id-slideshow img, .page-node-74 .main-container .view-id-slideshow img {
@@ -9414,7 +9417,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding: 2rem 0 3rem 0;
   background-color: #eee;
   border-radius: 3px;
-  margin-top: 200px;
+  margin-top: 250px;
 }
 .page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-outer {
   padding: 0 20px;
@@ -9486,17 +9489,49 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 @media (max-width: 768px) {
   .page-node-59 form {
-    margin: 0 10px;
-    margin-top: 200px !important;
+    margin: 0 20px 0 10px;
+  }
+  .page-node-59 form .webform-progressbar-outer {
+    display: flex;
+    position: relative;
+    border: 1px solid #777777;
+    width: 100%;
+    margin-bottom: 50px;
+  }
+  .page-node-59 form .webform-progressbar-outer .webform-progressbar-page {
+    position: absolute;
+    width: 15px;
+    margin: -6px -4px;
+    background-color: #777777;
+    border-radius: 50%;
+    display: block;
+    height: 15px;
+    padding: 0 !important;
+  }
+  .page-node-59 form .webform-progressbar-outer .webform-progressbar-page .webform-progressbar-page-label {
+    font-size: 0;
+  }
+  .page-node-59 form .current {
+    background-color: #00247a !important;
+    margin-right: -1px !important;
+  }
+  .page-node-59 form .current .webform-progressbar-page-label {
+    font-size: 14px !important;
+    position: relative;
+    top: 15px;
+  }
+  .page-node-59 form .completed {
+    background-color: #00247a;
+  }
+  .page-node-59 form .webform-progressbar {
+    padding: 10px 5px 0 20px;
+    border-bottom: 15px solid white;
+  }
+  .page-node-59 form .webform-progressbar:after {
+    background: none !important;
   }
   .page-node-59 .main-container {
     overflow-x: hidden !important;
-  }
-  .page-node-59 .webform-progressbar:after {
-    display: none;
-  }
-  .page-node-59 .webform-progressbar:before {
-    display: none;
   }
 }
 
@@ -10307,6 +10342,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   text-decoration: none;
 }
 @media (max-width: 768px) and (min-width: 320px) {
+  .node-type-news .form-actions .btn-success, .node-type-article .form-actions .btn-success, .node-type-videos .form-actions .btn-success, .node-type-gallery .form-actions .btn-success {
+    width: 100% !important;
+  }
+  .node-type-news .form-item-captcha-response, .node-type-article .form-item-captcha-response, .node-type-videos .form-item-captcha-response, .node-type-gallery .form-item-captcha-response {
+    text-align: -webkit-center;
+  }
   .node-type-news .view-display-id-block_1 .view-content, .node-type-article .view-display-id-block_1 .view-content, .node-type-videos .view-display-id-block_1 .view-content, .node-type-gallery .view-display-id-block_1 .view-content {
     text-align: -webkit-center;
   }
@@ -10332,7 +10373,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin: auto;
   padding: 30px 0 40px 0;
 }
-.node-type-gallery #block-system-main .group-header .field-name-field-images .field-items .field-item {
+.node-type-gallery #block-system-main .group-middle {
+  width: 100% !important;
+  margin-bottom: 40px;
+}
+.node-type-gallery #block-system-main .group-middle .field-name-field-images .field-items .field-item {
   margin: 2px 2px -6px;
   display: inline-block;
   width: 24%;
@@ -10342,7 +10387,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     text-align: -webkit-center;
   }
   .node-type-gallery #block-system-main .field-name-field-images .field-items .field-item {
-    width: 49% !important;
+    width: 31% !important;
   }
 }
 

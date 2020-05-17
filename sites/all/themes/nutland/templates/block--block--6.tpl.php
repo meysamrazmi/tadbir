@@ -75,7 +75,7 @@
   #block-block-6{
     position: absolute;
     width: 100%;
-    top: 75px;
+    top: 65px;
     padding: 40px 0;
     background: url("/sites/all/themes/nutland/images/sktemplate1.jpg");
     background-position: center;

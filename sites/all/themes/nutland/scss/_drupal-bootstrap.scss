@@ -1712,6 +1712,9 @@ a {
         .col-md-2{
           padding-right: auto !important;
           text-align: -webkit-center;
+          .text{
+            right: 15%!important;
+          }
         }
       }
     }
@@ -2293,7 +2296,7 @@ a {
       padding: 2rem 0 3rem 0;
       background-color: #eee;
       border-radius: 3px;
-      margin-top: 200px;
+      margin-top: 250px;
       .webform-progressbar{
         .webform-progressbar-outer{
           padding: 0 20px;
@@ -2368,18 +2371,49 @@ a {
   }
   @media (max-width: 768px){
     form{
-      margin: 0 10px;
-      margin-top: 200px!important;
+      margin: 0 20px 0 10px;
+      .webform-progressbar-outer{
+        display: flex;
+        position: relative;
+        border: 1px solid #777777;
+        width: 100%;
+        margin-bottom: 50px;
+        .webform-progressbar-page{
+          position: absolute;
+          width: 15px;
+          margin: -6px -4px;
+          background-color: #777777;
+          border-radius: 50%;
+          display: block;
+          height: 15px;
+          padding: 0 !important;
+          .webform-progressbar-page-label{
+            font-size: 0;
+          }
+        }
+      }
+      .current {
+        background-color: #00247a !IMPORTANT;
+        margin-right: -1px !important;
+        .webform-progressbar-page-label{
+          font-size: 14px !IMPORTANT;
+          position: relative;
+          top: 15px;
+        }
+      }
+      .completed {
+        background-color: #00247a;
+      }
+      .webform-progressbar{
+        padding: 10px 5px 0 20px;
+        border-bottom: 15px solid white;
+        &:after{
+          background: none!important;
+        }
+      }
     }
-
     .main-container{
       overflow-x: hidden!important;
-    }
-    .webform-progressbar:after{
-      display: none;
-    }
-    .webform-progressbar:before {
-      display: none;
     }
   }
 }
@@ -3272,6 +3306,14 @@ a {
     }
   }
   @media (max-width: 768px) and (min-width: 320px) {
+    .form-actions{
+      .btn-success{
+        width: 100%!important;
+      }
+    }
+    .form-item-captcha-response{
+      text-align: -webkit-center;
+    }
     .view-display-id-block_1{
       .view-content{
         text-align: -webkit-center;
@@ -3304,7 +3346,9 @@ a {
       margin: auto;
       padding: 30px 0 40px 0;
     }
-    .group-header{
+    .group-middle{
+      width: 100%!important;
+      margin-bottom: 40px;
       .field-name-field-images{
         .field-items{
           .field-item{
@@ -3321,7 +3365,7 @@ a {
         text-align: -webkit-center;
         .field-items{
           .field-item{
-            width: 49% !important;
+            width: 31% !important;
           }
         }
       }
