@@ -7300,10 +7300,6 @@ td.visible-print {
     display: none !important;
   }
 }
-body li.active-trail a:after {
-  width: 100% !important;
-}
-
 .fixed {
   position: fixed;
   top: 0;
@@ -7319,6 +7315,10 @@ body li.active-trail a:after {
 }
 .fixed ul.menu.nav li .dropdown-menu {
   top: 50px !important;
+}
+
+.logged-in .fixed {
+  top: 30px !important;
 }
 
 .alert-success {
@@ -8444,14 +8444,45 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-weight: bold;
   margin-right: 5px;
 }
-@media (max-width: 340px) {
-  #navbar .left-menu .grob {
-    display: none !important;
+@media (min-width: 320px) and (max-width: 600px) {
+  #navbar .navbar-collapse #block-system-main-menu {
+    position: absolute !important;
+    right: 0 !important;
+    padding-top: 125px !important;
+    min-width: 100% !important;
   }
-}
-@media (max-width: 600px) {
-  #navbar {
-    min-height: 65px;
+  #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li {
+    padding: 0 30px;
+  }
+  #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li a {
+    color: black !important;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 10px 0 !important;
+    border-bottom: 1px solid #ccc;
+  }
+  #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li a .caret {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+    border: none;
+  }
+  #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li a .caret:after {
+    content: "+";
+    font-family: "Glyphicons Halflings";
+    border: 1px solid;
+    border-radius: 50%;
+    font-size: 10px;
+    padding: 3px;
+    color: #1d1919;
+  }
+  #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li .dropdown-menu {
+    background: none !important;
+    text-align: center;
+  }
+  #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li .dropdown-menu a {
+    color: #8c8989 !important;
+    border: none !important;
   }
 }
 @media (max-width: 768px) {
@@ -8504,6 +8535,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     display: inline-block;
     vertical-align: middle;
     margin: auto 10px;
+    right: 30%;
+    position: absolute;
   }
 }
 @media (max-width: 768px) and (max-width: 450px) {
@@ -10462,22 +10495,22 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-projects .main-container .page-header, .node-type-projects .main-container .element-invisible, .node-type-projects .main-container .tabs--primary, .node-type-projects .main-container .action-links {
   display: none;
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slides img, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide img {
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main img, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide img {
   filter: brightness(0.65);
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slides header, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide header {
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main header, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide header {
   display: none !important;
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slides .owl-next:hover span, .node-type-projects .main-container #block-system-main .field-name-field-slides .owl-prev:hover span, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next:hover span, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev:hover span {
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-next:hover span, .node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-prev:hover span, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next:hover span, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev:hover span {
   color: #00247a;
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slides .owl-next span, .node-type-projects .main-container #block-system-main .field-name-field-slides .owl-prev span, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next span, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev span {
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-next span, .node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-prev span, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next span, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev span {
   font-size: 0;
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slides .owl-next span:hover:before, .node-type-projects .main-container #block-system-main .field-name-field-slides .owl-prev span:hover:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next span:hover:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev span:hover:before {
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-next span:hover:before, .node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-prev span:hover:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next span:hover:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev span:hover:before {
   color: #ccc;
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slides .owl-next span:before, .node-type-projects .main-container #block-system-main .field-name-field-slides .owl-prev span:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next span:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev span:before {
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-next span:before, .node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-prev span:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next span:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev span:before {
   font-family: icomoon !important;
   line-height: 1;
   font-size: 60px;
@@ -10487,13 +10520,25 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   transition: all 0.2s ease-in-out;
   transform: translate(0%, -50%);
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slides .owl-next span:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next span:before {
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-next span:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-next span:before {
   content: "";
   left: 20px;
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slides .owl-prev span:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev span:before {
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-prev span:before, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-prev span:before {
   content: "";
   right: 20px;
+}
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .owl-dots, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-dots {
+  display: none !important;
+}
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .mejs-container, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .mejs-container {
+  width: 100% !important;
+}
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .mejs-container .mejs-controls, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .mejs-container .mejs-controls {
+  display: none !important;
+}
+.node-type-projects .main-container #block-system-main .field-name-field-slide-main .mejs-container video, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .mejs-container video {
+  width: 100% !important;
 }
 .node-type-projects .main-container #block-system-main .field-name-field-slides .owl-dots {
   display: none !important;
@@ -11104,7 +11149,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     font-size: 16px !important;
     padding: 0 10px !important;
   }
-  .node-type-subset .main-container .field-name-field-slider-main .owl-prev span:before, .node-type-subset .main-container .field-name-field-slider-main .owl-next span:before {
+  .node-type-subset .main-container .field-name-field-slide-main .owl-prev span:before, .node-type-subset .main-container .field-name-field-slide-main .owl-next span:before {
     font-size: 30px !important;
   }
   .node-type-subset .main-container .group-left {

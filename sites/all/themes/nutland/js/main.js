@@ -132,6 +132,28 @@ $(".node-type-subset.not-front").ready(function () {
   })
   $(".field-name-field-slider-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
+
+    loop: true,
+    margin: 15,
+    responsiveClass: true,
+    nav: true,
+    autoplayTimeout: 3200,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 1 },
+      1000: { items: 1 }
+    }
+  });
+});
+//project slider
+
+$(".node-type-projects.not-front").ready(function () {
+  $(".field-name-field-slide-main .field-items img, .field-name-field-slide-main .field-items video").each(function(){
+    $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
+  })
+  $(".field-name-field-slide-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
+    rtl: true,
+
     loop: true,
     margin: 15,
     responsiveClass: true,
