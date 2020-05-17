@@ -1025,6 +1025,22 @@ a {
     border-top: 1px solid rgba(255, 255, 255, .1);
     a{color: #444;text-decoration: none;}
   }
+  @media (max-width:320px) and (min-width: 600px){
+    text-align: -webkit-center;
+    #cards_footer .card-title{
+      opacity: 0;
+    }
+    ul.menu{
+      li{
+        display: inline-block !important;
+        width: 49%;
+        font-weight: bold;
+      }
+    }
+    address{
+      text-align: justify;
+    }
+  }
 }
 //main menu
 #navbar {
@@ -1511,11 +1527,11 @@ a {
               border: 1px solid rgba(0, 0, 0, .4);
               padding-top: 2rem;
               padding-bottom: 2rem;
-              h4{
+              h4, h3{
                 color: #00247a;
                 margin-bottom: 20px;
               }
-              .caption_article{
+              p{
                 border-right: 2px solid #333;
                 border-left: 2px solid #333;
                 line-height: 2;
@@ -1626,14 +1642,20 @@ a {
         }
       }
     }
-    @media (max-width:500px) {
+    @media (min-width: 320px) and (max-width:600px) {
       .view-id-slideshow{
+        img{
+          max-height: calc(85vmax - 3.125rem) !important;
+        }
         .owl-item{
           .field-content{
-            padding: 1px 20px 10px!important;
+            padding: 50px 20px 250px !IMPORTANT;
             p{
-              font-size: 16px !important;
+              font-size: 18px !important;
               margin-top: 10px;
+              padding: 10px!important;
+              line-height: 1.5!important;
+              letter-spacing: -0.03em;
             }
           }
         }
@@ -1646,9 +1668,50 @@ a {
           }
         }
       }
+      #gozideha{
+        .items{
+          height: 207px!important;
+        }
+      }
+      #sectionText section .container{
+        padding: 25px !important;
+        p{
+          text-align: justify;
+          color: #1b1515;
+          font-weight: bold;
+          padding: 0 15px !important;
+        }
+      }
       #last{
         .col-md-6{
           max-height: 235px;
+          .items_text{
+            height: 100px !important;
+          }
+        }
+      }
+      #projects{
+        .view-content{
+          width: 100%;
+          .items{
+            height: 207px!important;
+          }
+          .views-field-title{
+            text-align: center!important;
+            font-weight: bold;
+            span{
+              line-height: 2.5 !important;
+              a{
+                padding-top: 15px;
+              }
+            }
+          }
+        }
+      }
+      #jobs{
+        .col-md-2{
+          padding-right: auto !important;
+          text-align: -webkit-center;
         }
       }
     }
@@ -1660,9 +1723,6 @@ a {
           max-height: calc(50vmax - 3.125rem);
         }
         .owl-item{
-          .field-content{
-            padding: 0 20px 20px !important;
-          }
           p{
             transform: translate(0px,0px);
             font-size: 25px !important;

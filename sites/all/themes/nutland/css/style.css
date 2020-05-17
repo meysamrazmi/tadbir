@@ -8301,6 +8301,22 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: #444;
   text-decoration: none;
 }
+@media (max-width: 320px) and (min-width: 600px) {
+  #footer {
+    text-align: -webkit-center;
+  }
+  #footer #cards_footer .card-title {
+    opacity: 0;
+  }
+  #footer ul.menu li {
+    display: inline-block !important;
+    width: 49%;
+    font-weight: bold;
+  }
+  #footer address {
+    text-align: justify;
+  }
+}
 
 #navbar .container.px-5 {
   padding: 0 !important;
@@ -8741,11 +8757,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding-top: 2rem;
   padding-bottom: 2rem;
 }
-.page-node-3 .main-container #node-3 #sectionText section .container .article h4, .page-node-3 .main-container #node-74 #sectionText section .container .article h4, .page-node-74 .main-container #node-3 #sectionText section .container .article h4, .page-node-74 .main-container #node-74 #sectionText section .container .article h4 {
+.page-node-3 .main-container #node-3 #sectionText section .container .article h4, .page-node-3 .main-container #node-3 #sectionText section .container .article h3, .page-node-3 .main-container #node-74 #sectionText section .container .article h4, .page-node-3 .main-container #node-74 #sectionText section .container .article h3, .page-node-74 .main-container #node-3 #sectionText section .container .article h4, .page-node-74 .main-container #node-3 #sectionText section .container .article h3, .page-node-74 .main-container #node-74 #sectionText section .container .article h4, .page-node-74 .main-container #node-74 #sectionText section .container .article h3 {
   color: #00247a;
   margin-bottom: 20px;
 }
-.page-node-3 .main-container #node-3 #sectionText section .container .article .caption_article, .page-node-3 .main-container #node-74 #sectionText section .container .article .caption_article, .page-node-74 .main-container #node-3 #sectionText section .container .article .caption_article, .page-node-74 .main-container #node-74 #sectionText section .container .article .caption_article {
+.page-node-3 .main-container #node-3 #sectionText section .container .article p, .page-node-3 .main-container #node-74 #sectionText section .container .article p, .page-node-74 .main-container #node-3 #sectionText section .container .article p, .page-node-74 .main-container #node-74 #sectionText section .container .article p {
   border-right: 2px solid #333;
   border-left: 2px solid #333;
   line-height: 2;
@@ -8843,20 +8859,61 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-3 .main-container #node-3 #jobs img:hover, .page-node-3 .main-container #node-74 #jobs img:hover, .page-node-74 .main-container #node-3 #jobs img:hover, .page-node-74 .main-container #node-74 #jobs img:hover {
   filter: none !important;
 }
-@media (max-width: 500px) {
+@media (min-width: 320px) and (max-width: 600px) {
+  .page-node-3 .main-container .view-id-slideshow img, .page-node-74 .main-container .view-id-slideshow img {
+    max-height: calc(85vmax - 3.125rem) !important;
+  }
   .page-node-3 .main-container .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content {
-    padding: 1px 20px 10px !important;
+    padding: 50px 20px 250px !important;
   }
   .page-node-3 .main-container .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content p {
-    font-size: 16px !important;
+    font-size: 18px !important;
     margin-top: 10px;
+    padding: 10px !important;
+    line-height: 1.5 !important;
+    letter-spacing: -0.03em;
   }
   .page-node-3 .main-container .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container .view-id-slideshow .owl-next span:before, .page-node-74 .main-container .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container .view-id-slideshow .owl-next span:before {
     transform: translate(0%, -100%) !important;
     font-size: 32px !important;
   }
+  .page-node-3 .main-container #gozideha .items, .page-node-74 .main-container #gozideha .items {
+    height: 207px !important;
+  }
+  .page-node-3 .main-container #sectionText section .container, .page-node-74 .main-container #sectionText section .container {
+    padding: 25px !important;
+  }
+  .page-node-3 .main-container #sectionText section .container p, .page-node-74 .main-container #sectionText section .container p {
+    text-align: justify;
+    color: #1b1515;
+    font-weight: bold;
+    padding: 0 15px !important;
+  }
   .page-node-3 .main-container #last .col-md-6, .page-node-74 .main-container #last .col-md-6 {
     max-height: 235px;
+  }
+  .page-node-3 .main-container #last .col-md-6 .items_text, .page-node-74 .main-container #last .col-md-6 .items_text {
+    height: 100px !important;
+  }
+  .page-node-3 .main-container #projects .view-content, .page-node-74 .main-container #projects .view-content {
+    width: 100%;
+  }
+  .page-node-3 .main-container #projects .view-content .items, .page-node-74 .main-container #projects .view-content .items {
+    height: 207px !important;
+  }
+  .page-node-3 .main-container #projects .view-content .views-field-title, .page-node-74 .main-container #projects .view-content .views-field-title {
+    text-align: center !important;
+    font-weight: bold;
+  }
+  .page-node-3 .main-container #projects .view-content .views-field-title span, .page-node-74 .main-container #projects .view-content .views-field-title span {
+    line-height: 2.5 !important;
+  }
+  .page-node-3 .main-container #projects .view-content .views-field-title span a, .page-node-74 .main-container #projects .view-content .views-field-title span a {
+    padding-top: 15px;
+  }
+  .page-node-3 .main-container #jobs .col-md-2, .page-node-74 .main-container #jobs .col-md-2 {
+    padding-right: auto !important;
+    text-align: -webkit-center;
   }
 }
 @media (max-width: 768px) {
@@ -8864,9 +8921,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     object-fit: cover;
     height: calc(90vh - 3.75rem);
     max-height: calc(50vmax - 3.125rem);
-  }
-  .page-node-3 .main-container .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content {
-    padding: 0 20px 20px !important;
   }
   .page-node-3 .main-container .view-id-slideshow .owl-item p, .page-node-74 .main-container .view-id-slideshow .owl-item p {
     transform: translate(0px, 0px);

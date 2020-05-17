@@ -166,7 +166,7 @@
     <section>
       <div class="container">
         <div class="article">
-          <h4 style="font-weight: 700"><?php print $node4->title; ?></h4>
+          <h3 style="font-weight: 700"><?php print $node4->title; ?></h3>
           <h4><?php print $node4->field_tozih['und'][0]['value']; ?></h4>
           <P class="caption_article">
             <?php print $node4->body['und'][0]['value']; ?>
@@ -507,6 +507,9 @@
   }
   #gozideha .caption span {
     display: table
+  }
+  #gozideha .caption h4 {
+    font-weight: bold;
   }
   #gozideha .caption span:before {
     content: "";
