@@ -123,4 +123,18 @@
     margin-right: -0.5rem
   }
 
+  @media (min-width: 320px) and (max-width: 600px) {
+    #block-block-7{
+      padding: 44px 0 !important;
+    }
+    #sectionBanner .container{
+      padding: 0 33px !important;
+    }
+    .caption_slide {
+      min-height: 120px !important;
+    }
+    .caption_write {
+      padding: 0 2.25rem !important;
+    }
+  }
 </style>

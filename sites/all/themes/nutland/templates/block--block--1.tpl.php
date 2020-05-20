@@ -63,10 +63,10 @@
             <div class="container">
                 <div class="row mx-n4">
                     <div class="col-md-5 px-4 col-sm-12 col-xs-12">
-                        <article class="cards card-none">
+                        <article class="cards cardi card-none">
                             <div class="card-header">
                                 <a href="/" class="logo_footer">
-                                    <img src="/sites/all/themes/nutland/images/logo_footer.png" alt="">
+                                    <img src="<?php print image_style_url("597x139", $node1->field_image['und'][0]['uri']); ?>" alt="">
                                 </a>
                             </div>
                             <div class="card-body">
@@ -90,7 +90,7 @@
                             </div>
                         </article>
                     </div>
-                    <div class="col-md-4 col-sm-12 col-xs-12">
+                    <div class="col-md-4  col-sm-12 col-xs-12">
                         <article class="cards card-none">
                             <div class="card-header">
                                 <h4 class="card-title">تماس با ما</h4>

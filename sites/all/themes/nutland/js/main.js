@@ -70,7 +70,7 @@ $(document).ready(function(){
 // search box in page news
 $(".page-news .view-filters").ready(function(){
   $("#edit-title").attr("placeholder", "کلمه مورد نظر را جستجو کنید");
-  $("#edit-body-value").attr("placeholder", "در محتوا");
+  $("#edit-body-value").attr("placeholder", "در تمامی محتواها");
   // $("input#edit-created-min").attr({ "value":" ", "placeholder": "از تاریخ"});
   // $("input#edit-created-max").attr({ "value":" ", "placeholder": "تا تاریخ"});
   $.getScript("/sites/all/libraries/persiandatepicker/persian-date.min.js").done(function(){
@@ -85,6 +85,23 @@ $(".page-news .view-filters").ready(function(){
     });
   });
 });
+//birthday
+
+$(".page-node-5").ready(function(){
+  $.getScript("/sites/all/libraries/persiandatepicker/persian-date.min.js").done(function(){
+    $.getScript("/sites/all/libraries/persiandatepicker/persian-datepicker.min.js").done(function(){
+      $("input#edit-submitted-date").blur(function () {
+        $(this).persianDatepicker({
+          observer: true,
+          format: 'YYYY/MM/DD',
+          altField: '.observer-example-alt',
+        });
+      });
+    });
+  });
+});
+
+
 //carousel in node news//carousel in node news
  $(".node-type-news.not-front").ready(function () {
    $(".field-name-field-news-image .field-items img").each(function(){
@@ -112,7 +129,7 @@ $(".page-node-59 #block-system-main, #node-59").ready(function () {
 });
 //comment form
 $(document).ready(function () {
-  $("form.comment-form .form-actions span").text("ارسال پیام");
+  //$("form.comment-form .form-actions span").text("ارسال پیام");
   $(".filter").click(function(){
     $(".views-exposed-form").toggle();
   });
@@ -140,6 +157,10 @@ $(".node-type-projects.not-front").ready(function () {
 });
 //carousel in node subset
 $(".node-type-subset.not-front").ready(function () {
+  $(".field-name-field-title").click(function(){
+    $(".field-name-field-expo").toggle();
+  });
+  $(".field-name-field-tarh .items").prepend("<div class='line_effect'><span class='lineInner'></span></div>");
   $(".group-left .field-type-image .field-items .field-item").addClass("items");
   $(".field-name-field-slider-main .field-items img, .field-name-field-slider-main .field-items video").each(function(){
     $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
