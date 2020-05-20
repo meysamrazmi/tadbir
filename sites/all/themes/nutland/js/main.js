@@ -11,18 +11,24 @@ $(document).ready(function () {
 })
 //show collapse menu
 $(document).ready(function(){
-  $("body").click(function(){
-      $(".px-5 div#navbar-collapse").addClass("collapse");
-      $("body").removeClass("over-open-menu");
+  $(".navbar-toggle").click(function(){
+    $("#navbar").toggleClass("resp");
+    $(".px-5 div#navbar-collapse").toggle(100);
+    $(".icon-bar").toggleClass("hidden");
+    $(this).toggleClass("xclose");
   });
-  $("#block-system-main-menu").click(function (ev) {
-    ev.stopPropagation();
-  });
-  $("#navbar .navbar-header button").click(function (ev) {
-    $(".px-5 div#navbar-collapse").removeClass("collapse");
-      $("body").addClass("over-open-menu");
-      ev.stopPropagation();
-  });
+  //$("body").click(function(){
+    //  $(".px-5 div#navbar-collapse").addClass("collapse");
+      //$("body").removeClass("over-open-menu");
+  //});
+  //$("#block-system-main-menu").click(function (ev) {
+   // ev.stopPropagation();
+  //});
+  //$("#navbar .navbar-header button").click(function (ev) {
+    //$(".px-5 div#navbar-collapse").removeClass("collapse");
+      //$("body").addClass("over-open-menu");
+      //ev.stopPropagation();
+  //});
 
   $(".mdi-magnify").click(function(){
     $(".form-search-menu").toggleClass("open");
@@ -38,9 +44,11 @@ $(document).ready(function(){
   });
   $(".page-gallery").ready(function () {
     $(" .view-content .views-field-field-main-image .field-content").addClass("items");
+    $(".view form").prepend("<div class='filter hidden-sm hidden-lg hidden-md'><strong>فیلترها</strong></div>");
   });
   $(".page-videos").ready(function () {
     $(" .view-content .views-field-field-image-video .field-content").addClass("items");
+
   });
   $(".page-news").ready(function () {
     $(".view-content .views-field-field-news-image").addClass("items");
@@ -103,7 +111,12 @@ $(".page-node-59 #block-system-main, #node-59").ready(function () {
   $(".webform-progressbar").addClass("col-md-3 col-sm-3 col-xs-12");
 });
 //comment form
-$("form.comment-form .form-actions span").text("ارسال پیام");
+$(document).ready(function () {
+  $("form.comment-form .form-actions span").text("ارسال پیام");
+  $(".filter").click(function(){
+    $(".views-exposed-form").toggle();
+  });
+})
 
 
 //carousel in node project//carousel in node news
@@ -127,6 +140,7 @@ $(".node-type-projects.not-front").ready(function () {
 });
 //carousel in node subset
 $(".node-type-subset.not-front").ready(function () {
+  $(".group-left .field-type-image .field-items .field-item").addClass("items");
   $(".field-name-field-slider-main .field-items img, .field-name-field-slider-main .field-items video").each(function(){
     $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
   })
@@ -170,7 +184,6 @@ $(".node-type-projects.not-front").ready(function () {
 $(window).scroll(function(){
   var sticky = $('.navbar-static-top'),
     scroll = $(window).scrollTop();
-
   if (scroll >= 100) sticky.addClass('fixed');
   else sticky.removeClass('fixed');
 });

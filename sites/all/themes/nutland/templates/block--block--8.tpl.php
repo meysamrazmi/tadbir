@@ -224,9 +224,12 @@
     }
     @media (max-width: 768px) {
      #main{
-       max-width: 250px!important;
+       max-width: 450px!important;
        overflow: overlay;
      }
+      ul.accordion li{
+        padding: 0 6px!important;
+      }
     }
     @media only screen and (max-width: 36rem) {
       .accordion li {

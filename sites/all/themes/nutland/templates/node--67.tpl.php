@@ -119,7 +119,7 @@
     <div class="img-center">
       <img src="http://www.tadbir.offerbama.com/sites/default/files/tadbir-logo_0.png"/>
     </div>
-    <div class="container">
+    <div class="container pad">
       <div class="text2">
         <h5><?php print $node2->title; ?></h5>
         <div><?php print $node2->body['und'][0]['value']; ?></div>

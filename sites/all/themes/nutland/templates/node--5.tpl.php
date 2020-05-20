@@ -139,7 +139,7 @@
         </div>
       </div>
     </div>
-    <h4 style="margin: 10px 50px;">فرم تماس</h4>
+    <h4 class="hform" style="margin: 10px 50px;">فرم تماس</h4>
     <div class="form">
       <?php
       $block = module_invoke('webform', 'block_view', 'client-block-21');
