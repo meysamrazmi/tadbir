@@ -407,8 +407,9 @@
     overflow: hidden
   }
   #last .items_text img {
-    height: 100%;
+    min-height: 100%;
     width: 100%;
+    height: auto;
     transition: -webkit-transform .5s ease-in-out;
     transition: transform .5s ease-in-out;
     transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out
@@ -541,7 +542,8 @@
     color: #fff
   }
   #gozideha .items img {
-    height: 100%;
+    min-height: 100%;
+    height: auto;
     width: 100%;
     transition: all .4s ease-in-out;
     filter: grayscale(100%);

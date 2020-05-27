@@ -224,8 +224,11 @@
     }
     @media (max-width: 768px) {
      #main{
-       max-width: 450px!important;
+       max-width: calc(100vw - 20px)!important;
        overflow: overlay;
+       padding: 25px 0.625rem;
+       margin: 0 -30px !important;
+       background: #eee;
      }
       ul.accordion li{
         padding: 0 6px!important;
