@@ -17,18 +17,6 @@ $(document).ready(function(){
     $(".icon-bar").toggleClass("hidden");
     $(this).toggleClass("xclose");
   });
-  //$("body").click(function(){
-    //  $(".px-5 div#navbar-collapse").addClass("collapse");
-      //$("body").removeClass("over-open-menu");
-  //});
-  //$("#block-system-main-menu").click(function (ev) {
-   // ev.stopPropagation();
-  //});
-  //$("#navbar .navbar-header button").click(function (ev) {
-    //$(".px-5 div#navbar-collapse").removeClass("collapse");
-      //$("body").addClass("over-open-menu");
-      //ev.stopPropagation();
-  //});
 
   $(".mdi-magnify").click(function(){
     $(".form-search-menu").toggleClass("open");
@@ -127,7 +115,7 @@ $(".page-node-59 #block-system-main, #node-59").ready(function () {
   $("form").addClass("container");
   $(".webform-progressbar").addClass("col-md-3 col-sm-3 col-xs-12");
 });
-//comment form
+//fillters toggle
 $(document).ready(function () {
   //$("form.comment-form .form-actions span").text("ارسال پیام");
   $(".filter").click(function(){

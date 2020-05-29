@@ -126,7 +126,10 @@
 
   @media (min-width: 320px) and (max-width: 600px) {
     #block-block-3{
-      padding: 44px 0 !important;
+      display: none;
+    }
+    .page-header, .breadcrumb{
+      display: none !important;
     }
     #sectionBanner .container{
       padding: 0 33px !important;

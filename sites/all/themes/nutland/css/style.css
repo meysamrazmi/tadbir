@@ -9239,17 +9239,17 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   float: left;
 }
 .page-news #block-system-main .view-header {
-  top: 34% !important;
+  top: 34%;
   left: 30px !important;
 }
 @media (max-width: 600px) {
   .page-news #block-system-main {
-    margin-top: 165px !important;
+    margin-top: 0px !important;
     padding: 0 !important;
   }
   .page-news .view-content {
     text-align: -webkit-center;
-    padding: 0px 10px;
+    margin: 0px 30px;
   }
   .page-news .view-content .items {
     float: none !important;
@@ -9261,9 +9261,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     float: none !important;
     margin-left: 0 !important;
     margin-bottom: 25px;
-  }
-  .page-news #edit-title-wrapper {
-    width: 96% !important;
   }
   .page-news .form-type-textfield {
     width: 100% !important;
@@ -9298,9 +9295,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .page-news .view-content .views-row .views-field-field-kholase {
     float: right;
     margin-top: -50px;
-  }
-  .page-news #edit-title-wrapper {
-    width: 96% !important;
   }
   .page-news .form-type-textfield {
     width: 100% !important;

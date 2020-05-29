@@ -2089,18 +2089,18 @@ a {
       }
     }
     .view-header{
-      top: 34% !important;
+      top: 34% ;
       left: 30px !important;
     }
   }
   @media (max-width: 600px) {
     #block-system-main{
-      margin-top: 165px !important;
+      margin-top: 0px !important;
       padding: 0!important;
     }
     .view-content{
       text-align: -webkit-center;
-      padding: 0px 10px;
+      margin: 0px 30px;
       .items{
         float: none !important;
       }
@@ -2117,9 +2117,6 @@ a {
           //
         }
       }
-    }
-    #edit-title-wrapper{
-      width: 96% !important;
     }
     .form-type-textfield{
       width: 100% !important;
@@ -2156,9 +2153,6 @@ a {
           margin-top: -50px;
         }
       }
-    }
-    #edit-title-wrapper{
-      width: 96% !important;
     }
     .form-type-textfield{
       width: 100% !important;
