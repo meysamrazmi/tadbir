@@ -1,14 +1,5 @@
 var $ = jQuery;
-$(document).ready(function () {
-  $('.backtotop').click(function(){
-    $('html, body').animate({
-      scrollTop: (0)
-    }, 1000);
-  })
-  $('#navbar .user-menu .navbar-right button').click(function(){
-    $(this).parent().toggleClass('open');
-  });
-})
+
 //show collapse menu
 $(document).ready(function(){
   $(".navbar-toggle").click(function(){
@@ -33,6 +24,10 @@ $(document).ready(function(){
   $(".page-gallery").ready(function () {
     $(" .view-content .views-field-field-main-image .field-content").addClass("items");
     $(".view form").prepend("<div class='filter hidden-sm hidden-lg hidden-md'><strong>فیلترها</strong></div>");
+    $(".view form").on('click', ".filter", function(){
+      $(".views-exposed-form").toggle();
+      $(".view-header").css('opacity','1');
+    });
   });
   $(".page-videos").ready(function () {
     $(" .view-content .views-field-field-image-video .field-content").addClass("items");
@@ -115,13 +110,6 @@ $(".page-node-59 #block-system-main, #node-59").ready(function () {
   $("form").addClass("container");
   $(".webform-progressbar").addClass("col-md-3 col-sm-3 col-xs-12");
 });
-//fillters toggle
-$(document).ready(function () {
-  //$("form.comment-form .form-actions span").text("ارسال پیام");
-  $(".filter").click(function(){
-    $(".views-exposed-form").toggle();
-  });
-})
 
 
 //carousel in node project//carousel in node news

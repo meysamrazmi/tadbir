@@ -139,16 +139,16 @@
         </div>
       </div>
     </div>
-    <h4 class="hform" style="margin: 10px 50px;">فرم تماس</h4>
+    <h4 class="hform" style="margin: 10px 0px;">فرم تماس</h4>
     <div class="form">
       <?php
       $block = module_invoke('webform', 'block_view', 'client-block-21');
       print render($block['content']);
       ?>
     </div>
-    <h4>گروه اقتصادی تدبیر در شبکه های اجتماعی : </h4>
+    <h4 class="hbottom">گروه اقتصادی تدبیر در شبکه های اجتماعی : </h4>
     <div class="social">
-      <ul class="list">
+      <ul class="list" style="padding-right: 0px;">
         <a href=""> <li class="social1"></li></a>
         <a href=""> <li class="social2"></li></a>
         <a href=""> <li class="social3"></li></a>
@@ -178,11 +178,20 @@
   <?php endif; ?>
   <?php print render($content['comments']); ?>
 </article>
-
+<style>
+  @media (max-width: 1200px) {
+    .hform, .hbottom{
+      margin: 10px 35px!important;
+    }
+  }
+</style>
 <script>
   // tab  info
   $(document).on("click", ".tab-info .menu div", function() {
     var numberIndex = $(this).index();
+    tabs(numberIndex)
+  });
+  function tabs(numberIndex) {
     if (!$(this).is("active")) {
       $(".tab-info .menu div").removeClass("active");
       $(".tab-info ul li").removeClass("active");
@@ -193,6 +202,12 @@
         .innerHeight();
       $(".tab-info ul").height(listItemHeight + "px");
     }
+
+  }
+  $(document).on("change", ".tab-info .menu div", function() {
+    var numberIndex = $(this).index();
+    tabs(numberIndex)
   });
+
 </script>
 

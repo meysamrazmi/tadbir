@@ -126,7 +126,7 @@
 
   @media (min-width: 320px) and (max-width: 600px) {
     #block-block-3{
-      display: none;
+      display: none
     }
     .page-header, .breadcrumb{
       display: none !important;
