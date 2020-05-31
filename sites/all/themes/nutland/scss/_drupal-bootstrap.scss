@@ -1691,7 +1691,6 @@ a {
             }
             img{
               width: 100%;
-              height: auto;
               transition: all .4s ease-in-out;
             }
             .views-field-title{
@@ -4495,6 +4494,9 @@ a {
           }
         }
       }
+      .group-header{
+        margin-bottom: 100px;
+      }
       .group-left{
         width: 35%;
         text-align: -webkit-left;
@@ -4629,6 +4631,20 @@ a {
             left: 5px;
           }
         }
+        .field-name-field-company{
+          max-width: 1100px;
+          margin: auto;
+          padding-bottom: 50px;
+          .field-item {
+            border: 1px solid #ccc;
+            text-align: -webkit-center;
+            img{
+              display: block;
+              max-width: 100%;
+              min-height: 200px;
+            }
+          }
+        }
       }
     }
     @media (max-width: 1200px) and (min-width: 1000px) {
@@ -4689,7 +4705,9 @@ a {
           text-align: center;
         }
       }
-
+      .group-header{
+        margin-bottom: 0 !important;
+      }
       .field-label{
         &:after, &:before{
           width: 35% !important;
@@ -4702,6 +4720,9 @@ a {
           height: auto !important;
           min-height: 230px;
         }
+      }
+      .group-header{
+        margin-bottom: 0 !important;
       }
       .group-left{
         width: 100% !important;
@@ -4774,9 +4795,6 @@ a {
         &:after, &:before{
           display: none !important;
         }
-      }
-      .ds-2col-stacked > .group-header{
-        margin-bottom: -300px!important;
       }
     }
   }

@@ -103,6 +103,19 @@ $(".page-node-5").ready(function(){
          1000: { items: 1 }
        }
      });
+   $(".field-name-field-company .field-items").addClass("owl-carousel owl-theme").owlCarousel({
+     rtl: true,
+     loop: true,
+     margin: 15,
+     responsiveClass: true,
+     nav: true,
+     autoplayTimeout: 3200,
+     responsive: {
+       0: { items: 1 },
+       600: { items: 3 },
+       1000: { items: 5 }
+     }
+   });
  });
  // page form
 

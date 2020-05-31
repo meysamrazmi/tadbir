@@ -8914,7 +8914,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .page-node-3 .main-container #node-3 #projects .view-content .views-row img, .page-node-3 .main-container #node-74 #projects .view-content .views-row img, .page-node-74 .main-container #node-3 #projects .view-content .views-row img, .page-node-74 .main-container #node-74 #projects .view-content .views-row img {
   width: 100%;
-  height: auto;
   transition: all 0.4s ease-in-out;
 }
 .page-node-3 .main-container #node-3 #projects .view-content .views-row .views-field-title, .page-node-3 .main-container #node-74 #projects .view-content .views-row .views-field-title, .page-node-74 .main-container #node-3 #projects .view-content .views-row .views-field-title, .page-node-74 .main-container #node-74 #projects .view-content .views-row .views-field-title {
@@ -11388,6 +11387,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-size: 28px;
   line-height: 2;
 }
+.node-type-subset .main-container #block-system-main .group-header {
+  margin-bottom: 100px;
+}
 .node-type-subset .main-container #block-system-main .group-left {
   width: 35%;
   text-align: -webkit-left;
@@ -11518,6 +11520,20 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   top: 30px;
   left: 5px;
 }
+.node-type-subset .main-container #block-system-main .group-footer .field-name-field-company {
+  max-width: 1100px;
+  margin: auto;
+  padding-bottom: 50px;
+}
+.node-type-subset .main-container #block-system-main .group-footer .field-name-field-company .field-item {
+  border: 1px solid #ccc;
+  text-align: -webkit-center;
+}
+.node-type-subset .main-container #block-system-main .group-footer .field-name-field-company .field-item img {
+  display: block;
+  max-width: 100%;
+  min-height: 200px;
+}
 @media (max-width: 1200px) and (min-width: 1000px) {
   .node-type-subset .main-container .group-left {
     width: 39% !important;
@@ -11569,6 +11585,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .node-type-subset .main-container .group-right h5 {
     text-align: center;
   }
+  .node-type-subset .main-container .group-header {
+    margin-bottom: 0 !important;
+  }
   .node-type-subset .main-container .field-label:after, .node-type-subset .main-container .field-label:before {
     width: 35% !important;
   }
@@ -11577,6 +11596,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .node-type-subset .main-container .field-name-field-slider-main img {
     height: auto !important;
     min-height: 230px;
+  }
+  .node-type-subset .main-container .group-header {
+    margin-bottom: 0 !important;
   }
   .node-type-subset .main-container .group-left {
     width: 100% !important;
@@ -11638,9 +11660,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
   .node-type-subset .main-container .field-label:after, .node-type-subset .main-container .field-label:before {
     display: none !important;
-  }
-  .node-type-subset .main-container .ds-2col-stacked > .group-header {
-    margin-bottom: -300px !important;
   }
 }
 
