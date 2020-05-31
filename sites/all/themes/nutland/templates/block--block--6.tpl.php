@@ -74,9 +74,10 @@
 <style>
   #block-block-6{
     position: absolute;
-    width: 100%;
-    top: 65px;
+    width: 100vw;
+    top: 0px;
     padding: 40px 0;
+    right: calc(50% - 50vw);
     background: url("/sites/all/themes/nutland/images/sktemplate1.jpg");
     background-position: center;
     background-size: 100% 100%;

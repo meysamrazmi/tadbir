@@ -103,19 +103,6 @@ $(".page-node-5").ready(function(){
          1000: { items: 1 }
        }
      });
-   $(".field-name-field-company .field-items").addClass("owl-carousel owl-theme").owlCarousel({
-     rtl: true,
-     loop: true,
-     margin: 15,
-     responsiveClass: true,
-     nav: true,
-     autoplayTimeout: 3200,
-     responsive: {
-       0: { items: 1 },
-       600: { items: 3 },
-       1000: { items: 5 }
-     }
-   });
  });
  // page form
 
@@ -168,6 +155,20 @@ $(".node-type-subset.not-front").ready(function () {
       1000: { items: 1 }
     }
   });
+
+  $(".field-name-field-company .field-items").addClass("owl-carousel owl-theme").owlCarousel({
+    rtl: true,
+    loop: true,
+    margin: 15,
+    responsiveClass: true,
+    nav: true,
+    autoplayTimeout: 3200,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 3 },
+      1000: { items: 5 }
+    }
+  });
 });
 //project slider
 
@@ -192,7 +193,7 @@ $(".node-type-projects.not-front").ready(function () {
 });
 //fix header on scroll
 $(window).scroll(function(){
-  var sticky = $('.navbar-static-top'),
+  var sticky = $('.navbar-fixed-top'),
     scroll = $(window).scrollTop();
   if (scroll >= 100) sticky.addClass('fixed');
   else sticky.removeClass('fixed');

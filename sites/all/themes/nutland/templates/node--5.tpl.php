@@ -139,6 +139,36 @@
         </div>
       </div>
     </div>
+    <div class="tab-mobile container">
+      <h4>اطلاعات تماس</h4>
+      <div class="tab-container">
+        <div class="tab-navigation">
+          <select id="select-box">
+            <option value="1">دپارتمان انرژی</option>
+            <option value="2">دپارتمان کشاورزی</option>
+            <option value="3">دپارتمان دارویی</option>
+            <option value="4">دپارتمان ساختمان</option>
+            <option value="5">دپارتمان سرمایه گذاری</option>
+          </select>
+        </div>
+
+        <div id="tab-1" class="tab-content">
+          <div><span><?php print $node2->body['und'][0]['value']; ?></span></div>
+        </div>
+        <div id="tab-2" class="tab-content">
+          <div class="table"><?php print $node3->body['und'][0]['value']?></div>
+        </div>
+        <div id="tab-3" class="tab-content">
+          <div class="table"><?php print $node4->body['und'][0]['value']?></div>
+        </div>
+        <div id="tab-4" class="tab-content">
+          <div class="table"><?php print $node5->body['und'][0]['value']?></div>
+        </div>
+        <div id="tab-5" class="tab-content">
+          <div class="table"><?php print $node6->body['und'][0]['value']?></div>
+        </div>
+      </div>
+    </div>
     <h4 class="hform" style="margin: 10px 0px;">فرم تماس</h4>
     <div class="form">
       <?php
@@ -184,6 +214,29 @@
       margin: 10px 35px!important;
     }
   }
+  @media (max-width: 768px) {
+    .tab-mobile{
+      display: block !important;
+      padding: 0 30px;
+    }
+    .tab-container{
+      text-align: -webkit-center;
+    }
+    #select-box{
+      outline: none;
+      min-width: 320px;
+      margin: 15px auto;
+      padding: 10px;
+      border-color: #ccc !important;
+
+    }
+    .tab-content{
+      text-align: justify;
+    }
+    .select-selected {
+      background-color: DodgerBlue;
+    }
+  }
 </style>
 <script>
   // tab  info
@@ -204,9 +257,12 @@
     }
 
   }
-  $(document).on("change", ".tab-info .menu div", function() {
-    var numberIndex = $(this).index();
-    tabs(numberIndex)
+  $('.tab-content').hide();
+  $('#tab-1').show();
+  $('#select-box').change(function () {
+    dropdown = $('#select-box').val();
+    $('.tab-content').hide();
+    $('#' + "tab-" + dropdown).show();
   });
 
 </script>

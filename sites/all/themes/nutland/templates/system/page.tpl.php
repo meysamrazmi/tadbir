@@ -119,7 +119,7 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
                 <li class="grob">
                     <i class="mdi mdi-magnify"></i>
                 </li>
-                <li>
+                <li class="hidden-xs">
                     <select id="lang">
                         <option value="فارسی">فارسی</option>
                         <option value="انگلیسی">انگلیسی</option>

@@ -74,9 +74,10 @@
 <style>
   #block-block-4{
     position: absolute;
-    width: 100%;
-    top: 65px;
+    width: 100vw;
+    top: 0px;
     padding: 40px 0;
+    right: calc(50% - 50vw);
     background: url("/sites/all/themes/nutland/images/sktemplate1.jpg");
     background-position: center;
     background-size: cover;
@@ -122,18 +123,13 @@
     border-left: 4px solid #fff;
     margin-right: -0.5rem
   }
+
   @media (min-width: 320px) and (max-width: 600px) {
     #block-block-4{
-      padding: 44px 0 !important;
+      display: none
     }
-    #sectionBanner .container{
-      padding: 0 33px !important;
-    }
-    .caption_slide {
-      min-height: 120px !important;
-    }
-    .caption_write {
-      padding: 0 2.25rem !important;
+    .page-header, .breadcrumb{
+      display: none !important;
     }
   }
 </style>
