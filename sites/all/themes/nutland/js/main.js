@@ -164,7 +164,8 @@ $(".node-type-subset.not-front").ready(function () {
     nav: true,
     autoplayTimeout: 3200,
     responsive: {
-      0: { items: 1 },
+      0: { items: 2 },
+      500: { items: 2 },
       600: { items: 3 },
       1000: { items: 5 }
     }
