@@ -139,7 +139,7 @@
         </div>
       </div>
     </div>
-    <div class="tab-mobile container">
+    <div class="tab-mobile container" style="display: none">
       <h4>اطلاعات تماس</h4>
       <div class="tab-container">
         <div class="tab-navigation">
@@ -214,17 +214,23 @@
       margin: 10px 35px!important;
     }
   }
+  @media (max-width: 768px) and (min-width: 600px) {
+    .tab-mobile {
+      padding: 0 30px;
+    }
+  }
   @media (max-width: 768px) {
     .tab-mobile{
       display: block !important;
-      padding: 0 30px;
     }
     .tab-container{
       text-align: -webkit-center;
+      padding: 10px 0 20px 0;
+
     }
     #select-box{
       outline: none;
-      min-width: 320px;
+      width: 100vw;
       margin: 15px auto;
       padding: 10px;
       border-color: #ccc !important;

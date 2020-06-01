@@ -8,6 +8,10 @@ $(document).ready(function(){
     $(".icon-bar").toggleClass("hidden");
     $(this).toggleClass("xclose");
   });
+  //convert + to -
+  $(".menu.nav .dropdown").click(function(){
+    $(this).toggleClass("petro").find("a .caret").toggleClass("petro");
+  });
 
   $(".mdi-magnify").click(function(){
     $(".form-search-menu").toggleClass("open");
@@ -134,7 +138,7 @@ $(".node-type-projects.not-front").ready(function () {
 //carousel in node subset
 $(".node-type-subset.not-front").ready(function () {
   $(".field-name-field-title").click(function(){
-    $(".field-name-field-expo").toggle();
+    $(this).parent().children().last().toggle();
   });
   $(".field-name-field-tarh .items").prepend("<div class='line_effect'><span class='lineInner'></span></div>");
   $(".group-left .field-type-image .field-items .field-item").addClass("items");
@@ -194,8 +198,13 @@ $(".node-type-projects.not-front").ready(function () {
 });
 //fix header on scroll
 $(window).scroll(function(){
-  var sticky = $('.navbar-fixed-top'),
+  let sticky = $('.navbar-fixed-top'),
     scroll = $(window).scrollTop();
-  if (scroll >= 100) sticky.addClass('fixed');
-  else sticky.removeClass('fixed');
+  if (scroll > 0){
+    $('body').addClass('fixed');
+    sticky.addClass('fixed');
+  } else {
+    $("body").removeClass('fixed');
+    sticky.removeClass('fixed');
+  }
 });

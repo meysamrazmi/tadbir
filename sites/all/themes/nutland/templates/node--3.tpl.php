@@ -253,8 +253,8 @@
         <div class="header_title text-primary">
           <h5 class="mb-0">حوزه های اصلی فعالیت</h5>
         </div>
-        <div class="container" style="padding: 0">
-          <div class="col-md-2 col-xs-6 col-sm-6">
+        <div class="container osm" style="padding: 0">
+          <div class="col-md-2">
             <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter1" src="<?php print image_style_url("medium", $node7->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -262,7 +262,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-2 col-xs-6 col-sm-6">
+          <div class="col-md-2">
             <a href="<?php print $node8->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter2" src="<?php print image_style_url("medium", $node8->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -270,7 +270,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-2 col-xs-6 col-sm-6">
+          <div class="col-md-2">
             <a href="<?php print $node9->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter3" src="<?php print image_style_url("medium", $node9->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -278,7 +278,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-2 col-xs-6 col-sm-6">
+          <div class="col-md-2">
             <a href="<?php print $node10->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter4" src="<?php print image_style_url("medium", $node10->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -286,7 +286,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-2 col-xs-6 col-sm-6">
+          <div class="col-md-2">
             <a href="<?php print $node11->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter5" src="<?php print image_style_url("medium", $node11->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -294,7 +294,7 @@
               </div>
             </a>
           </div>
-          <div class="col-md-2 col-xs-6 col-sm-6">
+          <div class="col-md-2">
             <a href="<?php print $node12->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter6" src="<?php print image_style_url("medium", $node12->field_image['und'][0]['uri']); ?>" alt="">
               <div  class="text">
@@ -538,12 +538,11 @@
   }
   #gozideha .items {
     position: relative;
-    height: 350px;
+    height: 360px;
     color: #fff
   }
   #gozideha .items img {
     min-height: 100%;
-    height: auto;
     width: 100%;
     transition: all .4s ease-in-out;
     filter: grayscale(100%);

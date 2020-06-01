@@ -10,7 +10,7 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
      -moz-box-shadow: $shadow;
           box-shadow: $shadow;
 }
-.fixed {
+#navbar.fixed:not(.resp) {
   .px-5{
     height: 50px !important;
     overflow: hidden;
@@ -23,14 +23,6 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
       }
     }
   }
-}
-.logged-in{
-  .fixed{
-    top: 30px!important;
-  }
-}
-header#navbar.fixed + .main-container {
-  margin-top: 60px;
 }
 .alert-success {
   z-index: 6;
@@ -80,9 +72,18 @@ header#navbar.fixed + .main-container {
   .navbar-collapse{
     border-color: white !important;
   }
-  @media (min-width: 320px) and (max-width: 768px) {
-
+  @media (max-width: 768px) {
     height: 100vh;
+    overflow: overlay;
+    body.admin-menu & {
+      height: calc(100vh - 29px);
+    }
+    a.logo.mobile {
+      position: absolute;
+      top: 75px;
+      right: 25px;
+      display: block !important;
+    }
     .form-search-menu{
       top: 5px !important;
       width: 100% !important;
@@ -93,6 +94,7 @@ header#navbar.fixed + .main-container {
         background: #f3f3f3;
         max-width: calc(100% - 90px) !important;
         margin-left: 20px;
+        width: 360px !important;
         input{
           border-radius: 0;
           border-left: 0 !important;
@@ -127,8 +129,7 @@ header#navbar.fixed + .main-container {
       }
     }
     .logo.navbar-btn.pull-left {
-      z-index: 101;
-      display: inline-table !important;
+      display: none !important;
       img{
         position: fixed;
         top: 130px;
@@ -151,13 +152,18 @@ header#navbar.fixed + .main-container {
   }
 }
 .main-container{
-  overflow-x: unset;
+  > .row{
+    margin: 0 !important;
+    > .col-sm-12{
+      padding: 0 !important;
+    }
+  }
   span:not(.glyphicon){
     font-family: fanum!important;
   }
 }
 .breadcrumb{
-  opacity: 0!important;
+  display: none;
 }
 html {
   &.overlay-open .navbar-fixed-top {
@@ -204,7 +210,7 @@ body {
   }
   // Add padding to body if various toolbar or navbars are fixed on top.
   &.navbar-is-fixed-top {
-    padding-top: 64px;
+    padding-top: 55px;
   }
   &.navbar-is-fixed-bottom {
     padding-bottom: 64px !important;
@@ -234,8 +240,12 @@ body {
     }
     &.navbar-is-fixed-top {
       padding-top: 85px !important;
+      transition: padding 0.5s ease;
+      &.fixed {
+        padding-top: 55px !important;
+      }
       @media (max-width: 768px){
-        padding-top: 65px !important;
+        padding-top: 55px !important;
       }
     }
   }
@@ -1141,6 +1151,7 @@ a {
     padding: 0!important;
     height: 85px;
     justify-content: start;
+    transition: all 0.5s ease;
   }
   .navbar-toggle{
     background-color: white!IMPORTANT;
@@ -1150,6 +1161,9 @@ a {
     position: static;
   }
   a.logo{
+    &.mobile{
+      display: none;
+    }
     img{
       width: 230px;
       max-height: 69px!important;
@@ -1293,7 +1307,7 @@ a {
       }
     }
   }
-  @media (min-width: 320px) and (max-width: 768px) {
+  @media (max-width: 768px) {
     .navbar-collapse{
       #block-system-main-menu{
         position: absolute !important;
@@ -1333,6 +1347,11 @@ a {
                   top: 4px;
                 }
               }
+              .petro{
+                &:after{
+                  width: 0 !important;
+                }
+              }
             }
             .dropdown-menu{
               background: none !important;
@@ -1346,27 +1365,23 @@ a {
         }
       }
     }
-  }
-  @media (min-width: 450px) and (max-width: 600px) {
-    .logo.navbar-btn.pull-left{
-      right: calc(50vw + 30px) !important;
-    }
-  }
-  @media (max-width: 768px) {
-    min-height: 65px;
+    min-height: 50px;
     .px-5{
-      height: 60px !important;
+      height: 55px !important;
     }
-      a.logo{
-        img{
-          width: 325px;
-          max-height: 100px !important;
-        }
+    a.logo{
+      img{
+        width: 325px;
+        max-height: 100px !important;
       }
+    }
     ul.menu.nav{
       display: block!important;
-      .dropdown:hover{
-        .dropdown-menu{
+      .dropdown{
+        &:hover .dropdown-menu {
+          display: none !important;
+        }
+        &.petro .dropdown-menu{
           display: block!important;
           margin-bottom: 20px;
           text-align: right;
@@ -1401,7 +1416,6 @@ a {
         right: 0;
         background: white;
         top: 0;
-        height: 100vh;
         min-width: 220px;
         padding-top: 80px;
         transition: all 1s ease;
@@ -1425,6 +1439,11 @@ a {
     .container-fluid {
       flex-direction: row !important ;
       padding: 0;
+    }
+  }
+  @media (min-width: 450px) and (max-width: 600px) {
+    .logo.navbar-btn.pull-left{
+      right: calc(50vw + 30px) !important;
     }
   }
   @media (min-width: 769px) and (max-width: 899px) {
@@ -1808,6 +1827,8 @@ a {
       #gozideha{
         .items{
           height: 207px!important;
+          width: calc(100vw - 50px);
+          overflow: hidden;
         }
       }
       #sectionText section .container{
@@ -1877,6 +1898,9 @@ a {
           max-width: 450px !important;
           align-items: center;
           margin: auto auto 10px auto;
+          img{
+            height: auto !important;
+          }
         }
       }
       #sectionText{
@@ -1904,6 +1928,13 @@ a {
             max-width: 500px;
             margin: auto;
           }
+        }
+      }
+      .osm{
+        overflow-x: scroll;
+        display: flex;
+        img{
+          max-width: none !important;
         }
       }
     }
@@ -2424,6 +2455,11 @@ a {
         }
       }
     }
+    @media (max-width: 600px) {
+      .items{
+        margin-right: 20px;
+      }
+    }
   }
 }
 // form
@@ -2443,7 +2479,10 @@ a {
       padding: 2rem 0 3rem 0;
       background-color: #eee;
       border-radius: 3px;
-      margin-top: 170px;
+      margin-top: 220px;
+      @media (max-width:530px) {
+        margin-top: 110px !important;
+      }
       .webform-progressbar{
         .webform-progressbar-outer{
           padding: 0 20px;
@@ -3139,12 +3178,6 @@ a {
 }
 //type videos
 .node-type-videos{
-  .main-container{
-    overflow-x: hidden !important;
-    .field-label:after{
-      width: 90%!important;
-    }
-  }
   #block-system-main{
     .group-header{
       .field-name-field-video{
@@ -3284,9 +3317,6 @@ a {
   .main-container{
     overflow-x: hidden;
     padding: 0 15px;
-    .group-footer{
-      margin-top: 75px;
-    }
     .field-label{
       display: block!important;
       color: #00247a;
@@ -3313,8 +3343,9 @@ a {
   }
   #block-system-main{
     .group-header{
-      border-top: 2px solid #a0a0a0;
+      border-top: 1px solid #D0D0D0;
       padding-top: 15px;
+      padding-bottom: 50px;
       .field-type-addthis{
         position: relative;
         top: 30px;
@@ -3416,6 +3447,7 @@ a {
       .field-name-post-date{
         left: 70px;
         position: relative;
+        top: -20px;
       }
       .group-header{
         padding-top: 15px;
@@ -3431,6 +3463,8 @@ a {
             text-align: justify;
             line-height: 2;
             padding-bottom: 15px;
+            margin-top: 15px;
+
           }
         }
         .links.list-inline{
@@ -3468,7 +3502,7 @@ a {
       height: auto!important;
     }
     .views-row{
-      width: 32%;
+      width: calc(33% - 15px);
       display: inline-block;
       overflow: hidden;
       margin: 6px;
@@ -3508,7 +3542,6 @@ a {
       .view-content{
         text-align: -webkit-center;
         .views-row{
-          width: 31%;
           height:auto!important;
         }
       }
@@ -3518,7 +3551,6 @@ a {
     .view-display-id-block_1{
       .view-content{
         .views-row{
-          width: 30%!important;
           height: 225px!important;
         }
       }
@@ -3539,10 +3571,20 @@ a {
       width: 100%!important;
       margin-bottom: 40px;
       .field-name-field-images{
+        @media (max-width: 768px) {
+          width: calc(100vw - 4px);
+          margin-right: calc(50% - 50vw + 2px);
+        }
         .field-items{
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between;
           .field-item{
             margin: 3px 0px;
             width: 24%;
+            @media (max-width: 768px) {
+              width: 32.5% !important;
+            }
           }
         }
       }
@@ -3562,34 +3604,11 @@ a {
         }
       }
     }
-    @media(min-width: 768px) and (max-width: 1000px){
-      .group-middle{
-        min-width: 734px;
-      }
-      .field-name-related{
-        .field-items{
-          min-width: 758px;
-        }
-      }
-    }
-    @media (max-width: 768px) {
-      .field-name-field-images{
-        width: calc(100vw - 4px);
-        margin-right: calc(50% - 50vw + 2px);
-        .field-items{
-          display: flex;
-          flex-wrap: wrap;
-          justify-content: space-between;
-          .field-item{
-            width: 32% !important;
-          }
-        }
-      }
-    }
   }
 }
 //page videos, gallery, news search
 .page-news, .page-gallery, .page-videos{
+  overflow-x: hidden;
   .view-header{
     order: 1;
     text-align: left;
@@ -3643,8 +3662,8 @@ a {
           border-radius: 0!important;
         }
         #edit-submit-videos, #edit-submit-gallery, #edit-submit-news{
-          background-color: #f90707;
-          border-color: #ed0606;
+          background-color: #00247a;
+          border-color: #00247a;
           font-size: 0;
           &:before{
             content: "\e003";
@@ -3675,8 +3694,8 @@ a {
           display: none;
         }
         padding: 5px 15px !important;
-        width: 108%;
-        margin-right: -19px;
+        width: 100vw;
+        margin-right: calc(50% - 50vw);
         .form-item-created-min, .form-item-created-max{
           width: 50%!important;
         }
@@ -3784,11 +3803,6 @@ a {
         max-width: 700px!important;
       }
     }
-    @media (max-width: 450px){
-      form{
-        width: 111%;
-      }
-    }
   }
 }
 //about us page
@@ -3797,6 +3811,7 @@ a {
     margin-top: -54px;
     width: inherit;
     padding: 0;
+    overflow-x: hidden !important;
     #top{
       .intro{
         max-width: 600px;
@@ -4453,52 +4468,15 @@ a {
         }
       }
       .field-name-field-company{
-        .owl-nav{
+        .owl-dots{
           display: block !important;
         }
-        .owl-next, .owl-prev{
-          &:hover{
-            span{
-              color: #00247a;
-            }
-          }
-          span{
-            font-size: 0;
-            &:hover{
-              &:before{
-                color: #ccc;
-              }
-            }
-            &:before{
-              font-family: icomoon!important;
-              line-height: 1;
-              font-size: 60px;
-              position: absolute;
-              color: #ccc;
-              top: 35%;
-              transition: all 0.2s ease-in-out;
-            }
-          }
-        }
-        .owl-next{
-          span{
-            &:before{
-              content: "\e956";
-              left: 20px;
-            }
-          }
-        }
-        .owl-prev{
-          span{
-            &:before{
-              content: "\e957";
-              right: 20px;
-            }
-          }
+        .owl-nav{
+          display: none !important;
         }
       }
-      .group-header{
-        margin-bottom: 100px;
+      > .group-header{
+        margin-top: 85px;
       }
       .group-left{
         width: 35%;
@@ -4540,13 +4518,14 @@ a {
                 border: 1px solid rgba(0, 0, 0, 0.1);
                 padding: 0.625rem;
                 color: #adadad;
-                margin-bottom: -50px;
+                margin-bottom: 0 !important;
                 text-align: justify;
                 .field-name-field-title .field-item{
                   color: #00247c;
                   font-weight: bold;
                   padding: 10px 0 15px 0;
                   margin-right: 40px;
+                  font-size: 20px;
                   &:before{
                     content: " ";
                     display: block;
@@ -4557,6 +4536,27 @@ a {
                     right: -42px;
                     top: 10px;
                   }
+                  &:after{
+                    @media (max-width: 768px) {
+                      float: left;
+                      position: relative;
+                      content: "\e252";
+                      font-family: "Glyphicons Halflings";
+                    }
+                  }
+                }
+              }
+              > .field-item:first-child{
+                pointer-events: none;
+                font-weight: bold;
+                .field-name-field-title{
+                  .field-item{
+                    text-align: center;
+                    color: #4B4B4B;
+                    &:before, &:after{
+                      display: none;
+                    }
+                  }
                 }
               }
             }
@@ -4564,6 +4564,9 @@ a {
         }
         .field-collection-view{
           border-bottom: none !important;
+          .group-left{
+            margin-bottom: 0 !important;
+          }
         }
         .field-name-field-tarh  {
           .items{
@@ -4694,16 +4697,8 @@ a {
       .group-left{
         width: 100% !important;
         text-align: -webkit-center !important;
-        .items{
-          width: 200px !important;
-          height: 200px !important;
-        }
         img{
           margin-bottom: 25px;
-          margin-top: 100px;
-          width: 200px;
-          height: 200px;
-
         }
       }
       .group-right{
@@ -4727,27 +4722,26 @@ a {
       }
     }
     @media (max-width:600px) {
+      #block-system-main .field-name-field-slider-main > .group-header{
+        margin-top: 55px !important;
+      }
       .field-name-field-slider-main{
         img{
           height: auto !important;
           min-height: 230px;
         }
       }
-      .group-header{
-        margin-bottom: 0 !important;
-      }
       .group-left{
         width: 100% !important;
         text-align: -webkit-center !important;
         .items{
-          width: 200px !important;
-          height: 200px !important;
+          width: 250px !important;
+          height: 250px !important;
         }
         img{
           margin-bottom: 25px;
-          margin-top: 100px;
-          width: 200px;
-          height: 200px;
+          width: 250px;
+          height: 250px;
 
         }
       }
@@ -4774,7 +4768,6 @@ a {
         .owl-prev, .owl-next{
           span:before{
             font-size: 30px !important;
-            top: 27% !important;
           }
         }
       }
