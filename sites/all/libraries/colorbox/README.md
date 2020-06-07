@@ -3,6 +3,30 @@ A customizable lightbox plugin for jQuery.  See the [project page](http://jacklm
 
 ## Changelog:
 
+##### Version 1.6.4 - 2016/05/10
+
+* Fixed bug where using the inline property would duplicate target elements, if the selector matched multiple elements.
+
+##### Version 1.6.3 - 2015/07/27
+
+* Fixed regression that caused error in IE8 when the calculated initial size was negative. Fixes #741
+
+##### Version 1.6.2 - 2015/07/13
+
+* Fixed iframe attribute name (allowFullScreen to allowFullscreen). Fixes #737
+
+##### Version 1.6.1 - 2015/05/14
+
+* Replaced the inline onclick handler for cboxPhoto with a namespaced event for easier unbinding.  Fixes #719.
+
+##### Version 1.6.0 - 2015/03/03
+
+* Added two new properties that expose how `<img>` and `<iframe>` elements are created, to give users direct control over those elements. Fixes #700.
+
+##### Version 1.5.15 - 2015/02/25
+
+* Adding to NPM, merged white-space cleanup & new language file.
+
 ##### Version 1.5.14 - 2014/9/9
 
 * When opening, append Colorbox to the DOM if it was detached for whatever reason.  Fixes #645.

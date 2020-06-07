@@ -539,16 +539,14 @@
   #gozideha .items {
     position: relative;
     height: 360px;
-    color: #fff
+    color: #fff;
+    text-shadow: 1px 1px #000000;
   }
   #gozideha .items img {
     min-height: 100%;
     width: 100%;
     transition: all .4s ease-in-out;
     filter: grayscale(100%);
-  }
-  #gozideha .items:hover {
-    text-shadow: 1px 1px #000000;
   }
   #gozideha .items .caption_wrap {
     top: 3.125rem;

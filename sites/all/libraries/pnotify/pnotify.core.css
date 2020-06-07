@@ -1,0 +1,569 @@
+/*
+Author  : Hunter Perrin
+Version : 3.0.0
+Link    : http://sciactive.com/pnotify/
+*/
+/* -- Notice */
+.ui-pnotify {
+  top: 56px;
+  right: 8px;
+  min-width: 350px;
+  position: absolute;
+  height: auto;
+  z-index: 2;
+  margin-right: 10px;
+}
+body > .ui-pnotify {
+    /* Notices in the body context should be fixed to the viewport. */
+    position: fixed;
+    /* Ensures notices are above everything */
+    z-index: 100040;
+}
+body > .ui-pnotify.stack-bottomright {
+    z-index: 900;
+}
+.ui-pnotify-modal-overlay {
+    background-color: rgba(0, 0, 0, .4);
+    top: 0;
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+}
+body > .ui-pnotify-modal-overlay {
+    position: fixed;
+    z-index: 100039;
+}
+.ui-pnotify.ui-pnotify-in {
+    display: block !important;
+}
+.ui-pnotify.ui-pnotify-move {
+    transition: left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+}
+.ui-pnotify.ui-pnotify-fade-slow {
+    transition: opacity .6s linear;
+    opacity: 0;
+}
+.ui-pnotify.ui-pnotify-fade-slow.ui-pnotify.ui-pnotify-move {
+    transition: opacity .6s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+}
+.ui-pnotify.ui-pnotify-fade-normal {
+    transition: opacity .4s linear;
+    opacity: 0;
+}
+.ui-pnotify.ui-pnotify-fade-normal.ui-pnotify.ui-pnotify-move {
+    transition: opacity .4s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+}
+.ui-pnotify.ui-pnotify-fade-fast {
+    transition: opacity .2s linear;
+    opacity: 0;
+}
+.ui-pnotify.ui-pnotify-fade-fast.ui-pnotify.ui-pnotify-move {
+    transition: opacity .2s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+}
+.ui-pnotify.ui-pnotify-fade-in {
+    opacity: 1;
+}
+.ui-pnotify .ui-pnotify-shadow {
+    -webkit-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 20px 0px, rgba(0, 0, 0, 0.05) 0px 0px 5px;
+    -moz-box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 20px 0px, rgba(0, 0, 0, 0.05) 0px 0px 5px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 20px 0px, rgba(0, 0, 0, 0.05) 0px 0px 5px;
+}
+.ui-pnotify-container {
+    background-position: 0 0;
+    padding: .8em;
+    height: 100%;
+    margin: 0;
+}
+.ui-pnotify-container:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+.ui-pnotify-container.ui-pnotify-sharp {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.ui-pnotify-title {
+    display: block;
+    margin-bottom: .4em;
+    margin-top: 0;
+}
+.ui-pnotify-text {
+    display: block;
+}
+.ui-pnotify-icon, .ui-pnotify-icon span {
+    display: block;
+    float: left;
+    margin-right: .2em;
+}
+/* Alternate stack initial positioning. */
+.ui-pnotify.stack-topleft, .ui-pnotify.stack-bottomleft {
+    left: 10px;
+    right: auto;
+}
+.ui-pnotify.stack-bottomright, .ui-pnotify.stack-bottomleft {
+    bottom: 10px;
+    top: auto;
+}
+.ui-pnotify.stack-modal {
+    left: 50%;
+    right: auto;
+    margin-left: -150px;
+}
+.ui-pnotify-container {
+    position: relative;
+    left: 0;
+}
+@media (max-width: 480px) {
+    /* -- Notice */
+    .ui-pnotify-mobile-able.ui-pnotify {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        width: auto !important;
+        font-size: 1.2em;
+        -webkit-font-smoothing: antialiased;
+        -moz-font-smoothing: antialiased;
+        -ms-font-smoothing: antialiased;
+        font-smoothing: antialiased;
+    }
+    .ui-pnotify-mobile-able.ui-pnotify .ui-pnotify-shadow {
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        border-bottom-width: 5px;
+    }
+    .ui-pnotify-mobile-able .ui-pnotify-container {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+    }
+    /* Alternate stack initial positioning. */
+    .ui-pnotify-mobile-able.ui-pnotify.stack-topleft, .ui-pnotify-mobile-able.ui-pnotify.stack-bottomleft {
+        left: 0;
+        right: 0;
+    }
+    .ui-pnotify-mobile-able.ui-pnotify.stack-bottomright, .ui-pnotify-mobile-able.ui-pnotify.stack-bottomleft {
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: auto;
+    }
+    .ui-pnotify-mobile-able.ui-pnotify.stack-bottomright .ui-pnotify-shadow, .ui-pnotify-mobile-able.ui-pnotify.stack-bottomleft .ui-pnotify-shadow {
+        border-top-width: 5px;
+        border-bottom-width: 1px;
+    }
+
+}
+/* -- Pulldown */
+.ui-pnotify-history-container {
+    position: absolute;
+    top: 0;
+    right: 18px;
+    width: 70px;
+    border-top: none;
+    padding: 0;
+    -webkit-border-top-left-radius: 0;
+    -moz-border-top-left-radius: 0;
+    border-top-left-radius: 0;
+    -webkit-border-top-right-radius: 0;
+    -moz-border-top-right-radius: 0;
+    border-top-right-radius: 0;
+    /* Ensures history container is above notices. */
+    z-index: 10000;
+}
+.ui-pnotify-history-container.ui-pnotify-history-fixed {
+    position: fixed;
+}
+.ui-pnotify-history-container .ui-pnotify-history-header {
+    padding: 2px;
+    text-align: center;
+}
+.ui-pnotify-history-container button {
+    cursor: pointer;
+    display: block;
+    width: 100%;
+}
+.ui-pnotify-history-container .ui-pnotify-history-pulldown {
+    display: block;
+    margin: 0 auto;
+}
+/*
+Color Scheme: http://paletton.com/palette.php?uid=c1T3n2J040kpEKzpEKzbEPSOEyiNk9W
+*/
+.brighttheme {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.brighttheme.ui-pnotify-container {
+    padding: 18px;
+}
+.brighttheme .ui-pnotify-title {
+    margin-bottom: 12px;
+}
+.brighttheme-notice {
+    background-color: #FFFFA2;
+    border: 0 solid #FFFF00;
+    color: #4F4F00;
+}
+.brighttheme-info {
+    background-color: #8FCEDD;
+    border: 0 solid #0286A5;
+    color: #012831;
+}
+.brighttheme-success {
+    background-color: #AFF29A;
+    border: 0 solid #35DB00;
+    color: #104300;
+}
+.brighttheme-error {
+    background-color: #FFABA2;
+    background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255,255,255,.3) 35px, rgba(255,255,255,.3) 70px);
+    border: 0 solid #FF1800;
+    color: #4F0800;
+}
+.brighttheme-icon-notice,
+.brighttheme-icon-info,
+.brighttheme-icon-success,
+.brighttheme-icon-closer,
+.brighttheme-icon-sticker {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    font-family: "Courier New",Courier,monospace;
+    border-radius: 50%;
+}
+.brighttheme-icon-notice:after,
+.brighttheme-icon-info:after,
+.brighttheme-icon-success:after,
+.brighttheme-icon-closer:after,
+.brighttheme-icon-sticker:after {
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+.brighttheme-icon-notice {
+    background-color: #2E2E00;
+    color: #FFFFA2;
+    margin-top: 2px;
+}
+.brighttheme-icon-notice:after {
+    content: "!";
+}
+.brighttheme-icon-info {
+    background-color: #012831;
+    color: #8FCEDD;
+    margin-top: 2px;
+}
+.brighttheme-icon-info:after {
+    content: "i";
+}
+.brighttheme-icon-success {
+    background-color: #104300;
+    color: #AFF29A;
+    margin-top: 2px;
+}
+.brighttheme-icon-success:after {
+    content: "\002713";
+}
+.brighttheme-icon-error {
+    position: relative;
+    width: 0;
+    height: 0;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-bottom: 16px solid #2E0400;
+    font-size: 0;
+    line-height: 0;
+    color: #FFABA2;
+    margin-top: 1px;
+}
+.brighttheme-icon-error:after {
+    position: absolute;
+    top: 1px;
+    left: -4px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    font-family: "Courier New",Courier,monospace;
+    content: "!";
+}
+.brighttheme-icon-closer,
+.brighttheme-icon-sticker {
+    display: inline-block;
+}
+.brighttheme-icon-closer:after {
+    top: -4px;
+    content: "\002715";
+}
+.brighttheme-icon-sticker:after {
+    top: -5px;
+    content: "\01D1BC";
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.brighttheme-icon-sticker.brighttheme-icon-stuck:after {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+
+.brighttheme .ui-pnotify-action-bar {
+    padding-top: 12px;
+}
+.brighttheme .ui-pnotify-action-bar textarea, .brighttheme .ui-pnotify-action-bar input {
+    display: block;
+    width: 100%;
+    margin-bottom: 12px !important;
+}
+.brighttheme .ui-pnotify-action-button {
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4px 8px;
+    border: none;
+    background: transparent;
+}
+
+.brighttheme .ui-pnotify-action-button.btn-primary {
+    border: none;
+    border-radius: 0;
+}
+.brighttheme-notice .ui-pnotify-action-button.btn-primary {
+    background-color: #FFFF00;
+    color: #4F4F00;
+}
+.brighttheme-info .ui-pnotify-action-button.btn-primary {
+    background-color: #0286A5;
+    color: #012831;
+}
+.brighttheme-success .ui-pnotify-action-button.btn-primary {
+    background-color: #35DB00;
+    color: #104300;
+}
+.brighttheme-error .ui-pnotify-action-button.btn-primary {
+    background-color: #FF1800;
+    color: #4F0800;
+}
+.ui-pnotify.ui-pnotify-nonblock-fade {
+    /*transition: opacity .3s ease;*/
+    opacity: .2;
+}
+.ui-pnotify.ui-pnotify-nonblock-hide {
+    display: none !important;
+}
+/*
+Color Scheme: https://www.google.com/design/spec/style/color.html#color-color-palette
+*/
+/*
+material: {
+    // Material doesn't require any UI libraries.
+    container: "pnotify-material",
+    notice: "pnotify-material-notice",
+    notice_icon: "material-icons pnotify-material-icon-notice",
+    info: "pnotify-material-info",
+    info_icon: "material-icons pnotify-material-icon-info",
+    success: "pnotify-material-success",
+    success_icon: "material-icons pnotify-material-icon-success",
+    error: "pnotify-material-error",
+    error_icon: "material-icons pnotify-material-icon-error"
+},
+$.extend(PNotify.styling.material, {
+    closer: "pnotify-material-icon-closer",
+    pin_up: "pnotify-material-icon-sticker",
+    pin_down: "pnotify-material-icon-sticker pnotify-material-icon-stuck"
+});
+*/
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+.pnotify-material {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    font-size: 14px;
+}
+.pnotify-material.ui-pnotify-shadow {
+    -webkit-box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.2);
+    -moz-box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 6px 24px 0px rgba(0,0,0,0.2);
+}
+.pnotify-material.ui-pnotify-container {
+    padding: 24px;
+}
+.pnotify-material .ui-pnotify-title {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+.pnotify-material-notice {
+    background-color: #FFEB3B;
+    border: none;
+    color: rgba(0,0,0,0.87);
+}
+.pnotify-material-info {
+    background-color: #2196F3;
+    border: none;
+    color: #fff;
+}
+.pnotify-material-success {
+    background-color: #8BC34A;
+    border: none;
+    color: rgba(0,0,0,0.87);
+}
+
+.pnotify-material-error {
+    background-color: #F44336;
+    border: none;
+    color: #fff;
+}
+.pnotify-material-icon-notice,
+.pnotify-material-icon-info,
+.pnotify-material-icon-success,
+.pnotify-material-icon-closer,
+.pnotify-material-icon-sticker {
+    position: relative;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 16px;
+    font-family: "Courier New",Courier,monospace;
+    border-radius: 50%;
+}
+.pnotify-material-icon-notice:after,
+.pnotify-material-icon-info:after,
+.pnotify-material-icon-success:after,
+.pnotify-material-icon-closer:after,
+.pnotify-material-icon-sticker:after {
+    position: absolute;
+    top: 0;
+    left: 4px;
+}
+.pnotify-material-icon-notice:after {
+    content: "announcement";
+}
+.pnotify-material-icon-info:after {
+    content: "info";
+}
+.pnotify-material-icon-success:after {
+    content: "check circle";
+}
+.pnotify-material-icon-error:after {
+    content: "report problem";
+}
+.pnotify-material-icon-closer,
+.pnotify-material-icon-sticker {
+    display: inline-block;
+}
+.pnotify-material-icon-closer:after {
+    top: -4px;
+    content: "\002715";
+}
+.pnotify-material-icon-sticker:after {
+    top: -5px;
+    content: "\01D1BC";
+    -moz-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+.pnotify-material-icon-sticker.pnotify-material-icon-stuck:after {
+    -moz-transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.ui-pnotify-closer, .ui-pnotify-sticker {
+    float: right;
+    margin-left: .2em;
+}
+.ui-pnotify-container.ui-state-default {
+  background: #a0e056;
+  border: none;
+  color: #fff;
+}
+span.ui-icon.ui-icon-circle-check {
+  background: none;
+  text-indent: 0;
+}
+span.ui-icon.ui-icon-circle-check:before {
+  content: "\f5e0";
+  font-family: mat;
+  color: #fff !important;
+  font-size: 17px;
+}
+h4.ui-pnotify-title {
+  display: none;
+}
+.ui-pnotify-text {
+  margin-left: 20px;
+}
+.ui-pnotify-sticker {
+  position: absolute;
+  left: 26px;
+  top: 11px;
+}
+.ui-pnotify-closer {
+  position: absolute;
+  left: 6px;
+  top: 8px;
+}
+.ui-pnotify-closer span {
+text-indent: 0 !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: none #eee !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ui-pnotify-closer span:before {
+  content: "\f156";
+  font-family: mat;
+  color: #555;
+  font-size: 16px;
+  font-weight: bold;
+}
+.ui-state-error .ui-pnotify-text a:last-child {
+  padding: 0 7px;
+  margin: 0 4px;
+  color: #000;
+  white-space: nowrap;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 3px;
+}
+.ui-pnotify{
+  max-width: calc(100vw - 30px);
+  min-width: inherit !important;
+}
+
+
+
+
+
+
+@media (max-width: 840px){
+.ui-pnotify-closer, .ui-pnotify-sticker {
+  visibility: visible !important;
+}
+
+
+
+}
+
+

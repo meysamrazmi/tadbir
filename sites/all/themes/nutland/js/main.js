@@ -35,7 +35,9 @@ $(document).ready(function(){
   });
   $(".page-videos").ready(function () {
     $(" .view-content .views-field-field-image-video .field-content").addClass("items");
-
+  });
+  $(".page-videos , .page-gallery").ready(function () {
+    $(".page-videos #block-system-main .view-content, .page-gallery #block-system-main .view-content").append('<div class="views-row"></div><div class="views-row"></div>');
   });
   $(".page-news").ready(function () {
     $(".view-content .views-field-field-news-image").addClass("items");
