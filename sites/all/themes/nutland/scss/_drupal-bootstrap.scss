@@ -1183,7 +1183,7 @@ a {
     ul.menu.nav {
       display: flex;
       align-items: center;
-      padding-right: 0!important;
+      padding-right: 0 !important;
       margin-top: 45px;
       font-weight: 500;
       transition: all 0.5s ease;
@@ -1610,6 +1610,7 @@ a {
             .mejs-container {
               min-width: 100vw !important;
               height: calc(90vh - 3.75rem) !important;
+              filter: brightness(0.65);
               width: 100% !important;
               @media all and (max-width: 768px){
                 height: calc(100vh - 55px) !important;
@@ -3777,7 +3778,9 @@ a {
           }
         }
       }
-      #block-block-3{
+      #block-block-3,
+      #block-block-4,
+      #block-block-7{
         padding: 0px 0px;
       }
     }
@@ -4486,8 +4489,11 @@ a {
           }
         }
       }
-      .collapsible.group-top{
+      .group-top{
         margin:25px auto;
+        div#gtx-trans {
+          display: none;
+        }
         h3{
           display: none;
         }
