@@ -7450,9 +7450,9 @@ td.visible-print {
   padding-right: 0;
   transition: all 0.4s ease;
   border: none !important;
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 0;
+  top: 15%;
   border-radius: 25px;
   margin-top: 10px;
   z-index: 2;
@@ -7732,6 +7732,7 @@ form#search-block-form {
 ul.action-links {
   margin: 12px 0;
   padding: 0;
+  display: none !important;
 }
 ul.action-links li {
   display: inline;
@@ -10451,6 +10452,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border-top: 1px solid #D0D0D0;
   padding-top: 15px;
   padding-bottom: 50px;
+  margin-top: 40px;
 }
 .node-type-news #block-system-main .group-header .field-type-addthis, .node-type-article #block-system-main .group-header .field-type-addthis, .node-type-videos #block-system-main .group-header .field-type-addthis, .node-type-gallery #block-system-main .group-header .field-type-addthis {
   position: relative;

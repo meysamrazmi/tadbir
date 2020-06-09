@@ -163,9 +163,9 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
   padding-right: 0;
   transition: all 0.4s ease;
   border: none !important;
-  position: absolute;
+  position: fixed;
   left: 0;
-  top: 0;
+  top: 15%;
   border-radius: 25px;
   margin-top: 10px;
   z-index: 2;
@@ -452,6 +452,7 @@ form#search-block-form {
 ul.action-links {
   margin: $padding-base-horizontal 0;
   padding: 0;
+  display: none !important;
   li {
     display: inline;
     margin: 0;
@@ -3390,6 +3391,7 @@ a {
       border-top: 1px solid #D0D0D0;
       padding-top: 15px;
       padding-bottom: 50px;
+      margin-top: 40px;
       .field-type-addthis{
         position: relative;
         top: 30px;
