@@ -7436,6 +7436,58 @@ td.visible-print {
   }
 }
 
+.role-administrator .tabs--primary {
+  display: inline-block;
+  z-index: 1;
+}
+
+.tabs--primary {
+  width: 0;
+  height: 45px;
+  overflow: hidden;
+  background: transparent !important;
+  padding-left: 47px;
+  padding-right: 0;
+  transition: all 0.4s ease;
+  border: none !important;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border-radius: 25px;
+  margin-top: 10px;
+  z-index: 2;
+}
+
+.tabs--primary:hover {
+  width: 750px;
+  background: #fff !important;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+  width: 100%;
+}
+
+.tabs--primary:before {
+  content: "+";
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  text-align: center;
+  border-radius: 50%;
+  background: #2c82a9;
+  font-size: 25px;
+  font-family: sans-serif;
+  color: #fff;
+  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.12), 0 1px 4px rgba(0, 0, 0, 0.12);
+  margin: 2px 3px 0;
+  position: absolute;
+  left: 0;
+  line-height: 34px;
+  transition: all 0.3s ease;
+}
+
+.tabs--primary li {
+  float: left;
+}
+
 .main-container > .row {
   margin: 0 !important;
 }
@@ -10901,7 +10953,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding: 0;
   overflow-x: hidden !important;
 }
-.node-type-projects .main-container .page-header, .node-type-projects .main-container .element-invisible, .node-type-projects .main-container .tabs--primary, .node-type-projects .main-container .action-links {
+.node-type-projects .main-container .page-header, .node-type-projects .main-container .element-invisible, .node-type-projects .main-container .action-links {
   display: none;
 }
 .node-type-projects .main-container #block-system-main .field-name-field-slide-main img, .node-type-projects .main-container #block-system-main .field-name-field-middle-slide img {
@@ -11129,11 +11181,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: flex;
   justify-content: center;
 }
-.node-type-projects .main-container #block-system-main .group-middle .field-name-body {
+.node-type-projects .main-container #block-system-main .group-middle .field-name-body, .node-type-projects .main-container #block-system-main .group-middle .field-name-field-aboves {
   line-height: 2;
   text-align: justify;
+  margin-bottom: 15px;
 }
-.node-type-projects .main-container #block-system-main .group-middle .field-name-body span {
+.node-type-projects .main-container #block-system-main .group-middle .field-name-body span, .node-type-projects .main-container #block-system-main .group-middle .field-name-field-aboves span {
   font-family: fanum !important;
 }
 .node-type-projects .main-container #block-system-main .group-footer {
@@ -11376,7 +11429,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding: 0;
   margin-top: -55px;
 }
-.node-type-subset .main-container .page-header, .node-type-subset .main-container .element-invisible, .node-type-subset .main-container .tabs--primary, .node-type-subset .main-container .action-links {
+.node-type-subset .main-container .page-header, .node-type-subset .main-container .element-invisible, .node-type-subset .main-container .action-links {
   display: none;
 }
 .node-type-subset .main-container #block-system-main .field-name-field-slider-main img {
