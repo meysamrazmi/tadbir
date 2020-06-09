@@ -189,7 +189,7 @@ exclude[css][] = 'modules/user/user.css'
 ;;;;;;;;;;;;;;;;;;;;;
 ;; Breakpoints
 ;;;;;;;;;;;;;;;;;;;;;
-breakpoints[screen-xs-max] = (max-width: 767px)
+breakpoints[screen-xs-max] = (max-width: 768px)
 breakpoints[screen-sm-min] = (min-width: 768px)
 breakpoints[screen-sm-max] = (max-width: 991px)
 breakpoints[screen-md-min] = (min-width: 992px)

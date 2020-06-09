@@ -1186,6 +1186,7 @@ a {
       padding-right: 0!important;
       margin-top: 45px;
       font-weight: 500;
+      transition: all 0.5s ease;
       @media (max-width: 1000px){
         overflow: scroll;
         overflow: overlay;
@@ -1273,6 +1274,7 @@ a {
       align-items: stretch;
       margin: 0 0 0 5px;
       padding: 0;
+      transition: all 0.5s ease;
       li{
         list-style: none;
         padding: 0px ;
@@ -3990,6 +3992,18 @@ a {
           }
           @media all and (max-width: 768px){
             height: calc(100vh - 50px);
+          }
+        }
+        .mejs-container{
+          height: calc(100vh - 90px) !important;
+          @media all and (max-width: 980px){
+            height: calc(100vh - 80px) !important;
+          }
+          @media all and (max-width: 768px){
+            height: calc(100vh - 50px) !important;
+          }
+          .mejs-layers {
+            display: none;
           }
         }
       }
