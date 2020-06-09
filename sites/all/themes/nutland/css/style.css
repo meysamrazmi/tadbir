@@ -8889,7 +8889,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .file-video .mejs-container {
   min-width: 100vw !important;
   height: calc(90vh - 3.75rem) !important;
-  filter: brightness(0.65);
+  filter: brightness(0.3);
   width: 100% !important;
 }
 @media all and (max-width: 768px) {
@@ -9713,6 +9713,13 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   width: 150px;
   margin-bottom: 10px;
 }
+.page-node-59 #block-system-main form .webform-component-display .control-label {
+  font-weight: 700 !important;
+  margin: 10px 0;
+}
+.page-node-59 #block-system-main form h2.webform-page {
+  display: none !important;
+}
 @media (max-width: 1000px) and (min-width: 769px) {
   .page-node-59 .webform-progressbar-outer {
     padding: 0 !important;
@@ -9878,33 +9885,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .node-type-article h2.block-title, .node-type-projects h2.block-title, .node-type-custom h2.block-title {
   opacity: 0;
-}
-.node-type-article .view-display-id-block_1 .views-row, .node-type-projects .view-display-id-block_1 .views-row, .node-type-custom .view-display-id-block_1 .views-row {
-  border: 1px solid #ccc;
-  padding: 0.625rem;
-  margin: 20px 0;
-  line-height: 2;
-}
-.node-type-article .view-display-id-block_1 .views-row:before, .node-type-projects .view-display-id-block_1 .views-row:before, .node-type-custom .view-display-id-block_1 .views-row:before {
-  content: "";
-  position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 15px;
-  font-family: "Glyphicons Halflings";
-}
-.node-type-article .view-display-id-block_1 .views-row .views-field-field-article-category a, .node-type-projects .view-display-id-block_1 .views-row .views-field-field-article-category a, .node-type-custom .view-display-id-block_1 .views-row .views-field-field-article-category a {
-  color: #fa3939 !important;
-  text-decoration: none;
-  padding-right: 25px;
-}
-.node-type-article .view-display-id-block_1 .views-row .views-field-title a, .node-type-projects .view-display-id-block_1 .views-row .views-field-title a, .node-type-custom .view-display-id-block_1 .views-row .views-field-title a {
-  color: black;
-  font-size: 16px;
-  font-weight: bold;
-  text-decoration: none;
-  padding-right: 25px;
 }
 
 .page-node-5 .main-container.container {
@@ -10250,7 +10230,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   transition: transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.15);
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   right: 0;
   left: 0;
@@ -10584,10 +10564,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: black !important;
   content: "";
 }
-.node-type-news #block-views-videos-block-1 .items, .node-type-news #block-views-news-block-1 .items, .node-type-news .view-display-id-block_1 .items, .node-type-article #block-views-videos-block-1 .items, .node-type-article #block-views-news-block-1 .items, .node-type-article .view-display-id-block_1 .items, .node-type-videos #block-views-videos-block-1 .items, .node-type-videos #block-views-news-block-1 .items, .node-type-videos .view-display-id-block_1 .items, .node-type-gallery #block-views-videos-block-1 .items, .node-type-gallery #block-views-news-block-1 .items, .node-type-gallery .view-display-id-block_1 .items {
+.node-type-news #block-views-videos-block-1 .items, .node-type-news #block-views-news-block-1 .items, .node-type-news .view-display-id-block_1 .items, .node-type-news .view-id-article .items, .node-type-article #block-views-videos-block-1 .items, .node-type-article #block-views-news-block-1 .items, .node-type-article .view-display-id-block_1 .items, .node-type-article .view-id-article .items, .node-type-videos #block-views-videos-block-1 .items, .node-type-videos #block-views-news-block-1 .items, .node-type-videos .view-display-id-block_1 .items, .node-type-videos .view-id-article .items, .node-type-gallery #block-views-videos-block-1 .items, .node-type-gallery #block-views-news-block-1 .items, .node-type-gallery .view-display-id-block_1 .items, .node-type-gallery .view-id-article .items {
   height: auto !important;
 }
-.node-type-news #block-views-videos-block-1 .views-row, .node-type-news #block-views-news-block-1 .views-row, .node-type-news .view-display-id-block_1 .views-row, .node-type-article #block-views-videos-block-1 .views-row, .node-type-article #block-views-news-block-1 .views-row, .node-type-article .view-display-id-block_1 .views-row, .node-type-videos #block-views-videos-block-1 .views-row, .node-type-videos #block-views-news-block-1 .views-row, .node-type-videos .view-display-id-block_1 .views-row, .node-type-gallery #block-views-videos-block-1 .views-row, .node-type-gallery #block-views-news-block-1 .views-row, .node-type-gallery .view-display-id-block_1 .views-row {
+.node-type-news #block-views-videos-block-1 .views-row, .node-type-news #block-views-news-block-1 .views-row, .node-type-news .view-display-id-block_1 .views-row, .node-type-news .view-id-article .views-row, .node-type-article #block-views-videos-block-1 .views-row, .node-type-article #block-views-news-block-1 .views-row, .node-type-article .view-display-id-block_1 .views-row, .node-type-article .view-id-article .views-row, .node-type-videos #block-views-videos-block-1 .views-row, .node-type-videos #block-views-news-block-1 .views-row, .node-type-videos .view-display-id-block_1 .views-row, .node-type-videos .view-id-article .views-row, .node-type-gallery #block-views-videos-block-1 .views-row, .node-type-gallery #block-views-news-block-1 .views-row, .node-type-gallery .view-display-id-block_1 .views-row, .node-type-gallery .view-id-article .views-row {
   width: calc(33% - 15px);
   display: inline-block;
   overflow: hidden;
@@ -10595,10 +10575,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   background: whitesmoke;
   height: 290px;
 }
-.node-type-news #block-views-videos-block-1 .views-row .views-field-title, .node-type-news #block-views-news-block-1 .views-row .views-field-title, .node-type-news .view-display-id-block_1 .views-row .views-field-title, .node-type-article #block-views-videos-block-1 .views-row .views-field-title, .node-type-article #block-views-news-block-1 .views-row .views-field-title, .node-type-article .view-display-id-block_1 .views-row .views-field-title, .node-type-videos #block-views-videos-block-1 .views-row .views-field-title, .node-type-videos #block-views-news-block-1 .views-row .views-field-title, .node-type-videos .view-display-id-block_1 .views-row .views-field-title, .node-type-gallery #block-views-videos-block-1 .views-row .views-field-title, .node-type-gallery #block-views-news-block-1 .views-row .views-field-title, .node-type-gallery .view-display-id-block_1 .views-row .views-field-title {
+.node-type-news #block-views-videos-block-1 .views-row .views-field-title, .node-type-news #block-views-news-block-1 .views-row .views-field-title, .node-type-news .view-display-id-block_1 .views-row .views-field-title, .node-type-news .view-id-article .views-row .views-field-title, .node-type-article #block-views-videos-block-1 .views-row .views-field-title, .node-type-article #block-views-news-block-1 .views-row .views-field-title, .node-type-article .view-display-id-block_1 .views-row .views-field-title, .node-type-article .view-id-article .views-row .views-field-title, .node-type-videos #block-views-videos-block-1 .views-row .views-field-title, .node-type-videos #block-views-news-block-1 .views-row .views-field-title, .node-type-videos .view-display-id-block_1 .views-row .views-field-title, .node-type-videos .view-id-article .views-row .views-field-title, .node-type-gallery #block-views-videos-block-1 .views-row .views-field-title, .node-type-gallery #block-views-news-block-1 .views-row .views-field-title, .node-type-gallery .view-display-id-block_1 .views-row .views-field-title, .node-type-gallery .view-id-article .views-row .views-field-title {
   padding: 15px;
 }
-.node-type-news #block-views-videos-block-1 .views-row .views-field-title a, .node-type-news #block-views-news-block-1 .views-row .views-field-title a, .node-type-news .view-display-id-block_1 .views-row .views-field-title a, .node-type-article #block-views-videos-block-1 .views-row .views-field-title a, .node-type-article #block-views-news-block-1 .views-row .views-field-title a, .node-type-article .view-display-id-block_1 .views-row .views-field-title a, .node-type-videos #block-views-videos-block-1 .views-row .views-field-title a, .node-type-videos #block-views-news-block-1 .views-row .views-field-title a, .node-type-videos .view-display-id-block_1 .views-row .views-field-title a, .node-type-gallery #block-views-videos-block-1 .views-row .views-field-title a, .node-type-gallery #block-views-news-block-1 .views-row .views-field-title a, .node-type-gallery .view-display-id-block_1 .views-row .views-field-title a {
+.node-type-news #block-views-videos-block-1 .views-row .views-field-title a, .node-type-news #block-views-news-block-1 .views-row .views-field-title a, .node-type-news .view-display-id-block_1 .views-row .views-field-title a, .node-type-news .view-id-article .views-row .views-field-title a, .node-type-article #block-views-videos-block-1 .views-row .views-field-title a, .node-type-article #block-views-news-block-1 .views-row .views-field-title a, .node-type-article .view-display-id-block_1 .views-row .views-field-title a, .node-type-article .view-id-article .views-row .views-field-title a, .node-type-videos #block-views-videos-block-1 .views-row .views-field-title a, .node-type-videos #block-views-news-block-1 .views-row .views-field-title a, .node-type-videos .view-display-id-block_1 .views-row .views-field-title a, .node-type-videos .view-id-article .views-row .views-field-title a, .node-type-gallery #block-views-videos-block-1 .views-row .views-field-title a, .node-type-gallery #block-views-news-block-1 .views-row .views-field-title a, .node-type-gallery .view-display-id-block_1 .views-row .views-field-title a, .node-type-gallery .view-id-article .views-row .views-field-title a {
   color: black;
   font-weight: bold;
   text-decoration: none;

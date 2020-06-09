@@ -618,7 +618,6 @@
 
     $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
       items: 2,
-      loop: true,
       rtl: true,
       nav: true,
       dots: true,

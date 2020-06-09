@@ -46,6 +46,9 @@ $(document).ready(function(){
   $(".node-type-news").ready(function () {
     $(".group-footer .view-content .views-field-field-news-image .field-content").addClass("items");
   });
+  $(".node-type-article ").ready(function () {
+    $(".group-footer .view-content .views-field-field-image .field-content").addClass("items");
+  });
 
   $(".node-type-projects").ready(function () {
     $(".group-footer .view-content .views-field-field-ima .field-content").addClass("items");

@@ -2582,6 +2582,15 @@ a {
           margin-bottom: 10px;
         }
       }
+      .webform-component-display{
+        .control-label{
+          font-weight: 700 !important;
+          margin: 10px 0;
+        }
+      }
+      h2.webform-page{
+        display: none !important;
+      }
     }
   }
   @media (max-width: 1000px) and (min-width: 769px) {
@@ -2767,35 +2776,6 @@ a {
   }
   h2.block-title{
     opacity: 0;
-  }
-  .view-display-id-block_1{
-    .views-row{
-      border: 1px solid #ccc;
-      padding: 0.625rem;
-      margin: 20px 0;
-      line-height: 2;
-      &:before{
-        content: "\e257";
-        position: absolute;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 15px;
-        font-family: "Glyphicons Halflings";
-      }
-      .views-field-field-article-category a{
-        color: #fa3939 !important;
-        text-decoration: none;
-        padding-right: 25px;
-      }
-      .views-field-title a{
-        color: black;
-        font-size: 16px;
-        font-weight: bold;
-        text-decoration: none;
-        padding-right: 25px;
-      }
-    }
   }
 }
 //contact us
@@ -3177,7 +3157,7 @@ a {
   transition: transform .5s ease-in-out;
   transition: -webkit-transform .5s ease-in-out;
   transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out;
-  background-color: rgba(0, 0, 0, .3);
+  background-color: rgba(0, 0, 0, .15);
   -webkit-transition: -webkit-transform .5s ease-in-out;
   right: 0;
   left: 0;
@@ -3543,7 +3523,7 @@ a {
       }
     }
   }
-  #block-views-videos-block-1, #block-views-news-block-1, .view-display-id-block_1{
+  #block-views-videos-block-1, #block-views-news-block-1, .view-display-id-block_1, .view-id-article {
     .items{
       height: auto!important;
     }
