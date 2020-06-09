@@ -73,6 +73,7 @@
 </section>
 <style>
   #block-block-4{
+    position: relative;
     width: 100vw;
     top: 0px;
     padding: 40px 0;

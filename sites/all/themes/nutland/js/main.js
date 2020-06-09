@@ -143,7 +143,7 @@ $(".node-type-subset.not-front").ready(function () {
     $(this).parent().children().last().toggle();
   });
   $(".field-name-field-tarh .items").prepend("<div class='line_effect'><span class='lineInner'></span></div>");
-  $(".group-left .field-type-image .field-items .field-item").addClass("items");
+  $(".group-footer .collapsible   .field-type-image .field-items .field-item").addClass("items");
   $(".field-name-field-slider-main .field-items img, .field-name-field-slider-main .field-items video").each(function(){
     $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
   })

@@ -11,7 +11,7 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
           box-shadow: $shadow;
 }
 #navbar.fixed:not(.resp) {
-  .px-5{
+  .px-5, .left-menu ul{
     height: 50px !important;
   }
   ul.menu.nav{
@@ -2478,10 +2478,7 @@ a {
       padding: 2rem 0 3rem 0;
       background-color: #eee;
       border-radius: 3px;
-      margin-top: 220px;
-      @media (max-width:530px) {
-        margin-top: 110px !important;
-      }
+      margin-top: 20px;
       .webform-progressbar{
         .webform-progressbar-outer{
           padding: 0 20px;
@@ -4161,7 +4158,7 @@ a {
           font-size: 18px;
           margin-bottom: 30px;
           position: relative;
-          overflow-x: hidden;
+          overflow: hidden;
           &:after{
             content: '';
             position: absolute;
@@ -4489,6 +4486,46 @@ a {
           }
         }
       }
+      .collapsible.group-top{
+        margin:25px auto;
+        h3{
+          display: none;
+        }
+        > .field-group-format-wrapper{
+          display: flex !important;
+          align-content: space-between;
+          justify-content: center;
+          @media (max-width:768px) {
+            display: block !important;
+            text-align: -webkit-center;
+            .items{
+              height: auto !important;
+              max-width: 320px;
+            }
+            .group-utop{
+              max-width: 90% !important;
+            }
+          }
+          @media (max-width:450px) {
+            .items{
+              height: auto !important;
+              max-width: 250px !important;
+            }
+          }
+          .group-utop{
+            max-width: 50%;
+            padding: 0 25px;
+            h5{
+              font-size: 18px;
+              font-weight: bold;
+              color: #00247c;
+            }
+            .field-name-body p{
+              text-align: justify !important;
+            }
+          }
+        }
+      }
       .field-name-field-body{
         position: absolute;
         width: 100%;
@@ -4527,26 +4564,6 @@ a {
       }
       > .group-header{
         margin-top: 85px;
-      }
-      .group-left{
-        width: 35%;
-        text-align: -webkit-left;
-        margin-bottom:50px;
-        .items{
-          width: 320px;
-          height: 320px;
-        }
-      }
-      .group-right{
-        width: 53%;
-        margin-left: 140px;
-        text-align: justify;
-        line-height: 2;
-        h5{
-          font-weight: bold;
-          color: #00247a;
-          font-size: 20px;
-        }
       }
       .group-footer{
         .field-collection-container{
@@ -4704,13 +4721,6 @@ a {
       }
     }
     @media (max-width: 1200px) and (min-width: 1000px) {
-      .group-left{
-        width: 39% !important;
-      }
-      .group-right{
-        width: 50%!important;
-        margin-left: 100px!important;
-      }
       .field-name-field-company{
         max-width: 1000px !important;
       }
@@ -4720,14 +4730,6 @@ a {
         .field-item{
           padding: 50px 20px 85px !important;
         }
-      }
-      .group-left{
-        width: 33% !important;
-        margin-right: 50px;
-      }
-      .group-right{
-        width: 45% !important;
-        margin-left: 50px !important;
       }
       .field-label{
         &:after, &:before{
@@ -4742,21 +4744,6 @@ a {
       .field-name-field-body{
         .field-item{
           padding: 50px 20px 35px !important;
-        }
-      }
-      .group-left{
-        width: 100% !important;
-        text-align: -webkit-center !important;
-        img{
-          margin-bottom: 25px;
-        }
-      }
-      .group-right{
-        width: 95%  !important;
-        margin-left: 15px !important;
-        margin-right: 15px !important;
-        h5{
-          text-align: center;
         }
       }
       .group-header{
@@ -4779,28 +4766,6 @@ a {
         img{
           height: auto !important;
           min-height: 230px;
-        }
-      }
-      .group-left{
-        width: 100% !important;
-        text-align: -webkit-center !important;
-        .items{
-          width: 250px !important;
-          height: 250px !important;
-        }
-        img{
-          margin-bottom: 25px;
-          width: 250px;
-          height: 250px;
-
-        }
-      }
-      .group-right{
-        width: 95%  !important;
-        margin-left: 15px !important;
-        margin-right: 15px !important;
-        h5{
-          text-align: center;
         }
       }
       .field-name-field-body{
@@ -4839,7 +4804,7 @@ a {
               }
             }
             .group-header{
-              margin-bottom: -125px !important;
+              margin-bottom: -90px !important;
             }
             .group-header h2{
               bottom: 95px !important;
