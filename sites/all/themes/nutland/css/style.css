@@ -7300,7 +7300,7 @@ td.visible-print {
     display: none !important;
   }
 }
-#navbar.fixed:not(.resp) .px-5 {
+#navbar.fixed:not(.resp) .px-5, #navbar.fixed:not(.resp) .left-menu ul {
   height: 50px !important;
 }
 #navbar.fixed:not(.resp) ul.menu.nav {
@@ -9603,12 +9603,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding: 2rem 0 3rem 0;
   background-color: #eee;
   border-radius: 3px;
-  margin-top: 220px;
-}
-@media (max-width: 530px) {
-  .page-node-59 #block-system-main form {
-    margin-top: 110px !important;
-  }
+  margin-top: 20px;
 }
 .page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-outer {
   padding: 0 20px;
@@ -11126,7 +11121,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-size: 18px;
   margin-bottom: 30px;
   position: relative;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 .node-type-projects .main-container #block-system-main .group-footer .field-label:after {
   content: "";
@@ -11405,6 +11400,48 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-subset .main-container #block-system-main .field-name-field-slider-main .mejs-container video {
   width: 100% !important;
 }
+.node-type-subset .main-container #block-system-main .collapsible.group-top {
+  margin: 25px auto;
+}
+.node-type-subset .main-container #block-system-main .collapsible.group-top h3 {
+  display: none;
+}
+.node-type-subset .main-container #block-system-main .collapsible.group-top > .field-group-format-wrapper {
+  display: flex !important;
+  align-content: space-between;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .node-type-subset .main-container #block-system-main .collapsible.group-top > .field-group-format-wrapper {
+    display: block !important;
+    text-align: -webkit-center;
+  }
+  .node-type-subset .main-container #block-system-main .collapsible.group-top > .field-group-format-wrapper .items {
+    height: auto !important;
+    max-width: 320px;
+  }
+  .node-type-subset .main-container #block-system-main .collapsible.group-top > .field-group-format-wrapper .group-utop {
+    max-width: 90% !important;
+  }
+}
+@media (max-width: 450px) {
+  .node-type-subset .main-container #block-system-main .collapsible.group-top > .field-group-format-wrapper .items {
+    height: auto !important;
+    max-width: 250px !important;
+  }
+}
+.node-type-subset .main-container #block-system-main .collapsible.group-top > .field-group-format-wrapper .group-utop {
+  max-width: 50%;
+  padding: 0 25px;
+}
+.node-type-subset .main-container #block-system-main .collapsible.group-top > .field-group-format-wrapper .group-utop h5 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #00247c;
+}
+.node-type-subset .main-container #block-system-main .collapsible.group-top > .field-group-format-wrapper .group-utop .field-name-body p {
+  text-align: justify !important;
+}
 .node-type-subset .main-container #block-system-main .field-name-field-body {
   position: absolute;
   width: 100%;
@@ -11441,26 +11478,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .node-type-subset .main-container #block-system-main > .group-header {
   margin-top: 85px;
-}
-.node-type-subset .main-container #block-system-main .group-left {
-  width: 35%;
-  text-align: -webkit-left;
-  margin-bottom: 50px;
-}
-.node-type-subset .main-container #block-system-main .group-left .items {
-  width: 320px;
-  height: 320px;
-}
-.node-type-subset .main-container #block-system-main .group-right {
-  width: 53%;
-  margin-left: 140px;
-  text-align: justify;
-  line-height: 2;
-}
-.node-type-subset .main-container #block-system-main .group-right h5 {
-  font-weight: bold;
-  color: #00247a;
-  font-size: 20px;
 }
 .node-type-subset .main-container #block-system-main .group-footer .field-collection-container {
   background-image: url(/sites/all/themes/nutland/images/sktemplate3.jpg);
@@ -11610,13 +11627,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   min-height: 200px;
 }
 @media (max-width: 1200px) and (min-width: 1000px) {
-  .node-type-subset .main-container .group-left {
-    width: 39% !important;
-  }
-  .node-type-subset .main-container .group-right {
-    width: 50% !important;
-    margin-left: 100px !important;
-  }
   .node-type-subset .main-container .field-name-field-company {
     max-width: 1000px !important;
   }
@@ -11624,14 +11634,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 @media (max-width: 1000px) and (min-width: 768px) {
   .node-type-subset .main-container .field-name-field-body .field-item {
     padding: 50px 20px 85px !important;
-  }
-  .node-type-subset .main-container .group-left {
-    width: 33% !important;
-    margin-right: 50px;
-  }
-  .node-type-subset .main-container .group-right {
-    width: 45% !important;
-    margin-left: 50px !important;
   }
   .node-type-subset .main-container .field-label:after, .node-type-subset .main-container .field-label:before {
     width: 39% !important;
@@ -11643,21 +11645,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 @media (max-width: 768px) and (min-width: 600px) {
   .node-type-subset .main-container .field-name-field-body .field-item {
     padding: 50px 20px 35px !important;
-  }
-  .node-type-subset .main-container .group-left {
-    width: 100% !important;
-    text-align: -webkit-center !important;
-  }
-  .node-type-subset .main-container .group-left img {
-    margin-bottom: 25px;
-  }
-  .node-type-subset .main-container .group-right {
-    width: 95% !important;
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-  }
-  .node-type-subset .main-container .group-right h5 {
-    text-align: center;
   }
   .node-type-subset .main-container .group-header {
     margin-bottom: 0 !important;
@@ -11676,27 +11663,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .node-type-subset .main-container .field-name-field-slider-main img {
     height: auto !important;
     min-height: 230px;
-  }
-  .node-type-subset .main-container .group-left {
-    width: 100% !important;
-    text-align: -webkit-center !important;
-  }
-  .node-type-subset .main-container .group-left .items {
-    width: 250px !important;
-    height: 250px !important;
-  }
-  .node-type-subset .main-container .group-left img {
-    margin-bottom: 25px;
-    width: 250px;
-    height: 250px;
-  }
-  .node-type-subset .main-container .group-right {
-    width: 95% !important;
-    margin-left: 15px !important;
-    margin-right: 15px !important;
-  }
-  .node-type-subset .main-container .group-right h5 {
-    text-align: center;
   }
   .node-type-subset .main-container .field-name-field-body .field-item {
     padding: 20px 20px 120px !important;
@@ -11729,7 +11695,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     max-height: 207px;
   }
   .node-type-subset .main-container .field-name-field-tarh > .field-items > .field-item .group-header {
-    margin-bottom: -125px !important;
+    margin-bottom: -90px !important;
   }
   .node-type-subset .main-container .field-name-field-tarh > .field-items > .field-item .group-header h2 {
     bottom: 95px !important;
