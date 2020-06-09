@@ -1658,7 +1658,7 @@ a {
             .mejs-container {
               min-width: 100vw !important;
               height: calc(90vh - 3.75rem) !important;
-              filter: brightness(0.65);
+              filter: brightness(0.3);
               width: 100% !important;
               @media all and (max-width: 768px){
                 height: calc(100vh - 55px) !important;

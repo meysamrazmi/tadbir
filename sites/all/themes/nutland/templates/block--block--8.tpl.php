@@ -173,12 +173,17 @@
       bottom: 0.625rem;
       color: #00247a;
       font-size: 18px;
-      white-space: nowrap;
-      display: none
+      display: none;
+      width: 100%;
+      white-space: normal;
+      text-align: right;
+      max-height: 65px;
+      overflow: hidden;
+      line-height: 25px;
     }
     [dir] .figures .caption {
       background-color: rgba(255, 255, 255, .8);
-      padding: 15px;
+      padding: 10px 15px;
     }
     [dir=rtl] .figures .caption {
       right: 0;
