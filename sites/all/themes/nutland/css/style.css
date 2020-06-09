@@ -8769,6 +8769,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .page-node-3 .main-container #node-3 .view-id-slideshow img, .page-node-3 .main-container #node-74 .view-id-slideshow img, .page-node-74 .main-container #node-3 .view-id-slideshow img, .page-node-74 .main-container #node-74 .view-id-slideshow img {
   filter: brightness(0.65);
+  min-width: 100vw !important;
+  height: calc(90vh - 85px);
+  width: 100% !important;
 }
 .page-node-3 .main-container #node-3 .view-id-slideshow .owl-next:hover span, .page-node-3 .main-container #node-3 .view-id-slideshow .owl-prev:hover span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-next:hover span, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-prev:hover span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-next:hover span, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-prev:hover span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-next:hover span, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-prev:hover span {
   color: #00247a;
@@ -8820,13 +8823,23 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   z-index: 100;
 }
 .page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .file-video, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .file-video, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .file-video, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .file-video {
-  height: calc(90vh - 3.75rem);
+  height: calc(90vh - 85px);
   display: flex;
+}
+@media all and (max-width: 768px) {
+  .page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .file-video, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .file-video, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .file-video, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .file-video {
+    height: calc(100vh - 55px) !important;
+  }
 }
 .page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .file-video .mejs-container {
   min-width: 100vw !important;
   height: calc(90vh - 3.75rem) !important;
   width: 100% !important;
+}
+@media all and (max-width: 768px) {
+  .page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .file-video .mejs-container, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .file-video .mejs-container {
+    height: calc(100vh - 55px) !important;
+  }
 }
 .page-node-3 .main-container #node-3 .view-id-slideshow .owl-item .file-video .mejs-container video, .page-node-3 .main-container #node-74 .view-id-slideshow .owl-item .file-video .mejs-container video, .page-node-74 .main-container #node-3 .view-id-slideshow .owl-item .file-video .mejs-container video, .page-node-74 .main-container #node-74 .view-id-slideshow .owl-item .file-video .mejs-container video {
   width: 100%;
@@ -9061,7 +9074,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 @media (max-width: 768px) {
   .page-node-3 .main-container .view-id-slideshow img, .page-node-74 .main-container .view-id-slideshow img {
     object-fit: cover;
-    height: calc(90vh - 3.75rem);
+    height: calc(100vh - 55px) !important;
   }
   .page-node-3 .main-container .view-id-slideshow .owl-item p, .page-node-74 .main-container .view-id-slideshow .owl-item p {
     transform: translate(0px, 0px);
@@ -9331,7 +9344,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   background: white;
 }
 .page-videos #block-system-main, .page-gallery #block-system-main {
-  margin-top: 260px;
+  margin-top: 15px;
 }
 .page-videos #block-system-main .view-content, .page-gallery #block-system-main .view-content {
   max-width: 1000px;

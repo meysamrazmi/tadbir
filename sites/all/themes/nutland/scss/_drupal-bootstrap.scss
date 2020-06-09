@@ -1529,6 +1529,9 @@ a {
       .view-id-slideshow{
         img{
           filter: brightness(0.65);
+          min-width: 100vw !important;
+          height: calc(90vh - 85px);
+          width: 100% !important;
         }
         .owl-next, .owl-prev{
           &:hover{
@@ -1597,12 +1600,18 @@ a {
             z-index: 100;
           }
           .file-video{
-            height: calc(90vh - 3.75rem);
+            height: calc(90vh - 85px);
             display: flex;
+            @media all and (max-width: 768px){
+              height: calc(100vh - 55px) !important;
+            }
             .mejs-container {
               min-width: 100vw !important;
               height: calc(90vh - 3.75rem) !important;
               width: 100% !important;
+              @media all and (max-width: 768px){
+                height: calc(100vh - 55px) !important;
+              }
               video {
                 width: 100%;
                 height: 100%;
@@ -1866,7 +1875,7 @@ a {
       .view-id-slideshow{
         img{
           object-fit: cover;
-          height: calc(90vh - 3.75rem);
+          height: calc(100vh - 55px) !important;
         }
         .owl-item{
           p{
@@ -2193,7 +2202,7 @@ a {
 .page-videos, .page-gallery{
   background: white;
   #block-system-main{
-    margin-top: 260px;
+    margin-top: 15px;
     .view-content{
       max-width: 1000px;
       width: 100%;

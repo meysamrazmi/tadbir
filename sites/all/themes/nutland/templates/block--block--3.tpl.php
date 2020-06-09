@@ -80,6 +80,7 @@
     background: url("/sites/all/themes/nutland/images/sktemplate1.jpg");
     background-position: center;
     background-size: cover;
+    position: relative;
   }
   #block3{
     z-index: 5;
