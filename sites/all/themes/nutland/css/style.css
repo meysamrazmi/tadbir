@@ -11094,7 +11094,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   position: relative;
   margin-top: -215px;
   z-index: 2;
-  margin-bottom: 200px !important;
+  margin-bottom: 50px !important;
   color: white;
   padding: 35px 75px;
   border-bottom: none !important;
@@ -11186,7 +11186,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-projects .main-container #block-system-main .group-middle .field-name-body, .node-type-projects .main-container #block-system-main .group-middle .field-name-field-aboves {
   line-height: 2;
   text-align: justify;
-  margin-bottom: 15px;
+  margin-bottom: 35px;
 }
 .node-type-projects .main-container #block-system-main .group-middle .field-name-body span, .node-type-projects .main-container #block-system-main .group-middle .field-name-field-aboves span {
   font-family: fanum !important;
