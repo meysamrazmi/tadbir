@@ -105,6 +105,8 @@
     <?php
     $node1 = node_load(20);
     $node2 = node_load(10);
+    $node13 = node_load(94);
+    $node14 = node_load(95);
     $node3 = node_load(9);
     $node4 = node_load(8);
     $node5 = node_load(7);
@@ -184,7 +186,7 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-          <a href="<?php print $node1->field_link['und'][0]['url'] ?>" class="items_text border_image items">
+          <a href="<?php print $node13->field_link['und'][0]['url'] ?>" class="items_text border_image items">
             <img src="<?php print image_style_url("555x300", $node1->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
@@ -196,7 +198,7 @@
           </a>
         </div>
         <div class="col-md-6">
-          <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items_text border_image items">
+          <a href="<?php print $node14->field_link['und'][0]['url']; ?>" class="items_text border_image items">
             <img src="<?php print image_style_url("555x300", $node2->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">

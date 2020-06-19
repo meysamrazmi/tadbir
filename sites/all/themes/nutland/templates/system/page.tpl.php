@@ -130,6 +130,9 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
                         <option value="انگلیسی">انگلیسی</option>
                     </select>
                 </li>
+              <li class="hidden-xs subset-link">
+                <a>زیر مجموعه ها</a>
+              </li>
             </ul>
         </div>
     <div class="form-search-menu">

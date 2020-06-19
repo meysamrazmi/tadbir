@@ -54,9 +54,6 @@
   <?php endif;?>
   <?php print render($title_suffix); ?>
 
-
-  <?php
-  ?>
   <div id="block3">
 
     <section id="sectionBanner">
@@ -71,13 +68,16 @@
   </div>
 
 </section>
+<?php
+$node = node_load(91);
+?>
 <style>
   #block-block-3{
     width: 100vw;
     top: 0px;
     padding: 40px 0;
     right: calc(50% - 50vw);
-    background: url("/sites/all/themes/nutland/images/sktemplate1.jpg");
+    background: url(<?php echo isset($node->field_image['und'][0])? file_create_url($node->field_image['und'][0]['uri']) : '';?>);
     background-position: center;
     background-size: cover;
     position: relative;

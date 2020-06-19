@@ -1223,7 +1223,7 @@ a {
   }
   .navbar-collapse {
     z-index: 100;
-    max-width: calc(100% - 245px - 120px);
+    max-width: calc(100% - 245px - 230px);
     margin-right: 1.5%;
     .block-title {
       display: none;
@@ -1310,6 +1310,11 @@ a {
           }
         }
       }
+      > li:nth-child(2) {
+        @media (min-width: 768px){
+          display: none;
+        }
+      }
     }
   }
   .left-menu{
@@ -1320,7 +1325,7 @@ a {
       display: flex;
       justify-content: center;
       align-items: stretch;
-      margin: 0 0 0 5px;
+      margin: 0 0 0 0px;
       padding: 0;
       transition: all 0.5s ease;
       li{
@@ -1503,7 +1508,7 @@ a {
       }
     }
     .left-menu{
-      width: 130px !important;
+      width: 210px !important;
       li{
         min-width: 40px!important;
       }
@@ -4644,157 +4649,155 @@ a {
       > .group-header{
         margin-top: 85px;
       }
-      .group-footer{
-        .field-collection-container{
-          background-image: url(/sites/all/themes/nutland/images/sktemplate3.jpg);
-          background-repeat: no-repeat;
-          background-size: cover;
-          background-attachment: fixed;
-          padding: 50px 0;
-          border-bottom: none!important;
-          .field-name-field-costum{
-            max-width: 1100px;
-            margin: auto;
-            > .field-items{
-              display: grid;
-              grid-template-columns: auto auto auto;
-              padding: 10px;
-              .group-header{
-                background-color: rgba(255, 255, 255, 0.9);
-                border: 1px solid rgba(0, 0, 0, 0.1);
-                padding: 0.625rem;
-                color: #adadad;
-                margin-bottom: 0 !important;
-                text-align: justify;
-                .field-name-field-title .field-item{
-                  color: #00247c;
-                  font-weight: bold;
-                  padding: 10px 0 15px 0;
-                  margin-right: 40px;
-                  font-size: 20px;
-                  &:before{
-                    content: " ";
-                    display: block;
-                    position: relative;
-                    height: 1px;
-                    background: #00247c;
-                    width: 40px;
-                    right: -42px;
-                    top: 10px;
-                  }
-                  &:after{
-                    @media (max-width: 767px) {
-                      float: left;
-                      position: relative;
-                      content: "\e252";
-                      font-family: "Glyphicons Halflings";
-                    }
-                  }
-                }
-              }
-              > .field-item:first-child{
-                pointer-events: none;
-                font-weight: bold;
-                .field-name-field-title{
-                  .field-item{
-                    text-align: center;
-                    color: #4B4B4B;
-                    &:before, &:after{
-                      display: none;
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-        .field-collection-view{
-          border-bottom: none !important;
-          .group-left{
-            margin-bottom: 0 !important;
-          }
-        }
-        .field-name-field-tarh  {
-          .items{
-            height: auto!important;
-            &:before{
-              bottom: 80px;
-            }
-          }
+      .field-collection-container{
+        background-image: url(/sites/all/themes/nutland/images/sktemplate3.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-attachment: fixed;
+        padding: 50px 0;
+        border-bottom: none!important;
+        .field-name-field-costum{
           max-width: 1100px;
           margin: auto;
           > .field-items{
-            display: flex;
-            margin-bottom: -100px;
-            > .field-item{
-              padding: 0 10px;
-              .group-header{
-                h2{
-                  width: 100%;
-                  bottom: 95px;
-                  background: rgba(0, 36, 122, 0.5);
-                  text-align: right;
+            display: grid;
+            grid-template-columns: auto auto auto;
+            padding: 10px;
+            .group-header{
+              background-color: rgba(255, 255, 255, 0.9);
+              border: 1px solid rgba(0, 0, 0, 0.1);
+              padding: 0.625rem;
+              color: #adadad;
+              margin-bottom: 0 !important;
+              text-align: justify;
+              .field-name-field-title .field-item{
+                color: #00247c;
+                font-weight: bold;
+                padding: 10px 0 15px 0;
+                margin-right: 40px;
+                font-size: 20px;
+                &:before{
+                  content: " ";
+                  display: block;
                   position: relative;
-                  min-height: 75px;
-                  color: white;
-                  padding-right: 15px;
-                  font-size: 20px;
-                  a{
-                    color: white;
-                  }
-                  &:before{
-                    content: " ";
-                    display: block;
+                  height: 1px;
+                  background: #00247c;
+                  width: 40px;
+                  right: -42px;
+                  top: 10px;
+                }
+                &:after{
+                  @media (max-width: 767px) {
+                    float: left;
                     position: relative;
-                    height: 3px;
-                    background: white;
-                    width: 110px;
-                    right: 0px;
-                    top: -5px;
-
+                    content: "\e252";
+                    font-family: "Glyphicons Halflings";
+                  }
+                }
+              }
+            }
+            > .field-item:first-child{
+              pointer-events: none;
+              font-weight: bold;
+              .field-name-field-title{
+                .field-item{
+                  text-align: center;
+                  color: #4B4B4B;
+                  &:before, &:after{
+                    display: none;
                   }
                 }
               }
             }
           }
         }
-        .field-label{
-          text-align: center;
-          padding: 20px 10px;
-          color: #00247a;
-          position: relative;
+      }
+      .field-collection-view{
+        border-bottom: none !important;
+        .group-left{
+          margin-bottom: 0 !important;
+        }
+      }
+      .field-name-field-tarh  {
+        .items{
+          height: auto!important;
           &:before{
-            content: " ";
-            display: block;
-            position: relative;
-            height: 2px;
-            background: #ccc;
-            width: 42%;
-            top: 10px;
-          }
-          &:after{
-            content: " ";
-            display: block;
-            position: absolute;
-            height: 2px;
-            background: #ccc;
-            width: 42%;
-            top: 30px;
-            left: 5px;
+            bottom: 80px;
           }
         }
-        .field-name-field-company{
-          max-width: 1100px;
-          margin: auto;
-          padding-bottom: 50px;
-          .field-item {
-            border: 1px solid #ccc;
-            text-align: -webkit-center;
-            img{
-              display: block;
-              max-width: 100%;
-              min-height: 200px;
+        max-width: 1100px;
+        margin: auto;
+        > .field-items{
+          display: flex;
+          margin-bottom: -100px;
+          > .field-item{
+            padding: 0 10px;
+            .group-header{
+              h2{
+                width: 100%;
+                bottom: 95px;
+                background: rgba(0, 36, 122, 0.5);
+                text-align: right;
+                position: relative;
+                min-height: 75px;
+                color: white;
+                padding-right: 15px;
+                font-size: 20px;
+                a{
+                  color: white;
+                }
+                &:before{
+                  content: " ";
+                  display: block;
+                  position: relative;
+                  height: 3px;
+                  background: white;
+                  width: 110px;
+                  right: 0px;
+                  top: -5px;
+
+                }
+              }
             }
+          }
+        }
+      }
+      .field-label{
+        text-align: center;
+        padding: 20px 10px;
+        color: #00247a;
+        position: relative;
+        &:before{
+          content: " ";
+          display: block;
+          position: relative;
+          height: 2px;
+          background: #ccc;
+          width: 42%;
+          top: 10px;
+        }
+        &:after{
+          content: " ";
+          display: block;
+          position: absolute;
+          height: 2px;
+          background: #ccc;
+          width: 42%;
+          top: 30px;
+          left: 5px;
+        }
+      }
+      .field-name-field-company{
+        max-width: 1100px;
+        margin: auto;
+        padding-bottom: 50px;
+        .field-item {
+          border: 1px solid #ccc;
+          text-align: -webkit-center;
+          img{
+            display: block;
+            max-width: 100%;
+            min-height: 200px;
           }
         }
       }

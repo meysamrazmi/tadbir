@@ -71,6 +71,9 @@
   </div>
 
 </section>
+<?php
+$node = node_load(92);
+?>
 <style>
   #block-block-7{
     position: relative;
@@ -78,7 +81,7 @@
     top: 0px;
     padding: 40px 0;
     right: calc(50% - 50vw);
-    background: url("/sites/all/themes/nutland/images/sktemplate1.jpg");
+    background: url(<?php echo isset($node->field_image['und'][0])? file_create_url($node->field_image['und'][0]['uri']) : '';?>);
     background-position: center;
     background-size: cover;
   }

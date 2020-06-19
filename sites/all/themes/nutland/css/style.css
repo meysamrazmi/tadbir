@@ -8498,7 +8498,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 #navbar .navbar-collapse {
   z-index: 100;
-  max-width: calc(100% - 245px - 120px);
+  max-width: calc(100% - 245px - 230px);
   margin-right: 1.5%;
 }
 #navbar .navbar-collapse .block-title {
@@ -8586,6 +8586,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   align-items: center;
   justify-content: center;
 }
+@media (min-width: 768px) {
+  #navbar .navbar-collapse ul.menu.nav > li:nth-child(2) {
+    display: none;
+  }
+}
 #navbar .left-menu {
   position: relative;
   overflow-x: hidden;
@@ -8595,7 +8600,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: flex;
   justify-content: center;
   align-items: stretch;
-  margin: 0 0 0 5px;
+  margin: 0 0 0 0px;
   padding: 0;
   transition: all 0.5s ease;
 }
@@ -8765,7 +8770,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     padding: 10px 6px;
   }
   #navbar .left-menu {
-    width: 130px !important;
+    width: 210px !important;
   }
   #navbar .left-menu li {
     min-width: 40px !important;
@@ -11585,7 +11590,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-subset .main-container #block-system-main > .group-header {
   margin-top: 85px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container {
+.node-type-subset .main-container #block-system-main .field-collection-container {
   background-image: url(/sites/all/themes/nutland/images/sktemplate3.jpg);
   background-repeat: no-repeat;
   background-size: cover;
@@ -11593,16 +11598,16 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding: 50px 0;
   border-bottom: none !important;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum {
+.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum {
   max-width: 1100px;
   margin: auto;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items {
+.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items {
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 10px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items .group-header {
+.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items .group-header {
   background-color: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(0, 0, 0, 0.1);
   padding: 0.625rem;
@@ -11610,14 +11615,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-bottom: 0 !important;
   text-align: justify;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item {
+.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item {
   color: #00247c;
   font-weight: bold;
   padding: 10px 0 15px 0;
   margin-right: 40px;
   font-size: 20px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item:before {
+.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item:before {
   content: " ";
   display: block;
   position: relative;
@@ -11628,48 +11633,48 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   top: 10px;
 }
 @media (max-width: 767px) {
-  .node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item:after {
+  .node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item:after {
     float: left;
     position: relative;
     content: "";
     font-family: "Glyphicons Halflings";
   }
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items > .field-item:first-child {
+.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items > .field-item:first-child {
   pointer-events: none;
   font-weight: bold;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items > .field-item:first-child .field-name-field-title .field-item {
+.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items > .field-item:first-child .field-name-field-title .field-item {
   text-align: center;
   color: #4B4B4B;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items > .field-item:first-child .field-name-field-title .field-item:before, .node-type-subset .main-container #block-system-main .group-footer .field-collection-container .field-name-field-costum > .field-items > .field-item:first-child .field-name-field-title .field-item:after {
+.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items > .field-item:first-child .field-name-field-title .field-item:before, .node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items > .field-item:first-child .field-name-field-title .field-item:after {
   display: none;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-view {
+.node-type-subset .main-container #block-system-main .field-collection-view {
   border-bottom: none !important;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-collection-view .group-left {
+.node-type-subset .main-container #block-system-main .field-collection-view .group-left {
   margin-bottom: 0 !important;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-tarh {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh {
   max-width: 1100px;
   margin: auto;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-tarh .items {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh .items {
   height: auto !important;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-tarh .items:before {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh .items:before {
   bottom: 80px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-tarh > .field-items {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items {
   display: flex;
   margin-bottom: -100px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-tarh > .field-items > .field-item {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items > .field-item {
   padding: 0 10px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-tarh > .field-items > .field-item .group-header h2 {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items > .field-item .group-header h2 {
   width: 100%;
   bottom: 95px;
   background: rgba(0, 36, 122, 0.5);
@@ -11680,10 +11685,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding-right: 15px;
   font-size: 20px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-tarh > .field-items > .field-item .group-header h2 a {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items > .field-item .group-header h2 a {
   color: white;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-tarh > .field-items > .field-item .group-header h2:before {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items > .field-item .group-header h2:before {
   content: " ";
   display: block;
   position: relative;
@@ -11693,13 +11698,13 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   right: 0px;
   top: -5px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-label {
+.node-type-subset .main-container #block-system-main .field-label {
   text-align: center;
   padding: 20px 10px;
   color: #00247a;
   position: relative;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-label:before {
+.node-type-subset .main-container #block-system-main .field-label:before {
   content: " ";
   display: block;
   position: relative;
@@ -11708,7 +11713,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   width: 42%;
   top: 10px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-label:after {
+.node-type-subset .main-container #block-system-main .field-label:after {
   content: " ";
   display: block;
   position: absolute;
@@ -11718,16 +11723,16 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   top: 30px;
   left: 5px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-company {
+.node-type-subset .main-container #block-system-main .field-name-field-company {
   max-width: 1100px;
   margin: auto;
   padding-bottom: 50px;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-company .field-item {
+.node-type-subset .main-container #block-system-main .field-name-field-company .field-item {
   border: 1px solid #ccc;
   text-align: -webkit-center;
 }
-.node-type-subset .main-container #block-system-main .group-footer .field-name-field-company .field-item img {
+.node-type-subset .main-container #block-system-main .field-name-field-company .field-item img {
   display: block;
   max-width: 100%;
   min-height: 200px;

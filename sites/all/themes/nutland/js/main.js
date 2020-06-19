@@ -12,6 +12,10 @@ $(document).ready(function(){
   $(".menu.nav .dropdown").click(function(){
     $(this).toggleClass("petro").find("a .caret").toggleClass("petro");
   });
+  $('.subset-link, #useroverlay').click(function(){
+    $('.subset-link').toggleClass('open');
+    $('#block-block-9').toggleClass('open');
+  })
 
   $(".mdi-magnify").click(function(){
     $(".form-search-menu").toggleClass("open");
@@ -55,7 +59,7 @@ $(document).ready(function(){
   });
 
   $(".node-type-subset").ready(function () {
-    $(".group-footer .field-name-field-tarh .field-name-field-ima").addClass("items");
+    $(".field-name-field-tarh .field-name-field-ima").addClass("items");
   });
 
 });
