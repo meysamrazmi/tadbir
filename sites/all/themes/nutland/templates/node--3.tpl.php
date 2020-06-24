@@ -548,7 +548,6 @@
     min-height: 100%;
     width: 100%;
     transition: all .4s ease-in-out;
-    filter: grayscale(100%);
   }
   #gozideha .items .caption_wrap {
     top: 3.125rem;
@@ -558,7 +557,7 @@
     width: 100%
   }
   #gozideha .items:hover img {
-    filter: none;
+    filter: brightness(0.65);
   }
   #gozideha .items_text {
     position: relative;

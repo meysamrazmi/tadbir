@@ -57,77 +57,96 @@
 
   <?php
   $node1 = node_load(29);
+  $node2 = node_load(110);
   ?>
-    <footer id="footer">
-        <section id="cards_footer">
-            <div class="container">
-                <div class="row mx-n4">
-                    <div class="col-md-5 px-4 col-sm-12 col-xs-12">
-                        <article class="cards cardi card-none">
-                            <div class="card-header">
-                                <a href="/" class="logo_footer">
-                                    <img src="<?php print image_style_url("597x139", $node1->field_image['und'][0]['uri']); ?>" alt="">
-                                </a>
-                            </div>
-                            <div class="card-body">
-                                <p class="text-justify">
-                                  <?php print $node1->body['und'][0]['value']; ?>
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-3 mt-md-0 mt-3 px-4  col-sm-12 col-xs-12" >
-                        <article class="cards card-none">
-                            <div class="card-header">
-                                <h4 class="card-title">لینکهای مفید</h4>
-                            </div>
-                            <div class="card-body">
-
-                                <?php
-                                $menu = menu_tree('menu-footer');
-                                print drupal_render($menu);
-                                ?>
-                            </div>
-                        </article>
-                    </div>
-                    <div class="col-md-4  col-sm-12 col-xs-12">
-                        <article class="cards card-none">
-                            <div class="card-header">
-                                <h4 class="card-title">تماس با ما</h4>
-                            </div>
-                            <address class="card-body card-address">
-                                <ul class="items-contact">
-                                    <li>
-                                        <span>تهران، خیابان شهید احمد  قصیر
-                                        (بخارست) ، خیابان هشتم ، شماره ۶</span></li>
-                                    <li>
-                                        <span>کد پستی : 1514716711</span>
-                                    </li>
-                                    <li>
-                                        <span>تلفن بنیاد برکت : </span><a class="fs-20 text-nowrap" href="tel:02188532300" dir="ltr">(021)
-                                            88532300 - 15</a></li>
-                                  <li>
-                                    <span>نمابر بنیاد برکت :</span><span dir="ltr"> (021) - 88532316</span>
-                                  </li>
-                                  <li>
-                                    <span>تلفن حراست :</span><span dir="ltr"> (021) - 88532229</span>
-                                  </li>
-                                  <li>
-                                    <span>تلفن روابط عمومی :</span><span dir="ltr"> (021) - 88480016 / 88480025</span>
-                                  </li>
-                                </ul>
-                            </address>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="copyright">
-            <div class="container">
-                <p class="text-center"><a class="name-co" href="/" target="_blank">
-                        تمامی حقوق این وبسایت متعلق به گروه توسعه اقتصادی تدبیر می باشد </a></p>
-            </div>
-        </section>
-    </footer>
+  <footer id="footer">
+    <section id="cards_footer">
+      <div class="container">
+        <div class="card-header">
+          <a href="/" class="logo_footer">
+            <img src="http://tadbir.offerbama.com/sites/default/files/logo-header.png" alt="گروه توسعه اقتصادی تدبیر" title="گروه توسعه اقتصادی تدبیر">
+          </a>
+        </div>
+        <div class="row mx-n4">
+          <div class="col-md-4 px-4 col-sm-12 col-xs-12 texti">
+            <article class="cards cardi card-none">
+              <div class="card-body">
+                <p class="text-justify">
+                  <?php print $node1->body['und'][0]['value']; ?>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-3 mt-md-0 mt-3 px-4  col-sm-12 col-xs-12 linki" >
+            <article class="cards card-none">
+              <div class="">
+                <h4 class="card-title">دسترسی سریع</h4>
+              </div>
+              <div class="card-body">
+                <?php
+                $menu = menu_tree('menu-footer');
+                print drupal_render($menu);
+                ?>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4  col-sm-12 col-xs-12">
+            <article class="cards card-none">
+              <div class="">
+                <h4 class="card-title">اطلاعات تماس</h4>
+              </div>
+              <address class="card-body card-address"><?php echo $node2->body['und'][0]['value'];?></address>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="copyright">
+      <div class="container">
+        <p class="text-center">
+          <a class="name-co" href="/" target="_blank" style="border-bottom: 2px solid #253A76;width: 430px;margin: auto;">
+            تمامی حقوق این وبسایت متعلق به گروه توسعه اقتصادی تدبیر می باشد
+          </a>
+          <a class="name-co" href="https://www.tusi.co/" target="_blank" style="direction: ltr;">
+            <span style="padding: 10px 10px 0 0;"> Design and Development by</span> <img src="/sites/all/themes/nutland/images/tusi.svg" style="width: 40px;filter: brightness(0.3);vertical-align: middle;display: inline-block;">
+          </a>
+        </p>
+      </div>
+    </section>
+  </footer>
 
 </section>
+<style>
+  #cards_footer {
+    padding: 60px 0;
+  }
+  section#cards_footer:before {
+    content: "";
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    height: 100px;
+    background: url(/sites/all/themes/nutland/images/pattern-tadbir.png);
+    background-size: auto 100%;
+    opacity: 0.2;
+    z-index: -1;
+  }
+  address.card-body.card-address {
+    white-space: pre-line;
+    line-height: 25px;
+  }
+  .texti article {
+    border-top: 1px solid #fff;
+    padding-top: 20px;
+    margin-top: 20px;
+  }
+  .linki {
+    margin-right: 5%;
+  }
+  @media (max-width: 992px) {
+    .linki {
+      margin-right: 0;
+    }
+
+  }
+</style>

@@ -154,11 +154,12 @@
       max-width: 1000px;
     }
     .subsets > a img {
-      filter: brightness(0.7);
+      filter: brightness(0.5);
       position: absolute;
       width: 100%;
       right: 0;
       top: 1px;
+      transition: all 0.3s ease;
     }
     .subsets > a .caption {
       width: 100%;
@@ -182,6 +183,21 @@
       color: #fff !important;
       padding: 10px 20px;
     }
+    .subsets > a:hover img {
+      filter: brightness(0.75);
+    }
+    .subsets > a .caption:before {
+      content: "";
+      position: absolute;
+      background: #F95109;
+      width: 0%;
+      top: 75px;
+      height: 3px;
+      transition: all 0.3s ease;
+    }
+    .subsets > a:hover .caption:before {
+      width: 60%;
+    }
     #useroverlay {
       position: fixed;
       top: 0;
@@ -202,9 +218,4 @@
       cursor: pointer;
     }
   </style>
-<script>
-  // $('.subset-link, #useroverlay').click(function(){
-  //   $('.subset-link').toggleClass('open');
-  //   $('#block-block-9').toggleClass('open');
-  // })
-</script>
+
