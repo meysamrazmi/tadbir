@@ -187,11 +187,11 @@
       <div class="row">
         <div class="col-md-6">
           <a href="<?php print $node13->field_link['und'][0]['url'] ?>" class="items_text border_image items">
-            <img src="<?php print image_style_url("555x300", $node1->field_image['und'][0]['uri']); ?>" alt="">
+            <img src="<?php print image_style_url("555x300", $node13->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
-                <h4><?php print $node1->title; ?></h4>
-                <span><?php print $node1->field_tozih['und'][0]['value']; ?></span>
+                <h4><?php print $node13->title; ?></h4>
+                <span><?php print $node13->field_tozih['und'][0]['value']; ?></span>
               </div>
             </div>
             <div class="line_effect"><span class="lineInner"></span></div>
@@ -199,11 +199,11 @@
         </div>
         <div class="col-md-6">
           <a href="<?php print $node14->field_link['und'][0]['url']; ?>" class="items_text border_image items">
-            <img src="<?php print image_style_url("555x300", $node2->field_image['und'][0]['uri']); ?>" alt="">
+            <img src="<?php print image_style_url("555x300", $node14->field_image['und'][0]['uri']); ?>" alt="">
             <div class="caption_wrap">
               <div class="caption">
-                <h4><?php print $node2->title; ?></h4>
-                <span><?php print $node2->field_tozih['und'][0]['value']; ?></span>
+                <h4><?php print $node14->title; ?></h4>
+                <span><?php print $node14->field_tozih['und'][0]['value']; ?></span>
               </div>
             </div>
             <div class="line_effect"><span class="lineInner"></span></div>
@@ -623,8 +623,18 @@
       rtl: true,
       nav: true,
       dots: true,
+      loop: true,
       autoWidth: true,
+      autoplayTimeout: 10000,
+      autoplay:true,
+      autoplayHoverPause:false,
+      onTranslated: videoPlay,
     });
+    function videoPlay(event) {
+      let player = new MediaElementPlayer('.active video');
+      player.play();
+    }
+    $('.owl-carousel').click(videoPlay)
   });
 </script>
 

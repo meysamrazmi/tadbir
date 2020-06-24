@@ -64,13 +64,12 @@
   $node3 = node_load(43);
   $node4 = node_load(44);
   $node5 = node_load(50);
-  $node6 = node_load(51);
+//  $node6 = node_load(51);
   $node7 = node_load(53);
   $node8 = node_load(49);
   //    print $node->title;
   //    print '<img src="'. image_style_url("320x320", $node->field_image['und'][0]['uri']) .'">';
   ?>
-  <div id="useroverlay"></div>
   <section>
     <div class="subsets">
       <a href="<?php print $node1->field_link['und'][0]['url']; ?>" class="">
@@ -100,12 +99,6 @@
       <a href="<?php print $node5->field_link['und'][0]['url']; ?>" class="">
         <img src="<?php print image_style_url("320x320", $node5->field_image['und'][0]['uri']); ?>" alt="">
         <div class="caption"><?php print $node5->title; ?></div>
-      </a>
-
-
-      <a href="<?php print $node6->field_link['und'][0]['url']; ?>" class="">
-        <img src="<?php print image_style_url("320x320", $node6->field_image['und'][0]['uri']); ?>" alt="">
-        <div class="caption"><?php print $node6->title; ?></div>
       </a>
 
 

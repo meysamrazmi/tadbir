@@ -124,7 +124,7 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
                 <li class="grob">
                     <i class="mdi mdi-magnify"></i>
                 </li>
-                <li class="hidden-xs">
+                <li class="hidden-xs d-none">
                     <select id="lang">
                         <option value="فارسی">فارسی</option>
                         <option value="انگلیسی">انگلیسی</option>
@@ -139,7 +139,7 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
       <form action="/search/node" method="get" accept-charset="UTF-8">
         <div>
           <div class="form-item form-item-query form-type-textfield form-group">
-            <input class="form-control form-text" type="text" id="edit-query" name="query" value="" size="40" maxlength="128">
+            <input class="form-control form-text" type="text" id="edit-query" name="query" value="" size="40" maxlength="128" placeholder="جستجو...">
           </div>
           <button type="submit" id="edit-sa" name="op" value="جستجو" class="btn btn-primary form-submit">
             <i class="mdi mdi-magnify"></i>

@@ -190,7 +190,16 @@
       nav: true,
       dots: true,
       autoWidth: true,
+      autoplayTimeout: 10000,
+      autoplay:true,
+      autoplayHoverPause:false,
+      onTranslated: videoPlay,
     });
+    function videoPlay(event) {
+      let player = new MediaElementPlayer('.active video');
+      player.play();
+    }
+    $('.owl-carousel').click(videoPlay)
   });
   $('.page-node-37 .view-custom').each(function(){
     $(this).children('.view-content').addClass('owl-carousel');

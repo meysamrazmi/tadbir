@@ -64,7 +64,7 @@
   $node3 = node_load(43);
   $node4 = node_load(44);
   $node5 = node_load(50);
-  $node6 = node_load(51);
+//  $node6 = node_load(51);
   $node7 = node_load(53);
   $node8 = node_load(49);
   //    print $node->title;
@@ -100,12 +100,6 @@
         <a href="<?php print $node5->field_link['und'][0]['url']; ?>" class="">
           <img src="<?php print image_style_url("320x320", $node5->field_image['und'][0]['uri']); ?>" alt="">
           <div class="caption"><?php print $node5->title; ?></div>
-        </a>
-
-
-        <a href="<?php print $node6->field_link['und'][0]['url']; ?>" class="">
-          <img src="<?php print image_style_url("320x320", $node6->field_image['und'][0]['uri']); ?>" alt="">
-          <div class="caption"><?php print $node6->title; ?></div>
         </a>
 
 
@@ -181,11 +175,12 @@
       background: #253A76;
       white-space: nowrap;
       color: #fff;
-      min-width: 100px !important;
+      min-width: 150px !important;
+      justify-content: center;
     }
     .subset-link a {
       color: #fff !important;
-      padding: 10px 10px;
+      padding: 10px 20px;
     }
     #useroverlay {
       position: fixed;
@@ -193,13 +188,14 @@
       width: 100%;
       height: 100%;
       right: 0;
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.05);
       z-index: 0;
       transition: all .3s ease;
       -webkit-transition: all .3s ease;
       pointer-events: none;
       opacity: 0;
     }
+    div#useroverlay.open,
     #block-block-9.open div#useroverlay {
       pointer-events: auto;
       opacity: 1;

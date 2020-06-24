@@ -1,4 +1,8 @@
 var $ = jQuery;
+function videoPlay(event) {
+  let player = new MediaElementPlayer('.active video');
+  player.play();
+}
 
 //show collapse menu
 $(document).ready(function(){
@@ -12,13 +16,23 @@ $(document).ready(function(){
   $(".menu.nav .dropdown").click(function(){
     $(this).toggleClass("petro").find("a .caret").toggleClass("petro");
   });
-  $('.subset-link, #useroverlay').click(function(){
+  let removeOverlay = function(){
+    $('.subset-link').removeClass('open');
+    $('#block-block-9').removeClass('open');
+    $('.left-menu ul li i.mdi-close').removeClass("mdi-close").addClass('mdi-magnify');
+    $(".form-search-menu").removeClass("open");
+    $('#useroverlay').removeClass("open");
+  }
+  $('#useroverlay').click(removeOverlay)
+  $('.subset-link').click(function(){
     $('.subset-link').toggleClass('open');
     $('#block-block-9').toggleClass('open');
+    $('#useroverlay').toggleClass("open");
   })
-
-  $(".mdi-magnify").click(function(){
+  $(".left-menu ul li i.mdi-magnify").click(function(){
+    $(this).toggleClass("mdi-close mdi-magnify");
     $(".form-search-menu").toggleClass("open");
+    $('#useroverlay').toggleClass("open");
   });
   //close alert box
   $( "body .close" ).click(function() {
@@ -109,13 +123,17 @@ $(".page-node-5").ready(function(){
        margin: 15,
        responsiveClass: true,
        nav: true,
-       autoplayTimeout: 3200,
+       autoplayTimeout: 10000,
+       autoplay:true,
+       autoplayHoverPause:false,
        responsive: {
          0: { items: 1 },
          600: { items: 1 },
          1000: { items: 1 }
-       }
+       },
+       onTranslated: videoPlay,
      });
+   $('.owl-carousel').click(videoPlay);
  });
  // page form
 
@@ -141,8 +159,10 @@ $(".node-type-projects.not-front").ready(function () {
       0: { items: 1 },
       600: { items: 1 },
       1000: { items: 1 }
-    }
+    },
+    onTranslated: videoPlay,
   });
+  $('.owl-carousel').click(videoPlay);
 });
 //carousel in node subset
 $(".node-type-subset.not-front").ready(function () {
@@ -151,23 +171,26 @@ $(".node-type-subset.not-front").ready(function () {
   });
   $(".field-name-field-tarh .items").prepend("<div class='line_effect'><span class='lineInner'></span></div>");
   $(".group-footer .group-top   .field-type-image .field-items .field-item").addClass("items");
-  $(".field-name-field-slider-main .field-items img, .field-name-field-slider-main .field-items video").each(function(){
+  $(".field-name-field-slider-main .field-items img").each(function(){
     $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
   })
   $(".field-name-field-slider-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
-
     loop: true,
     margin: 15,
     responsiveClass: true,
     nav: true,
-    autoplayTimeout: 3200,
+    autoplayTimeout: 10000,
+    autoplay:true,
+    autoplayHoverPause:false,
     responsive: {
       0: { items: 1 },
       600: { items: 1 },
       1000: { items: 1 }
-    }
+    },
+    onTranslated: videoPlay,
   });
+  $('.owl-carousel').click(videoPlay);
 
   $(".field-name-field-company .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
@@ -175,14 +198,19 @@ $(".node-type-subset.not-front").ready(function () {
     margin: 15,
     responsiveClass: true,
     nav: true,
-    autoplayTimeout: 3200,
+    dots: false,
+    autoplayTimeout: 3000,
+    autoplay:true,
+    autoplayHoverPause:false,
     responsive: {
       0: { items: 2 },
       500: { items: 2 },
       600: { items: 3 },
       1000: { items: 5 }
-    }
+    },
+    onTranslated: videoPlay,
   });
+  $('.owl-carousel').click(videoPlay);
 });
 //project slider
 
@@ -192,18 +220,21 @@ $(".node-type-projects.not-front").ready(function () {
   })
   $(".field-name-field-slide-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
-
     loop: true,
     margin: 15,
     responsiveClass: true,
     nav: true,
-    autoplayTimeout: 3200,
+    autoplayTimeout: 3000,
+    autoplay:true,
+    autoplayHoverPause:false,
     responsive: {
       0: { items: 1 },
       600: { items: 1 },
       1000: { items: 1 }
-    }
+    },
+    onTranslated: videoPlay,
   });
+  $('.owl-carousel').click(videoPlay);
 });
 //fix header on scroll
 $(window).scroll(function(){
