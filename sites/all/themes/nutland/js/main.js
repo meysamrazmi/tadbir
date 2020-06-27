@@ -13,6 +13,12 @@ $(document).ready(function(){
     $(this).toggleClass("xclose");
   });
   //convert + to -
+  $(".menu.nav .dropdown:not(:nth-child(2))").each(function(){
+    $(this).addClass("heigth-" + $(this).find(".dropdown-menu li").length);
+  })
+  $(".menu.nav .dropdown:nth-child(2)").each(function(){
+    $(this).addClass("subset-heigth-" + $(this).find(".dropdown-menu .subsets a").length);
+  })
   $(".menu.nav .dropdown").click(function(){
     $(this).toggleClass("petro").find("a .caret").toggleClass("petro");
   });

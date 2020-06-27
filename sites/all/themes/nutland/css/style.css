@@ -7346,7 +7346,8 @@ td.visible-print {
   height: 20px;
   width: 2px;
   background-color: #333;
-  right: 30px;
+  right: 20px;
+  top: 0;
 }
 .resp .xclose:before {
   transform: rotate(45deg);
@@ -7412,9 +7413,6 @@ td.visible-print {
   .resp .left-menu .grob {
     display: none !important;
   }
-  .resp .left-menu .grob + li {
-    display: flex !important;
-  }
   .resp .logo.navbar-btn.pull-left {
     display: none !important;
   }
@@ -7423,10 +7421,6 @@ td.visible-print {
     top: 130px;
     right: 30px;
     max-width: 277px;
-  }
-  .resp .xclose:after, .resp .xclose:before {
-    right: 40px;
-    top: 0;
   }
 }
 @media (max-width: 400px) {
@@ -8524,6 +8518,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     max-width: calc(100% - 245px - 180px);
   }
 }
+@media (max-width: 767px) {
+  #navbar .navbar-collapse {
+    margin: 0;
+  }
+}
 #navbar .navbar-collapse .block-title {
   display: none;
 }
@@ -8614,10 +8613,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 #navbar .navbar-collapse ul.menu.nav li .dropdown-menu:hover li:after {
   width: 0 !important;
 }
-#navbar .navbar-collapse ul.menu.nav .dropdown:hover .dropdown-menu {
-  height: 40px;
-}
 @media (min-width: 768px) {
+  #navbar .navbar-collapse ul.menu.nav .dropdown:hover .dropdown-menu {
+    height: 40px;
+  }
   #navbar .navbar-collapse ul.menu.nav > li:nth-child(2) {
     display: none;
   }
@@ -8682,7 +8681,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     position: absolute !important;
     right: 0 !important;
     padding-top: 125px !important;
-    min-width: 100% !important;
+    width: 100% !important;
     background: none !important;
   }
   #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li {
@@ -8741,12 +8740,90 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     display: block !important;
   }
   #navbar ul.menu.nav .dropdown:hover .dropdown-menu {
-    display: none !important;
+    display: block !important;
+    height: 0;
+    overflow: hidden;
   }
   #navbar ul.menu.nav .dropdown.petro .dropdown-menu {
     display: block !important;
     margin-bottom: 20px;
     text-align: right;
+    height: auto;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-1 .dropdown-menu {
+    height: 45px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-2 .dropdown-menu {
+    height: 90px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-3 .dropdown-menu {
+    height: 135px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-4 .dropdown-menu {
+    height: 180px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-5 .dropdown-menu {
+    height: 225px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-6 .dropdown-menu {
+    height: 270px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-7 .dropdown-menu {
+    height: 315px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-8 .dropdown-menu {
+    height: 360px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-9 .dropdown-menu {
+    height: 405px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-10 .dropdown-menu {
+    height: 450px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-11 .dropdown-menu {
+    height: 495px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-12 .dropdown-menu {
+    height: 540px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-13 .dropdown-menu {
+    height: 585px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-14 .dropdown-menu {
+    height: 630px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.heigth-15 .dropdown-menu {
+    height: 675px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-1 .dropdown-menu {
+    height: 120px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-2 .dropdown-menu {
+    height: 240px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-3 .dropdown-menu {
+    height: 360px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-4 .dropdown-menu {
+    height: 480px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-5 .dropdown-menu {
+    height: 600px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-6 .dropdown-menu {
+    height: 720px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-7 .dropdown-menu {
+    height: 840px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-8 .dropdown-menu {
+    height: 960px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-9 .dropdown-menu {
+    height: 1080px;
+  }
+  #navbar ul.menu.nav .dropdown.petro.subset-heigth-10 .dropdown-menu {
+    height: 1200px;
   }
   #navbar ul.menu.nav .dropdown > a {
     pointer-events: none;

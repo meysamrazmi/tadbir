@@ -59,7 +59,8 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
       height: 20px;
       width: 2px;
       background-color: #333;
-      right: 30px;
+      right: 20px;
+      top: 0;
     }
     &:before{
       transform: rotate(45deg);
@@ -123,7 +124,7 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
       .grob{
         display: none !important;
         + li{
-          display: flex !important;
+          //display: flex !important;
         }
       }
     }
@@ -134,12 +135,6 @@ $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
         top: 130px;
         right: 30px;
         max-width: 277px;
-      }
-    }
-    .xclose{
-      &:after, &:before{
-        right: 40px;
-        top: 0;
       }
     }
   }
@@ -1245,6 +1240,9 @@ a {
     @media (max-width: 899px) and (min-width: 768px){
       max-width: calc(100% - 245px - 180px);
     }
+    @media (max-width: 767px){
+      margin: 0;
+    }
     .block-title {
       display: none;
     }
@@ -1331,15 +1329,11 @@ a {
           }
         }
       }
-      .dropdown {
-        &:hover {
-          .dropdown-menu {
-            height: 40px;
-          }
+      @media (min-width: 768px){
+        .dropdown:hover .dropdown-menu {
+          height: 40px;
         }
-      }
-      > li:nth-child(2) {
-        @media (min-width: 768px){
+        > li:nth-child(2) {
           display: none;
         }
       }
@@ -1403,7 +1397,7 @@ a {
         position: absolute !important;
         right: 0 !IMPORTANT;
         padding-top: 125px !important;
-        min-width: 100% !important;
+        width: 100% !important;
         background: none !important;
         ul.menu.nav{
           li{
@@ -1470,12 +1464,27 @@ a {
       display: block!important;
       .dropdown{
         &:hover .dropdown-menu {
-          display: none !important;
+          display: block !important;
+          height: 0;
+          overflow: hidden;
         }
-        &.petro .dropdown-menu{
-          display: block!important;
-          margin-bottom: 20px;
-          text-align: right;
+        &.petro {
+          .dropdown-menu{
+            display: block!important;
+            margin-bottom: 20px;
+            text-align: right;
+            height: auto;
+          }
+          @for $i from 1 through 15 {
+            &.heigth-#{$i} .dropdown-menu{
+              height: #{($i * 45)}px;
+            }
+          }
+          @for $i from 1 through 10 {
+            &.subset-heigth-#{$i} .dropdown-menu{
+              height: #{($i * 120)}px;
+            }
+          }
         }
         > a{
           pointer-events: none;
