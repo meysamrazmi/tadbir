@@ -297,3 +297,10 @@ function filter($name, &$query, &$get_result){
   else
     $get_result = false;
 }
+
+/**
+ * Implements hook_theme_registry_alter().
+ */
+function functions_theme_registry_alter(&$theme_registry) {
+  $theme_registry['status_messages']['function'] = 'theme_pines_notify';
+}

@@ -1264,9 +1264,13 @@ a {
       }
       li {
         position: static;
+        span.nolink,
         a {
           color: #444;
           white-space: nowrap;
+          position: relative;
+          display: block;
+          padding: 10px 15px;
           &:after{
             content: "";
             position: absolute;
@@ -1402,6 +1406,7 @@ a {
         ul.menu.nav{
           li{
             padding: 0 30px;
+            span.nolink,
             a{
               color: black !important;
               font-weight: bold;
@@ -1620,6 +1625,7 @@ a {
     }
     #node-3, #node-74{
       .view-id-slideshow{
+        .owl-stage,
         .owl-item {
           height: calc(100vh - 85px);
           overflow: hidden;
@@ -1727,6 +1733,7 @@ a {
               .mejs-layer {
                 width: 100% !important;
                 height: 100% !important;
+                display: none !important;
               }
               .mejs-overlay-loading {
                 display: none;
@@ -1779,7 +1786,7 @@ a {
         display: flex;
         margin-top: 20px;
         align-items: center;
-        margin-bottom: 35px;
+        margin-bottom: 25px;
         .mb-0{
           font-size: 18px;
           margin: 0 10px;
@@ -2450,7 +2457,10 @@ a {
     }
     @media (max-width: 899px) and (min-width: 768px){
       left: 160px;
-      width: calc(100vw - 250px - 170px);
+      width: calc(100vw - 250px - 180px);
+      .fixed & {
+        width: calc(100vw - 250px - 170px);
+      }
     }
     @media (max-width: 767px){
       left: 50px;
@@ -2459,6 +2469,9 @@ a {
     @media (min-width: 1440px){
       left: 350px;
       width: calc(100vw - 350px - 280px);
+      .fixed & {
+        width: calc(100vw - 250px - 370px);
+      }
     }
   }
   form{
@@ -5007,4 +5020,18 @@ a {
 .owl-nav {
   height: 0 !important;
   margin: 0 !important;
+}
+.ui-pnotify-container.ui-state-default {
+  background: #4CAF50;
+}
+.ui-pnotify-container.ui-state-error {
+  background: #F44336;
+  border: none;
+  color: #fff;
+}
+.ui-state-default .ui-icon {
+  height: 20px;
+}
+.ui-widget {
+  font-family: dana;
 }

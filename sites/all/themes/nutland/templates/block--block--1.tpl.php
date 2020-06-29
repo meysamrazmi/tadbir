@@ -104,11 +104,11 @@
     <section id="copyright">
       <div class="container">
         <p class="text-center">
-          <a class="name-co" href="/" target="_blank" style="border-bottom: 2px solid #253A76;width: 430px;margin: auto;">
-            تمامی حقوق این وبسایت متعلق به گروه توسعه اقتصادی تدبیر می باشد
+          <a class="name-co" href="/" target="_blank" style="border-bottom: 2px solid #253A76;width: 430px;margin: auto;max-width: 100%;">
+            تمامی حقوق متعلق به گروه توسعه اقتصادی تدبیر می باشد
           </a>
-          <a class="name-co" href="https://www.tusi.co/" target="_blank" style="direction: ltr;">
-            <span style="padding: 10px 10px 0 0;"> Design and Development by</span> <img src="/sites/all/themes/nutland/images/tusi.svg" style="width: 40px;filter: brightness(0.3);vertical-align: middle;display: inline-block;">
+          <a class="name-co" href="https://www.tusi.co/" target="_blank" style="direction: ltr; margin-top: 5px;">
+            <span style="padding: 10px 10px 0 0;"> Design and Development by</span> <img src="/sites/all/themes/nutland/images/tusi.svg" style="width: 40px;filter: brightness(0.3);vertical-align: top;display: inline-block;">
           </a>
         </p>
       </div>

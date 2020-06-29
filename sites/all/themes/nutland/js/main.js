@@ -121,7 +121,9 @@ $(".page-node-5").ready(function(){
 //carousel in node news//carousel in node news
  $(".node-type-news.not-front").ready(function () {
    $(".field-name-field-news-image .field-items img").each(function(){
-     $(this).after("<span>" + $(this).attr("title") + "</span>");
+     if($(this).attr("title")){
+       $(this).after("<span>" + $(this).attr("title") + "</span>");
+     }
    })
      $(".field-name-field-news-image .field-items").addClass("owl-carousel owl-theme").owlCarousel({
        rtl: true,
@@ -152,7 +154,9 @@ $(".page-node-59 #block-system-main, #node-59").ready(function () {
 //carousel in node project//carousel in node news
 $(".node-type-projects.not-front").ready(function () {
   $(".field-name-field-middle-slide .field-items img").each(function(){
-    $(this).after("<span>" + $(this).attr("title") + "</span>");
+    if($(this).attr("title")){
+      $(this).after("<span>" + $(this).attr("title") + "</span>");
+    }
   })
   $(".field-name-field-middle-slide .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
@@ -178,7 +182,7 @@ $(".node-type-subset.not-front").ready(function () {
   $(".field-name-field-tarh .items").prepend("<div class='line_effect'><span class='lineInner'></span></div>");
   $(".group-footer .group-top   .field-type-image .field-items .field-item").addClass("items");
   $(".field-name-field-slider-main .field-items img").each(function(){
-    $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
+    $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title")? $(this).attr("title") : '' + "</p>" + "</div>" + "</div>");
   })
   $(".field-name-field-slider-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
@@ -222,7 +226,12 @@ $(".node-type-subset.not-front").ready(function () {
 
 $(".node-type-projects.not-front").ready(function () {
   $(".field-name-field-slide-main .field-items img, .field-name-field-slide-main .field-items video").each(function(){
-    $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
+    if($(this).attr("title")){
+      $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
+    }
+    else{
+      $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p></p>" + "</div>" + "</div>");
+    }
   })
   $(".field-name-field-slide-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,

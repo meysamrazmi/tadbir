@@ -105,12 +105,8 @@
     <?php
     $node1 = node_load(20);
     $node2 = node_load(10);
-    $node13 = node_load(94);
-    $node14 = node_load(95);
     $node3 = node_load(9);
     $node4 = node_load(8);
-    $node5 = node_load(7);
-    $node6 = node_load(6);
     $node7 = node_load(36);
     $node8 = node_load(34);
     $node9 = node_load(31);
@@ -185,52 +181,7 @@
         <h5 class="mb-0 text-primary">آخرین مطالب</h5>
       </div>
       <div class="row">
-        <div class="col-md-6">
-          <a href="<?php print $node13->field_link['und'][0]['url'] ?>" class="items_text border_image items">
-            <img src="<?php print image_style_url("555x300", $node13->field_image['und'][0]['uri']); ?>" alt="">
-            <div class="caption_wrap">
-              <div class="caption">
-                <h4><?php print $node13->title; ?></h4>
-                <span><?php print $node13->field_tozih['und'][0]['value']; ?></span>
-              </div>
-            </div>
-            <div class="line_effect"><span class="lineInner"></span></div>
-          </a>
-        </div>
-        <div class="col-md-6">
-          <a href="<?php print $node14->field_link['und'][0]['url']; ?>" class="items_text border_image items">
-            <img src="<?php print image_style_url("555x300", $node14->field_image['und'][0]['uri']); ?>" alt="">
-            <div class="caption_wrap">
-              <div class="caption">
-                <h4><?php print $node14->title; ?></h4>
-                <span><?php print $node14->field_tozih['und'][0]['value']; ?></span>
-              </div>
-            </div>
-            <div class="line_effect"><span class="lineInner"></span></div>
-          </a>
-        </div>
-        <div class="col-md-6 mt-3">
-          <a href="<?php print $node5->field_link['und'][0]['url']; ?>" class="items_text border_image items">
-            <img src="<?php print image_style_url("555x300", $node5->field_image['und'][0]['uri']); ?>" alt="">
-            <div class="caption_wrap">
-              <div class="caption">
-                <h4><?php print $node5->title; ?></h4>
-              </div>
-            </div>
-            <div class="line_effect"><span class="lineInner"></span></div>
-          </a>
-        </div>
-        <div class="col-md-6 mt-3">
-          <a href="<?php print $node6->field_link['und'][0]['url']; ?>" class="items_text border_image items">
-            <img src="<?php print image_style_url("555x300", $node6->field_image['und'][0]['uri']); ?>" alt="">
-            <div class="caption_wrap">
-              <div class="caption">
-                <h4><?php print $node6->title; ?></h4>
-              </div>
-            </div>
-            <div class="line_effect"><span class="lineInner"></span></div>
-          </a>
-        </div>
+        <?php print views_embed_view('latest', 'blockk'); ?>
       </div>
     </div>
   </section>
@@ -419,6 +370,11 @@
   #last .items_text .caption {
     top: auto;
     bottom: 1.25rem
+  }
+  #last .items_text .caption h4 {
+    line-height: 20px;
+    height: 40px;
+    overflow: hidden;
   }
   #last .items_text .caption_wrap {
     top: 0.3125rem;

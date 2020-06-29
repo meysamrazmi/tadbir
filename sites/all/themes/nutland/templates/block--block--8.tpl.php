@@ -54,65 +54,9 @@
   <?php endif;?>
   <?php print render($title_suffix); ?>
 
-
-  <?php
-  ?>
-
-  <?php
-  $node1 = node_load(41);
-  $node2 = node_load(42);
-  $node3 = node_load(43);
-  $node4 = node_load(44);
-  $node5 = node_load(50);
-//  $node6 = node_load(51);
-  $node7 = node_load(53);
-  $node8 = node_load(49);
-  //    print $node->title;
-  //    print '<img src="'. image_style_url("320x320", $node->field_image['und'][0]['uri']) .'">';
-  ?>
   <section>
     <div class="subsets">
-      <a href="<?php print $node1->field_link['und'][0]['url']; ?>" class="">
-        <img src="<?php print image_style_url("320x320", $node1->field_image['und'][0]['uri']); ?>" alt="">
-        <div class="caption"><?php print $node1->title; ?></div>
-      </a>
-
-
-      <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="">
-        <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
-        <div class="caption"><?php print $node2->title; ?></div>
-      </a>
-
-
-      <a href="<?php print $node3->field_link['und'][0]['url']; ?>" class="">
-        <img src="<?php print image_style_url("320x320", $node3->field_image['und'][0]['uri']); ?>" alt="">
-        <div class="caption"><?php print $node3->title; ?></div>
-      </a>
-
-
-      <a href="<?php print $node4->field_link['und'][0]['url']; ?>" class="">
-        <img src="<?php print image_style_url("320x320", $node4->field_image['und'][0]['uri']); ?>" alt="">
-        <div class="caption"><?php print $node4->title; ?></div>
-      </a>
-
-
-      <a href="<?php print $node5->field_link['und'][0]['url']; ?>" class="">
-        <img src="<?php print image_style_url("320x320", $node5->field_image['und'][0]['uri']); ?>" alt="">
-        <div class="caption"><?php print $node5->title; ?></div>
-      </a>
-
-
-      <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="">
-        <img src="<?php print image_style_url("320x320", $node7->field_image['und'][0]['uri']); ?>" alt="">
-        <div class="caption"><?php print $node7->title; ?></div>
-      </a>
-
-
-      <a href="<?php print $node8->field_link['und'][0]['url']; ?>" class="">
-        <img src="<?php print image_style_url("320x320", $node8->field_image['und'][0]['uri']); ?>" alt="">
-        <div class="caption"><?php print $node8->title; ?></div>
-      </a>
-
+      <?php print views_embed_view('ubsets', 'blockk'); ?>
     </div>
   </section>
 
@@ -124,9 +68,4 @@
       transition: all 0.3s ease;
     }
   </style>
-  <script>
-    // $('.subset-link, #useroverlay').click(function(){
-    //   $('.subset-link').toggleClass('open');
-    //   $('#block-block-9').toggleClass('open');
-    // })
-  </script>
+
