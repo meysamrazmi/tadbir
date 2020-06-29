@@ -62,6 +62,9 @@
   <title><?php print $head_title; ?></title>
   <?php print $styles; ?>
   <link type="text/css" rel="stylesheet" href="https://cdn.materialdesignicons.com/4.2.95/css/materialdesignicons.min.css" media="all">
+  <script src="/sites/all/libraries/persiandatepicker/moment.min.js"></script>
+  <script src="/sites/all/libraries/persiandatepicker/moment-jalaali.js"></script>
+  <link type="text/css" rel="stylesheet" href="/sites/all/libraries/persiandatepicker/persianDatepicker-default.css" />
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
     <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>

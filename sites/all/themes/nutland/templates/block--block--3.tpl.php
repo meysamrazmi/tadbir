@@ -55,12 +55,21 @@
   <?php print render($title_suffix); ?>
 
   <div id="block3">
-
     <section id="sectionBanner">
       <div class="container" style="padding: 25px 10px;">
         <div class="caption_slide">
           <div class="caption_write">
-            <h1>مرکز اخبار</h1>
+            <?php
+              $alias = drupal_get_path_alias();
+              switch ($alias){
+                case 'projects':
+                  print "<h1>پروژه ها</h1>";
+                  break;
+                case 'news':
+                  print "<h1>مرکز اخبار</h1>";
+                  break;
+              }
+            ?>
           </div>
         </div>
       </div>
@@ -69,7 +78,15 @@
 
 </section>
 <?php
-$node = node_load(91);
+  $node = node_load(91);
+  switch ($alias){
+    case 'projects':
+      $node = node_load(122);
+      break;
+    case 'news':
+      $node = node_load(91);
+      break;
+  }
 ?>
 <style>
   #block-block-3{

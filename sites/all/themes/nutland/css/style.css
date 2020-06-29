@@ -9454,130 +9454,139 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   top: 80px;
 }
 
-.page-news {
-  background: white;
-}
-.page-news #block-system-main {
-  margin-top: 15px;
-  padding: 0 10px;
-}
-.page-news #block-system-main .view-content {
+.news-type .view-content {
   border-top: 1px solid #ccc;
 }
-.page-news #block-system-main .view-content .items {
+@media (max-width: 600px) {
+  .news-type .view-content {
+    text-align: -webkit-center;
+    margin: 0px 15px;
+  }
+}
+@media (max-width: 450px) {
+  .news-type .view-content {
+    text-align: right !important;
+  }
+}
+.news-type .view-content .items {
   display: inline-block;
   max-width: 250px;
   height: 220px !important;
   float: right;
   margin-left: 15px;
 }
-.page-news #block-system-main .view-content .items:before {
+@media (max-width: 600px) {
+  .news-type .view-content .items {
+    float: none !important;
+  }
+}
+.news-type .view-content .items:before {
   height: 215px;
 }
-.page-news #block-system-main .view-content .items:after {
+.news-type .view-content .items:after {
   height: 220px;
 }
-.page-news #block-system-main .view-content .items .line_effect {
+.news-type .view-content .items .line_effect {
   max-width: 250px;
   height: 215px;
 }
-.page-news #block-system-main .view-content .views-row {
+@media (max-width: 450px) {
+  .news-type .view-content .items {
+    float: right !important;
+    max-width: 150px !important;
+  }
+  .news-type .view-content .items .line_effect {
+    height: 127px !important;
+  }
+  .news-type .view-content .items:before {
+    height: 127px !important;
+  }
+  .news-type .view-content .items:after {
+    height: 133px !important;
+  }
+}
+.news-type .view-content .views-row {
   display: inline-block;
   border-bottom: 1px solid #ccc;
   padding: 30px 0;
   width: 100%;
 }
-.page-news #block-system-main .view-content .views-row a {
+.news-type .view-content .views-row a {
   text-decoration: none;
 }
-.page-news #block-system-main .view-content .views-row img {
+.news-type .view-content .views-row img {
   float: right;
   min-width: 250px;
   margin-left: 25px;
 }
-.page-news #block-system-main .view-content .views-row .views-field-field-news-category {
-  margin-bottom: 10px;
-}
-.page-news #block-system-main .view-content .views-row .views-field-field-news-category a {
-  color: #00247c !important;
-}
-.page-news #block-system-main .view-content .views-row .views-field-title {
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.page-news #block-system-main .view-content .views-row .views-field-title a {
-  color: black !important;
-}
-.page-news #block-system-main .view-content .views-row .views-field-field-kholase, .page-news #block-system-main .view-content .views-row .views-field-created {
-  color: #a2a2a2;
-  font-weight: 300;
-  text-align: justify;
-}
-.page-news #block-system-main .view-content .views-row .views-field-created {
-  float: left;
-}
 @media (max-width: 600px) {
-  .page-news #block-system-main {
-    margin-top: 0px !important;
-    padding: 0 !important;
-  }
-  .page-news .view-content {
-    text-align: -webkit-center;
-    margin: 0px 15px;
-  }
-  .page-news .view-content .items {
-    float: none !important;
-  }
-  .page-news .view-content .views-row .views-field-created {
-    display: none !important;
-  }
-  .page-news .view-content .views-row img {
+  .news-type .view-content .views-row img {
     float: none !important;
     margin-left: 0 !important;
     margin-bottom: 25px;
   }
-  .page-news .form-type-textfield {
-    width: 100% !important;
-  }
 }
-@media (min-width: 320px) and (max-width: 450px) {
-  .page-news .view-content {
-    text-align: right !important;
-  }
-  .page-news .view-content .items {
-    float: right !important;
-    max-width: 150px !important;
-  }
-  .page-news .view-content .items .line_effect {
-    height: 127px !important;
-  }
-  .page-news .view-content .items:before {
-    height: 127px !important;
-  }
-  .page-news .view-content .items:after {
-    height: 133px !important;
-  }
-  .page-news .view-content .views-row .views-field-created {
+.news-type .view-content .views-row .news-type-category {
+  margin-bottom: 10px;
+}
+.news-type .view-content .views-row .news-type-category a {
+  color: #00247c !important;
+}
+.news-type .view-content .views-row .views-field-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.news-type .view-content .views-row .views-field-title a {
+  color: black !important;
+}
+.news-type .view-content .views-row .news-type-body,
+.news-type .view-content .views-row .views-field-created {
+  color: #a2a2a2;
+  font-weight: 300;
+  text-align: justify;
+}
+.news-type .view-content .views-row .views-field-created {
+  float: left;
+}
+@media (max-width: 600px) {
+  .news-type .view-content .views-row .views-field-created {
     display: none !important;
   }
-  .page-news .view-content .views-row img {
+}
+@media (max-width: 450px) {
+  .news-type .view-content .views-row .views-field-created {
+    display: none !important;
+  }
+  .news-type .view-content .views-row img {
     float: none !important;
     margin-left: 0 !important;
     margin-bottom: 25px;
     min-width: 150px !important;
   }
-  .page-news .view-content .views-row .views-field-field-kholase {
+  .news-type .view-content .views-row .news-type-body {
     float: right;
     margin-top: -50px;
   }
-  .page-news .form-type-textfield {
+}
+@media (max-width: 600px) {
+  .news-type .view-content .form-type-textfield {
     width: 100% !important;
   }
 }
 
-.page-videos, .page-gallery {
-  background: white;
+.page-projects #block-system-main,
+.page-news #block-system-main {
+  margin-top: 15px;
+  padding: 0 10px;
 }
+@media (max-width: 600px) {
+  .page-projects #block-system-main,
+.page-news #block-system-main {
+    margin-top: 0px !important;
+    padding: 0 !important;
+  }
+}
+
 .page-videos #block-system-main, .page-gallery #block-system-main {
   margin-top: 15px;
 }
@@ -10918,79 +10927,98 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
 }
 
+.page-projects,
 .page-news, .page-gallery, .page-videos {
   overflow-x: hidden;
 }
+.page-projects .page-header,
 .page-news .page-header, .page-gallery .page-header, .page-videos .page-header {
   display: none;
 }
+.page-projects .view-header,
 .page-news .view-header, .page-gallery .view-header, .page-videos .view-header {
   order: 1;
   text-align: left;
-  max-width: 1000px;
   margin: auto;
   width: 100%;
 }
+.page-projects .view,
 .page-news .view, .page-gallery .view, .page-videos .view {
   display: flex;
   flex-direction: column;
 }
+.page-projects .view .view-content,
 .page-news .view .view-content, .page-gallery .view .view-content, .page-videos .view .view-content {
   order: 2;
 }
+.page-projects .main-container .pagination li.active span,
 .page-news .main-container .pagination li.active span, .page-gallery .main-container .pagination li.active span, .page-videos .main-container .pagination li.active span {
   background: #00247a;
   color: white;
 }
+.page-projects .main-container .pagination a:hover,
 .page-news .main-container .pagination a:hover, .page-gallery .main-container .pagination a:hover, .page-videos .main-container .pagination a:hover {
   background: #00247a;
   color: white;
 }
-.page-news .main-container .pagination span, .page-news .main-container .pagination a, .page-gallery .main-container .pagination span, .page-gallery .main-container .pagination a, .page-videos .main-container .pagination span, .page-videos .main-container .pagination a {
+.page-projects .main-container .pagination span, .page-projects .main-container .pagination a,
+.page-news .main-container .pagination span,
+.page-news .main-container .pagination a, .page-gallery .main-container .pagination span, .page-gallery .main-container .pagination a, .page-videos .main-container .pagination span, .page-videos .main-container .pagination a {
   background: #eee;
   border: none;
   color: black;
   border-radius: 0;
   margin: 0 5px;
 }
+.page-projects .main-container .view-filters,
 .page-news .main-container .view-filters, .page-gallery .main-container .view-filters, .page-videos .main-container .view-filters {
   margin-bottom: 30px;
   padding-bottom: 15px;
   order: 0;
 }
+.page-projects .main-container .view-filters form,
 .page-news .main-container .view-filters form, .page-gallery .main-container .view-filters form, .page-videos .main-container .view-filters form {
   background-color: #eee;
   padding: 5px 0;
   max-width: 1115px;
   font-weight: bold;
 }
+.page-projects .main-container .view-filters form .filter,
 .page-news .main-container .view-filters form .filter, .page-gallery .main-container .view-filters form .filter, .page-videos .main-container .view-filters form .filter {
   display: none;
 }
+.page-projects .main-container .view-filters form .views-exposed-widgets,
 .page-news .main-container .view-filters form .views-exposed-widgets, .page-gallery .main-container .view-filters form .views-exposed-widgets, .page-videos .main-container .view-filters form .views-exposed-widgets {
   margin-bottom: 0 !important;
 }
+.page-projects .main-container .view-filters form label,
 .page-news .main-container .view-filters form label, .page-gallery .main-container .view-filters form label, .page-videos .main-container .view-filters form label {
   display: none !important;
 }
-.page-news .main-container .view-filters form .form-control, .page-news .main-container .view-filters form .form-item-created-max, .page-gallery .main-container .view-filters form .form-control, .page-gallery .main-container .view-filters form .form-item-created-max, .page-videos .main-container .view-filters form .form-control, .page-videos .main-container .view-filters form .form-item-created-max {
+.page-projects .main-container .view-filters form .form-control, .page-projects .main-container .view-filters form .form-item-created-max,
+.page-news .main-container .view-filters form .form-control,
+.page-news .main-container .view-filters form .form-item-created-max, .page-gallery .main-container .view-filters form .form-control, .page-gallery .main-container .view-filters form .form-item-created-max, .page-videos .main-container .view-filters form .form-control, .page-videos .main-container .view-filters form .form-item-created-max {
   width: 195px;
   border-radius: 0 !important;
 }
-.page-news .main-container .view-filters form #edit-submit-videos, .page-news .main-container .view-filters form #edit-submit-gallery, .page-news .main-container .view-filters form #edit-submit-news, .page-gallery .main-container .view-filters form #edit-submit-videos, .page-gallery .main-container .view-filters form #edit-submit-gallery, .page-gallery .main-container .view-filters form #edit-submit-news, .page-videos .main-container .view-filters form #edit-submit-videos, .page-videos .main-container .view-filters form #edit-submit-gallery, .page-videos .main-container .view-filters form #edit-submit-news {
+.page-projects .main-container .view-filters form [id^=edit-submit-],
+.page-news .main-container .view-filters form [id^=edit-submit-], .page-gallery .main-container .view-filters form [id^=edit-submit-], .page-videos .main-container .view-filters form [id^=edit-submit-] {
   background-color: #00247a;
   border-color: #00247a;
   font-size: 0;
 }
-.page-news .main-container .view-filters form #edit-submit-videos:before, .page-news .main-container .view-filters form #edit-submit-gallery:before, .page-news .main-container .view-filters form #edit-submit-news:before, .page-gallery .main-container .view-filters form #edit-submit-videos:before, .page-gallery .main-container .view-filters form #edit-submit-gallery:before, .page-gallery .main-container .view-filters form #edit-submit-news:before, .page-videos .main-container .view-filters form #edit-submit-videos:before, .page-videos .main-container .view-filters form #edit-submit-gallery:before, .page-videos .main-container .view-filters form #edit-submit-news:before {
+.page-projects .main-container .view-filters form [id^=edit-submit-]:before,
+.page-news .main-container .view-filters form [id^=edit-submit-]:before, .page-gallery .main-container .view-filters form [id^=edit-submit-]:before, .page-videos .main-container .view-filters form [id^=edit-submit-]:before {
   content: "";
   font-family: "Glyphicons Halflings";
   font-size: 16px;
   color: white;
 }
+.page-projects .main-container .view-filters form #edit-created-wrapper .form-type-textfield,
 .page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield, .page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield, .page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield {
   display: inline-flex;
 }
+.page-projects .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
 .page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after, .page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after, .page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after {
   content: "";
   font-family: "Glyphicons Halflings";
@@ -11000,26 +11028,34 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: #807d7d;
 }
 @media (min-width: 320px) and (max-width: 600px) {
-  .page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
+  .page-projects .main-container form,
+.page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
     padding: 5px 15px !important;
     width: 100vw;
     margin-right: calc(50% - 50vw);
   }
-  .page-news .main-container form .filter + div > .views-exposed-form, .page-gallery .main-container form .filter + div > .views-exposed-form, .page-videos .main-container form .filter + div > .views-exposed-form {
+  .page-projects .main-container form .filter + div > .views-exposed-form,
+.page-news .main-container form .filter + div > .views-exposed-form, .page-gallery .main-container form .filter + div > .views-exposed-form, .page-videos .main-container form .filter + div > .views-exposed-form {
     display: none;
   }
-  .page-news .main-container form .form-item-created-min, .page-news .main-container form .form-item-created-max, .page-gallery .main-container form .form-item-created-min, .page-gallery .main-container form .form-item-created-max, .page-videos .main-container form .form-item-created-min, .page-videos .main-container form .form-item-created-max {
+  .page-projects .main-container form .form-item-created-min, .page-projects .main-container form .form-item-created-max,
+.page-news .main-container form .form-item-created-min,
+.page-news .main-container form .form-item-created-max, .page-gallery .main-container form .form-item-created-min, .page-gallery .main-container form .form-item-created-max, .page-videos .main-container form .form-item-created-min, .page-videos .main-container form .form-item-created-max {
     width: 50% !important;
   }
-  .page-news .main-container form .form-item-body-value input, .page-news .main-container form .form-item-field-body-value input, .page-gallery .main-container form .form-item-body-value input, .page-gallery .main-container form .form-item-field-body-value input, .page-videos .main-container form .form-item-body-value input, .page-videos .main-container form .form-item-field-body-value input {
+  .page-projects .main-container form .form-item-body-value input, .page-projects .main-container form .form-item-field-body-value input,
+.page-news .main-container form .form-item-body-value input,
+.page-news .main-container form .form-item-field-body-value input, .page-gallery .main-container form .form-item-body-value input, .page-gallery .main-container form .form-item-field-body-value input, .page-videos .main-container form .form-item-body-value input, .page-videos .main-container form .form-item-field-body-value input {
     max-width: 83%;
   }
-  .page-news .main-container .filter, .page-gallery .main-container .filter, .page-videos .main-container .filter {
+  .page-projects .main-container .filter,
+.page-news .main-container .filter, .page-gallery .main-container .filter, .page-videos .main-container .filter {
     padding: 10px 15px 5px 0;
     position: relative;
     display: block !important;
   }
-  .page-news .main-container .filter strong:before, .page-gallery .main-container .filter strong:before, .page-videos .main-container .filter strong:before {
+  .page-projects .main-container .filter strong:before,
+.page-news .main-container .filter strong:before, .page-gallery .main-container .filter strong:before, .page-videos .main-container .filter strong:before {
     content: "";
     position: absolute;
     width: calc(100% - 100px);
@@ -11028,7 +11064,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     right: 65px;
     top: 20px;
   }
-  .page-news .main-container .filter strong:after, .page-gallery .main-container .filter strong:after, .page-videos .main-container .filter strong:after {
+  .page-projects .main-container .filter strong:after,
+.page-news .main-container .filter strong:after, .page-gallery .main-container .filter strong:after, .page-videos .main-container .filter strong:after {
     content: "";
     font-family: "Glyphicons Halflings";
     position: absolute;
@@ -11036,12 +11073,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     margin-left: 15px;
     font-weight: normal;
   }
-  .page-news .main-container .views-submit-button, .page-gallery .main-container .views-submit-button, .page-videos .main-container .views-submit-button {
+  .page-projects .main-container .views-submit-button,
+.page-news .main-container .views-submit-button, .page-gallery .main-container .views-submit-button, .page-videos .main-container .views-submit-button {
     float: left !important;
     width: inherit !important;
     margin-bottom: -50px;
   }
-  .page-news .main-container .views-submit-button button, .page-gallery .main-container .views-submit-button button, .page-videos .main-container .views-submit-button button {
+  .page-projects .main-container .views-submit-button button,
+.page-news .main-container .views-submit-button button, .page-gallery .main-container .views-submit-button button, .page-videos .main-container .views-submit-button button {
     border-radius: 0;
     position: relative;
     bottom: 50px;
@@ -11050,38 +11089,58 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
 }
 @media (max-width: 767px) {
-  .page-news .main-container .view-filters .form-item-created-min, .page-news .main-container .view-filters .form-item-created-max, .page-gallery .main-container .view-filters .form-item-created-min, .page-gallery .main-container .view-filters .form-item-created-max, .page-videos .main-container .view-filters .form-item-created-min, .page-videos .main-container .view-filters .form-item-created-max {
+  .page-projects .main-container .view-filters .form-item-created-min, .page-projects .main-container .view-filters .form-item-created-max,
+.page-news .main-container .view-filters .form-item-created-min,
+.page-news .main-container .view-filters .form-item-created-max, .page-gallery .main-container .view-filters .form-item-created-min, .page-gallery .main-container .view-filters .form-item-created-max, .page-videos .main-container .view-filters .form-item-created-min, .page-videos .main-container .view-filters .form-item-created-max {
     width: 50% !important;
   }
-  .page-news .main-container .view-filters #edit-title-wrapper, .page-news .main-container .view-filters #edit-field-video-category-tid-wrapper, .page-news .main-container .view-filters #edit-body-value-wrapper,
-.page-news .main-container .view-filters #edit-field-news-category-tid-wrapper, .page-news .main-container .view-filters #edit-field-category-tid-wrapper, .page-news .main-container .view-filters #edit-field-body-value-wrapper, .page-gallery .main-container .view-filters #edit-title-wrapper, .page-gallery .main-container .view-filters #edit-field-video-category-tid-wrapper, .page-gallery .main-container .view-filters #edit-body-value-wrapper,
-.page-gallery .main-container .view-filters #edit-field-news-category-tid-wrapper, .page-gallery .main-container .view-filters #edit-field-category-tid-wrapper, .page-gallery .main-container .view-filters #edit-field-body-value-wrapper, .page-videos .main-container .view-filters #edit-title-wrapper, .page-videos .main-container .view-filters #edit-field-video-category-tid-wrapper, .page-videos .main-container .view-filters #edit-body-value-wrapper,
-.page-videos .main-container .view-filters #edit-field-news-category-tid-wrapper, .page-videos .main-container .view-filters #edit-field-category-tid-wrapper, .page-videos .main-container .view-filters #edit-field-body-value-wrapper {
+  .page-projects .main-container .view-filters #edit-title-wrapper,
+.page-projects .main-container .view-filters #edit-body-value-wrapper,
+.page-projects .main-container .view-filters [id^=edit-field-],
+.page-news .main-container .view-filters #edit-title-wrapper,
+.page-news .main-container .view-filters #edit-body-value-wrapper,
+.page-news .main-container .view-filters [id^=edit-field-], .page-gallery .main-container .view-filters #edit-title-wrapper,
+.page-gallery .main-container .view-filters #edit-body-value-wrapper,
+.page-gallery .main-container .view-filters [id^=edit-field-], .page-videos .main-container .view-filters #edit-title-wrapper,
+.page-videos .main-container .view-filters #edit-body-value-wrapper,
+.page-videos .main-container .view-filters [id^=edit-field-] {
     width: 98%;
   }
-  .page-news .main-container .view-filters .form-control, .page-gallery .main-container .view-filters .form-control, .page-videos .main-container .view-filters .form-control {
+  .page-projects .main-container .view-filters .form-control,
+.page-news .main-container .view-filters .form-control, .page-gallery .main-container .view-filters .form-control, .page-videos .main-container .view-filters .form-control {
     width: 100% !important;
   }
-  .page-news .main-container .view-filters #edit-created-wrapper, .page-gallery .main-container .view-filters #edit-created-wrapper, .page-videos .main-container .view-filters #edit-created-wrapper {
+  .page-projects .main-container .view-filters #edit-created-wrapper,
+.page-news .main-container .view-filters #edit-created-wrapper, .page-gallery .main-container .view-filters #edit-created-wrapper, .page-videos .main-container .view-filters #edit-created-wrapper {
     width: 100%;
   }
-  .page-news .main-container .view-filters #edit-created-wrapper .form-type-textfield, .page-gallery .main-container .view-filters #edit-created-wrapper .form-type-textfield, .page-videos .main-container .view-filters #edit-created-wrapper .form-type-textfield {
+  .page-projects .main-container .view-filters #edit-created-wrapper .form-type-textfield,
+.page-news .main-container .view-filters #edit-created-wrapper .form-type-textfield, .page-gallery .main-container .view-filters #edit-created-wrapper .form-type-textfield, .page-videos .main-container .view-filters #edit-created-wrapper .form-type-textfield {
     margin: 5px 0 !important;
   }
-  .page-news .main-container .view-filters .form-item-field-video-category-tid, .page-news .main-container .view-filters .form-item-field-video-category-tid, .page-news .main-container .view-filters .form-item-field-category-tid, .page-gallery .main-container .view-filters .form-item-field-video-category-tid, .page-gallery .main-container .view-filters .form-item-field-video-category-tid, .page-gallery .main-container .view-filters .form-item-field-category-tid, .page-videos .main-container .view-filters .form-item-field-video-category-tid, .page-videos .main-container .view-filters .form-item-field-video-category-tid, .page-videos .main-container .view-filters .form-item-field-category-tid {
+  .page-projects .main-container .view-filters .form-item-field-video-category-tid, .page-projects .main-container .view-filters .form-item-field-video-category-tid, .page-projects .main-container .view-filters .form-item-field-category-tid,
+.page-news .main-container .view-filters .form-item-field-video-category-tid,
+.page-news .main-container .view-filters .form-item-field-video-category-tid,
+.page-news .main-container .view-filters .form-item-field-category-tid, .page-gallery .main-container .view-filters .form-item-field-video-category-tid, .page-gallery .main-container .view-filters .form-item-field-video-category-tid, .page-gallery .main-container .view-filters .form-item-field-category-tid, .page-videos .main-container .view-filters .form-item-field-video-category-tid, .page-videos .main-container .view-filters .form-item-field-video-category-tid, .page-videos .main-container .view-filters .form-item-field-category-tid {
     margin-bottom: 0 !important;
   }
-  .page-news .main-container .view-filters #edit-created-min, .page-gallery .main-container .view-filters #edit-created-min, .page-videos .main-container .view-filters #edit-created-min {
+  .page-projects .main-container .view-filters #edit-created-min,
+.page-news .main-container .view-filters #edit-created-min, .page-gallery .main-container .view-filters #edit-created-min, .page-videos .main-container .view-filters #edit-created-min {
     margin-bottom: 5px;
   }
-  .page-news .main-container .view-filters .views-submit-button, .page-gallery .main-container .view-filters .views-submit-button, .page-videos .main-container .view-filters .views-submit-button {
+  .page-projects .main-container .view-filters .views-submit-button,
+.page-news .main-container .view-filters .views-submit-button, .page-gallery .main-container .view-filters .views-submit-button, .page-videos .main-container .view-filters .views-submit-button {
     width: 100%;
   }
-  .page-news .main-container .view-filters .views-submit-button #edit-submit-videos, .page-news .main-container .view-filters .views-submit-button #edit-submit-gallery, .page-news .main-container .view-filters .views-submit-button #edit-submit-news, .page-gallery .main-container .view-filters .views-submit-button #edit-submit-videos, .page-gallery .main-container .view-filters .views-submit-button #edit-submit-gallery, .page-gallery .main-container .view-filters .views-submit-button #edit-submit-news, .page-videos .main-container .view-filters .views-submit-button #edit-submit-videos, .page-videos .main-container .view-filters .views-submit-button #edit-submit-gallery, .page-videos .main-container .view-filters .views-submit-button #edit-submit-news {
+  .page-projects .main-container .view-filters .views-submit-button [id^=edit-submit-],
+.page-news .main-container .view-filters .views-submit-button [id^=edit-submit-], .page-gallery .main-container .view-filters .views-submit-button [id^=edit-submit-], .page-videos .main-container .view-filters .views-submit-button [id^=edit-submit-] {
     width: 98%;
     margin-bottom: 15px;
   }
-  .page-news .main-container #block-block-3,
+  .page-projects .main-container #block-block-3,
+.page-projects .main-container #block-block-4,
+.page-projects .main-container #block-block-7,
+.page-news .main-container #block-block-3,
 .page-news .main-container #block-block-4,
 .page-news .main-container #block-block-7, .page-gallery .main-container #block-block-3,
 .page-gallery .main-container #block-block-4,
@@ -11092,26 +11151,35 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
 }
 @media (min-width: 1000px) and (max-width: 1200px) {
-  .page-news .main-container .form-control, .page-news .main-container .form-item-created-max, .page-gallery .main-container .form-control, .page-gallery .main-container .form-item-created-max, .page-videos .main-container .form-control, .page-videos .main-container .form-item-created-max {
+  .page-projects .main-container .form-control, .page-projects .main-container .form-item-created-max,
+.page-news .main-container .form-control,
+.page-news .main-container .form-item-created-max, .page-gallery .main-container .form-control, .page-gallery .main-container .form-item-created-max, .page-videos .main-container .form-control, .page-videos .main-container .form-item-created-max {
     width: 158px !important;
   }
-  .page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
+  .page-projects .main-container form,
+.page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
     max-width: 920px !important;
   }
 }
 @media (min-width: 991px) and (max-width: 1000px) {
-  .page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
+  .page-projects .main-container form,
+.page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
     width: 920px !important;
   }
-  .page-news .main-container form .form-control, .page-news .main-container form .form-item-created-max, .page-gallery .main-container form .form-control, .page-gallery .main-container form .form-item-created-max, .page-videos .main-container form .form-control, .page-videos .main-container form .form-item-created-max {
+  .page-projects .main-container form .form-control, .page-projects .main-container form .form-item-created-max,
+.page-news .main-container form .form-control,
+.page-news .main-container form .form-item-created-max, .page-gallery .main-container form .form-control, .page-gallery .main-container form .form-item-created-max, .page-videos .main-container form .form-control, .page-videos .main-container form .form-item-created-max {
     width: 125px !important;
   }
 }
 @media (min-width: 768px) and (max-width: 990px) {
-  .page-news .main-container .form-control, .page-news .main-container .form-item-created-max, .page-gallery .main-container .form-control, .page-gallery .main-container .form-item-created-max, .page-videos .main-container .form-control, .page-videos .main-container .form-item-created-max {
+  .page-projects .main-container .form-control, .page-projects .main-container .form-item-created-max,
+.page-news .main-container .form-control,
+.page-news .main-container .form-item-created-max, .page-gallery .main-container .form-control, .page-gallery .main-container .form-item-created-max, .page-videos .main-container .form-control, .page-videos .main-container .form-item-created-max {
     width: 110px !important;
   }
-  .page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
+  .page-projects .main-container form,
+.page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
     max-width: 700px !important;
   }
 }
@@ -12068,6 +12136,55 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 
 .ui-widget {
   font-family: dana;
+}
+
+.pdp-default {
+  transform: scale(1.15);
+}
+
+.pdp-default .pdp-header {
+  height: 25px !important;
+  font-size: 14px !important;
+  border: none;
+  background: #f5f5f5;
+}
+
+.pdp-default .dows {
+  background: #fff;
+  color: #555;
+}
+
+.pdp-default .dow {
+  font-family: dana;
+  border: none;
+  height: 30px !important;
+  line-height: 30px !important;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+
+.pdp-default .days {
+  border: none;
+}
+
+.pdp-default .day {
+  border: none;
+}
+
+.pdp-default .nul {
+  background: #fff;
+  border: navajowhite;
+}
+
+.pdp-default .pdp-footer {
+  background: #eee;
+  height: 25px !important;
+}
+
+.pdp-default .pdp-footer .goToday {
+  color: #555;
+  font-family: dana;
+  padding: 5px;
 }
 
 @font-face {

@@ -1,7 +1,9 @@
 var $ = jQuery;
 function videoPlay(event) {
-  let player = new MediaElementPlayer('.active video');
-  player.play();
+  if($(".active video").length){
+    let player = new MediaElementPlayer('.active video');
+    player.play();
+  }
 }
 
 //show collapse menu
@@ -35,8 +37,8 @@ $(document).ready(function(){
     $('#block-block-9').toggleClass('open');
     $('#useroverlay').toggleClass("open");
   })
-  $(".left-menu ul li i.mdi-magnify").click(function(){
-    $(this).toggleClass("mdi-close mdi-magnify");
+  $(".left-menu ul li").click(function(){
+    $(this).find('i').toggleClass("mdi-close mdi-magnify");
     $(".form-search-menu").toggleClass("open");
     $('#useroverlay').toggleClass("open");
   });
@@ -63,8 +65,8 @@ $(document).ready(function(){
   $(".page-videos , .page-gallery").ready(function () {
     $(".page-videos #block-system-main .view-content, .page-gallery #block-system-main .view-content").append('<div class="views-row"></div><div class="views-row"></div>');
   });
-  $(".page-news").ready(function () {
-    $(".view-content .views-field-field-news-image").addClass("items");
+  $(".news-type-image").each(function () {
+    $(this).parent().addClass("items");
   });
 
   $(".node-type-news").ready(function () {
@@ -84,35 +86,48 @@ $(document).ready(function(){
 
 });
 // search box in page news
-$(".page-news .view-filters").ready(function(){
+$(".view-filters").ready(function(){
   $("#edit-title").attr("placeholder", "کلمه مورد نظر را جستجو کنید");
   $("#edit-body-value").attr("placeholder", "در تمامی محتواها");
-  // $("input#edit-created-min").attr({ "value":" ", "placeholder": "از تاریخ"});
-  // $("input#edit-created-max").attr({ "value":" ", "placeholder": "تا تاریخ"});
-  $.getScript("/sites/all/libraries/persiandatepicker/persian-date.min.js").done(function(){
-    $.getScript("/sites/all/libraries/persiandatepicker/persian-datepicker.min.js").done(function(){
-      $("input#edit-created-min, input#edit-created-max").blur(function () {
+  $("input#edit-created-min, input#edit-created-max").each(function(){
+    if($(this).val().indexOf('/') > -1)
+      $(this).val(moment($(this).val(), 'MM/DD/YYYY').format('YYYY-MM-DD'));
+  })
+  $.getScript("/sites/all/libraries/persiandatepicker/persianDatepicker.js").done(function(){
+    $("#block-system-main").on("mouseenter", "input#edit-created-min, input#edit-created-max", function () {
+      if(!$(this).hasClass('onn')){
+        $(this).addClass('onn');
+        $(this).blur();
+        let a = moment($(this).val(), 'YYYY-MM-DD').format('jYYYY-jMM-jDD');
+        console.log(a);
         $(this).persianDatepicker({
-          observer: true,
-          format: 'YYYY/MM/DD',
-          altField: '.observer-example-alt',
+          showGregorianDate: true,
+          // selectedDate: a,
+          persianNumbers: false,
+          formatDate: 'YYYY-MM-DD',
         });
-      });
+      }
     });
+
   });
 });
 //birthday
 
 $(".page-node-5").ready(function(){
-  $.getScript("/sites/all/libraries/persiandatepicker/persian-date.min.js").done(function(){
-    $.getScript("/sites/all/libraries/persiandatepicker/persian-datepicker.min.js").done(function(){
-      $("input#edit-submitted-date").blur(function () {
+  $.getScript("/sites/all/libraries/persiandatepicker/persianDatepicker.js").done(function(){
+    $("#block-system-main").on("mouseenter", "input#edit-submitted-date", function () {
+      if(!$(this).hasClass('onn')){
+        $(this).addClass('onn');
+        $(this).blur();
+        let a = moment($(this).val(), 'YYYY-MM-DD').format('jYYYY-jMM-jDD');
+        console.log(a);
         $(this).persianDatepicker({
-          observer: true,
-          format: 'YYYY/MM/DD',
-          altField: '.observer-example-alt',
+          showGregorianDate: true,
+          // selectedDate: a,
+          persianNumbers: false,
+          formatDate: 'YYYY-MM-DD',
         });
-      });
+      }
     });
   });
 });
@@ -177,12 +192,12 @@ $(".node-type-projects.not-front").ready(function () {
 //carousel in node subset
 $(".node-type-subset.not-front").ready(function () {
   $(".field-name-field-title").click(function(){
-    $(this).parent().children().last().toggle();
+    $(this).parent().find("> *:not(.field-name-field-title)").last().toggle();
   });
   $(".field-name-field-tarh .items").prepend("<div class='line_effect'><span class='lineInner'></span></div>");
-  $(".group-footer .group-top   .field-type-image .field-items .field-item").addClass("items");
   $(".field-name-field-slider-main .field-items img").each(function(){
-    $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title")? $(this).attr("title") : '' + "</p>" + "</div>" + "</div>");
+    let a = $(this).attr("title")? $(this).attr("title") : ''
+    $(this).after("<div class='field-name-field-body'><div class='field-item'><p>" + a + "</p></div></div>");
   })
   $(".field-name-field-slider-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
@@ -226,12 +241,8 @@ $(".node-type-subset.not-front").ready(function () {
 
 $(".node-type-projects.not-front").ready(function () {
   $(".field-name-field-slide-main .field-items img, .field-name-field-slide-main .field-items video").each(function(){
-    if($(this).attr("title")){
-      $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + $(this).attr("title") + "</p>" + "</div>" + "</div>");
-    }
-    else{
-      $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p></p>" + "</div>" + "</div>");
-    }
+    let a = $(this).attr("title")? $(this).attr("title") : ''
+    $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + a + "</p>" + "</div>" + "</div>");
   })
   $(".field-name-field-slide-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,

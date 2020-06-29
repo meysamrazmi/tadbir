@@ -2216,137 +2216,127 @@ a {
     top: 80px;
   }
 }
-//news main page
-.page-news{
-  background: white;
-  #block-system-main{
-    margin-top: 15px;
-    padding: 0 10px;
-    .view-content{
-      border-top: 1px solid #ccc;
-      .items{
-        display: inline-block;
-        max-width: 250px;
-        height: 220px!important;
-        float: right;
-        margin-left: 15px;
-        &:before{
-          height: 215px;
-        }
-        &:after{
-          height: 220px;
-        }
-        .line_effect{
-          max-width: 250px;
-          height: 215px;
-        }
+.news-type .view-content{
+  border-top: 1px solid #ccc;
+  @media (max-width: 600px) {
+    text-align: -webkit-center;
+    margin: 0px 15px;
+  }
+  @media (max-width: 450px) {
+    text-align: right!important;
+  }
+  .items{
+    display: inline-block;
+    max-width: 250px;
+    height: 220px!important;
+    float: right;
+    margin-left: 15px;
+    @media (max-width: 600px) {
+      float: none !important;
+    }
+    &:before{
+      height: 215px;
+    }
+    &:after{
+      height: 220px;
+    }
+    .line_effect{
+      max-width: 250px;
+      height: 215px;
+    }
+    @media (max-width: 450px) {
+      float: right !important;
+      max-width: 150px!important;
+      .line_effect{
+        height: 127px !important;
       }
-      .views-row{
-        display: inline-block;
-        border-bottom: 1px solid #ccc;
-        padding: 30px 0;
-        width: 100%;
-        a{
-          text-decoration: none;
-        }
-        img{
-          float: right;
-          min-width: 250px;
-          margin-left: 25px;
-        }
-        .views-field-field-news-category{
-          margin-bottom: 10px;
-          a{
-            color: #00247c !important;
-          }
-        }
-        .views-field-title{
-          font-weight: bold;
-          margin-bottom: 10px;
-          a{
-            color: black!important;
-          }
-        }
-        .views-field-field-kholase, .views-field-created{
-          color: #a2a2a2;
-          font-weight: 300;
-          text-align: justify;
-        }
-        .views-field-created{
-          float: left;
-        }
+      &:before{
+        height: 127px !important;
+      }
+      &:after{
+        height: 133px !important;
+      }
+    }
+  }
+  .views-row{
+    display: inline-block;
+    border-bottom: 1px solid #ccc;
+    padding: 30px 0;
+    width: 100%;
+    a{
+      text-decoration: none;
+    }
+    img{
+      float: right;
+      min-width: 250px;
+      margin-left: 25px;
+      @media (max-width: 600px) {
+        float: none !important;
+        margin-left: 0!important;
+        margin-bottom: 25px;
+      }
+    }
+    .news-type-category{
+      margin-bottom: 10px;
+      a{
+        color: #00247c !important;
+      }
+    }
+    .views-field-title{
+      font-weight: bold;
+      margin-bottom: 10px;
+      a{
+        color: black!important;
+      }
+    }
+    .news-type-body,
+    .views-field-created{
+      color: #a2a2a2;
+      font-weight: 300;
+      text-align: justify;
+    }
+    .views-field-created{
+      float: left;
+      @media (max-width: 600px) {
+        display: none !important;
+      }
+    }
+    @media (max-width: 450px) {
+      .views-field-created{
+        display: none !important;
+      }
+      img{
+        float: none !important;
+        margin-left: 0!important;
+        margin-bottom: 25px;
+        min-width: 150px!important;
+      }
+      .news-type-body{
+        float: right;
+        margin-top: -50px;
       }
     }
   }
   @media (max-width: 600px) {
-    #block-system-main{
-      margin-top: 0px !important;
-      padding: 0!important;
-    }
-    .view-content{
-      text-align: -webkit-center;
-      margin: 0px 15px;
-      .items{
-        float: none !important;
-      }
-      .views-row{
-        .views-field-created{
-          display: none !important;
-        }
-        img{
-          float: none !important;
-          margin-left: 0!important;
-          margin-bottom: 25px;
-        }
-        .field-content{
-          //
-        }
-      }
-    }
-    .form-type-textfield{
-      width: 100% !important;
-    }
-  }
-  @media (min-width: 320px) and (max-width: 450px) {
-    .view-content{
-      text-align: right!important;
-      .items{
-        float: right !important;
-        max-width: 150px!important;
-        .line_effect{
-          height: 127px !important;
-        }
-        &:before{
-          height: 127px !important;
-        }
-        &:after{
-          height: 133px !important;
-        }
-      }
-      .views-row{
-        .views-field-created{
-          display: none !important;
-        }
-        img{
-          float: none !important;
-          margin-left: 0!important;
-          margin-bottom: 25px;
-          min-width: 150px!important;
-        }
-        .views-field-field-kholase{
-          float: right;
-          margin-top: -50px;
-        }
-      }
-    }
     .form-type-textfield{
       width: 100% !important;
     }
   }
 }
+//news main page
+.page-projects,
+.page-news{
+  #block-system-main{
+    margin-top: 15px;
+    padding: 0 10px;
+    @media (max-width: 600px) {
+      margin-top: 0px !important;
+      padding: 0!important;
+    }
+  }
+}
 //videos main page
 .page-videos, .page-gallery{
-  background: white;
   #block-system-main{
     margin-top: 15px;
     .view-content{
@@ -3385,16 +3375,12 @@ a {
       }
     }
 
-    @media(min-width: 1000px) and (max-width: 1200px){
-      .field-name-relative {
-        .field-items{
+    .field-name-relative {
+      .field-items{
+        @media(min-width: 1000px) and (max-width: 1200px){
           min-width: 1000px;
         }
-      }
-    }
-    @media(min-width: 768px) and (max-width: 1000px){
-      .field-name-relative {
-        .field-items{
+        @media(min-width: 768px) and (max-width: 1000px){
           min-width: 758px;
         }
       }
@@ -3793,6 +3779,7 @@ a {
   }
 }
 //page videos, gallery, news search
+.page-projects,
 .page-news, .page-gallery, .page-videos{
   overflow-x: hidden;
   .page-header {
@@ -3801,7 +3788,6 @@ a {
   .view-header{
     order: 1;
     text-align: left;
-    max-width: 1000px;
     margin: auto;
     width: 100%;
   }
@@ -3813,7 +3799,6 @@ a {
     }
   }
   .main-container{
-
     .pagination{
       li.active{
         span{
@@ -3853,7 +3838,7 @@ a {
           width: 195px;
           border-radius: 0!important;
         }
-        #edit-submit-videos, #edit-submit-gallery, #edit-submit-news{
+        [id^=edit-submit-]{
           background-color: #00247a;
           border-color: #00247a;
           font-size: 0;
@@ -3880,7 +3865,6 @@ a {
       }
     }
     @media (min-width: 320px) and (max-width: 600px) {
-
       form{
         .filter + div > .views-exposed-form {
           display: none;
@@ -3939,8 +3923,9 @@ a {
         .form-item-created-min, .form-item-created-max{
           width: 50%!important;
         }
-        #edit-title-wrapper, #edit-field-video-category-tid-wrapper, #edit-body-value-wrapper,
-        #edit-field-news-category-tid-wrapper, #edit-field-category-tid-wrapper, #edit-field-body-value-wrapper
+        #edit-title-wrapper,
+        #edit-body-value-wrapper,
+        [id^=edit-field-]
         {
           width: 98%;
         }
@@ -3961,7 +3946,7 @@ a {
         }
         .views-submit-button{
           width: 100%;
-          #edit-submit-videos, #edit-submit-gallery, #edit-submit-news{
+          [id^=edit-submit-]{
             width: 98%;
             margin-bottom: 15px;
           }
@@ -5034,4 +5019,44 @@ a {
 }
 .ui-widget {
   font-family: dana;
+}
+.pdp-default {
+  transform: scale(1.15);
+}
+.pdp-default .pdp-header {
+  height: 25px !important;
+  font-size: 14px !important;
+  border: none;
+  background: #f5f5f5;
+}
+.pdp-default .dows {
+  background: #fff;
+  color: #555;
+}
+.pdp-default .dow {
+  font-family: dana;
+  border: none;
+  height: 30px !important;
+  line-height: 30px !important;
+  border-bottom: 1px solid #eee;
+  margin-bottom: 5px;
+}
+.pdp-default .days {
+  border: none;
+}
+.pdp-default .day {
+  border: none;
+}
+.pdp-default .nul {
+  background: #fff;
+  border: navajowhite;
+}
+.pdp-default .pdp-footer {
+  background: #eee;
+  height: 25px !important;
+}
+.pdp-default .pdp-footer .goToday {
+  color: #555;
+  font-family: dana;
+  padding: 5px;
 }
