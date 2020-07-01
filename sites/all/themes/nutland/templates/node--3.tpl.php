@@ -410,9 +410,6 @@
     top: 0.3125rem;
     bottom: 0.3125rem
   }
-  [dir] #last .items_text:before {
-    border: 1px solid rgba(255, 255, 255, .5)
-  }
   [dir=rtl] #last .items_text:before {
     right: 0.3125rem;
     left: 0.3125rem
@@ -562,7 +559,6 @@
     position: absolute;
     top: 0.3125rem;
     bottom: 0.3125rem;
-    border: 1px solid rgba(255, 255, 255, .5);
     right: 0.3125rem;
     left: 0.3125rem
   }

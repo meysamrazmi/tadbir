@@ -71,6 +71,9 @@
       background: #fff;
       transition: all 0.3s ease;
     }
+    #block-block-9::-webkit-scrollbar{
+      width: 0px;
+    }
     .fixed #block-block-9 {
       height: calc(100vh - 48px);
     }
@@ -148,7 +151,7 @@
       width: 100%;
       height: 100%;
       right: 0;
-      background: rgba(0,0,0,0.05);
+      background: rgba(0,0,0,0.3);
       z-index: 0;
       transition: all .3s ease;
       -webkit-transition: all .3s ease;

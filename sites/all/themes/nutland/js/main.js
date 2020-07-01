@@ -37,7 +37,7 @@ $(document).ready(function(){
     $('#block-block-9').toggleClass('open');
     $('#useroverlay').toggleClass("open");
   })
-  $(".left-menu ul li").click(function(){
+  $(".left-menu ul li.grob").click(function(){
     $(this).find('i').toggleClass("mdi-close mdi-magnify");
     $(".form-search-menu").toggleClass("open");
     $('#useroverlay').toggleClass("open");

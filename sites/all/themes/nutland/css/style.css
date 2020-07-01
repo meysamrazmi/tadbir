@@ -8467,12 +8467,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 #footer ul.items-contact li a {
   color: white;
 }
-#footer #copyright {
-  color: #333;
-  background-color: #fff;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+#footer #copyright p {
+  font-size: 12px;
+  border-top: 1px solid #fff;
 }
 #footer #copyright a {
   color: #444;
@@ -8490,8 +8487,20 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   background-color: white !important;
   border-color: white !important;
 }
-#navbar #block-system-main-menu.contextual-links-region {
+#navbar #block-system-main-menu {
   position: static;
+}
+#navbar #block-system-main-menu::-webkit-scrollbar-thumb {
+  background: #bbb;
+  border: 1px solid #999;
+}
+#navbar #block-system-main-menu::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+#navbar #block-system-main-menu::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 0;
 }
 #navbar a.logo.mobile {
   display: none;
@@ -10951,6 +10960,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-news .view .view-content, .page-gallery .view .view-content, .page-videos .view .view-content {
   order: 2;
 }
+.page-projects .view .view-content + div,
+.page-news .view .view-content + div, .page-gallery .view .view-content + div, .page-videos .view .view-content + div {
+  order: 3;
+}
 .page-projects .main-container .pagination li.active span,
 .page-news .main-container .pagination li.active span, .page-gallery .main-container .pagination li.active span, .page-videos .main-container .pagination li.active span {
   background: #00247a;
@@ -10969,6 +10982,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: black;
   border-radius: 0;
   margin: 0 5px;
+  float: right;
 }
 .page-projects .main-container .view-filters,
 .page-news .main-container .view-filters, .page-gallery .main-container .view-filters, .page-videos .main-container .view-filters {
@@ -11399,9 +11413,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: white;
   text-align: right;
   width: 73%;
-  padding: 50px 20px 180px;
+  padding: 20px;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  height: 300px;
 }
 .node-type-projects .main-container #block-system-main .field-name-field-body .field-item p {
   border-right: 4px solid;
@@ -11747,7 +11764,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-subset .main-container {
   width: inherit;
   padding: 0;
-  margin-top: -55px;
 }
 .node-type-subset .main-container .page-header, .node-type-subset .main-container .element-invisible, .node-type-subset .main-container .action-links {
   display: none;
@@ -11765,6 +11781,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-right: 50%;
   transform: translateX(50%);
   min-width: 100vw;
+  margin-top: calc(240px - 18.3vw);
+}
+@media (min-width: 1350px) {
+  .node-type-subset .main-container #block-system-main .field-name-field-slider-main img {
+    margin-top: calc(240px - 18.3vw);
+  }
 }
 .node-type-subset .main-container #block-system-main .field-name-field-slider-main header {
   display: none !important;
@@ -11870,9 +11892,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: white;
   text-align: right;
   width: 73%;
-  padding: 50px 20px 180px;
+  padding: 20px;
   border: 1px solid #fff;
   background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  align-items: center;
+  height: 300px;
 }
 .node-type-subset .main-container #block-system-main .field-name-field-body .field-item p {
   border-right: 4px solid;
@@ -12042,12 +12067,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 @media (max-width: 1000px) and (min-width: 768px) {
   .node-type-subset .main-container .field-name-field-body .field-item {
-    padding: 50px 20px 85px !important;
+    height: 220px;
   }
 }
 @media (max-width: 767px) and (min-width: 600px) {
   .node-type-subset .main-container .field-name-field-body .field-item {
-    padding: 50px 20px 35px !important;
+    height: 170px;
   }
   .node-type-subset .main-container .group-header {
     margin-bottom: 0 !important;

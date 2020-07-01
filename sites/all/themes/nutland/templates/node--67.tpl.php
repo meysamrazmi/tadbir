@@ -149,6 +149,9 @@
   <?php print render($content['comments']); ?>
 </article>
 <style>
+  h1.page-header {
+    display: none;
+  }
 
   .img-center{
     text-align: -webkit-center;
