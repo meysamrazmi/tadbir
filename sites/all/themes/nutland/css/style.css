@@ -8472,7 +8472,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border-top: 1px solid #fff;
 }
 #footer #copyright a {
-  color: #444;
+  color: #fff;
   text-decoration: none;
   display: block;
   line-height: 35px;
@@ -9575,6 +9575,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .news-type .view-content .views-row .news-type-body {
     float: right;
     margin-top: -50px;
+    clear: right;
   }
 }
 @media (max-width: 600px) {
@@ -11781,7 +11782,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-right: 50%;
   transform: translateX(50%);
   min-width: 100vw;
-  margin-top: calc(240px - 18.3vw);
 }
 @media (min-width: 1350px) {
   .node-type-subset .main-container #block-system-main .field-name-field-slider-main img {
@@ -12063,7 +12063,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-subset .main-container #block-system-main .field-name-field-company .field-item img {
   display: block;
   max-width: 100%;
-  min-height: 200px;
 }
 @media (max-width: 1000px) and (min-width: 768px) {
   .node-type-subset .main-container .field-name-field-body .field-item {

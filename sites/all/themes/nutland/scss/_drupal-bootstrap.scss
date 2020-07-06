@@ -1194,7 +1194,7 @@ a {
       border-top: 1px solid #fff;
     }
     a{
-      color: #444;
+      color: #fff;
       text-decoration: none;
       display: block;
       line-height: 35px;
@@ -2325,6 +2325,7 @@ a {
       .news-type-body{
         float: right;
         margin-top: -50px;
+        clear: right;
       }
     }
   }
@@ -4641,7 +4642,6 @@ a {
           @media (min-width: 1350px){
             margin-top: calc(240px - 18.3vw);
           }
-          margin-top: calc(240px - 18.3vw);
         }
         header{
           display: none!important;
@@ -4936,7 +4936,6 @@ a {
           img{
             display: block;
             max-width: 100%;
-            min-height: 200px;
           }
         }
       }

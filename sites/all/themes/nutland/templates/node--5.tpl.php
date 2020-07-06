@@ -105,7 +105,7 @@
     $node6 = node_load(66);
   ?>
   <section id="map">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3238.7561093010218!2d51.41780451634272!3d35.73221623057533!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e06b4c28eed93%3A0x2df56dbfdf9b9fbc!2z2KjZhtuM2KfYryDYqNix2qnYqg!5e0!3m2!1sen!2s!4v1587106093726!5m2!1sen!2s"
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2645.9487698538337!2d51.41660390238768!3d35.73155633965012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e014e96cc6c55%3A0x3124d88e89ed2139!2sTadbir%20Economical%20Development%20Group!5e0!3m2!1sen!2sus!4v1594055325516!5m2!1sen!2sus"
             width="1920" height="500" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
     </iframe>
   </section>
