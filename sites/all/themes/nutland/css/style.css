@@ -12363,6 +12363,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   background: #00247a;
 }
 
+.page-node-67 h1.page-header {
+  display: none;
+}
+.page-node-67 .img-center {
+  text-align: -webkit-center;
+  margin-top: 50px;
+}
+
 @font-face {
   font-family: "mat";
   src: url("../fonts/material/material.eot");
