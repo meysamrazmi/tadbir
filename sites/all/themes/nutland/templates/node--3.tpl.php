@@ -578,7 +578,7 @@
       autoWidth: true,
       autoplayTimeout: 10000,
       autoplay:true,
-      autoplayHoverPause:false,
+      autoplayHoverPause:true,
       onTranslated: videoPlay,
     });
     function videoPlay(event) {

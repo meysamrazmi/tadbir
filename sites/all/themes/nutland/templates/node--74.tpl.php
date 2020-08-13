@@ -99,64 +99,6 @@
   <?php endif; ?>
 
   <?php
-  $node1 = node_load(38);
-  $node2 = node_load(75);
-  $node3 = node_load(39);
-  //    print $node->title;
-  //    print '<img src="'. image_style_url("320x320", $node->field_image['und'][0]['uri']) .'">';
-  ?>
-
-  <section id="top">
-    <div class="container intro">
-      <div>
-        <span class="text-primary"><?php print $node1->title; ?></span>
-        <?php print $node1->body['und'][0]['value']; ?>
-      </div>
-    </div>
-  </section>
-
-  <section id="custom">
-    <div class="container">
-      <div class="header_title text-primary">
-        <h5 class="mb-0">درباره تدبیر</h5>
-      </div>
-      <div class="about container">
-        <div class="col-md-4">
-          <img src="<?php print image_style_url("555x300", $node2->field_image['und'][0]['uri']); ?>" alt="">
-        </div>
-        <div class="col-md-8">
-          <h4>
-            <span class="text-primary"><?php print $node2->title; ?></span>
-          </h4>
-          <p>
-            <?php print $node2->body['und'][0]['value']; ?>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="custom2">
-    <div class="container">
-      <div class="header_title text-primary">
-        <h5 class="mb-0">ارزش های تدبیر</h5>
-      </div>
-      <div class="about container">
-        <div class="col-md-4 col-sm-6 col-xs-12" style="text-align: -webkit-center">
-          <img src="<?php print image_style_url("555x300", $node3->field_image['und'][0]['uri']); ?>" alt="">
-        </div>
-        <div class="col-md-8 col-sm-6 col-xs-12">
-          <p>
-            <?php print $node3->body['und'][0]['value']; ?>
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-
-  <?php
-
   // Hide comments, tags, and links now so that we can render them later.
   hide($content['comments']);
   hide($content['links']);
@@ -192,7 +134,7 @@
       autoWidth: true,
       autoplayTimeout: 10000,
       autoplay:true,
-      autoplayHoverPause:false,
+      autoplayHoverPause:true,
       onTranslated: videoPlay,
     });
     function videoPlay(event) {

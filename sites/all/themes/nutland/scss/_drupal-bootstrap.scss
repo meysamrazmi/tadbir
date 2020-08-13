@@ -3,6 +3,9 @@ $tablet:              "screen and (min-width: #{$screen-sm-min})";
 $normal:              "screen and (min-width: #{$screen-md-min})";
 $wide:                "screen and (min-width: #{$screen-lg-min})";
 $grid-breakpoint:     "screen and (min-width: #{$grid-float-breakpoint})";
+$tabletx:             "screen and (max-width: #{$screen-sm-min})";
+$normalx:             "screen and (max-width: #{$screen-md-min})";
+$widex:               "screen and (max-width: #{$screen-lg-min})";
 @import url('/sites/all/libraries/persiandatepicker/persian-datepicker.min.css');
 // Drop shadows.
 @mixin box-shadow($shadow) {
@@ -5073,6 +5076,7 @@ a {
 }
 .pdp-default .nul {
   background: #fff;
+  background: #fff;
   border: navajowhite;
 }
 .pdp-default .pdp-footer {
@@ -5083,4 +5087,157 @@ a {
   color: #555;
   font-family: dana;
   padding: 5px;
+}
+.field-collection-container {
+  border: none;
+}
+.costum-collection {
+  > .field-items  > .field-item {
+    margin: 20px 0 30px;
+    display: inline-block;
+    width: 100%;
+  }
+  .field-name-field-title {
+    .field-items {
+      display: flex;
+      justify-content: center;
+      position: relative;
+      margin-bottom: 20px;
+      &:before {
+        content: "";
+        width: 100%;
+        position: absolute;
+        right: 0;
+        height: 1px;
+        background: #ccc;
+        top: 50%;
+      }
+      * {
+        background: #fff;
+        z-index: 1;
+        padding: 10px 15px;
+        font-size: 18px;
+        color: #00247a;
+      }
+    }
+  }
+  .small_border .field-name-field-title .field-items:before {
+    width: 160px;
+    right: calc(50% - 80px);
+    top: inherit;
+    height: 3px;
+    z-index: 2;
+    bottom: 5px;
+    background: #ccc;
+  }
+  .no_title .field-name-field-title{display: none;}
+  .right_title {
+    .field-name-field-title {
+      .field-items {
+        justify-content: right;
+      }
+    }
+    &.small_border .field-name-field-title .field-items:before{
+      right: 15px;
+    }
+  }
+  .field-name-field-body{
+    text-align: justify;
+    line-height: 2em;
+    @media #{$tabletx} {
+      margin-top: 30px;
+    }
+  }
+  .right_border .has-border {
+    border-right: 5px solid #00247c;
+    padding-right: 15px;
+  }
+  .left_border .has-border {
+    border-left: 5px solid #00247c;
+    padding-left: 15px;
+  }
+  .just-body {
+    text-align: justify;
+    line-height: 2;
+    margin-bottom: 30px;
+    margin-top: 10px;
+    max-width: 100%;
+  }
+  .color_block .field-name-field-body {
+    color: white;
+    background: #00247c;
+    padding: 25px 40px;
+    margin: 0px 20px 0;
+  }
+  .small_width {
+    .just-body {
+      max-width: 600px;
+    }
+    .owl-carousel .field-item {
+      max-width: 600px;
+      margin: auto;
+    }
+  }
+  .slider-caption {
+    position: relative;
+    bottom: 32px;
+    text-align: center;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 6px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .owl-theme .owl-dots
+  .owl-dot span {
+    border-radius: 0;
+  }
+  .owl-next,
+  .owl-prev {
+    span{
+      font-size: 0;
+      &:before{
+        content: "";
+        font-family: icomoon !important;
+        line-height: 1;
+        font-size: 60px;
+        position: absolute;
+        color: #ccc;
+        top: 40%;
+        transition: all 0.2s ease-in-out;
+        transform: translate(0%, -50%);
+        right: 20px;
+      }
+    }
+  }
+  .owl-next span:before{
+    content: "";
+    right: inherit;
+    left: 20px;
+  }
+  .no_controller .owl-dots{display: none;}
+  img {
+    margin: auto;
+  }
+  @media #{$tabletx} {
+    .right_image {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+  }
+  .btn {
+    border-radius: 0;
+    border: none;
+  }
+  .container {
+    max-width: 100%;
+  }
+}
+.owl-carousel .mejs-container .mejs-controls{
+  display: none !important;
+}
+.btn.btn-primary {
+  background: #00247a;
 }

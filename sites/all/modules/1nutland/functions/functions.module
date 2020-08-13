@@ -304,3 +304,116 @@ function filter($name, &$query, &$get_result){
 function functions_theme_registry_alter(&$theme_registry) {
   $theme_registry['status_messages']['function'] = 'theme_pines_notify';
 }
+
+function costum_collection_right_image($item) {
+  alter_image_style($item);
+  $rand = 'img-'. rand(100, 999);
+  $output = render($item['field_title']) ."
+      <div class=\"container right_image\">
+        <div class=\"col-sm-8 left has-border\">
+          ". render($item['field_body']) ."
+        </div>
+        <div class=\"col-sm-4 right $rand\">
+          ". render($item['field_images']) ."
+        </div>
+      </div>";
+  print $output;
+
+  image_border_script($rand, $item);
+}
+
+function costum_collection_left_image($item) {
+  alter_image_style($item);
+  $rand = 'img-'. rand(100, 999);
+  $output = render($item['field_title']) ."
+      <div class=\"container left_image\">
+        <div class=\"col-sm-4 left $rand\">
+          ". render($item['field_images']) ."
+        </div>
+        <div class=\"col-sm-8 right has-border\">
+          ". render($item['field_body']) ."
+        </div>
+      </div>";
+  print $output;
+
+  image_border_script($rand, $item);
+}
+
+function costum_collection_slide($item) {
+  alter_image_style($item);
+  $rand = 'owl-'. rand(100, 999);
+  $output = render($item['field_title']) ."
+      <div class=\"container\">
+        <div class=\"$rand\">
+          ". render($item['field_images']) ."
+        </div>
+        <div class=\"has-border\">
+          ". render($item['field_body']) ."
+        </div>
+      </div>";
+
+  print $output;
+  print "<script>
+  $(\".node-type-news.not-front\").ready(function () {
+   $(\".$rand .field-items img\").each(function(){
+     if($(this).attr(\"title\")){
+       $(this).after(\"<span class='slider-caption'>\" + $(this).attr(\"title\") + \"</span>\");
+     }
+   })
+   $(\".$rand .field-items\").addClass(\"owl-carousel owl-theme\").owlCarousel({
+     rtl: true,
+     loop: true,
+     margin: 15,
+     responsiveClass: true,
+     nav: true,
+     autoplayTimeout: 10000,
+     autoplay:true,
+     autoplayHoverPause:true,
+     responsive: {
+       0: { items: 1 },
+       600: { items: 1 },
+       1000: { items: 1 }
+     },
+   });
+ });
+</script>";
+}
+
+function costum_collection_body($item) {
+  $output = render($item['field_title']) ."
+      <div class=\"container just-body\">
+        <div class=\"has-border\">
+          ". render($item['field_body']) ."
+        </div>
+      </div>";
+  print $output;
+}
+
+function costum_collection_image($item) {
+  alter_image_style($item);
+  $output = render($item['field_title']) ."
+      <div class=\"container just-image\">
+        ". render($item['field_images']) ."
+      </div>";
+  print $output;
+}
+
+function alter_image_style(&$item){
+  if(isset($item['field_image_size']['#items'][0]['value'])){
+    foreach($item['field_images'] as $key => $val){
+      if(strpos($key, '#') === false){
+        $item['field_images'][$key]['#image_style'] = $item['field_image_size']['#items'][0]['value'];
+      }
+    }
+  }
+}
+
+function image_border_script($rand, &$item){
+  if(isset($item['field_classes']['#items'])){
+    foreach($item['field_classes']['#items'] as $class){
+      if($class['value'] == 'image_border'){
+        print "<script>$('.$rand .field-item').addClass('border_image items').append('<div class=\"line_effect\"><span class=\"lineInner\"></span></div>')</script>";
+      }
+    }
+  }
+}

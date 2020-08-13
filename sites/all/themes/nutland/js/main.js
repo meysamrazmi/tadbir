@@ -148,7 +148,7 @@ $(".page-node-5").ready(function(){
        nav: true,
        autoplayTimeout: 10000,
        autoplay:true,
-       autoplayHoverPause:false,
+       autoplayHoverPause:true,
        responsive: {
          0: { items: 1 },
          600: { items: 1 },
@@ -191,9 +191,9 @@ $(".node-type-projects.not-front").ready(function () {
 });
 //carousel in node subset
 $(".node-type-subset.not-front").ready(function () {
-  $(".field-name-field-title").click(function(){
-    $(this).parent().find("> *:not(.field-name-field-title)").last().toggle();
-  });
+  // $(".field-name-field-title").click(function(){
+  //   $(this).parent().find("> *:not(.field-name-field-title)").last().toggle();
+  // });
   $(".field-name-field-tarh .items").prepend("<div class='line_effect'><span class='lineInner'></span></div>");
   $(".field-name-field-slider-main .field-items img").each(function(){
     let a = $(this).attr("title")? $(this).attr("title") : ''
@@ -207,7 +207,7 @@ $(".node-type-subset.not-front").ready(function () {
     nav: true,
     autoplayTimeout: 10000,
     autoplay:true,
-    autoplayHoverPause:false,
+    autoplayHoverPause:true,
     responsive: {
       0: { items: 1 },
       600: { items: 1 },
@@ -226,7 +226,7 @@ $(".node-type-subset.not-front").ready(function () {
     dots: false,
     autoplayTimeout: 3000,
     autoplay:true,
-    autoplayHoverPause:false,
+    autoplayHoverPause:true,
     responsive: {
       0: { items: 2 },
       500: { items: 2 },
@@ -252,7 +252,7 @@ $(".node-type-projects.not-front").ready(function () {
     nav: true,
     autoplayTimeout: 3000,
     autoplay:true,
-    autoplayHoverPause:false,
+    autoplayHoverPause:true,
     responsive: {
       0: { items: 1 },
       600: { items: 1 },

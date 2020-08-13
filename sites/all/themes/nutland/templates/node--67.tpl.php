@@ -96,37 +96,7 @@
       <?php endif; ?>
     </header>
   <?php endif; ?>
-  <?php
-  $node1 = node_load(68);
-  $node2 = node_load(69);
-  ?>
-  <section id="top">
-    <div class="container">
-      <div class="col-md-4">
-        <div class="items border_image">
-          <img src="<?php print image_style_url("250x220", $node1->field_image['und'][0]['uri']); ?>" alt="">
-          <div class="line_effect"><span class="lineInner"></span></div>
-        </div>
-      </div>
-      <div class="col-md-8">
-        <div class="text">
-          <h5><?php print $node1->title; ?></h5>
-          <div><?php print $node1->body['und'][0]['value']; ?></div>
-          <div class="link"><a href="<?php print $node1->field_link['und'][0]['url']; ?>">فرصت های شغلی</a></div>
-        </div>
-      </div>
-    </div>
-    <div class="img-center">
-      <img src="http://www.tadbir.offerbama.com/sites/default/files/tadbir-logo_0.png"/>
-    </div>
-    <div class="container pad">
-      <div class="text2">
-        <h5><?php print $node2->title; ?></h5>
-        <div><?php print $node2->body['und'][0]['value']; ?></div>
-        <div class="link"><a href="<?php print $node2->field_link['und'][0]['url']; ?>">ارسال رزومه</a></div>
-      </div>
-    </div>
-  </section>
+
   <?php
 
   // Hide comments, tags, and links now so that we can render them later.
