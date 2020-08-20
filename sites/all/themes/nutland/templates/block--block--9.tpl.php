@@ -125,6 +125,13 @@
       color: #fff;
       min-width: 150px !important;
       justify-content: center;
+      z-index: 100;
+    }
+    .overlay-open .subset-link {
+      z-index: 100;
+    }
+    .search-open .subset-link {
+      z-index: 1;
     }
     .subset-link a {
       color: #fff !important;
@@ -151,7 +158,7 @@
       width: 100%;
       height: 100%;
       right: 0;
-      background: rgba(0,0,0,0.3);
+      background: rgba(0,0,0,0.4);
       z-index: 0;
       transition: all .3s ease;
       -webkit-transition: all .3s ease;

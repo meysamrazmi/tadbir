@@ -30,17 +30,20 @@ $(document).ready(function(){
     $('.left-menu ul li i.mdi-close').removeClass("mdi-close").addClass('mdi-magnify');
     $(".form-search-menu").removeClass("open");
     $('#useroverlay').removeClass("open");
+    $('body').removeClass("overlay-open");
   }
   $('#useroverlay').click(removeOverlay)
   $('.subset-link').click(function(){
     $('.subset-link').toggleClass('open');
     $('#block-block-9').toggleClass('open');
     $('#useroverlay').toggleClass("open");
+    $('body').toggleClass("overlay-open search-open");
   })
   $(".left-menu ul li.grob").click(function(){
     $(this).find('i').toggleClass("mdi-close mdi-magnify");
     $(".form-search-menu").toggleClass("open");
     $('#useroverlay').toggleClass("open");
+    $('body').toggleClass("search-open");
   });
   //close alert box
   $( "body .close" ).click(function() {

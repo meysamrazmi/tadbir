@@ -131,7 +131,12 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
                     </select>
                 </li>
               <li class="hidden-xs subset-link">
-                <a>زیر مجموعه ها</a>
+                <a>
+                  <?php
+                  $menu = menu_link_load(873);
+                  echo $menu['link_title'];
+                  ?>
+                </a>
               </li>
             </ul>
         </div>

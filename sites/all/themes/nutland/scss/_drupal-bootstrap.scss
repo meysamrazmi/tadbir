@@ -286,13 +286,20 @@ body {
       top: 29px;
     }
     &.navbar-is-fixed-top {
-      transition: padding 0.5s ease;
+      transition: padding-top 0.5s ease;
       &.fixed {
         padding-top: 55px !important;
       }
       @media (max-width: 767px){
         padding-top: 55px !important;
       }
+    }
+  }
+  &.overlay-open {
+    overflow: hidden;
+    @media #{$tablet}{padding-right: 17px;}
+    @media (pointer:none), (pointer:coarse), (hover:none), (hover:on-demand) {
+      padding-right: 0px;
     }
   }
   div#admin-toolbar {

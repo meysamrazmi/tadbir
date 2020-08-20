@@ -7563,7 +7563,7 @@ body.admin-menu .navbar-fixed-top {
   top: 29px;
 }
 body.admin-menu.navbar-is-fixed-top {
-  transition: padding 0.5s ease;
+  transition: padding-top 0.5s ease;
 }
 body.admin-menu.navbar-is-fixed-top.fixed {
   padding-top: 55px !important;
@@ -7571,6 +7571,19 @@ body.admin-menu.navbar-is-fixed-top.fixed {
 @media (max-width: 767px) {
   body.admin-menu.navbar-is-fixed-top {
     padding-top: 55px !important;
+  }
+}
+body.overlay-open {
+  overflow: hidden;
+}
+@media screen and (min-width: 768px) {
+  body.overlay-open {
+    padding-right: 17px;
+  }
+}
+@media (pointer: none), (pointer: coarse), (hover: none), (hover: on-demand) {
+  body.overlay-open {
+    padding-right: 0px;
   }
 }
 body div#admin-toolbar {
