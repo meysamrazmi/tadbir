@@ -123,26 +123,6 @@
 </style>
 <script src="/sites/all/themes/nutland/js/owl.carousel.min.js"></script>
 <script>
-  $(document).ready(function () {
-
-    $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
-      items: 2,
-      loop: true,
-      rtl: true,
-      nav: true,
-      dots: true,
-      autoWidth: true,
-      autoplayTimeout: 10000,
-      autoplay:true,
-      autoplayHoverPause:true,
-      onTranslated: videoPlay,
-    });
-    function videoPlay(event) {
-      let player = new MediaElementPlayer('.active video');
-      player.play();
-    }
-    $('.owl-carousel').click(videoPlay)
-  });
   $('.page-node-37 .view-custom').each(function(){
     $(this).children('.view-content').addClass('owl-carousel');
   });

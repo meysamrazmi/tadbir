@@ -119,39 +119,39 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="py-2"/>
         </a>
       <?php endif; ?>
-        <div class="left-menu">
-            <ul>
-                <li class="grob">
-                    <i class="mdi mdi-magnify"></i>
-                </li>
-                <li class="hidden-xs d-none">
-                    <select id="lang">
-                        <option value="فارسی">فارسی</option>
-                        <option value="انگلیسی">انگلیسی</option>
-                    </select>
-                </li>
-              <li class="hidden-xs subset-link">
-                <a>
-                  <?php
-                  $menu = menu_link_load(873);
-                  echo $menu['link_title'];
-                  ?>
-                </a>
-              </li>
-            </ul>
-        </div>
-    <div class="form-search-menu">
-      <form action="/search/node" method="get" accept-charset="UTF-8">
-        <div>
-          <div class="form-item form-item-query form-type-textfield form-group">
-            <input class="form-control form-text" type="text" id="edit-query" name="query" value="" size="40" maxlength="128" placeholder="جستجو...">
-          </div>
-          <button type="submit" id="edit-sa" name="op" value="جستجو" class="btn btn-primary form-submit">
+      <div class="left-menu">
+        <ul>
+          <li class="grob">
             <i class="mdi mdi-magnify"></i>
-          </button>
-        </div>
-      </form>
-    </div>
+          </li>
+          <li class="hidden-xs d-none">
+            <select id="lang">
+              <option value="فارسی">فارسی</option>
+              <option value="انگلیسی">انگلیسی</option>
+            </select>
+          </li>
+          <li class="hidden-xs subset-link">
+            <a>
+              <?php
+              $menu = menu_link_load(873);
+              echo $menu['link_title'];
+              ?>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="form-search-menu">
+        <form action="/search/node" method="get" accept-charset="UTF-8">
+          <div>
+            <div class="form-item form-item-query form-type-textfield form-group">
+              <input class="form-control form-text" type="text" id="edit-query" name="query" value="" size="40" maxlength="128" placeholder="جستجو...">
+            </div>
+            <button type="submit" id="edit-sa" name="op" value="جستجو" class="btn btn-primary form-submit">
+              <i class="mdi mdi-magnify"></i>
+            </button>
+          </div>
+        </form>
+      </div>
     <?php endif; ?>
   </div>
 </header>
@@ -204,19 +204,28 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
     <?php print render($page['footer']); ?>
   </footer>
 <?php endif; ?>
-
+<script src="/sites/all/themes/nutland/js/aos.min.js"></script>
 <script src="/sites/all/themes/nutland/js/owl.carousel.min.js"></script>
 <script>
-    const $ = jQuery
-    $(document).ready(function(){
+  const $ = jQuery
+  $(document).ready(function () {
 
-        $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
-            items:2,
-            loop: true,
-            rtl:true,
-            nav: true,
-            dots:true,
-            autoWidth:true,
-        });
+    $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
+      items: 2,
+      rtl: true,
+      nav: true,
+      dots: true,
+      loop: true,
+      autoWidth: true,
+      autoplayTimeout: 10000,
+      autoplay:true,
+      autoplayHoverPause:true,
+      onTranslated: videoPlay,
     });
+    function videoPlay(event) {
+      let player = new MediaElementPlayer('.active video');
+      player.play();
+    }
+    $('.owl-carousel').click(videoPlay)
+  });
 </script>

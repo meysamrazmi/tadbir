@@ -160,20 +160,16 @@
   </div>
 
   <div class="row" id="sectionText">
-
     <section>
       <div class="container">
         <div class="article">
-          <h3 style="font-weight: 700"><?php print $node4->title; ?></h3>
+          <h3 style="font-weight: bold"><?php print $node4->title; ?></h3>
           <h4><?php print $node4->field_tozih['und'][0]['value']; ?></h4>
-          <P class="caption_article">
-            <?php print $node4->body['und'][0]['value']; ?>
-          </P>
+          <?php print $node4->body['und'][0]['value']; ?>
         </div>
       </div>
     </section>
   </div>
-
 
   <section id="last">
     <div class="container">
@@ -183,8 +179,41 @@
       <div class="row">
         <?php print views_embed_view('latest', 'blockk'); ?>
       </div>
+      <div class="row">
+        <?php print views_embed_view('news', 'block_2'); ?>
+      </div>
     </div>
   </section>
+
+  <?php
+  $node13 = node_load(140);
+  $node14 = node_load(141);
+  $node15 = node_load(142);
+  $node16 = node_load(143);
+  ?>
+  <div class="row" id="sectionText">
+    <section>
+      <div class="container">
+        <div class="article">
+          <h3 style="font-weight: bold"><?php print $node13->title; ?></h3>
+          <div class="sub-item">
+            <div class="col-sm-4">
+              <?php print isset($node14->field_image['und'][0])? '<img src="'. $node14->field_image['und'][0]['value'] .'">' : ''; ?>
+              <?php print isset($node14->body['und'][0])? '<div>'. $node14->body['und'][0]['value'] .'</div>' : ''; ?>
+            </div>
+            <div class="col-sm-4">
+              <?php print isset($node15->field_image['und'][0])? '<img src="'. $node15->field_image['und'][0]['value'] .'">' : ''; ?>
+              <?php print isset($node15->body['und'][0])? '<div>'. $node15->body['und'][0]['value'] .'</div>' : ''; ?>
+            </div>
+            <div class="col-sm-4">
+              <?php print isset($node16->field_image['und'][0])? '<img src="'. $node16->field_image['und'][0]['value'] .'">' : ''; ?>
+              <?php print isset($node16->body['und'][0])? '<div>'. $node16->body['und'][0]['value'] .'</div>' : ''; ?>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <div id="projects">
     <section>
@@ -302,6 +331,35 @@
     flex: 0 0 50%;
     max-width: 50%
   }
+  #last .view-news .view-content {
+    display: flex;
+  }
+  @media (max-width: 767px) {
+    #last .view-news .view-content {
+      flex-direction: column;
+    }
+  }
+  #last .view-news .views-field-created {
+    border-bottom: 1px solid #C4C4C4;
+    margin-bottom: 10px;
+  }
+  #last .view-news .views-field-created > span {
+    display: flex;
+    justify-content: space-between;
+  }
+  #last .view-news .views-field-created > span span:first-child {
+    color: #253A76;
+    font-weight: bold;
+  }
+  #last .view-news .views-field-title a {
+    color: #000;
+    font-weight: bold;
+    line-height: 2;
+  }
+  #last .view-news .views-field-body {
+    color: #808080;
+    line-height: 1.8;
+  }
   .col-6,
   [class^=col-sm-],
   [class^=col-md-],
@@ -338,7 +396,7 @@
     width: 0;
     transition: width .3s ease-in-out
   }
-  [dir] #last .caption span:before {
+  #last .caption span:before {
     background-color: rgba(255, 255, 255, .8);
     -webkit-transition: width .3s ease-in-out
   }
@@ -361,11 +419,12 @@
   }
   #last .items_text img {
     min-height: 100%;
-    width: 100%;
+    min-width: 100%;
     height: auto;
+    width: auto;
+    max-width: none;
     transition: -webkit-transform .5s ease-in-out;
     transition: transform .5s ease-in-out;
-    transition: transform .5s ease-in-out, -webkit-transform .5s ease-in-out
   }
   #last .items_text .caption {
     top: auto;
@@ -466,51 +525,41 @@
   }
   #gozideha .caption h4 {
     font-weight: bold;
-  }
-  #gozideha .caption span:before {
-    content: "";
-    height: 0.125rem;
     position: relative;
-    top: 2rem;
+  }
+  #gozideha .caption h4:before {
+    content: "";
+    height: 2px;
+    position: absolute;
+    bottom: -7px;
     display: block;
-    width: 0;
-    transition: width .3s ease-in-out
+    width: 0px;
+    transition: width .3s ease-in-out;
+    background-color: #F95109;
+    -webkit-transition: width .3s ease-in-out;
   }
-  [dir] #gozideha .caption span:before {
-    background-color: rgba(255, 255, 255, .8);
-    -webkit-transition: width .3s ease-in-out
-  }
-  #gozideha .caption span:after {
-    content: "";
-    width: 100%;
-    height: 0.0625rem;
-    position: relative;
-    top: 0.3125rem;
-    display: block
-  }
-  [dir] #gozideha .caption span:after {
-    background-color: rgba(255, 255, 255, .4)
+  #gozideha .items:hover .caption h4:before {
+    width: 100%
   }
   #gozideha .items {
-    position: relative;
-    height: 360px;
     color: #fff;
+    overflow: hidden;
     text-shadow: 1px 1px #000000;
   }
   #gozideha .items img {
     min-height: 100%;
-    width: 100%;
+    width: auto;
     transition: all .4s ease-in-out;
+    min-width: 100%;
+    height: auto;
+    filter: grayscale(1);
   }
   #gozideha .items .caption_wrap {
     top: 3.125rem;
     margin: 0.3125rem
   }
-  #gozideha .items:hover .caption span:before {
-    width: 100%
-  }
   #gozideha .items:hover img {
-    filter: brightness(0.65);
+    filter: grayscale(0);
   }
   #gozideha .items_text {
     position: relative;
@@ -562,30 +611,5 @@
     right: 0.3125rem;
     left: 0.3125rem
   }
-
-
 </style>
-<script src="/sites/all/themes/nutland/js/owl.carousel.min.js"></script>
-<script>
-  $(document).ready(function () {
-
-    $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
-      items: 2,
-      rtl: true,
-      nav: true,
-      dots: true,
-      loop: true,
-      autoWidth: true,
-      autoplayTimeout: 10000,
-      autoplay:true,
-      autoplayHoverPause:true,
-      onTranslated: videoPlay,
-    });
-    function videoPlay(event) {
-      let player = new MediaElementPlayer('.active video');
-      player.play();
-    }
-    $('.owl-carousel').click(videoPlay)
-  });
-</script>
 

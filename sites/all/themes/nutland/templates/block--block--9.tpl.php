@@ -47,7 +47,7 @@
  */
 ?>
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
-
+  <link rel="stylesheet" href="/sites/all/themes/nutland/css/aos.min.css">
   <?php print render($title_prefix); ?>
   <?php if ($title): ?>
     <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
@@ -101,7 +101,7 @@
       max-width: 1000px;
     }
     .subsets a img {
-      filter: brightness(0.5);
+      filter: brightness(0.8);
       position: absolute;
       width: 100%;
       right: 0;
@@ -138,7 +138,7 @@
       padding: 10px 20px;
     }
     .subsets a:hover img {
-      filter: brightness(0.75);
+      filter: brightness(0.5);
     }
     .subsets a .caption:before {
       content: "";
@@ -158,7 +158,7 @@
       width: 100%;
       height: 100%;
       right: 0;
-      background: rgba(0,0,0,0.4);
+      background: rgba(0,0,0,0.8);
       z-index: 0;
       transition: all .3s ease;
       -webkit-transition: all .3s ease;
