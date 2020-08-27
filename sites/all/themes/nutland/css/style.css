@@ -7435,6 +7435,11 @@ td.visible-print {
   z-index: 1;
 }
 
+body#tinymce {
+  padding: 15px;
+  direction: rtl;
+}
+
 .tabs--primary {
   width: 0;
   height: 45px;
@@ -7581,7 +7586,7 @@ body.overlay-open {
     padding-right: 17px;
   }
 }
-@media (pointer: none), (pointer: coarse), (hover: none), (hover: on-demand) {
+@media (pointer:none), (pointer:coarse), (hover:none), (hover:on-demand) {
   body.overlay-open {
     padding-right: 0px;
   }
@@ -9149,6 +9154,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-size: 14px;
   padding: 0 30px;
   margin: 0 -3px;
+  text-align: justify;
 }
 #node-3 #sectionText section .container .article .sub-item, #node-74 #sectionText section .container .article .sub-item {
   margin: 30px 0 0;
@@ -9159,6 +9165,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  text-align: justify;
 }
 @media screen and (max-width: 767px) {
   #node-3 #sectionText section .container .article .sub-item > div, #node-74 #sectionText section .container .article .sub-item > div {
@@ -11517,6 +11524,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .node-type-projects .main-container #block-system-main .field-collection-container .field-items .content .field-name-field-img img {
   width: 64px;
 }
+.node-type-projects .main-container #block-system-main .field-collection-container .field-items .content .field-name-field-expo {
+  text-align: justify;
+}
 .node-type-projects .main-container #block-system-main .field-name-field-projec-tag .field-items {
   display: flex;
   margin: 45px 0;
@@ -12390,6 +12400,61 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-67 .img-center {
   text-align: -webkit-center;
   margin-top: 50px;
+}
+
+.node-type-page .page-header {
+  margin-top: 50px;
+}
+
+.text-border {
+  border: 1px solid #fff;
+  padding: 35px 0;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.text-border .text-border-inside {
+  border: solid #fff;
+  border-width: 0 4px;
+  margin: 10px -4px 10px;
+  padding: 15px 20px;
+  color: #fff;
+  display: inline-block;
+}
+.text-border .text-border-inside > * {
+  /* font-size: 25px; */
+  font-weight: bold;
+}
+
+.header-style {
+  width: calc(100vw - 17px);
+  top: 0px;
+  padding: 40px 0;
+  right: calc(50% - 50vw + 8.5px);
+  background: url(/sites/default/files/field/images/insta/node-122.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+@media (pointer:none), (pointer:coarse), (hover:none), (hover:on-demand) {
+  .header-style {
+    width: 100vw;
+    right: calc(50% - 50vw);
+  }
+}
+.header-style:before {
+  content: " ";
+  background: rgba(0, 0, 0, 0.5);
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+}
+.header-style .container {
+  z-index: 5;
+  position: relative;
+  padding: 25px 15px;
+}
+.header-style ~ .header-style {
+  display: none;
 }
 
 @font-face {

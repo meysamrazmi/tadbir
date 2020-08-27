@@ -354,29 +354,29 @@ function costum_collection_slide($item) {
 
   print $output;
   print "<script>
-  $(\".node-type-news.not-front\").ready(function () {
-   $(\".$rand .field-items img\").each(function(){
-     if($(this).attr(\"title\")){
-       $(this).after(\"<span class='slider-caption'>\" + $(this).attr(\"title\") + \"</span>\");
-     }
-   })
-   $(\".$rand .field-items\").addClass(\"owl-carousel owl-theme\").owlCarousel({
-     rtl: true,
-     loop: true,
-     margin: 15,
-     responsiveClass: true,
-     nav: true,
-     autoplayTimeout: 10000,
-     autoplay:true,
-     autoplayHoverPause:true,
-     responsive: {
-       0: { items: 1 },
-       600: { items: 1 },
-       1000: { items: 1 }
-     },
+    $(\".node-type-news.not-front\").ready(function () {
+     $(\".$rand .field-items img\").each(function(){
+       if($(this).attr(\"title\")){
+         $(this).after(\"<span class='slider-caption'>\" + $(this).attr(\"title\") + \"</span>\");
+       }
+     })
+     $(\".$rand .field-items\").addClass(\"owl-carousel owl-theme\").owlCarousel({
+       rtl: true,
+       loop: true,
+       margin: 15,
+       responsiveClass: true,
+       nav: true,
+       autoplayTimeout: 10000,
+       autoplay:true,
+       autoplayHoverPause:true,
+       responsive: {
+         0: { items: 1 },
+         600: { items: 1 },
+         1000: { items: 1 }
+       },
+     });
    });
- });
-</script>";
+  </script>";
 }
 
 function costum_collection_body($item) {
@@ -396,6 +396,25 @@ function costum_collection_image($item) {
         ". render($item['field_images']) ."
       </div>";
   print $output;
+}
+
+function costum_collection_main_header($item) {
+  $output = '
+    <div class="header-style">
+      <div class="container">
+        <div class="text-border">
+          <div class="text-border-inside">
+            <h2>'. (isset($item['field_title']['#items'][0])? $item['field_title']['#items'][0]['value'] : '') .'</h2>
+          </div>
+        </div>
+      </div>
+    </div>';
+  print $output;
+  print '<style>h1.page-header {display: none;}</style>';
+
+  if(isset($item['field_images']['#items'][0])){
+    print '<style>.header-style{background-image: url('. image_style_url('1366x500', $item['field_images']['#items'][0]['uri']) .');}</style>';
+  }
 }
 
 function alter_image_style(&$item){
