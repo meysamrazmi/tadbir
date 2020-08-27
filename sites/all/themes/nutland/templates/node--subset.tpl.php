@@ -94,7 +94,7 @@
       <?php print $submitted; ?>
     </span>
     <?php endif; ?>
-  </header>fghjkl
+  </header>
   <?php endif; ?>
   <?php
     // Hide comments, tags, and links now so that we can render them later.

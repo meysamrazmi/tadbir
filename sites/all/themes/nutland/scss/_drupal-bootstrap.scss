@@ -4777,7 +4777,7 @@ a {
           }
         }
       }
-      .field-name-field-body{
+      .owl-carousel .field-name-field-body{
         position: absolute;
         width: 100%;
         height: 100%;
@@ -4797,6 +4797,9 @@ a {
           display: flex;
           align-items: center;
           height: 300px;
+          @media (max-width:600px) {
+            padding: 20px 20px 120px !important;
+          }
           p{
             border-right: 4px solid;
             border-left: 4px solid;
@@ -4805,6 +4808,12 @@ a {
             margin-right: -24px;
             font-size: 28px;
             line-height: 2;
+            @media (max-width:600px) {
+              font-size: 22px !important;
+              padding: 0px 10px !important;
+              top: 40px;
+              position: relative;
+            }
           }
         }
       }
@@ -4826,6 +4835,15 @@ a {
         background-attachment: fixed;
         padding: 50px 0;
         border-bottom: none!important;
+        position: relative;
+        &:before {
+          content: " ";
+          background: rgba(0, 0, 0, 0.2);
+          position: absolute;
+          top: 0;
+          height: 100%;
+          width: 100%;
+        }
         .field-name-field-costum{
           max-width: 1100px;
           margin: auto;
@@ -4866,19 +4884,7 @@ a {
                 }
               }
             }
-            > .field-item:first-child{
-              pointer-events: none;
-              font-weight: bold;
-              .field-name-field-title{
-                .field-item{
-                  text-align: center;
-                  color: #4B4B4B;
-                  &:before, &:after{
-                    display: none;
-                  }
-                }
-              }
-            }
+
           }
         }
       }
@@ -4999,17 +5005,6 @@ a {
           min-height: 230px;
         }
       }
-      .field-name-field-body{
-        .field-item{
-          padding: 20px 20px 120px !important;
-          p{
-            font-size: 22px !important;
-            padding: 0px 10px !important;
-            top: 40px;
-            position: relative;
-          }
-        }
-      }
       .field-name-field-slider-main{
         .owl-prev, .owl-next{
           span:before{
@@ -5041,6 +5036,25 @@ a {
           }
         }
       }
+    }
+  }
+  .header-style {
+    background: none;
+    width: initial;
+    padding: inherit;
+    &:before {
+      display: none;
+    }
+  }
+  .subset-collection{
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.9em;
+    .field-name-field-title {
+      font-weight: bold;
+    }
+    .field-name-field-sections > .container {
+      padding: 5px 15px;
     }
   }
 }

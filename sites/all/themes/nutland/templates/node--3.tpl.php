@@ -359,6 +359,7 @@
   #last .view-news .views-field-body {
     color: #808080;
     line-height: 1.8;
+    text-align: justify;
   }
   .col-6,
   [class^=col-sm-],

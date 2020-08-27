@@ -1,9 +1,9 @@
 @font-face {
 font-family: "yekan";
 src: 	url('../fonts/bYekan.eot');
-src: 	url('../fonts/bYekan.eot?#iefix') format("embedded-opentype"), 
-		url('../fonts/bYekan.woff') format("woff"), 
-		url('../fonts/bYekan.ttf') format("truetype"), 
+src: 	url('../fonts/bYekan.eot?#iefix') format("embedded-opentype"),
+		url('../fonts/bYekan.woff') format("woff"),
+		url('../fonts/bYekan.ttf') format("truetype"),
 		url('../fonts/bYekan.svg#BYekan') format("svg");
 font-weight: normal;
 font-style: normal
@@ -13,9 +13,9 @@ font-style: normal
 
   src: url('../fonts/glyphicons-halflings-regular.eot');
   src: url('../fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
-		 url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'), 
-		 url('../fonts/glyphicons-halflings-regular.woff') format('woff'), 
-		 url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'), 
+		 url('../fonts/glyphicons-halflings-regular.woff2') format('woff2'),
+		 url('../fonts/glyphicons-halflings-regular.woff') format('woff'),
+		 url('../fonts/glyphicons-halflings-regular.ttf') format('truetype'),
 		 url('../fonts/glyphicons-halflings-regular.svg#glyphicons_halflingsregular') format('svg');
 }
 @font-face {
@@ -61,10 +61,10 @@ font-style: normal
 #branding h1.page-title {
   font-family: yekan !important;
   font-size: 28px !important;
-}  
+}
 body {
   font: normal 12px/1.8em Open Sans, iransans, "Segoe UI", "Helvetica", sans-serif !important;
-}  
+}
 ul.action-links a {
   font-family: yekan, "Helvetica", sans-serif !important;
   padding-bottom: 4px !important;
@@ -96,7 +96,7 @@ input.add-new-condition,
   height: 50px !important;
   width: 50px !important;
   background-size: cover !important;
-}  
+}
 #toolbar {
   font: normal small "Lucida Grande",iransans, Verdana, sans-serif !important;
     font-size: 12px !important;
@@ -235,7 +235,7 @@ div#edit-field-course-code, div#edit-field-edu-duration, div#edit-field-edu-pric
   vertical-align: top;
   margin: 10px 15px;
 }
-#block-webform-client-block-3403 .webform-component--support--field, 
+#block-webform-client-block-3403 .webform-component--support--field,
 #block-webform-client-block-3403 .webform-component--support--content-type {
   display: inline-block;
   width: 45%;
@@ -437,7 +437,7 @@ fieldset#edit-field-pictures-und thead,
   padding: 10px;
   display: block;
   box-sizing: border-box;
-} 
+}
 .field-name-field-image table tr:first-child .image-widget-data label,
 .field-name-field-pictures table tr:first-child .image-widget-data label {
   opacity: 1;
@@ -689,7 +689,7 @@ a.btn.btn-primary:hover {
     top: 0;
     left: 30px;
 }
-.field-type-user-reference.field-name-field-user thead, 
+.field-type-user-reference.field-name-field-user thead,
 .field-type-user-reference.field-name-field-user .tabledrag-toggle-weight-wrapper{
     display: none;
 }
@@ -698,7 +698,9 @@ tr:not(.groupClass) .field-type-user-reference.field-name-field-user tr:nth-chil
     display: none;
 }
 
-
+.page-node-edit.node-type-subset .field-name-field-sections .horizontal-tabs-list {
+  display: none !important;
+}
 
 
 
