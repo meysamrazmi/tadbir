@@ -253,6 +253,7 @@ body {
   // Fix horizontal scrolling on iOS devices.
   // https://www.drupal.org/node/1870076
   position: relative;
+  line-height: 1.7;
   &.admin-expanded.admin-vertical.admin-nw .navbar,
   &.admin-expanded.admin-vertical.admin-sw .navbar {
     margin-left: 260px;
@@ -1847,8 +1848,9 @@ a {
             > div {
               display: flex;
               flex-direction: row;
-              align-items: flex-start;
+              align-items: center;
               text-align: justify;
+              line-height: 2em;
               @media #{$tabletx}{
                 margin: 20px auto;
                 max-width: 350px;

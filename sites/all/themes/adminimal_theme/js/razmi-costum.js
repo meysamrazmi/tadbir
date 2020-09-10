@@ -19,7 +19,7 @@ $(document).ready(function () {
     }
   })
 
-  $('textarea.text-summary').keypress(function(e) {
+  $('body').on('keypress paste', 'textarea.text-summary', function(e) {
     var tval = $(this).val(),
       tlength = tval.length,
       set = 500,

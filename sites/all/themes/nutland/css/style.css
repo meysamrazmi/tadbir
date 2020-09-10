@@ -7531,6 +7531,7 @@ body {
   background-color: white !important;
   font-family: fanum !important;
   position: relative;
+  line-height: 1.7;
 }
 body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-vertical.admin-sw .navbar {
   margin-left: 260px;
@@ -9164,8 +9165,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 #node-3 #sectionText section .container .article .sub-item > div, #node-74 #sectionText section .container .article .sub-item > div {
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   text-align: justify;
+  line-height: 2em;
 }
 @media screen and (max-width: 767px) {
   #node-3 #sectionText section .container .article .sub-item > div, #node-74 #sectionText section .container .article .sub-item > div {

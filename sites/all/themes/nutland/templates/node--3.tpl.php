@@ -198,15 +198,15 @@
           <h3 style="font-weight: bold"><?php print $node13->title; ?></h3>
           <div class="sub-item">
             <div class="col-sm-4">
-              <?php print isset($node14->field_image['und'][0])? '<img src="'. $node14->field_image['und'][0]['value'] .'">' : ''; ?>
+              <?php print isset($node14->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node14->field_image['und'][0]['uri']) .'">' : ''; ?>
               <?php print isset($node14->body['und'][0])? '<div>'. $node14->body['und'][0]['value'] .'</div>' : ''; ?>
             </div>
             <div class="col-sm-4">
-              <?php print isset($node15->field_image['und'][0])? '<img src="'. $node15->field_image['und'][0]['value'] .'">' : ''; ?>
+              <?php print isset($node15->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node15->field_image['und'][0]['uri']) .'">' : ''; ?>
               <?php print isset($node15->body['und'][0])? '<div>'. $node15->body['und'][0]['value'] .'</div>' : ''; ?>
             </div>
             <div class="col-sm-4">
-              <?php print isset($node16->field_image['und'][0])? '<img src="'. $node16->field_image['und'][0]['value'] .'">' : ''; ?>
+              <?php print isset($node16->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node16->field_image['und'][0]['uri']) .'">' : ''; ?>
               <?php print isset($node16->body['und'][0])? '<div>'. $node16->body['und'][0]['value'] .'</div>' : ''; ?>
             </div>
           </div>
