@@ -11981,8 +11981,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-bottom: 0 !important;
 }
 .node-type-subset .main-container #block-system-main .field-name-field-tarh {
-  max-width: 1100px;
+  width: 1100px;
   margin: auto;
+  max-width: calc(100vw - 40px);
 }
 .node-type-subset .main-container #block-system-main .field-name-field-tarh .items {
   height: auto !important;
@@ -11992,12 +11993,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items {
   display: flex;
-  margin-bottom: -100px;
+  margin: 0 auto -100px;
 }
 .node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items > .field-item {
   padding: 0 10px;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items > .field-item .group-header h2 {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items .group-header h2 {
   width: 100%;
   bottom: 95px;
   background: rgba(0, 36, 122, 0.5);
@@ -12008,10 +12009,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding-right: 15px;
   font-size: 20px;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items > .field-item .group-header h2 a {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items .group-header h2 a {
   color: white;
 }
-.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items > .field-item .group-header h2:before {
+.node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items .group-header h2:before {
   content: " ";
   display: block;
   position: relative;
@@ -12020,6 +12021,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   width: 110px;
   right: 0px;
   top: -5px;
+}
+@media screen and (min-width: 1200px) {
+  .node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items .owl-prev span:before {
+    right: -3.5vw;
+  }
+  .node-type-subset .main-container #block-system-main .field-name-field-tarh > .field-items .owl-next span:before {
+    left: -3.5vw;
+  }
 }
 .node-type-subset .main-container #block-system-main .field-label {
   text-align: center;
@@ -12363,6 +12372,35 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 
 .owl-carousel .mejs-container .mejs-controls {
   display: none !important;
+}
+.owl-carousel .owl-theme .owl-dots .owl-dot span {
+  border-radius: 0;
+}
+.owl-carousel .owl-next,
+.owl-carousel .owl-prev {
+  margin: 0;
+}
+.owl-carousel .owl-next span,
+.owl-carousel .owl-prev span {
+  font-size: 0;
+}
+.owl-carousel .owl-next span:before,
+.owl-carousel .owl-prev span:before {
+  content: "";
+  font-family: icomoon !important;
+  line-height: 1;
+  font-size: 60px;
+  position: absolute;
+  color: #ccc;
+  top: 40%;
+  transition: all 0.2s ease-in-out;
+  transform: translate(0%, -50%);
+  right: 20px;
+}
+.owl-carousel .owl-next span:before {
+  content: "";
+  right: inherit;
+  left: 20px;
 }
 
 .btn.btn-primary {

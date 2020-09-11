@@ -227,14 +227,12 @@ $(".node-type-projects.not-front").ready(function () {
 });
 //carousel in node subset
 $(".node-type-subset.not-front").ready(function () {
-  // $(".field-name-field-title").click(function(){
-  //   $(this).parent().find("> *:not(.field-name-field-title)").last().toggle();
-  // });
   $(".field-name-field-tarh .items").prepend("<div class='line_effect'><span class='lineInner'></span></div>");
   $(".field-name-field-slider-main .field-items img").each(function(){
     let a = $(this).attr("title")? $(this).attr("title") : ''
     $(this).after("<div class='field-name-field-body'><div class='field-item'><p>" + a + "</p></div></div>");
   })
+
   $(".field-name-field-slider-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
     rtl: true,
     loop: true,
@@ -269,9 +267,18 @@ $(".node-type-subset.not-front").ready(function () {
       600: { items: 3 },
       1000: { items: 5 }
     },
-    onTranslated: videoPlay,
   });
-  $('.owl-carousel').click(videoPlay);
+  $(".field-name-field-tarh > .field-items").addClass("owl-carousel owl-theme").owlCarousel({
+    rtl: true,
+    margin: 15,
+    responsiveClass: true,
+    nav: true,
+    dots: false,
+    responsive: {
+      0: { items: 1 },
+      600: { items: 2 },
+    },
+  });
 });
 //project slider
 
