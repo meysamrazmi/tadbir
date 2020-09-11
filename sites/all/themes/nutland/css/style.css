@@ -9199,6 +9199,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   width: auto;
   transition: all 0.4s ease-in-out;
   max-width: none !important;
+  height: auto;
 }
 #node-3 #projects .view-content .views-row .views-field-title, #node-74 #projects .view-content .views-row .views-field-title {
   width: 100%;
@@ -9276,6 +9277,27 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 #node-3 #jobs img:hover, #node-74 #jobs img:hover {
   filter: none !important;
 }
+#node-3 #jobs .osm, #node-74 #jobs .osm {
+  max-width: 100%;
+}
+#node-3 #jobs .owl-prev span:before, #node-74 #jobs .owl-prev span:before {
+  top: 60%;
+  right: -4vw;
+}
+@media screen and (max-width: 767px) {
+  #node-3 #jobs .owl-prev span:before, #node-74 #jobs .owl-prev span:before {
+    right: -8vw;
+  }
+}
+#node-3 #jobs .owl-next span:before, #node-74 #jobs .owl-next span:before {
+  top: 60%;
+  left: -4vw;
+}
+@media screen and (max-width: 767px) {
+  #node-3 #jobs .owl-next span:before, #node-74 #jobs .owl-next span:before {
+    left: -8vw;
+  }
+}
 
 .page-node-3 #block-google-cse-google-cse, .page-node-74 #block-google-cse-google-cse {
   top: 3.5% !important;
@@ -9322,7 +9344,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     width: 100%;
   }
   .page-node-3 .main-container #projects .view-content .items, .page-node-74 .main-container #projects .view-content .items {
-    height: 207px !important;
+    height: 280px !important;
   }
   .page-node-3 .main-container #projects .view-content .views-field-title, .page-node-74 .main-container #projects .view-content .views-field-title {
     text-align: center !important;
@@ -9351,9 +9373,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     transform: translate(0px, 0px);
     font-size: 25px !important;
   }
-  .page-node-3 .main-container .header_title, .page-node-74 .main-container .header_title {
-    margin: 10px;
-  }
   .page-node-3 .main-container #gozideha .col-md-4, .page-node-74 .main-container #gozideha .col-md-4 {
     flex: 0 0 100% !important;
     max-width: 450px !important;
@@ -9366,23 +9385,17 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .page-node-3 .main-container #sectionText .article, .page-node-74 .main-container #sectionText .article {
     margin: 0 10px;
   }
-  .page-node-3 .main-container #projects, .page-node-74 .main-container #projects {
-    text-align: -webkit-center;
-    padding-left: 20px;
-  }
   .page-node-3 .main-container #projects .view-content, .page-node-74 .main-container #projects .view-content {
-    display: inline-block !important;
+    flex-wrap: wrap;
   }
   .page-node-3 .main-container #projects .view-content .views-row, .page-node-74 .main-container #projects .view-content .views-row {
     width: 100% !important;
-    margin: 10px !important;
   }
   .page-node-3 .main-container #jobs .text, .page-node-74 .main-container #jobs .text {
     max-width: 120px !important;
   }
   .page-node-3 .main-container #jobs .container .container, .page-node-74 .main-container #jobs .container .container {
-    max-width: 500px;
-    margin: auto;
+    max-width: calc(100% - 50px) !important;
   }
 }
 @media (max-width: 1200px) and (min-width: 768px) {
@@ -9394,16 +9407,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
   .page-node-3 .main-container #jobs .container .container, .page-node-74 .main-container #jobs .container .container {
     margin: auto;
-  }
-}
-@media (max-width: 992px) {
-  .page-node-3 .main-container .osm, .page-node-74 .main-container .osm {
-    overflow-x: scroll;
-    display: flex;
-    max-width: 100vw !important;
-  }
-  .page-node-3 .main-container .osm img, .page-node-74 .main-container .osm img {
-    max-width: none !important;
   }
 }
 

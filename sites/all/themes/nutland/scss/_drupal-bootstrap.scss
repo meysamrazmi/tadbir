@@ -1886,6 +1886,7 @@ a {
           width: auto;
           transition: all 0.4s ease-in-out;
           max-width: none !important;
+          height: auto;
         }
         .views-field-title{
           width: 100%;
@@ -1969,6 +1970,23 @@ a {
         filter: none !important;
       }
     }
+    .osm {
+      max-width: 100%;
+    }
+    .owl-prev span:before {
+      top: 60%;
+      right: -4vw;
+      @media #{$tabletx} {
+        right: -8vw;
+      }
+    }
+    .owl-next span:before {
+      top: 60%;
+      left: -4vw;
+      @media #{$tabletx} {
+        left: -8vw;
+      }
+    }
   }
 }
 
@@ -2031,7 +2049,7 @@ a {
         .view-content{
           width: 100%;
           .items{
-            height: 207px!important;
+            height: 280px!important;
           }
           .views-field-title{
             text-align: center!important;
@@ -2068,9 +2086,6 @@ a {
           }
         }
       }
-      .header_title{
-        margin: 10px;
-      }
       #gozideha{
         .col-md-4{
           flex: 0 0 100% !important;
@@ -2088,13 +2103,10 @@ a {
         }
       }
       #projects{
-        text-align: -webkit-center;
-        padding-left: 20px;
         .view-content{
-          display: inline-block !important;
+          flex-wrap: wrap;
           .views-row{
             width: 100% !important;
-            margin: 10px !important;
           }
         }
       }
@@ -2104,8 +2116,7 @@ a {
         }
         .container{
           .container{
-            max-width: 500px;
-            margin: auto;
+            max-width: calc(100% - 50px) !important;
           }
         }
       }
@@ -2126,16 +2137,6 @@ a {
           .container{
             margin: auto;
           }
-        }
-      }
-    }
-    @media (max-width: 992px){
-      .osm{
-        overflow-x: scroll;
-        display: flex;
-        max-width: 100vw !important;
-        img{
-          max-width: none !important;
         }
       }
     }

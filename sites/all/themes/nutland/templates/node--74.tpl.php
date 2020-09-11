@@ -121,27 +121,24 @@
 <style>
 
 </style>
-<script src="/sites/all/themes/nutland/js/owl.carousel.min.js"></script>
 <script>
   $('.page-node-37 .view-custom').each(function(){
     $(this).children('.view-content').addClass('owl-carousel');
   });
   if($('.owl-carousel').length){
-    $.getScript('/sites/all/themes/nutland/js/owl.carousel.min.js', function(){
-      $('.owl-carousel').owlCarousel({
-        rtl:true,
-        loop:true,
-        margin:15,
-        responsiveClass:true,
-        nav:true,
-        autoplayTimeout:300,
-        responsive:{
-          0:{items:1},
-          600:{items:3},
-          1000:{items:6}
-        }
-      });
-    })
+    $('.owl-carousel').owlCarousel({
+      rtl:true,
+      loop:true,
+      margin:15,
+      responsiveClass:true,
+      nav:true,
+      autoplayTimeout:300,
+      responsive:{
+        0:{items:1},
+        600:{items:3},
+        1000:{items:6}
+      }
+    });
   }
 </script>
 
