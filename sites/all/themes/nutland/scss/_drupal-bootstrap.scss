@@ -4831,63 +4831,14 @@ a {
         margin-top: 85px;
       }
       .field-collection-container{
-        background-image: url(/sites/all/themes/nutland/images/sktemplate3.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-attachment: fixed;
-        padding: 50px 0;
-        border-bottom: none!important;
         position: relative;
         &:before {
-          content: " ";
+          content: "";
           background: rgba(0, 0, 0, 0.2);
           position: absolute;
           top: 0;
           height: 100%;
           width: 100%;
-        }
-        .field-name-field-costum{
-          max-width: 1100px;
-          margin: auto;
-          > .field-items{
-            display: grid;
-            grid-template-columns: auto auto auto;
-            padding: 10px;
-            .group-header{
-              background-color: rgba(255, 255, 255, 0.9);
-              border: 1px solid rgba(0, 0, 0, 0.1);
-              padding: 0.625rem;
-              color: #adadad;
-              margin-bottom: 0 !important;
-              text-align: justify;
-              .field-name-field-title .field-item{
-                color: #00247c;
-                font-weight: bold;
-                padding: 10px 0 15px 0;
-                margin-right: 40px;
-                font-size: 20px;
-                &:before{
-                  content: " ";
-                  display: block;
-                  position: relative;
-                  height: 1px;
-                  background: #00247c;
-                  width: 40px;
-                  right: -42px;
-                  top: 10px;
-                }
-                &:after{
-                  @media (max-width: 767px) {
-                    float: left;
-                    position: relative;
-                    content: "\e252";
-                    font-family: "Glyphicons Halflings";
-                  }
-                }
-              }
-            }
-
-          }
         }
       }
       .field-collection-view{

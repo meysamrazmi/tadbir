@@ -11964,63 +11964,15 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-top: 85px;
 }
 .node-type-subset .main-container #block-system-main .field-collection-container {
-  background-image: url(/sites/all/themes/nutland/images/sktemplate3.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
-  padding: 50px 0;
-  border-bottom: none !important;
   position: relative;
 }
 .node-type-subset .main-container #block-system-main .field-collection-container:before {
-  content: " ";
+  content: "";
   background: rgba(0, 0, 0, 0.2);
   position: absolute;
   top: 0;
   height: 100%;
   width: 100%;
-}
-.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum {
-  max-width: 1100px;
-  margin: auto;
-}
-.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-}
-.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items .group-header {
-  background-color: rgba(255, 255, 255, 0.9);
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 0.625rem;
-  color: #adadad;
-  margin-bottom: 0 !important;
-  text-align: justify;
-}
-.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item {
-  color: #00247c;
-  font-weight: bold;
-  padding: 10px 0 15px 0;
-  margin-right: 40px;
-  font-size: 20px;
-}
-.node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item:before {
-  content: " ";
-  display: block;
-  position: relative;
-  height: 1px;
-  background: #00247c;
-  width: 40px;
-  right: -42px;
-  top: 10px;
-}
-@media (max-width: 767px) {
-  .node-type-subset .main-container #block-system-main .field-collection-container .field-name-field-costum > .field-items .group-header .field-name-field-title .field-item:after {
-    float: left;
-    position: relative;
-    content: "";
-    font-family: "Glyphicons Halflings";
-  }
 }
 .node-type-subset .main-container #block-system-main .field-collection-view {
   border-bottom: none !important;

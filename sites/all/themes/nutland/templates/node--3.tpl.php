@@ -223,7 +223,7 @@
         </div>
       </div>
       <div class="container" style="padding: 0">
-        <?php $block = module_invoke('views', 'block_view', 'projects-block'); print render($block['content']);; ?>
+        <?php print views_embed_view('projects', 'block_1'); ?>
       </div>
     </section>
   </div>
