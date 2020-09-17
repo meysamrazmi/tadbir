@@ -9306,16 +9306,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: none;
 }
 @media (min-width: 320px) and (max-width: 600px) {
-  .page-node-3 .main-container .view-id-slideshow .owl-item .field-content, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content {
-    padding: 50px 20px 250px !important;
-  }
-  .page-node-3 .main-container .view-id-slideshow .owl-item .field-content p, .page-node-74 .main-container .view-id-slideshow .owl-item .field-content p {
-    font-size: 18px !important;
-    margin-top: 10px;
-    padding: 10px !important;
-    line-height: 1.5 !important;
-    letter-spacing: -0.03em;
-  }
   .page-node-3 .main-container .view-id-slideshow .owl-prev span:before, .page-node-3 .main-container .view-id-slideshow .owl-next span:before, .page-node-74 .main-container .view-id-slideshow .owl-prev span:before, .page-node-74 .main-container .view-id-slideshow .owl-next span:before {
     transform: translate(0%, -100%) !important;
     font-size: 32px !important;
@@ -9324,15 +9314,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     height: 207px !important;
     width: calc(100vw - 50px);
     overflow: hidden;
-  }
-  .page-node-3 .main-container #sectionText section .container, .page-node-74 .main-container #sectionText section .container {
-    padding: 25px !important;
-  }
-  .page-node-3 .main-container #sectionText section .container p, .page-node-74 .main-container #sectionText section .container p {
-    text-align: justify;
-    color: #1b1515;
-    font-weight: bold;
-    padding: 0 15px !important;
   }
   .page-node-3 .main-container #last .col-md-6, .page-node-74 .main-container #last .col-md-6 {
     max-height: 235px;
@@ -11415,9 +11396,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     height: calc(100vh - 50px) !important;
   }
 }
-.node-type-projects .main-container #block-system-main .field-name-field-slide-main .mejs-container .mejs-layers {
-  display: none;
-}
 .node-type-projects .main-container #block-system-main .field-name-field-middle-slide .owl-dots {
   display: block !important;
   margin-top: -30px;
@@ -12373,6 +12351,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   max-width: 100%;
 }
 
+.owl-carousel .mejs-layers,
 .owl-carousel .mejs-container .mejs-controls {
   display: none !important;
 }

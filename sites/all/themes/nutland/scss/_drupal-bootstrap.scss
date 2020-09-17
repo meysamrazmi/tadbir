@@ -2000,18 +2000,6 @@ a {
     }
     @media (min-width: 320px) and (max-width:600px) {
       .view-id-slideshow{
-        .owl-item{
-          .field-content{
-            padding: 50px 20px 250px !IMPORTANT;
-            p{
-              font-size: 18px !important;
-              margin-top: 10px;
-              padding: 10px!important;
-              line-height: 1.5!important;
-              letter-spacing: -0.03em;
-            }
-          }
-        }
         .owl-prev, .owl-next{
           span{
             &:before{
@@ -2026,15 +2014,6 @@ a {
           height: 207px!important;
           width: calc(100vw - 50px);
           overflow: hidden;
-        }
-      }
-      #sectionText section .container{
-        padding: 25px !important;
-        p{
-          text-align: justify;
-          color: #1b1515;
-          font-weight: bold;
-          padding: 0 15px !important;
         }
       }
       #last{
@@ -4235,9 +4214,6 @@ a {
           @media all and (max-width: 767px){
             height: calc(100vh - 50px) !important;
           }
-          .mejs-layers {
-            display: none;
-          }
         }
       }
       .field-name-field-middle-slide{
@@ -5241,6 +5217,7 @@ a {
   }
 }
 .owl-carousel {
+  .mejs-layers ,
   .mejs-container .mejs-controls{
     display: none !important;
   }

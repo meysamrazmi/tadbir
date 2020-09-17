@@ -701,6 +701,10 @@ tr:not(.groupClass) .field-type-user-reference.field-name-field-user tr:nth-chil
 .page-node-edit.node-type-subset .field-name-field-sections .horizontal-tabs-list {
   display: none !important;
 }
-
-
+.select2-search {
+  padding: 0;
+}
+.select2-search input {
+  box-sizing: border-box;
+}
 
