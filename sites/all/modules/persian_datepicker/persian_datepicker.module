@@ -1,0 +1,129 @@
+<?php
+
+
+/**
+ * Implements hook_elements().
+ */
+function persian_datepicker_element_info() {
+  return array(
+    'persian_datepicker' => array(
+      '#input' => TRUE,
+      '#element_validate' => array('persian_datepicker_validate'),
+      '#process' => array('ajax_process_form', 'persian_datepicker_process_element'),
+      '#theme_wrappers' => array('form_element'),
+    ),
+  );
+}
+function persian_datepicker_validate($element, &$form_state) {
+
+}
+function persian_datepicker_process_element($element, &$form_state){
+  $element['textfield'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Date'),
+    '#attributes' => array('id' => array($element["#field_name"])),
+    '#default_value' => isset($element["#default_value"])?$element["#default_value"]:'',
+
+  );
+  $element['#attached']=array(
+    'css' => array(
+      drupal_get_path('module', 'persian_datepicker') . '/css/datepicker.css'),
+    'js' => array(
+      drupal_get_path('module', 'persian_datepicker') . '/js/script.min.js',
+    ),
+  );
+  $element['#attached']['js'][] = array(
+    'type' => 'inline',
+    'data' => 'jQuery(document).ready(function() { kamaDatepicker("'.$element["#field_name"].'",{ buttonsColor: "red", forceFarsiDigits: true });});',
+    'scope' => 'footer',
+    'group' => JS_THEME,
+    'weight' => 5,
+  );
+  return $element;
+}
+/**
+ * Implements hook_field_info().
+ */
+function persian_datepicker_field_info() {
+  return array(
+    'persian_datepicker' => array(
+      'label' => 'Persian Date picker',
+      'description' => t('This field stores and renders persian_datepicker .'),
+      'default_widget' => 'persian_datepicker_persian_datepicker',
+      'default_formatter' => 'persian_datepicker_default',
+      'property_type' => 'text',
+    ),
+  );
+}
+/**
+ * Implements hook_field_validate().
+ */
+function persian_datepicker_field_validate($obj_type, $object, $field, $instance, $langcode, $items, &$errors) {
+}
+/**
+ * Implements hook_field_widget_error().
+ */
+function persian_datepicker_field_widget_error($element, $error, $form, &$form_state) {
+}
+/**
+ * Implements hook_content_is_empty().
+ */
+function persian_datepicker_field_is_empty($item, $field) {
+  if (empty($item['persian_datepicker'])) {
+    return TRUE;
+  }
+  return FALSE;
+}
+/**
+ * Implements hook_field_formatter_info().
+ *
+ */
+function persian_datepicker_field_formatter_info() {
+  $formats = array(
+    'persian_datepicker_default' => array(
+      'label' => t('Default datepicker date'),
+      'description' => t('Display the persian_datepicker .'),
+      'field types' => array('persian_datepicker'),
+    ),
+  );
+  return $formats;
+}
+/**
+ * Implements hook_field_formatter_view().
+ */
+function persian_datepicker_field_formatter_view($object_type, $object, $field, $instance, $langcode, $items, $display) {
+  $element = array();
+  switch ($display['type']) {
+    case 'persian_datepicker_default':
+      foreach ($items as $delta => $item) {
+        $element[$delta] = array('#markup' => $item['persian_datepicker']);
+      }
+      break;
+  }
+  return $element;
+}
+/**
+ * Implements hook_field_widget_info().
+ */
+function persian_datepicker_field_widget_info() {
+  return array(
+    'persian_datepicker_persian_datepicker' => array(
+      'label' => t('Date Popop'),
+      'field types' => array('persian_datepicker'),
+    ),
+  );
+}
+/**
+ * Implements hook_field_widget_form().
+ */
+function persian_datepicker_field_widget_form(&$form, &$form_state, $field, $instance, $langcode, $items, $delta, $base) {
+  $element = $base;
+  $element['persian_datepicker'] = $base + array(
+      '#type' => 'persian_datepicker',
+      '#default_value' => isset($items[$delta]['persian_datepicker']) ? $items[$delta]['persian_datepicker'] : NULL,
+      '#prefix' => '<div class="text-full-wrapper">',
+      '#suffix' => '</div>',
+    );
+  return $element;
+}
+

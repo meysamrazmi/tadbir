@@ -1,0 +1,13 @@
+<?php
+/**
+ * Implements hook_field_schema().
+ */
+function persian_datepicker_field_schema($field) {
+  $schema = array();
+  $schema['columns']['persian_datepicker'] = array(
+    'type' => 'varchar',
+    'length' => 125,
+    'not null' => FALSE
+  );
+  return $schema;
+}

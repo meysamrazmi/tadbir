@@ -1,0 +1,13 @@
+name = Persian Date Picker
+core = 7.x
+package = date
+version = "7.x-1.3"
+project = "date"
+datestamp = "1397134155"
+dependencies[]=jquery_update
+; Information added by Drupal.org packaging script on 2018-01-25
+version = "7.x-1.2"
+core = "7.x"
+project = "persian_datepicker"
+datestamp = "1516876691"
+
