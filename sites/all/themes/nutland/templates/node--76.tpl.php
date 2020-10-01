@@ -184,7 +184,7 @@
     $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
       items: 2,
       loop: true,
-      rtl: true,
+      rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
       nav: true,
       dots: true,
       autoWidth: true,
@@ -195,7 +195,7 @@
   });
   if($('.owl-carousel').length){
     $('.owl-carousel').owlCarousel({
-      rtl:true,
+      rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
       loop:true,
       margin:15,
       responsiveClass:true,

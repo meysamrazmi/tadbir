@@ -1,84 +1,6 @@
 <?php
-
-/**
- * @file
- * Default theme implementation to display a node.
- *
- * Available variables:
- * - $title: the (sanitized) title of the node.
- * - $content: An array of node items. Use render($content) to print them all,
- *   or print a subset such as render($content['field_example']). Use
- *   hide($content['field_example']) to temporarily suppress the printing of a
- *   given element.
- * - $user_picture: The node author's picture from user-picture.tpl.php.
- * - $date: Formatted creation date. Preprocess functions can reformat it by
- *   calling format_date() with the desired parameters on the $created variable.
- * - $name: Themed username of node author output from theme_username().
- * - $node_url: Direct URL of the current node.
- * - $display_submitted: Whether submission information should be displayed.
- * - $submitted: Submission information created from $name and $date during
- *   template_preprocess_node().
- * - $classes: String of classes that can be used to style contextually through
- *   CSS. It can be manipulated through the variable $classes_array from
- *   preprocess functions. The default values can be one or more of the
- *   following:
- *   - node: The current template type; for example, "theming hook".
- *   - node-[type]: The current node type. For example, if the node is a
- *     "Blog entry" it would result in "node-blog". Note that the machine
- *     name will often be in a short form of the human readable label.
- *   - node-teaser: Nodes in teaser form.
- *   - node-preview: Nodes in preview mode.
- *   The following are controlled through the node publishing options.
- *   - node-promoted: Nodes promoted to the front page.
- *   - node-sticky: Nodes ordered above other non-sticky nodes in teaser
- *     listings.
- *   - node-unpublished: Unpublished nodes visible only to administrators.
- * - $title_prefix (array): An array containing additional output populated by
- *   modules, intended to be displayed in front of the main title tag that
- *   appears in the template.
- * - $title_suffix (array): An array containing additional output populated by
- *   modules, intended to be displayed after the main title tag that appears in
- *   the template.
- *
- * Other variables:
- * - $node: Full node object. Contains data that may not be safe.
- * - $type: Node type; for example, story, page, blog, etc.
- * - $comment_count: Number of comments attached to the node.
- * - $uid: User ID of the node author.
- * - $created: Time the node was published formatted in Unix timestamp.
- * - $classes_array: Array of html class attribute values. It is flattened
- *   into a string within the variable $classes.
- * - $zebra: Outputs either "even" or "odd". Useful for zebra striping in
- *   teaser listings.
- * - $id: Position of the node. Increments each time it's output.
- *
- * Node status variables:
- * - $view_mode: View mode; for example, "full", "teaser".
- * - $teaser: Flag for the teaser state (shortcut for $view_mode == 'teaser').
- * - $page: Flag for the full page state.
- * - $promote: Flag for front page promotion state.
- * - $sticky: Flags for sticky post setting.
- * - $status: Flag for published status.
- * - $comment: State of comment settings for the node.
- * - $readmore: Flags true if the teaser content of the node cannot hold the
- *   main body content.
- * - $is_front: Flags true when presented in the front page.
- * - $logged_in: Flags true when the current user is a logged-in member.
- * - $is_admin: Flags true when the current user is an administrator.
- *
- * Field variables: for each field instance attached to the node a corresponding
- * variable is defined; for example, $node->body becomes $body. When needing to
- * access a field's raw values, developers/themers are strongly encouraged to
- * use these variables. Otherwise they will have to explicitly specify the
- * desired field language; for example, $node->body['en'], thus overriding any
- * language negotiation rule that was previously applied.
- *
- * @see template_preprocess()
- * @see template_preprocess_node()
- * @see template_process()
- *
- * @ingroup templates
- */
+global $language;
+$lang = $language->language;
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
@@ -186,10 +108,18 @@
   </section>
 
   <?php
-  $node13 = node_load(140);
-  $node14 = node_load(141);
-  $node15 = node_load(142);
-  $node16 = node_load(143);
+  if($lang == 'fa'){
+    $node13 = node_load(140);
+    $node14 = node_load(141);
+    $node15 = node_load(142);
+    $node16 = node_load(143);
+  }
+  else {
+    $node13 = node_load(156);
+    $node14 = node_load(155);
+    $node15 = node_load(157);
+    $node16 = node_load(158);
+  }
   ?>
   <div class="row" id="sectionText">
     <section>
@@ -199,15 +129,15 @@
           <div class="sub-item">
             <div class="col-sm-4">
               <?php print isset($node14->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node14->field_image['und'][0]['uri']) .'">' : ''; ?>
-              <?php print isset($node14->body['und'][0])? '<div>'. $node14->body['und'][0]['value'] .'</div>' : ''; ?>
+              <?php print isset($node14->body[$lang][0])? '<div>'. $node14->body[$lang][0]['value'] .'</div>' : ''; ?>
             </div>
             <div class="col-sm-4">
               <?php print isset($node15->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node15->field_image['und'][0]['uri']) .'">' : ''; ?>
-              <?php print isset($node15->body['und'][0])? '<div>'. $node15->body['und'][0]['value'] .'</div>' : ''; ?>
+              <?php print isset($node15->body[$lang][0])? '<div>'. $node15->body[$lang][0]['value'] .'</div>' : ''; ?>
             </div>
             <div class="col-sm-4">
               <?php print isset($node16->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node16->field_image['und'][0]['uri']) .'">' : ''; ?>
-              <?php print isset($node16->body['und'][0])? '<div>'. $node16->body['und'][0]['value'] .'</div>' : ''; ?>
+              <?php print isset($node16->body[$lang][0])? '<div>'. $node16->body[$lang][0]['value'] .'</div>' : ''; ?>
             </div>
           </div>
         </div>
@@ -219,7 +149,7 @@
     <section>
       <div class="container">
         <div class="header_title text-primary">
-          <h5 class="mb-0">پروژه ها</h5>
+          <h5 class="mb-0"><?php echo t('projects');?></h5>
         </div>
       </div>
       <div class="container" style="padding: 0">
@@ -385,6 +315,10 @@
     border-right: 3px solid rgba(255, 255, 255, .9);
     padding-right: 0.625rem
   }
+  .i18n-en #last .caption {
+    border-left: 3px solid rgba(255, 255, 255, .9);
+    padding-left: 0.625rem
+  }
   #last .caption span {
     display: table
   }
@@ -401,15 +335,15 @@
     background-color: rgba(255, 255, 255, .8);
     -webkit-transition: width .3s ease-in-out
   }
-  #last  .caption span:after {
+  #last .caption span:after {
     content: "";
     width: 100%;
     height: 0.0625rem;
     position: relative;
-    top: 0.3125rem;
+    top: 4px;
     display: block
   }
-  [dir] #last .caption span:after {
+  #last .caption span:after {
     background-color: rgba(255, 255, 255, .4)
   }
   #last .items_text {
@@ -437,8 +371,8 @@
     overflow: hidden;
   }
   #last .items_text .caption_wrap {
-    top: 0.3125rem;
-    bottom: 0.3125rem;
+    top: 4px;
+    bottom: 4px;
     width: 180px;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -447,32 +381,36 @@
     background-color: rgba(0, 36, 122, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: all .5s ease-in-out;
-    right: 0.3125rem
+    right: 4px;
   }
-  [dir] #last  .items_text .caption_wrap .caption {
+  .i18n-en #last .items_text .caption_wrap {
+    right: unset;
+    left: 4px;
+  }
+  #last  .items_text .caption_wrap .caption {
     margin: 0
   }
   #last .items_text:hover img {
     -webkit-transform: scale(1.1)
   }
-  [dir] #last .items_text:hover img {
+  #last .items_text:hover img {
     transform: scale(1.1)
   }
   #last .items_text:hover .caption_wrap {
     width: 200px
   }
-  [dir] #last .items_text:hover .caption_wrap {
+  #last .items_text:hover .caption_wrap {
     background-color: rgba(0, 36, 122, .9)
   }
   #last .items_text:before {
     content: "";
     position: absolute;
-    top: 0.3125rem;
-    bottom: 0.3125rem
+    top: 4px;
+    bottom: 4px
   }
-  [dir=rtl] #last .items_text:before {
-    right: 0.3125rem;
-    left: 0.3125rem
+  #last .items_text:before {
+    right: 4px;
+    left: 4px
   }
 
 
@@ -491,7 +429,7 @@
     flex: 0 0 33.3333333333%;
     max-width: 33.3333333333%
   }
-  [dir=rtl] #gozideha .caption span {
+  #gozideha .caption span {
     line-height: 1.2;
     font-size: 14px !important;
   }
@@ -521,6 +459,11 @@
     border-right: 3px solid rgba(255, 255, 255, .9);
     padding-right: 0.625rem
   }
+  .i18n-en #gozideha .caption {
+    border-left: 3px solid rgba(255, 255, 255, .9);
+    padding-left: 0.625rem;
+  }
+
   #gozideha .caption span {
     display: table
   }
@@ -557,7 +500,7 @@
   }
   #gozideha .items .caption_wrap {
     top: 3.125rem;
-    margin: 0.3125rem
+    margin: 4px
   }
   #gozideha .items:hover img {
     filter: grayscale(0);
@@ -581,8 +524,8 @@
     bottom: 1.25rem
   }
   #gozideha .items_text .caption_wrap {
-    top: 0.3125rem;
-    bottom: 0.3125rem;
+    top: 4px;
+    bottom: 4px;
     width: 11.25rem;
     -webkit-box-pack: end;
     -ms-flex-pack: end;
@@ -591,9 +534,9 @@
     background-color: rgba(0, 36, 122, .5);
     padding-bottom: 1.875rem;
     -webkit-transition: width .5s ease-in-out;
-    right: 0.3125rem
+    right: 4px
   }
-  [dir] #gozideha .items_text .caption_wrap .caption {
+  #gozideha .items_text .caption_wrap .caption {
     margin: 0
   }
   #gozideha .items_text:hover img {
@@ -607,15 +550,15 @@
   #gozideha .items_text:before {
     content: "";
     position: absolute;
-    top: 0.3125rem;
-    bottom: 0.3125rem;
-    right: 0.3125rem;
-    left: 0.3125rem
+    top: 4px;
+    bottom: 4px;
+    right: 4px;
+    left: 4px
   }
 </style>
 <script>
   $("#jobs .owl-carousel").owlCarousel({
-    rtl: true,
+    rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
     loop: true,
     margin: 15,
     responsiveClass: true,

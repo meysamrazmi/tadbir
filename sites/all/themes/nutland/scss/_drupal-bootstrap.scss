@@ -399,6 +399,10 @@ a{
   @media #{$grid-breakpoint} {
     margin-right: 0;
     padding-left: 0;
+    .i18n-en & {
+      padding-left: 15px;
+      padding-right: 0px;
+    }
   }
 }
 
@@ -1113,8 +1117,10 @@ a {
   margin-top: auto;
   position: relative;
   z-index: 5;
-  .col-md-3, .col-md-4, .col-md-5{
+  .i18n-fa {
+    .col-md-3, .col-md-4, .col-md-5{
       float: right;
+    }
   }
   .card-header{
     max-width: 420px;
@@ -1169,7 +1175,6 @@ a {
     flex-wrap: wrap;
     li{
       width: 50%;
-      text-align: right;
       a{
         color: white;
         padding: 5px 0px;
@@ -1264,6 +1269,10 @@ a {
     z-index: 100;
     max-width: calc(100% - 245px - 220px);
     margin-right: 1.5%;
+    .i18n-en & {
+      margin-right: 0;
+      margin-left: 1.5%;
+    }
     @media (max-width: 899px) and (min-width: 768px){
       max-width: calc(100% - 245px - 180px);
     }
@@ -1277,7 +1286,7 @@ a {
       display: flex;
       align-items: center;
       padding-right: 0 !important;
-      margin-top: 45px;
+      margin-top: 41px;
       font-weight: 500;
       transition: all 0.5s ease;
       @media (max-width: 1000px){
@@ -1307,6 +1316,10 @@ a {
             height: 4px;
             -webkit-transition: width 0.3s ease-in-out;
             background-color: #F95109;
+            .i18n-en & {
+              left: 0;
+              right: unset;
+            }
           }
           &:hover{
             background: none;
@@ -1389,7 +1402,7 @@ a {
       transition: all 0.5s ease;
       li{
         list-style: none;
-        padding: 0px ;
+        padding: 0px;
         min-width: 50px;
         cursor: pointer;
         display: flex;
@@ -1407,6 +1420,10 @@ a {
           color: #DADADA;
           margin-right: 10px;
           display: flex;
+          .i18n-en & {
+            margin-right: 0px;
+            margin-left: 10px;
+          }
         }
         a{
           color:#c7c3c3;
@@ -1775,6 +1792,10 @@ a {
           line-height: 2;
           transition: all 0.3s ease;
           position: relative;
+          .i18n-en & {
+            margin-right: unset;
+            margin-left: -24px;
+          }
           &:before {
             content: "";
             position: absolute;
@@ -1859,6 +1880,10 @@ a {
             img {
               max-width: 90px;
               margin-left: 10px;
+              .i18n-en & {
+                margin-left: unset;
+                margin-right: 10px;
+              }
             }
           }
         }
@@ -1887,12 +1912,12 @@ a {
           transition: all 0.4s ease-in-out;
           max-width: none !important;
           height: auto;
+          min-height: 100%;
         }
         .views-field-title{
           width: 100%;
           bottom: 0;
           background: rgba(0, 36, 122, .5);
-          text-align: right;
           position: absolute;
           min-height: 75px;
           transition: all .4s ease-in-out;
@@ -1918,10 +1943,10 @@ a {
             &:before{
               content: "";
               position: absolute;
-              top: 0.3125rem;
+              top: 4px;
               bottom: 8rem;
-              right: 0.3125rem;
-              left: 0.3125rem;
+              right: 4px;
+              left: 4px;
               border: 1px solid rgba(255, 255, 255, 0.5);
               transition: all 1s ease-in-out;
             }
@@ -2453,12 +2478,20 @@ a {
   transition: all 0.5s ease;
   opacity: 0;
   padding: 0;
+  .i18n-en & {
+    right: 150px;
+    left: unset;
+  }
   @media (max-width: 767px){
     height: 55px;
     left: 0px;
   }
   @media (min-width: 1440px){
     left: 300px;
+    .i18n-en & {
+      right: 300px;
+      left: unset;
+    }
   }
   &.open{
     left: 200px;
@@ -2468,22 +2501,38 @@ a {
       height: 50px;
       width: calc(100vw - 250px - 200px);
     }
+    .i18n-en & {
+      right: 200px;
+      left: unset;
+    }
     @media (max-width: 899px) and (min-width: 768px){
       left: 160px;
       width: calc(100vw - 250px - 180px);
       .fixed & {
         width: calc(100vw - 250px - 170px);
       }
+      .i18n-en & {
+        right: 160px;
+        left: unset;
+      }
     }
     @media (max-width: 767px){
       left: 50px;
       width: calc(100vw - 50px - 60px);
+      .i18n-en & {
+        right: 50px;
+        left: unset;
+      }
     }
     @media (min-width: 1440px){
       left: 350px;
       width: calc(100vw - 350px - 280px);
       .fixed & {
         width: calc(100vw - 250px - 370px);
+      }
+      .i18n-en & {
+        right: 350px;
+        left: unset;
       }
     }
   }
@@ -2518,6 +2567,10 @@ a {
       padding-right: 50px;
       box-shadow: none !important;
       font-size: 20px;
+      .i18n-en & {
+        padding-right: 6px;
+        padding-left: 50px;
+      }
     }
     button{
       display: none;
@@ -3258,12 +3311,12 @@ a {
 //change to scss in free time
 .line_effect {
   position: absolute;
-  top: 0.3125rem;
-  bottom: 0.3125rem
+  top: 4px;
+  bottom: 4px
 }
 .line_effect {
-  right: 0.3125rem;
-  left: 0.3125rem;
+  right: 4px;
+  left: 4px;
   pointer-events: none;
 }
 .lineInner:after,
@@ -3299,11 +3352,11 @@ a {
 .items:before {
   content: "";
   position: absolute;
-  top: 0.3125rem;
-  bottom: 0.3125rem;
+  top: 4px;
+  bottom: 4px;
   border: 1px solid rgba(255, 255, 255, .25);
-  right: 0.3125rem;
-  left: 0.3125rem;
+  right: 4px;
+  left: 4px;
   z-index: 4;
   pointer-events: none;
 }
@@ -3335,6 +3388,7 @@ a {
 }
 .line_effect:before {
   right: 0;
+  left: unset;
 }
 .items:hover .line_effect:before,  .items:hover .lineInner:before,
 .items:focus .line_effect:before,  .items:focus .lineInner:before {
@@ -5248,6 +5302,11 @@ a {
     content: "";
     right: inherit;
     left: 20px;
+  }
+  .i18n-en & {
+    .owl-rtl {
+      direction: ltr;
+    }
   }
 }
 .btn.btn-primary {

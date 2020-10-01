@@ -361,7 +361,7 @@ function costum_collection_slide($item) {
        }
      })
      $(\".$rand .field-items\").addClass(\"owl-carousel owl-theme\").owlCarousel({
-       rtl: true,
+       rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
        loop: true,
        margin: 15,
        responsiveClass: true,

@@ -210,7 +210,7 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
   $(document).ready(function () {
     $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
       items: 2,
-      rtl: true,
+      rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
       nav: true,
       dots: true,
       loop: true,

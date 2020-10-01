@@ -140,13 +140,13 @@
     padding-top: 20px;
     margin-top: 20px;
   }
-  .linki {
-    margin-right: 5%;
-  }
-  @media (max-width: 992px) {
+  @media (min-width: 993px) {
     .linki {
-      margin-right: 0;
+      margin-right: 5%;
     }
-
+    .i18n-en .linki{
+      margin-right: 0;
+      margin-left: 5%;
+    }
   }
 </style>

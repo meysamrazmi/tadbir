@@ -177,7 +177,7 @@ $(".page-node-5").ready(function(){
      }
    })
      $(".field-name-field-news-image .field-items").addClass("owl-carousel owl-theme").owlCarousel({
-       rtl: true,
+       rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
        loop: true,
        margin: 15,
        responsiveClass: true,
@@ -210,7 +210,7 @@ $(".node-type-projects.not-front").ready(function () {
     }
   })
   $(".field-name-field-middle-slide .field-items").addClass("owl-carousel owl-theme").owlCarousel({
-    rtl: true,
+    rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
     loop: true,
     margin: 15,
     responsiveClass: true,
@@ -234,7 +234,7 @@ $(".node-type-subset.not-front").ready(function () {
   })
 
   $(".field-name-field-slider-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
-    rtl: true,
+    rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
     loop: true,
     margin: 15,
     responsiveClass: true,
@@ -252,7 +252,7 @@ $(".node-type-subset.not-front").ready(function () {
   $('.owl-carousel').click(videoPlay);
 
   $(".field-name-field-company .field-items").addClass("owl-carousel owl-theme").owlCarousel({
-    rtl: true,
+    rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
     loop: true,
     margin: 15,
     responsiveClass: true,
@@ -269,7 +269,7 @@ $(".node-type-subset.not-front").ready(function () {
     },
   });
   $(".field-name-field-tarh > .field-items").addClass("owl-carousel owl-theme").owlCarousel({
-    rtl: true,
+    rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
     margin: 15,
     responsiveClass: true,
     nav: true,
@@ -288,7 +288,7 @@ $(".node-type-projects.not-front").ready(function () {
     $(this).after("<div class='field-name-field-body'>" + "<div class='field-item'>" + "<p>" + a + "</p>" + "</div>" + "</div>");
   })
   $(".field-name-field-slide-main .field-items").addClass("owl-carousel owl-theme").owlCarousel({
-    rtl: true,
+    rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
     loop: true,
     margin: 15,
     responsiveClass: true,
