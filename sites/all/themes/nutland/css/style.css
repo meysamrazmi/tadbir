@@ -7349,6 +7349,10 @@ td.visible-print {
   right: 20px;
   top: 0;
 }
+.i18n-en .resp .xclose:after, .i18n-en .resp .xclose:before {
+  right: unset;
+  left: 20px;
+}
 .resp .xclose:before {
   transform: rotate(45deg);
 }
@@ -7371,6 +7375,11 @@ td.visible-print {
     top: 75px;
     right: 25px;
     display: block !important;
+    z-index: 100;
+  }
+  .i18n-en .resp a.logo.mobile {
+    right: unset;
+    left: 25px;
   }
   .resp .form-search-menu {
     top: 5px !important;
@@ -8521,6 +8530,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   background-color: white !important;
   border-color: white !important;
 }
+.i18n-en #navbar .navbar-toggle {
+  margin-right: 0;
+  margin-left: 15px;
+}
 #navbar #block-system-main-menu {
   position: static;
 }
@@ -8764,6 +8777,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     top: 15px;
     border: none;
   }
+  .i18n-en #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li span.nolink .caret,
+.i18n-en #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li a .caret {
+    right: 20px;
+    left: unset;
+  }
   #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li span.nolink .caret:after,
 #navbar .navbar-collapse #block-system-main-menu ul.menu.nav li a .caret:after {
     position: absolute;
@@ -8898,6 +8916,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   #navbar .left-menu {
     position: absolute;
     left: 0;
+  }
+  .i18n-en #navbar .left-menu {
+    left: unset;
+    right: 0;
   }
   #navbar .left-menu ul {
     height: 50px;
@@ -9743,11 +9765,17 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .i18n-en .form-search-menu {
   right: 150px;
   left: unset;
+  border-right: none;
+  border-left: 1px solid #ccc;
 }
 @media (max-width: 767px) {
   .form-search-menu {
     height: 55px;
     left: 0px;
+  }
+  .i18n-en .form-search-menu {
+    right: 0;
+    left: unset;
   }
 }
 @media (min-width: 1440px) {

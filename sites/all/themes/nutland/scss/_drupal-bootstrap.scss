@@ -65,6 +65,10 @@ $mobile:              "(pointer:none), (pointer:coarse), (hover:none), (hover:on
       background-color: #333;
       right: 20px;
       top: 0;
+      .i18n-en & {
+        right: unset;
+        left: 20px;
+      }
     }
     &:before{
       transform: rotate(45deg);
@@ -87,6 +91,11 @@ $mobile:              "(pointer:none), (pointer:coarse), (hover:none), (hover:on
       top: 75px;
       right: 25px;
       display: block !important;
+      z-index: 100;
+      .i18n-en & {
+        right: unset;
+        left: 25px;
+      }
     }
     .form-search-menu{
       top: 5px !important;
@@ -1244,6 +1253,10 @@ a {
   .navbar-toggle{
     background-color: white!IMPORTANT;
     border-color: white !IMPORTANT;
+    .i18n-en & {
+      margin-right: 0;
+      margin-left: 15px;
+    }
   }
   #block-system-main-menu {
     position: static;
@@ -1473,6 +1486,10 @@ a {
                 left: 20px;
                 top: 15px;
                 border: none;
+                .i18n-en & {
+                  right: 20px;
+                  left: unset;
+                }
                 &:after{
                   position: absolute;
                   content: ' ';
@@ -1554,6 +1571,10 @@ a {
     .left-menu {
       position: absolute;
       left: 0;
+      .i18n-en & {
+        left: unset;
+        right: 0;
+      }
       ul{
         height: 50px;
       }
@@ -2494,10 +2515,16 @@ a {
   .i18n-en & {
     right: 150px;
     left: unset;
+    border-right: none;
+    border-left: 1px solid #ccc;
   }
   @media (max-width: 767px){
     height: 55px;
     left: 0px;
+    .i18n-en & {
+      right: 0;
+      left: unset;
+    }
   }
   @media (min-width: 1440px){
     left: 300px;
