@@ -7496,6 +7496,9 @@ body#tinymce {
 .main-container span:not(.glyphicon) {
   font-family: fanum !important;
 }
+.i18n-en .main-container span:not(.glyphicon) {
+  font-family: sans-serif !important;
+}
 
 .breadcrumb {
   display: none;
@@ -7529,9 +7532,14 @@ html.js .autocomplete-throbber.throbbing {
 
 body {
   background-color: white !important;
-  font-family: fanum !important;
   position: relative;
   line-height: 1.7;
+}
+body.i18n-fa {
+  font-family: fanum !important;
+}
+body.i18n-en {
+  font-family: sans-serif !important;
 }
 body.admin-expanded.admin-vertical.admin-nw .navbar, body.admin-expanded.admin-vertical.admin-sw .navbar {
   margin-left: 260px;
@@ -8420,6 +8428,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding: 0 30px;
   margin-right: -30px;
 }
+.i18n-en #footer .card-header {
+  margin-right: 0;
+  margin-left: -30px;
+}
 #footer .card-header * {
   width: 100%;
   filter: brightness(0) invert(1);
@@ -9079,8 +9091,8 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   min-height: 100%;
   width: auto;
   position: relative;
-  right: 50%;
-  transform: translateX(50%);
+  right: 50vw;
+  transform: translateX(50vw);
 }
 #node-3 .view-id-slideshow .owl-item .file-video .mejs-container .mejs-layer, #node-74 .view-id-slideshow .owl-item .file-video .mejs-container .mejs-layer {
   width: 100% !important;
@@ -9145,6 +9157,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin: 0 10px;
   color: #00247a;
   font-weight: bold;
+  text-transform: uppercase;
 }
 #node-3 .header_title:after, #node-3 .header_title:before, #node-74 .header_title:after, #node-74 .header_title:before {
   content: "";
@@ -9269,7 +9282,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 #node-3 #jobs .text, #node-74 #jobs .text {
   position: absolute;
   top: 73%;
-  right: 5%;
+  padding: 0 5%;
   color: white;
 }
 #node-3 #jobs .text h4, #node-74 #jobs .text h4 {
@@ -12508,6 +12521,16 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: none;
 }
 
+@media screen and (min-width: 992px) {
+  .i18n-fa .col-md-1, .i18n-fa .col-md-2, .i18n-fa .col-md-3, .i18n-fa .col-md-4, .i18n-fa .col-md-5, .i18n-fa .col-md-6, .i18n-fa .col-md-7, .i18n-fa .col-md-8, .i18n-fa .col-md-9, .i18n-fa .col-md-10, .i18n-fa .col-md-11, .i18n-fa .col-md-12 {
+    float: right;
+  }
+}
+@media screen and (min-width: 768px) {
+  .i18n-fa .col-sm-1, .i18n-fa .col-sm-2, .i18n-fa .col-sm-3, .i18n-fa .col-sm-4, .i18n-fa .col-sm-5, .i18n-fa .col-sm-6, .i18n-fa .col-sm-7, .i18n-fa .col-sm-8, .i18n-fa .col-sm-9, .i18n-fa .col-sm-10, .i18n-fa .col-sm-11, .i18n-fa .col-sm-12 {
+    float: right;
+  }
+}
 @font-face {
   font-family: "mat";
   src: url("../fonts/material/material.eot");

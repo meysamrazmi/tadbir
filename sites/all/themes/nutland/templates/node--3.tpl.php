@@ -22,21 +22,21 @@ $lang = $language->language;
   <div class="container" id="gozideha" >
 
     <div class="header_title">
-      <h5 class="mb-0">گزیده ها</h5>
+      <h5 class="mb-0"><?php echo t('top feed');?></h5>
     </div>
     <?php
-    $node1 = node_load(20);
-    $node2 = node_load(10);
-    $node3 = node_load(9);
-    $node4 = node_load(8);
-    $node7 = node_load(36);
-    $node8 = node_load(34);
-    $node9 = node_load(31);
-    $node10 = node_load(32);
-    $node11 = node_load(35);
-    $node12 = node_load(33);
-    //    print $node->title;
-    //    print '<img src="'. image_style_url("320x320", $node->field_image['und'][0]['uri']) .'">';
+    if($lang == 'fa'){
+      $node1 = node_load(20);
+      $node2 = node_load(10);
+      $node3 = node_load(9);
+      $node4 = node_load(8);
+    }
+    else {
+      $node1 = node_load(171);
+      $node2 = node_load(170);
+      $node3 = node_load(169);
+      $node4 = node_load(160);
+    }
     ?>
     <div class="row">
 
@@ -76,8 +76,6 @@ $lang = $language->language;
           <div class="line_effect"><span class="lineInner"></span></div>
         </a>
       </div>
-
-
     </div>
   </div>
 
@@ -87,7 +85,7 @@ $lang = $language->language;
         <div class="article">
           <h3 style="font-weight: bold"><?php print $node4->title; ?></h3>
           <h4><?php print $node4->field_tozih['und'][0]['value']; ?></h4>
-          <?php print $node4->body['und'][0]['value']; ?>
+          <?php print $node4->body[$lang][0]['value']; ?>
         </div>
       </div>
     </section>
@@ -96,7 +94,7 @@ $lang = $language->language;
   <section id="last">
     <div class="container">
       <div class="header_title">
-        <h5 class="mb-0 text-primary">آخرین مطالب</h5>
+        <h5 class="mb-0 text-primary"><?php echo t('latest feed');?></h5>
       </div>
       <div class="row">
         <?php print views_embed_view('latest', 'blockk'); ?>
@@ -159,11 +157,29 @@ $lang = $language->language;
   </div>
 
   <div id="jobs">
+    <?php
+    if($lang == 'fa'){
+      $node7 = node_load(36);
+      $node8 = node_load(34);
+      $node9 = node_load(31);
+      $node10 = node_load(32);
+      $node11 = node_load(35);
+      $node12 = node_load(33);
+    }
+    else {
+      $node7 = node_load(166);
+      $node8 = node_load(164);
+      $node9 = node_load(161);
+      $node10 = node_load(162);
+      $node11 = node_load(165);
+      $node12 = node_load(163);
+    }
+    ?>
 
     <section>
       <div class="container">
         <div class="header_title text-primary">
-          <h5 class="mb-0">حوزه های اصلی فعالیت</h5>
+          <h5 class="mb-0"><?php echo t('main activity areas');?></h5>
         </div>
         <div class="container osm owl-carousel owl-theme" style="padding: 0">
           <div>
@@ -209,7 +225,7 @@ $lang = $language->language;
           <div>
             <a href="<?php print $node12->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter6" src="<?php print image_style_url("medium", $node12->field_image['und'][0]['uri']); ?>" alt="">
-              <div  class="text">
+              <div class="text">
                 <h4><?php print $node12->title; ?></h4>
               </div>
             </a>
@@ -470,6 +486,7 @@ $lang = $language->language;
   #gozideha .caption h4 {
     font-weight: bold;
     position: relative;
+    text-transform: capitalize;
   }
   #gozideha .caption h4:before {
     content: "";

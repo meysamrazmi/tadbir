@@ -209,6 +209,9 @@ body#tinymce {
   }
   span:not(.glyphicon){
     font-family: fanum!important;
+    .i18n-en & {
+      font-family: sans-serif !important;
+    }
   }
 }
 .breadcrumb{
@@ -249,7 +252,12 @@ html {
 }
 body {
   background-color: white !important;
-  font-family: fanum !important;
+  &.i18n-fa {
+    font-family: fanum !important;
+  }
+  &.i18n-en {
+    font-family: sans-serif !important;
+  }
   // Fix horizontal scrolling on iOS devices.
   // https://www.drupal.org/node/1870076
   position: relative;
@@ -1133,6 +1141,10 @@ a {
     align-items: center;
     padding: 0 30px;
     margin-right: -30px;
+    .i18n-en & {
+      margin-right: 0;
+      margin-left: -30px;
+    }
     * {
       width: 100%;
       filter: brightness(0) invert(1);
@@ -1762,8 +1774,8 @@ a {
             min-height: 100%;
             width: auto;
             position: relative;
-            right: 50%;
-            transform: translateX(50%);
+            right: 50vw;
+            transform: translateX(50vw);
           }
           .mejs-layer {
             width: 100% !important;
@@ -1831,6 +1843,7 @@ a {
       margin: 0 10px;
       color:#00247a;
       font-weight: bold;
+      text-transform: uppercase;
     }
     &:after, &:before{
       content: "";
@@ -1963,7 +1976,7 @@ a {
     .text{
       position: absolute;
       top: 73%;
-      right: 5%;
+      padding: 0 5%;
       color: white;
       h4{
         font-weight: bold;
@@ -5371,5 +5384,20 @@ a {
   }
   ~ .header-style {
     display: none;
+  }
+}
+
+@media #{$normal} {
+  .i18n-fa{
+    .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+      float: right;
+    }
+  }
+}
+@media #{$tablet} {
+  .i18n-fa{
+    .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
+      float: right;
+    }
   }
 }
