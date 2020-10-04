@@ -10285,6 +10285,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info {
   position: relative;
   padding: 50px 0;
+  max-width: 100%;
 }
 .page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .menu {
   display: flex;
@@ -10307,6 +10308,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .menu h4 {
   margin: 0 0 0 75px;
   white-space: nowrap;
+}
+[dir=ltr] .page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .menu h4 {
+  margin: 0 75px 0 0;
 }
 .page-node-5 .main-container.container #node-5 #content .tab-contact .tab-info .tab--1-of-3 {
   width: 100%;
@@ -10347,6 +10351,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin: 40px 0;
   text-align: right;
 }
+[dir=ltr] .page-node-5 .main-container.container #node-5 #content .form form {
+  text-align: left;
+}
 .page-node-5 .main-container.container #node-5 #content .form form .control-label {
   font-weight: 300 !important;
 }
@@ -10361,7 +10368,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   display: inline-block;
 }
 .page-node-5 .main-container.container #node-5 #content .form form .webform-component--name, .page-node-5 .main-container.container #node-5 #content .form form .webform-component--email {
-  margin-left: 10px;
+  margin-left: 2%;
+}
+[dir=ltr] .page-node-5 .main-container.container #node-5 #content .form form .webform-component--name, [dir=ltr] .page-node-5 .main-container.container #node-5 #content .form form .webform-component--email {
+  margin-left: 0px;
+  margin-right: 2%;
 }
 .page-node-5 .main-container.container #node-5 #content .form form .form-actions {
   text-align: -webkit-center;
@@ -10374,7 +10385,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   width: 130px;
   float: left;
   position: relative;
-  top: -45px;
+}
+[dir=ltr] .page-node-5 .main-container.container #node-5 #content .form form button {
+  float: right;
 }
 .page-node-5 .main-container.container #node-5 #content .social {
   text-align: -webkit-center;
@@ -11374,10 +11387,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .page-videos .view-content .views-row .field-content:after {
     transform: translate(50%, -25%) !important;
   }
-}
-
-.page-contact-us.admin-menu .main-container .form-submit {
-  top: 0 !important;
 }
 
 .node-type-projects .main-container {

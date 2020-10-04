@@ -3066,6 +3066,7 @@ a {
           .tab-info {
             position: relative;
             padding: 50px 0;
+            max-width: 100%;
             .menu {
               display:flex;
               border-bottom: 2px solid #ccc;
@@ -3086,6 +3087,9 @@ a {
               h4{
                 margin: 0 0 0 75px;
                 white-space: nowrap;
+                [dir="ltr"] &{
+                  margin: 0 75px 0 0;
+                }
               }
             }
             .tab--1-of-3 {
@@ -3127,6 +3131,9 @@ a {
             margin-top:20px;
             margin: 40px 0;
             text-align: right;
+            [dir="ltr"] & {
+              text-align: left;
+            }
             .control-label{
               font-weight: 300!important;
             }
@@ -3141,7 +3148,11 @@ a {
               display: inline-block;
             }
             .webform-component--name, .webform-component--email{
-              margin-left: 10px;
+              margin-left: 2%;
+              [dir="ltr"] & {
+                margin-left: 0px;
+                margin-right: 2%;
+              }
             }
             .form-actions{
               text-align: -webkit-center;
@@ -3149,13 +3160,14 @@ a {
             button{
               background-color: #00247a !important;
               border-color: #00247a !important;
-              border-radius:0 ;
+              border-radius: 0;
               color: white;
               width: 130px;
               float: left;
               position: relative;
-              top: -45px;
-
+              [dir="ltr"] & {
+                float: right;
+              }
             }
           }
         }
@@ -4185,14 +4197,6 @@ a {
           transform: translate(50%, -25%)!important;
         }
       }
-    }
-  }
-}
-//contact us in admin menu
-.page-contact-us.admin-menu{
-  .main-container{
-    .form-submit{
-      top: 0!important;
     }
   }
 }

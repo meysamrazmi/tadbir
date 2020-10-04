@@ -1,84 +1,6 @@
 <?php
-
-/**
- * @file
- * Default theme implementation to display a node.
- *
- * Available variables:
- * - $title: the (sanitized) title of the node.
- * - $content: An array of node items. Use render($content) to print them all,
- *   or print a subset such as render($content['field_example']). Use
- *   hide($content['field_example']) to temporarily suppress the printing of a
- *   given element.
- * - $user_picture: The node author's picture from user-picture.tpl.php.
- * - $date: Formatted creation date. Preprocess functions can reformat it by
- *   calling format_date() with the desired parameters on the $created variable.
- * - $name: Themed username of node author output from theme_username().
- * - $node_url: Direct URL of the current node.
- * - $display_submitted: Whether submission information should be displayed.
- * - $submitted: Submission information created from $name and $date during
- *   template_preprocess_node().
- * - $classes: String of classes that can be used to style contextually through
- *   CSS. It can be manipulated through the variable $classes_array from
- *   preprocess functions. The default values can be one or more of the
- *   following:
- *   - node: The current template type; for example, "theming hook".
- *   - node-[type]: The current node type. For example, if the node is a
- *     "Blog entry" it would result in "node-blog". Note that the machine
- *     name will often be in a short form of the human readable label.
- *   - node-teaser: Nodes in teaser form.
- *   - node-preview: Nodes in preview mode.
- *   The following are controlled through the node publishing options.
- *   - node-promoted: Nodes promoted to the front page.
- *   - node-sticky: Nodes ordered above other non-sticky nodes in teaser
- *     listings.
- *   - node-unpublished: Unpublished nodes visible only to administrators.
- * - $title_prefix (array): An array containing additional output populated by
- *   modules, intended to be displayed in front of the main title tag that
- *   appears in the template.
- * - $title_suffix (array): An array containing additional output populated by
- *   modules, intended to be displayed after the main title tag that appears in
- *   the template.
- *
- * Other variables:
- * - $node: Full node object. Contains data that may not be safe.
- * - $type: Node type; for example, story, page, blog, etc.
- * - $comment_count: Number of comments attached to the node.
- * - $uid: User ID of the node author.
- * - $created: Time the node was published formatted in Unix timestamp.
- * - $classes_array: Array of html class attribute values. It is flattened
- *   into a string within the variable $classes.
- * - $zebra: Outputs either "even" or "odd". Useful for zebra striping in
- *   teaser listings.
- * - $id: Position of the node. Increments each time it's output.
- *
- * Node status variables:
- * - $view_mode: View mode; for example, "full", "teaser".
- * - $teaser: Flag for the teaser state (shortcut for $view_mode == 'teaser').
- * - $page: Flag for the full page state.
- * - $promote: Flag for front page promotion state.
- * - $sticky: Flags for sticky post setting.
- * - $status: Flag for published status.
- * - $comment: State of comment settings for the node.
- * - $readmore: Flags true if the teaser content of the node cannot hold the
- *   main body content.
- * - $is_front: Flags true when presented in the front page.
- * - $logged_in: Flags true when the current user is a logged-in member.
- * - $is_admin: Flags true when the current user is an administrator.
- *
- * Field variables: for each field instance attached to the node a corresponding
- * variable is defined; for example, $node->body becomes $body. When needing to
- * access a field's raw values, developers/themers are strongly encouraged to
- * use these variables. Otherwise they will have to explicitly specify the
- * desired field language; for example, $node->body['en'], thus overriding any
- * language negotiation rule that was previously applied.
- *
- * @see template_preprocess()
- * @see template_preprocess_node()
- * @see template_process()
- *
- * @ingroup templates
- */
+global $language;
+$lang = $language->language;
 ?>
 <article id="node-<?php print $node->nid; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
   <?php if ((!$page && !empty($title)) || !empty($title_prefix) || !empty($title_suffix) || $display_submitted): ?>
@@ -97,12 +19,22 @@
     </header>
   <?php endif; ?>
   <?php
+  if($lang == 'fa'){
     $node1 = node_load(61);
     $node2 = node_load(62);
     $node3 = node_load(63);
     $node4 = node_load(64);
     $node5 = node_load(65);
     $node6 = node_load(66);
+  }
+  else {
+    $node1 = node_load(176);
+    $node2 = node_load(177);
+    $node3 = node_load(178);
+    $node4 = node_load(179);
+    $node5 = node_load(180);
+    $node6 = node_load(175);
+  }
   ?>
   <section id="map">
     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d2645.9487698538337!2d51.41660390238768!3d35.73155633965012!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e014e96cc6c55%3A0x3124d88e89ed2139!2sTadbir%20Economical%20Development%20Group!5e0!3m2!1sen!2sus!4v1594055325516!5m2!1sen!2sus"
@@ -111,14 +43,14 @@
   </section>
   <section id="content">
     <div class="text">
-      <p><?php print $node1->body['und'][0]['value'];?></p>
+      <p><?php print $node1->body[$lang][0]['value'];?></p>
     </div>
     <div class="tab-contact">
       <div class="tab-info container">
         <div class="grid">
           <div class="tab tab--1-of-3">
             <div class="menu">
-              <h4 style="padding-bottom: 0!important;border-bottom: 0!important;"> اطلاعات تماس </h4>
+              <h4 style="padding-bottom: 0!important;border-bottom: 0!important;"><?php echo $lang == 'fa' ? 'اطلاعات تماس' : 'CONTACT INFO';?></h4>
               <div class="active"><span><?php print $node2->field_tozih['und'][0]['value']; ?></span></div>
               <div><span> <?php print $node3->field_tozih['und'][0]['value']; ?></span></div>
               <div><span><?php print $node4->field_tozih['und'][0]['value']; ?> </span></div>
@@ -129,54 +61,54 @@
           <div class="tab tab--2-of-3">
             <ul class="nacc">
               <li></li>
-              <li class="active"><div class="table"><?php print $node2->body['und'][0]['value']?></div></li>
-              <li><div class="table"><?php print $node3->body['und'][0]['value']?></div></li>
-              <li><div class="table"><?php print $node4->body['und'][0]['value']?></div></li>
-              <li><div class="table"><?php print $node5->body['und'][0]['value']?></div></li>
-              <li><div class="table"><?php print $node6->body['und'][0]['value']?></div></li>
+              <li class="active"><div class="table"><?php print $node2->body[$lang][0]['value']?></div></li>
+              <li><div class="table"><?php print $node3->body[$lang][0]['value']?></div></li>
+              <li><div class="table"><?php print $node4->body[$lang][0]['value']?></div></li>
+              <li><div class="table"><?php print $node5->body[$lang][0]['value']?></div></li>
+              <li><div class="table"><?php print $node6->body[$lang][0]['value']?></div></li>
             </ul>
           </div>
         </div>
       </div>
     </div>
     <div class="tab-mobile container" style="display: none">
-      <h4>اطلاعات تماس</h4>
+      <h4><?php echo $lang == 'fa' ? 'اطلاعات تماس' : 'CONTACT INFO';?></h4>
       <div class="tab-container">
         <div class="tab-navigation">
           <select id="select-box">
-            <option value="1">دپارتمان انرژی</option>
-            <option value="2">دپارتمان کشاورزی</option>
-            <option value="3">دپارتمان دارویی</option>
-            <option value="4">دپارتمان ساختمان</option>
-            <option value="5">دپارتمان سرمایه گذاری</option>
+            <option value="1"><?php echo $lang == 'fa' ? 'دپارتمان انرژی' : 'Energy Department';?></option>
+            <option value="2"><?php echo $lang == 'fa' ? 'دپارتمان کشاورزی' : 'Agriculture Department';?></option>
+            <option value="3"><?php echo $lang == 'fa' ? 'دپارتمان دارویی' : 'Medical Department';?></option>
+            <option value="4"><?php echo $lang == 'fa' ? 'دپارتمان ساختمان' : 'Construction Department';?></option>
+            <option value="5"><?php echo $lang == 'fa' ? 'دپارتمان سرمایه گذاری' : 'Investment Department';?></option>
           </select>
         </div>
 
         <div id="tab-1" class="tab-content">
-          <div><span><?php print $node2->body['und'][0]['value']; ?></span></div>
+          <div><span><?php print $node2->body[$lang][0]['value']; ?></span></div>
         </div>
         <div id="tab-2" class="tab-content">
-          <div class="table"><?php print $node3->body['und'][0]['value']?></div>
+          <div class="table"><?php print $node3->body[$lang][0]['value']?></div>
         </div>
         <div id="tab-3" class="tab-content">
-          <div class="table"><?php print $node4->body['und'][0]['value']?></div>
+          <div class="table"><?php print $node4->body[$lang][0]['value']?></div>
         </div>
         <div id="tab-4" class="tab-content">
-          <div class="table"><?php print $node5->body['und'][0]['value']?></div>
+          <div class="table"><?php print $node5->body[$lang][0]['value']?></div>
         </div>
         <div id="tab-5" class="tab-content">
-          <div class="table"><?php print $node6->body['und'][0]['value']?></div>
+          <div class="table"><?php print $node6->body[$lang][0]['value']?></div>
         </div>
       </div>
     </div>
-    <h4 class="hform" style="margin: 10px 0px;">فرم تماس</h4>
+    <h4 class="hform" style="margin: 10px 0px;"><?php echo $lang == 'fa' ? 'فرم تماس' : 'CONTACT FORM';?></h4>
     <div class="form">
       <?php
       $block = module_invoke('webform', 'block_view', 'client-block-21');
       print render($block['content']);
       ?>
     </div>
-    <h4 class="hbottom">گروه اقتصادی تدبیر در شبکه های اجتماعی : </h4>
+    <h4 class="hbottom"><?php echo $lang == 'fa' ? 'گروه اقتصادی تدبیر در شبکه های اجتماعی :' : 'Social Media:';?></h4>
     <div class="social">
       <ul class="list" style="padding-right: 0px;">
         <a href=""> <li class="social1"></li></a>
