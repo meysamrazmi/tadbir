@@ -160,11 +160,11 @@
       transition: transform .3s ease-in-out;
       transition: transform .3s ease-in-out, -webkit-transform .3s ease-in-out
     }
-    [dir] .figures:after {
+    .figures:after {
       background-color: rgba(0, 0, 0, .5);
       -webkit-transition: -webkit-transform .3s ease-in-out
     }
-    [dir=rtl] .figures:after {
+    .figures:after {
       right: 0;
       left: 0
     }
@@ -176,11 +176,11 @@
       white-space: nowrap;
       display: none
     }
-    [dir] .figures .caption {
+    .figures .caption {
       background-color: rgba(255, 255, 255, .8);
       padding: 15px;
     }
-    [dir=rtl] .figures .caption {
+    .figures .caption {
       right: 0;
       left: 0
     }
@@ -188,8 +188,8 @@
     .figures:focus:after {
       -webkit-transform: scale(0)
     }
-    [dir] .figures:hover:after,
-    [dir] .figures:focus:after {
+    .figures:hover:after,
+    .figures:focus:after {
       transform: scale(0)
     }
     .figures:hover .caption,
@@ -203,7 +203,7 @@
       overflow-y: hidden;
       max-width: 100vw
     }
-    [dir=rtl] .accordion {
+    .accordion {
       margin-right: -0.625rem;
       margin-left: -0.625rem;
       padding-right: 0;
@@ -215,10 +215,10 @@
       overflow: hidden;
       transition: all .3s ease-in-out
     }
-    [dir] .accordion li {
+    .accordion li {
       -webkit-transition: all .3s ease-in-out
     }
-    [dir=rtl] .accordion li {
+    .accordion li {
       padding-left: 0.625rem;
       padding-right: 0.625rem
     }

@@ -120,7 +120,6 @@ $lang = $language->language;
     </div>
   </section>
   <?php
-
   // Hide comments, tags, and links now so that we can render them later.
   hide($content['comments']);
   hide($content['links']);

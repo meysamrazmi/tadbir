@@ -99,6 +99,10 @@
     background-size: cover;
     position: relative;
   }
+  .i18n-en #block-block-3{
+    right: unset;
+    left: calc(50% - 50vw);
+  }
   #block3{
     z-index: 5;
     position: relative;
@@ -123,7 +127,7 @@
   .caption_slide {
     min-height: 160px
   }
-  [dir] .caption_slide {
+  .caption_slide {
     border: 1px solid #fff;
     background-color: rgba(255, 255, 255, .2);
     padding: 2rem 0
@@ -132,14 +136,18 @@
     display: table;
     color: #fff
   }
-  [dir] .caption_write {
+  .caption_write {
     padding: 1.5rem;
     margin-top: 10px;
   }
-  [dir=rtl] .caption_write {
+  .caption_write {
     border-right: 4px solid #fff;
     border-left: 4px solid #fff;
-    margin-right: -0.5rem
+    margin-right: -0.5rem;
+  }
+  .i18n-en .caption_write {
+    margin-right: 0;
+    margin-left: -0.5rem;
   }
 
   @media (min-width: 320px) and (max-width: 600px) {

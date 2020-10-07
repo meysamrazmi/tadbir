@@ -5126,6 +5126,10 @@ a {
 .ui-widget {
   font-family: dana;
 }
+.ii18n-en .ui-pnotify.ui-pnotify-fade-normal.ui-pnotify.ui-pnotify-move {
+  right: 10px !important;
+  left: unset !important;
+}
 .pdp-default {
   transform: scale(1.15);
 }
