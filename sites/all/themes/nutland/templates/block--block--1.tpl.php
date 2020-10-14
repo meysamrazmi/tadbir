@@ -38,7 +38,8 @@ $lang = $language->language;
         </div>
         <div class="row mx-n4">
           <div class="col-md-4 px-4 col-sm-12 col-xs-12 texti">
-            <article class="cards cardi card-none">
+            <article class="cards cardi card-none contextual-links-region">
+              <?php render_contextual_link_by_nid($node1->nid);?>
               <div class="card-body">
                 <p class="text-justify">
                   <?php print $node1->body[$lang][0]['value']; ?>
@@ -46,12 +47,13 @@ $lang = $language->language;
               </div>
             </article>
           </div>
-          <div class="col-md-3 mt-md-0 mt-3 px-4  col-sm-12 col-xs-12 linki" >
+          <div class="col-md-3 mt-md-0 mt-3 px-4 col-sm-12 col-xs-12 linki contextual-links-region" >
             <article class="cards card-none">
+              <?php render_contextual_link_by_menu('menu-footer');?>
               <div class="">
                 <h4 class="card-title"><?php echo $lang == 'fa' ? 'دسترسی سریع' : 'LINKS';?></h4>
               </div>
-              <div class="card-body">
+              <div class="card-bod">
                 <?php
                 $menu = menu_tree('menu-footer');
                 print drupal_render($menu);
@@ -60,7 +62,8 @@ $lang = $language->language;
             </article>
           </div>
           <div class="col-md-4  col-sm-12 col-xs-12">
-            <article class="cards card-none">
+            <article class="cards card-none contextual-links-region">
+              <?php render_contextual_link_by_nid($node1->nid);?>
               <div class="">
                 <h4 class="card-title"><?php echo $lang == 'fa' ? 'اطلاعات تماس' : 'CONTACT';?></h4>
               </div>

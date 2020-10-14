@@ -40,7 +40,8 @@ $lang = $language->language;
     ?>
     <div class="row">
 
-      <div class="col-md-4">
+      <div class="col-md-4 contextual-links-region">
+        <?php render_contextual_link_by_nid($node3->nid);?>
         <a href="<?php print $node1->field_link['und'][0]['url']; ?>" class="items border_image">
           <img src="<?php print image_style_url("320x320", $node1->field_image['und'][0]['uri']); ?>" alt="">
           <div class="caption_wrap">
@@ -52,7 +53,8 @@ $lang = $language->language;
           <div class="line_effect"><span class="lineInner"></span></div>
         </a>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 contextual-links-region">
+        <?php render_contextual_link_by_nid($node3->nid);?>
         <a href="<?php print $node2->field_link['und'][0]['url']; ?>" class="items border_image">
           <img src="<?php print image_style_url("320x320", $node2->field_image['und'][0]['uri']); ?>" alt="">
           <div class="caption_wrap">
@@ -64,7 +66,8 @@ $lang = $language->language;
           <div class="line_effect"><span class="lineInner"></span></div>
         </a>
       </div>
-      <div class="col-md-4">
+      <div class="col-md-4 contextual-links-region">
+        <?php render_contextual_link_by_nid($node3->nid);?>
         <a href="<?php print $node3->field_link['und'][0]['url']; ?>" class="items border_image">
           <img src="<?php print image_style_url("320x320", $node3->field_image['und'][0]['uri']); ?>" alt="">
           <div class="caption_wrap">
@@ -82,7 +85,8 @@ $lang = $language->language;
   <div class="row" id="sectionText">
     <section>
       <div class="container">
-        <div class="article">
+        <div class="article contextual-links-region">
+          <?php render_contextual_link_by_nid($node4->nid);?>
           <h3 style="font-weight: bold"><?php print $node4->title; ?></h3>
           <h4><?php print $node4->field_tozih['und'][0]['value']; ?></h4>
           <?php print $node4->body[$lang][0]['value']; ?>
@@ -125,15 +129,18 @@ $lang = $language->language;
         <div class="article">
           <h3 style="font-weight: bold"><?php print $node13->title; ?></h3>
           <div class="sub-item">
-            <div class="col-sm-4">
+            <div class="col-sm-4 contextual-links-region">
+              <?php render_contextual_link_by_nid($node14->nid);?>
               <?php print isset($node14->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node14->field_image['und'][0]['uri']) .'">' : ''; ?>
               <?php print isset($node14->body[$lang][0])? '<div>'. $node14->body[$lang][0]['value'] .'</div>' : ''; ?>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 contextual-links-region">
+              <?php render_contextual_link_by_nid($node15->nid);?>
               <?php print isset($node15->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node15->field_image['und'][0]['uri']) .'">' : ''; ?>
               <?php print isset($node15->body[$lang][0])? '<div>'. $node15->body[$lang][0]['value'] .'</div>' : ''; ?>
             </div>
-            <div class="col-sm-4">
+            <div class="col-sm-4 contextual-links-region">
+              <?php render_contextual_link_by_nid($node16->nid);?>
               <?php print isset($node16->field_image['und'][0])? '<img src="'. image_style_url('media_thumbnail', $node16->field_image['und'][0]['uri']) .'">' : ''; ?>
               <?php print isset($node16->body[$lang][0])? '<div>'. $node16->body[$lang][0]['value'] .'</div>' : ''; ?>
             </div>
@@ -182,7 +189,8 @@ $lang = $language->language;
           <h5 class="mb-0"><?php echo t('main activity areas');?></h5>
         </div>
         <div class="container osm owl-carousel owl-theme" style="padding: 0">
-          <div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node7->nid);?>
             <a href="<?php print $node7->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter1" src="<?php print image_style_url("medium", $node7->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -190,7 +198,8 @@ $lang = $language->language;
               </div>
             </a>
           </div>
-          <div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node8->nid);?>
             <a href="<?php print $node8->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter2" src="<?php print image_style_url("medium", $node8->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -198,7 +207,8 @@ $lang = $language->language;
               </div>
             </a>
           </div>
-          <div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node9->nid);?>
             <a href="<?php print $node9->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter3" src="<?php print image_style_url("medium", $node9->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -206,7 +216,8 @@ $lang = $language->language;
               </div>
             </a>
           </div>
-          <div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node10->nid);?>
             <a href="<?php print $node10->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter4" src="<?php print image_style_url("medium", $node10->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -214,7 +225,8 @@ $lang = $language->language;
               </div>
             </a>
           </div>
-          <div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node11->nid);?>
             <a href="<?php print $node11->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter5" src="<?php print image_style_url("medium", $node11->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">
@@ -222,7 +234,8 @@ $lang = $language->language;
               </div>
             </a>
           </div>
-          <div>
+          <div class="contextual-links-region">
+            <?php render_contextual_link_by_nid($node12->nid);?>
             <a href="<?php print $node12->field_link['und'][0]['url']; ?>" class="items_img">
               <img class="filter6" src="<?php print image_style_url("medium", $node12->field_image['und'][0]['uri']); ?>" alt="">
               <div class="text">

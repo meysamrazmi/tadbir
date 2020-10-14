@@ -707,7 +707,7 @@ tr:not(.groupClass) .field-type-user-reference.field-name-field-user tr:nth-chil
 .select2-search input {
   box-sizing: border-box;
 }
-.ii18n-en .ui-pnotify.ui-pnotify-fade-normal.ui-pnotify.ui-pnotify-move {
+.i18n-en .ui-pnotify.ui-pnotify-fade-normal.ui-pnotify.ui-pnotify-move {
   right: 10px !important;
   left: unset !important;
 }

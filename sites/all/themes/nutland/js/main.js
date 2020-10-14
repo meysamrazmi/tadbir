@@ -45,7 +45,7 @@ $(document).ready(function(){
     $('#block-block-9').addClass('open');
     $('#useroverlay').addClass("open");
     $('body').addClass("overlay-open");
-    $('#block-block-9 .subsets a').each(function(i){
+    $('#block-block-9 .subsets > div > a').each(function(i){
       $(this).attr({
         "data-aos": "fade-up",
         "data-aos-delay": (i * 100) + 200,

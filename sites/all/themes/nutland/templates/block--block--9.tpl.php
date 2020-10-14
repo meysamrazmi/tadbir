@@ -50,7 +50,7 @@
     flex-direction: column;
   }
 
-  .subsets a {
+  .subsets > div > a {
     height: 120px;
     width: 100%;
     border-bottom: 1px solid #fff;

@@ -4748,6 +4748,11 @@ a {
           margin-right: 50%;
           transform: translateX(50%);
           min-width: 100vw;
+          [dir="ltr"] & {
+            margin-right: unset;
+            margin-left: 50%;
+            transform: translateX(-50%);
+          }
           @media (min-width: 1350px){
             margin-top: calc(240px - 18.3vw);
           }
@@ -4885,6 +4890,10 @@ a {
             margin-right: -24px;
             font-size: 28px;
             line-height: 2;
+            [dir="ltr"] & {
+              margin-right: 0px;
+              margin-left: -24px;
+            }
             @media (max-width:600px) {
               font-size: 22px !important;
               padding: 0px 10px !important;
@@ -4943,11 +4952,10 @@ a {
               width: 100%;
               bottom: 95px;
               background: rgba(0, 36, 122, 0.5);
-              text-align: right;
               position: relative;
               min-height: 75px;
               color: white;
-              padding-right: 15px;
+              padding: 0 15px;
               font-size: 20px;
               a{
                 color: white;
@@ -4982,11 +4990,12 @@ a {
         &:before{
           content: " ";
           display: block;
-          position: relative;
+          position: absolute;
           height: 2px;
           background: #ccc;
           width: calc(50% - 100px);
-          top: 10px;
+          top: 30px;
+          right: 0;
         }
         &:after{
           content: " ";

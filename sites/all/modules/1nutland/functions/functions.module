@@ -436,3 +436,48 @@ function image_border_script($rand, &$item){
     }
   }
 }
+
+function render_contextual_link_by_nid($nid){
+  $element = array(
+    '#type' => 'contextual_links',
+    '#contextual_links' => array(
+      'node' => array('node', array($nid)),
+    ),
+  );
+  prepare_for_contextual($element);
+}
+
+function render_contextual_link_by_menu($menu){
+  $element = array(
+    '#type' => 'contextual_links',
+    '#contextual_links' => array(
+      'menu' => array('admin/structure/menu/manage', array($menu)),
+    ),
+  );
+  prepare_for_contextual($element);
+}
+
+function prepare_for_contextual($element){
+  if (module_exists('contextual') && user_access('access contextual links')) {
+    $links = array();
+
+    $element = contextual_pre_render_links($element);
+    if (!empty($element['#links'])) {
+      $links += $element['#links'];
+    }
+
+    if ($links) {
+      $build = array(
+        '#prefix' => '<div class="contextual-links-wrapper">',
+        '#suffix' => '</div>',
+        '#theme' => 'links__contextual',
+        '#links' => $links,
+        '#attributes' => array('class' => array('contextual-links')),
+        '#attached' => array(
+          'library' => array(array('contextual', 'contextual-links')),
+        ),
+      );
+      print drupal_render($build);
+    }
+  }
+}
