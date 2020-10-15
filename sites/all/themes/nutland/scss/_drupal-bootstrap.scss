@@ -3602,21 +3602,29 @@ a {
   .main-container{
     overflow-x: hidden;
     padding: 0 15px;
-    .field-label{
+    .field-label {
+      display: none;
+    }
+    .block-title {
       display: block!important;
       color: #00247a;
       font-size: 18px;
       margin-bottom: 30px;
       position: relative;
+      line-height: 28px;
       &:after{
         content: "";
         position: absolute;
         z-index: -1;
-        width: calc(100% - 120px);
+        width: calc(100% - 150px);
         height: 2px;
         background: #ccc;
         top: 15px;
         left: 10px;
+        [dir="ltr"] & {
+          left: unset;
+          right: 10px;
+        }
       }
     }
     .nav-tabs{
@@ -3655,12 +3663,19 @@ a {
           font-size: 24px;
           color: #6b6b6b;
           cursor: pointer;
+          [dir="ltr"] & {
+            left: unset;
+            right: 0;
+          }
         }
       }
       .field-name-post-date{
         .even{
           float: left;
           color: #a2a2a2;
+          [dir="ltr"] & {
+            float: right;
+          }
         }
       }
       .field-name-field-news-category, .field-name-field-category, .field-name-field-video-category{
@@ -3673,8 +3688,10 @@ a {
           font-size: 18px;
           border-bottom: 2px solid #a0a0a0;
           margin-bottom: 25px;
-          padding-bottom: 15px;
-          padding-left: 30px;
+          padding: 0 0 15px 30px;
+          [dir="ltr"] & {
+            padding: 0 30px 15px 0;
+          }
         }
       }
 
@@ -3698,11 +3715,15 @@ a {
           content: "";
           position: absolute;
           z-index: -1;
-          width: calc(100% - 90px);
+          width: calc(100% - 120px);
           height: 2px;
           background: #ccc;
           top: 12px;
           left: 10px;
+          [dir="ltr"] & {
+            left: unset;
+            right: 10px;
+          }
         }
       }
       .comment-form{
@@ -3710,6 +3731,7 @@ a {
         margin: auto;
         order: 0;
         margin-bottom:30px;
+        width: 100%;
         label {
           font-weight: 500;
           color: #666666;
@@ -3741,6 +3763,9 @@ a {
             color: white;
             width: 130px;
             float: left;
+            [dir="ltr"] & {
+              float: right;
+            }
           }
         }
       }

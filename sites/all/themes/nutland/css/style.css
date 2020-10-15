@@ -10785,21 +10785,29 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding: 0 15px;
 }
 .node-type-news .main-container .field-label, .node-type-article .main-container .field-label, .node-type-videos .main-container .field-label, .node-type-gallery .main-container .field-label {
+  display: none;
+}
+.node-type-news .main-container .block-title, .node-type-article .main-container .block-title, .node-type-videos .main-container .block-title, .node-type-gallery .main-container .block-title {
   display: block !important;
   color: #00247a;
   font-size: 18px;
   margin-bottom: 30px;
   position: relative;
+  line-height: 28px;
 }
-.node-type-news .main-container .field-label:after, .node-type-article .main-container .field-label:after, .node-type-videos .main-container .field-label:after, .node-type-gallery .main-container .field-label:after {
+.node-type-news .main-container .block-title:after, .node-type-article .main-container .block-title:after, .node-type-videos .main-container .block-title:after, .node-type-gallery .main-container .block-title:after {
   content: "";
   position: absolute;
   z-index: -1;
-  width: calc(100% - 120px);
+  width: calc(100% - 150px);
   height: 2px;
   background: #ccc;
   top: 15px;
   left: 10px;
+}
+[dir=ltr] .node-type-news .main-container .block-title:after, [dir=ltr] .node-type-article .main-container .block-title:after, [dir=ltr] .node-type-videos .main-container .block-title:after, [dir=ltr] .node-type-gallery .main-container .block-title:after {
+  left: unset;
+  right: 10px;
 }
 .node-type-news .main-container .nav-tabs, .node-type-article .main-container .nav-tabs, .node-type-videos .main-container .nav-tabs, .node-type-gallery .main-container .nav-tabs {
   border-bottom: none !important;
@@ -10836,9 +10844,16 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: #6b6b6b;
   cursor: pointer;
 }
+[dir=ltr] .node-type-news #block-system-main .group-header .field-type-addthis:before, [dir=ltr] .node-type-article #block-system-main .group-header .field-type-addthis:before, [dir=ltr] .node-type-videos #block-system-main .group-header .field-type-addthis:before, [dir=ltr] .node-type-gallery #block-system-main .group-header .field-type-addthis:before {
+  left: unset;
+  right: 0;
+}
 .node-type-news #block-system-main .group-header .field-name-post-date .even, .node-type-article #block-system-main .group-header .field-name-post-date .even, .node-type-videos #block-system-main .group-header .field-name-post-date .even, .node-type-gallery #block-system-main .group-header .field-name-post-date .even {
   float: left;
   color: #a2a2a2;
+}
+[dir=ltr] .node-type-news #block-system-main .group-header .field-name-post-date .even, [dir=ltr] .node-type-article #block-system-main .group-header .field-name-post-date .even, [dir=ltr] .node-type-videos #block-system-main .group-header .field-name-post-date .even, [dir=ltr] .node-type-gallery #block-system-main .group-header .field-name-post-date .even {
+  float: right;
 }
 .node-type-news #block-system-main .group-header .field-name-field-news-category a, .node-type-news #block-system-main .group-header .field-name-field-category a, .node-type-news #block-system-main .group-header .field-name-field-video-category a, .node-type-article #block-system-main .group-header .field-name-field-news-category a, .node-type-article #block-system-main .group-header .field-name-field-category a, .node-type-article #block-system-main .group-header .field-name-field-video-category a, .node-type-videos #block-system-main .group-header .field-name-field-news-category a, .node-type-videos #block-system-main .group-header .field-name-field-category a, .node-type-videos #block-system-main .group-header .field-name-field-video-category a, .node-type-gallery #block-system-main .group-header .field-name-field-news-category a, .node-type-gallery #block-system-main .group-header .field-name-field-category a, .node-type-gallery #block-system-main .group-header .field-name-field-video-category a {
   color: #00247c !important;
@@ -10847,8 +10862,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-size: 18px;
   border-bottom: 2px solid #a0a0a0;
   margin-bottom: 25px;
-  padding-bottom: 15px;
-  padding-left: 30px;
+  padding: 0 0 15px 30px;
+}
+[dir=ltr] .node-type-news #block-system-main .group-header .field-name-title h5, [dir=ltr] .node-type-article #block-system-main .group-header .field-name-title h5, [dir=ltr] .node-type-videos #block-system-main .group-header .field-name-title h5, [dir=ltr] .node-type-gallery #block-system-main .group-header .field-name-title h5 {
+  padding: 0 30px 15px 0;
 }
 .node-type-news #block-system-main .group-footer h2.title.comment-form, .node-type-article #block-system-main .group-footer h2.title.comment-form, .node-type-videos #block-system-main .group-footer h2.title.comment-form, .node-type-gallery #block-system-main .group-footer h2.title.comment-form {
   opacity: 0;
@@ -10869,17 +10886,22 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   content: "";
   position: absolute;
   z-index: -1;
-  width: calc(100% - 90px);
+  width: calc(100% - 120px);
   height: 2px;
   background: #ccc;
   top: 12px;
   left: 10px;
+}
+[dir=ltr] .node-type-news #block-system-main .group-footer #comments h2.title:after, [dir=ltr] .node-type-article #block-system-main .group-footer #comments h2.title:after, [dir=ltr] .node-type-videos #block-system-main .group-footer #comments h2.title:after, [dir=ltr] .node-type-gallery #block-system-main .group-footer #comments h2.title:after {
+  left: unset;
+  right: 10px;
 }
 .node-type-news #block-system-main .group-footer .comment-form, .node-type-article #block-system-main .group-footer .comment-form, .node-type-videos #block-system-main .group-footer .comment-form, .node-type-gallery #block-system-main .group-footer .comment-form {
   max-width: 900px;
   margin: auto;
   order: 0;
   margin-bottom: 30px;
+  width: 100%;
 }
 .node-type-news #block-system-main .group-footer .comment-form label, .node-type-article #block-system-main .group-footer .comment-form label, .node-type-videos #block-system-main .group-footer .comment-form label, .node-type-gallery #block-system-main .group-footer .comment-form label {
   font-weight: 500;
@@ -10917,6 +10939,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: white;
   width: 130px;
   float: left;
+}
+[dir=ltr] .node-type-news #block-system-main .group-footer .comment-form .form-actions .btn-success, [dir=ltr] .node-type-article #block-system-main .group-footer .comment-form .form-actions .btn-success, [dir=ltr] .node-type-videos #block-system-main .group-footer .comment-form .form-actions .btn-success, [dir=ltr] .node-type-gallery #block-system-main .group-footer .comment-form .form-actions .btn-success {
+  float: right;
 }
 .node-type-news #block-system-main .group-footer .field-name-post-date, .node-type-article #block-system-main .group-footer .field-name-post-date, .node-type-videos #block-system-main .group-footer .field-name-post-date, .node-type-gallery #block-system-main .group-footer .field-name-post-date {
   left: 70px;

@@ -37,6 +37,10 @@ font-style: normal
   margin-left: 0;
   margin-right: 160px;
 }
+.i18n-en #admin-menu .dropdown li li.expandable ul {
+  margin-left: 160px;
+  margin-right: unset;
+}
 #admin-menu .dropdown li ul {
   left: auto;
   right: inherit;
