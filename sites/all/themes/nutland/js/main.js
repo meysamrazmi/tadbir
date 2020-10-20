@@ -89,7 +89,12 @@ $(document).ready(function(){
   });
   $(".page-gallery").ready(function () {
     $(" .view-content .views-field-field-main-image .field-content").addClass("items");
-    $(".view form").prepend("<div class='filter hidden-sm hidden-lg hidden-md'><strong>فیلترها</strong></div>");
+    if(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'){
+      $(".view form").prepend("<div class='filter hidden-sm hidden-lg hidden-md'><strong>Filters</strong></div>");
+    }
+    else {
+      $(".view form").prepend("<div class='filter hidden-sm hidden-lg hidden-md'><strong>فیلترها</strong></div>");
+    }
     $(".view form").on('click', ".filter", function(){
       $(".views-exposed-form").toggle();
       $(".view-header").css('opacity','1');
@@ -125,6 +130,11 @@ $(document).ready(function(){
 $(".view-filters").ready(function(){
   $("#edit-title").attr("placeholder", "کلمه مورد نظر را جستجو کنید");
   $("#edit-body-value").attr("placeholder", "در تمامی محتواها");
+  if(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'){
+    $("#edit-title").attr("placeholder", "Search");
+    $("#edit-body-value").attr("placeholder", "in all contents");
+  }
+
   $("input#edit-created-min, input#edit-created-max").each(function(){
     if($(this).val().indexOf('/') > -1)
       $(this).val(moment($(this).val(), 'MM/DD/YYYY').format('YYYY-MM-DD'));

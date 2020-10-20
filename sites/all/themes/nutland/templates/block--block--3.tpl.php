@@ -93,17 +93,17 @@ $lang = $language->language;
     color: #fff
   }
   .caption_write {
-    padding: 1.5rem;
+    padding: 13px;
     margin-top: 10px;
   }
   .caption_write {
     border-right: 4px solid #fff;
     border-left: 4px solid #fff;
-    margin-right: -0.5rem;
+    margin-right: -4px;
   }
   .i18n-en .caption_write {
     margin-right: 0;
-    margin-left: -0.5rem;
+    margin-left: -4px;
   }
 
   @media (min-width: 320px) and (max-width: 600px) {

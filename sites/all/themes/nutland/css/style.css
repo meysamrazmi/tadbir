@@ -7310,6 +7310,10 @@ td.visible-print {
   top: 50px !important;
 }
 
+.main-container.container {
+  min-height: calc(100vh - 660px);
+}
+
 .alert-success {
   z-index: 6;
   margin: 0 50px;
@@ -9557,6 +9561,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   float: right;
   margin-left: 15px;
 }
+.i18n-en .news-type .view-content .items {
+  float: left;
+  margin: 0 15px 0 0;
+}
 @media (max-width: 600px) {
   .news-type .view-content .items {
     float: none !important;
@@ -9601,6 +9609,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   min-width: 250px;
   margin-left: 25px;
 }
+.i18n-en .news-type .view-content .views-row img {
+  float: left;
+  margin: 0 25px 0 0;
+}
 @media (max-width: 600px) {
   .news-type .view-content .views-row img {
     float: none !important;
@@ -9629,6 +9641,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .news-type .view-content .views-row .views-field-created {
   float: left;
+}
+.i18n-en .news-type .view-content .views-row .views-field-created {
+  float: right;
 }
 @media (max-width: 600px) {
   .news-type .view-content .views-row .views-field-created {
@@ -9674,7 +9689,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-top: 15px;
 }
 .page-videos #block-system-main .view-content, .page-gallery #block-system-main .view-content {
-  max-width: 1000px;
   width: 100%;
   align-items: start;
   margin: auto;
@@ -9707,21 +9721,26 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   padding: 15px 0 0 15px;
   color: #848080;
 }
+[dir=ltr] .page-videos #block-system-main .view-content .views-row .views-field-created, [dir=ltr] .page-gallery #block-system-main .view-content .views-row .views-field-created {
+  float: right;
+  padding: 15px 15px 0 0;
+}
 .page-videos #block-system-main .view-content .views-row .views-field-field-image-video .field-content, .page-gallery #block-system-main .view-content .views-row .views-field-field-image-video .field-content {
   position: relative;
 }
 .page-videos #block-system-main .view-content .views-row .views-field-field-image-video .field-content:after, .page-gallery #block-system-main .view-content .views-row .views-field-field-image-video .field-content:after {
   content: url("/sites/all/themes/nutland/images/play.png");
   position: absolute;
-  top: 50%;
-  right: 50%;
-  transform: translate(25%, -25%);
+  top: calc(50% - 25px);
+  right: calc(50% - 25px);
+  left: unset;
   background: none !important;
+  width: 65px;
+  height: 65px;
 }
 .page-videos #block-system-main .view-content .views-row .views-field-field-video-category, .page-videos #block-system-main .view-content .views-row .views-field-field-category, .page-gallery #block-system-main .view-content .views-row .views-field-field-video-category, .page-gallery #block-system-main .view-content .views-row .views-field-field-category {
   padding: 15px;
   font-weight: bold;
-  text-align: right;
 }
 .page-videos #block-system-main .view-content .views-row .views-field-field-video-category a, .page-videos #block-system-main .view-content .views-row .views-field-field-category a, .page-gallery #block-system-main .view-content .views-row .views-field-field-video-category a, .page-gallery #block-system-main .view-content .views-row .views-field-field-category a {
   color: #00247c;
@@ -9730,7 +9749,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-videos #block-system-main .view-content .views-row .views-field-title, .page-gallery #block-system-main .view-content .views-row .views-field-title {
   padding: 0 15px 15px 0;
   font-weight: bold;
-  text-align: right;
+}
+[dir=ltr] .page-videos #block-system-main .view-content .views-row .views-field-title, [dir=ltr] .page-gallery #block-system-main .view-content .views-row .views-field-title {
+  padding: 0 0 15px 15px;
 }
 .page-videos #block-system-main .view-content .views-row .views-field-title a, .page-gallery #block-system-main .view-content .views-row .views-field-title a {
   color: #000000;
@@ -10019,6 +10040,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 .page-node-59 #block-system-main .col-md-3, .page-node-59 #block-system-main .col-md-9 {
   float: right;
 }
+[dir=ltr] .page-node-59 #block-system-main .col-md-3, [dir=ltr] .page-node-59 #block-system-main .col-md-9 {
+  float: left;
+}
 .page-node-59 #block-system-main form {
   max-width: 950px;
   padding: 2rem 0 3rem 0;
@@ -10042,6 +10066,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-right: 5px;
   font-weight: bold;
 }
+[dir=ltr] .page-node-59 #block-system-main form .webform-progressbar .webform-progressbar-page.current {
+  margin-right: unset;
+  margin-left: 5px;
+}
 .page-node-59 #block-system-main form .webform-progressbar:after {
   content: "";
   position: absolute;
@@ -10052,8 +10080,15 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   height: 600px;
   background: white;
 }
+[dir=ltr] .page-node-59 #block-system-main form .webform-progressbar:after {
+  right: 0;
+  left: unset;
+}
 .page-node-59 #block-system-main form .webform-component--txt9, .page-node-59 #block-system-main form .webform-component--txt8, .page-node-59 #block-system-main form .webform-component--txt7 {
   float: left !important;
+}
+[dir=ltr] .page-node-59 #block-system-main form .webform-component--txt9, [dir=ltr] .page-node-59 #block-system-main form .webform-component--txt8, [dir=ltr] .page-node-59 #block-system-main form .webform-component--txt7 {
+  float: right !important;
 }
 .page-node-59 #block-system-main form .control-label {
   font-weight: 300 !important;
@@ -10070,6 +10105,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   text-align: left;
   margin-left: 15px;
   padding-top: 15px;
+}
+[dir=ltr] .page-node-59 #block-system-main form .form-actions {
+  text-align: right;
+  margin-right: 15px;
+  margin-left: unset;
 }
 .page-node-59 #block-system-main form .form-actions button {
   background-color: #00247a !important;
@@ -10097,6 +10137,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   }
   .page-node-59 .webform-component--txt7, .page-node-59 .webform-component--txt8, .page-node-59 .webform-component--txt9 {
     float: left !important;
+  }
+  [dir=ltr] .page-node-59 .webform-component--txt7, [dir=ltr] .page-node-59 .webform-component--txt8, [dir=ltr] .page-node-59 .webform-component--txt9 {
+    float: right !important;
   }
   .page-node-59 .form-actions button {
     width: 70px !important;
@@ -10127,6 +10170,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     background-color: #00247a !important;
     margin-right: -1px !important;
   }
+  [dir=ltr] .page-node-59 form .current {
+    margin-right: unset !important;
+    margin-left: -1px !important;
+  }
   .page-node-59 form .current .webform-progressbar-page-label {
     font-size: 14px !important;
     position: relative;
@@ -10139,6 +10186,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .page-node-59 form .webform-progressbar {
     padding: 10px 5px 0 20px;
     border-bottom: 15px solid white;
+  }
+  [dir=ltr] .page-node-59 form .webform-progressbar {
+    padding: 10px 20px 0 5px;
   }
   .page-node-59 form .webform-progressbar:after {
     background: none !important;
@@ -10162,6 +10212,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border-bottom-left-radius: 25px;
   border-left: 2px solid;
   text-align: center;
+}
+[dir=ltr] .page-node-done .main-container .webform-confirmation {
+  border-right: 2px solid;
+  border-left: 0;
 }
 .page-node-done .main-container .links {
   text-align: center;
@@ -10200,12 +10254,20 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   left: 1%;
   top: 8%;
 }
+[dir=ltr] .node-type-article #block-system-main .group-header .field-type-addthis, [dir=ltr] .node-type-projects #block-system-main .group-header .field-type-addthis, [dir=ltr] .node-type-custom #block-system-main .group-header .field-type-addthis {
+  right: 1%;
+  left: unset;
+}
 .node-type-article #block-system-main .group-header .field-type-addthis:hover .field-items, .node-type-projects #block-system-main .group-header .field-type-addthis:hover .field-items, .node-type-custom #block-system-main .group-header .field-type-addthis:hover .field-items {
   opacity: 1;
 }
 .node-type-article #block-system-main .group-header .field-type-addthis .field-items, .node-type-projects #block-system-main .group-header .field-type-addthis .field-items, .node-type-custom #block-system-main .group-header .field-type-addthis .field-items {
   margin-left: 30px;
   opacity: 0;
+}
+[dir=ltr] .node-type-article #block-system-main .group-header .field-type-addthis .field-items, [dir=ltr] .node-type-projects #block-system-main .group-header .field-type-addthis .field-items, [dir=ltr] .node-type-custom #block-system-main .group-header .field-type-addthis .field-items {
+  margin-left: unset;
+  margin-right: 30px;
 }
 .node-type-article #block-system-main .group-header .field-type-addthis:before, .node-type-projects #block-system-main .group-header .field-type-addthis:before, .node-type-custom #block-system-main .group-header .field-type-addthis:before {
   content: url(/sites/all/themes/nutland/images/share.png);
@@ -10216,9 +10278,16 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: #6b6b6b;
   cursor: pointer;
 }
+[dir=ltr] .node-type-article #block-system-main .group-header .field-type-addthis:before, [dir=ltr] .node-type-projects #block-system-main .group-header .field-type-addthis:before, [dir=ltr] .node-type-custom #block-system-main .group-header .field-type-addthis:before {
+  margin-left: unset;
+  margin-right: 5px;
+}
 .node-type-article #block-system-main .group-header .field-name-post-date .even, .node-type-projects #block-system-main .group-header .field-name-post-date .even, .node-type-custom #block-system-main .group-header .field-name-post-date .even {
   float: left;
   color: #a2a2a2;
+}
+[dir=ltr] .node-type-article #block-system-main .group-header .field-name-post-date .even, [dir=ltr] .node-type-projects #block-system-main .group-header .field-name-post-date .even, [dir=ltr] .node-type-custom #block-system-main .group-header .field-name-post-date .even {
+  float: right;
 }
 .node-type-article #block-system-main .group-header .field-name-field-article-category a, .node-type-projects #block-system-main .group-header .field-name-field-article-category a, .node-type-custom #block-system-main .group-header .field-name-field-article-category a {
   color: #fa3939 !important;
@@ -10835,6 +10904,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   left: 45px;
   top: -5px;
 }
+[dir=ltr] .node-type-news #block-system-main .group-header .field-type-addthis .field-items, [dir=ltr] .node-type-article #block-system-main .group-header .field-type-addthis .field-items, [dir=ltr] .node-type-videos #block-system-main .group-header .field-type-addthis .field-items, [dir=ltr] .node-type-gallery #block-system-main .group-header .field-type-addthis .field-items {
+  right: 45px;
+  left: unset;
+  margin: 0 30px 0 0;
+}
 .node-type-news #block-system-main .group-header .field-type-addthis:before, .node-type-article #block-system-main .group-header .field-type-addthis:before, .node-type-videos #block-system-main .group-header .field-type-addthis:before, .node-type-gallery #block-system-main .group-header .field-type-addthis:before {
   content: url(/sites/all/themes/nutland/images/share.png);
   position: absolute;
@@ -10948,6 +11022,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   position: relative;
   top: -20px;
 }
+[dir=ltr] .node-type-news #block-system-main .group-footer .field-name-post-date, [dir=ltr] .node-type-article #block-system-main .group-footer .field-name-post-date, [dir=ltr] .node-type-videos #block-system-main .group-footer .field-name-post-date, [dir=ltr] .node-type-gallery #block-system-main .group-footer .field-name-post-date {
+  right: 70px;
+  left: unset;
+}
 .node-type-news #block-system-main .group-footer .group-header, .node-type-article #block-system-main .group-footer .group-header, .node-type-videos #block-system-main .group-footer .group-header, .node-type-gallery #block-system-main .group-footer .group-header {
   padding-top: 15px;
   max-width: 900px;
@@ -10979,11 +11057,19 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   transition: all 0.4s ease-in-out;
   transform: translate(-10px, -20px);
 }
+[dir=ltr] .node-type-news #block-system-main .group-footer .group-header .links.list-inline a:before, [dir=ltr] .node-type-article #block-system-main .group-footer .group-header .links.list-inline a:before, [dir=ltr] .node-type-videos #block-system-main .group-footer .group-header .links.list-inline a:before, [dir=ltr] .node-type-gallery #block-system-main .group-footer .group-header .links.list-inline a:before {
+  transform: translate(10px, -20px);
+}
 .node-type-news #block-system-main .group-footer .group-header .comment-reply, .node-type-article #block-system-main .group-footer .group-header .comment-reply, .node-type-videos #block-system-main .group-footer .group-header .comment-reply, .node-type-gallery #block-system-main .group-footer .group-header .comment-reply {
   position: relative;
   float: left;
   top: 29px;
   left: 15px;
+}
+[dir=ltr] .node-type-news #block-system-main .group-footer .group-header .comment-reply, [dir=ltr] .node-type-article #block-system-main .group-footer .group-header .comment-reply, [dir=ltr] .node-type-videos #block-system-main .group-footer .group-header .comment-reply, [dir=ltr] .node-type-gallery #block-system-main .group-footer .group-header .comment-reply {
+  float: right;
+  left: unset;
+  right: 15px;
 }
 .node-type-news #block-system-main .group-footer .group-header .comment-reply a:before, .node-type-article #block-system-main .group-footer .group-header .comment-reply a:before, .node-type-videos #block-system-main .group-footer .group-header .comment-reply a:before, .node-type-gallery #block-system-main .group-footer .group-header .comment-reply a:before {
   color: black !important;
@@ -11098,6 +11184,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin: auto;
   width: 100%;
 }
+[dir=ltr] .page-projects .view-header,
+[dir=ltr] .page-news .view-header, [dir=ltr] .page-gallery .view-header, [dir=ltr] .page-videos .view-header {
+  text-align: right;
+}
 .page-projects .view,
 .page-news .view, .page-gallery .view, .page-videos .view {
   display: flex;
@@ -11130,6 +11220,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   border-radius: 0;
   margin: 0 5px;
   float: right;
+}
+[dir=ltr] .page-projects .main-container .pagination span, [dir=ltr] .page-projects .main-container .pagination a,
+[dir=ltr] .page-news .main-container .pagination span,
+[dir=ltr] .page-news .main-container .pagination a, [dir=ltr] .page-gallery .main-container .pagination span, [dir=ltr] .page-gallery .main-container .pagination a, [dir=ltr] .page-videos .main-container .pagination span, [dir=ltr] .page-videos .main-container .pagination a {
+  float: left;
 }
 .page-projects .main-container .view-filters,
 .page-news .main-container .view-filters, .page-gallery .main-container .view-filters, .page-videos .main-container .view-filters {
@@ -11188,6 +11283,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   top: 5px;
   color: #807d7d;
 }
+[dir=ltr] .page-projects .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after,
+[dir=ltr] .page-news .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after, [dir=ltr] .page-gallery .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after, [dir=ltr] .page-videos .main-container .view-filters form #edit-created-wrapper .form-type-textfield:after {
+  right: 20px;
+  left: unset;
+}
 @media (min-width: 320px) and (max-width: 600px) {
   .page-projects .main-container form,
 .page-news .main-container form, .page-gallery .main-container form, .page-videos .main-container form {
@@ -11198,6 +11298,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   .page-projects .main-container form .filter + div > .views-exposed-form,
 .page-news .main-container form .filter + div > .views-exposed-form, .page-gallery .main-container form .filter + div > .views-exposed-form, .page-videos .main-container form .filter + div > .views-exposed-form {
     display: none;
+  }
+  [dir=ltr] .page-projects .main-container form,
+[dir=ltr] .page-news .main-container form, [dir=ltr] .page-gallery .main-container form, [dir=ltr] .page-videos .main-container form {
+    margin-left: calc(50% - 50vw);
+    margin-right: 0;
   }
   .page-projects .main-container form .form-item-created-min, .page-projects .main-container form .form-item-created-max,
 .page-news .main-container form .form-item-created-min,
@@ -11225,6 +11330,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     right: 65px;
     top: 20px;
   }
+  [dir=ltr] .page-projects .main-container .filter strong:before,
+[dir=ltr] .page-news .main-container .filter strong:before, [dir=ltr] .page-gallery .main-container .filter strong:before, [dir=ltr] .page-videos .main-container .filter strong:before {
+    left: 65px;
+    right: unset;
+  }
   .page-projects .main-container .filter strong:after,
 .page-news .main-container .filter strong:after, .page-gallery .main-container .filter strong:after, .page-videos .main-container .filter strong:after {
     content: "";
@@ -11233,6 +11343,12 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     left: 0;
     margin-left: 15px;
     font-weight: normal;
+  }
+  [dir=ltr] .page-projects .main-container .filter strong:after,
+[dir=ltr] .page-news .main-container .filter strong:after, [dir=ltr] .page-gallery .main-container .filter strong:after, [dir=ltr] .page-videos .main-container .filter strong:after {
+    right: 0;
+    left: unset;
+    margin: 0 15px 0 0;
   }
   .page-projects .main-container .views-submit-button,
 .page-news .main-container .views-submit-button, .page-gallery .main-container .views-submit-button, .page-videos .main-container .views-submit-button {
@@ -11569,6 +11685,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   font-size: 28px;
   line-height: 2;
 }
+[dir=ltr] .node-type-projects .main-container #block-system-main .field-name-field-body .field-item p {
+  margin: 0 0 0 -24px;
+}
 .node-type-projects .main-container #block-system-main .field-collection-container {
   background: rgba(0, 0, 0, 0.5);
   position: relative;
@@ -11632,6 +11751,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-left: 20px;
   height: 90px;
 }
+[dir=ltr] .node-type-projects .main-container #block-system-main .field-collection-container .field-items .content .field-name-field-img {
+  float: left;
+  margin: 0 20px 0 0;
+}
 .node-type-projects .main-container #block-system-main .field-collection-container .field-items .content .field-name-field-img img {
   width: 64px;
 }
@@ -11691,6 +11814,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin: auto;
 }
 .node-type-projects .main-container #block-system-main .group-footer .field-label {
+  display: none;
+}
+.node-type-projects .main-container #block-system-main .group-footer .block-title {
   display: block !important;
   color: #00247a;
   font-size: 18px;
@@ -11698,8 +11824,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   position: relative;
   overflow: hidden;
   padding: 0 10px;
+  font-weight: bold;
 }
-.node-type-projects .main-container #block-system-main .group-footer .field-label:after {
+.node-type-projects .main-container #block-system-main .group-footer .block-title:after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -11708,6 +11835,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   background: #ccc;
   top: 15px;
   margin-right: 10px;
+}
+[dir=ltr] .node-type-projects .main-container #block-system-main .group-footer .block-title:after {
+  margin: 0 0 0 10px;
 }
 .node-type-projects .main-container #block-system-main .group-footer .items {
   height: auto !important;
@@ -11726,9 +11856,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: black;
   font-weight: bold;
   text-decoration: none;
-}
-.node-type-projects .main-container #block-system-main .group-footer h2.title.comment-form {
-  opacity: 0;
 }
 .node-type-projects .main-container #block-system-main .group-footer #comments {
   display: flex;
@@ -11757,11 +11884,15 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   top: 12px;
   margin-right: 10px;
 }
+[dir=ltr] .node-type-projects .main-container #block-system-main .group-footer #comments h2.title:after {
+  margin: 0 0 0 10px;
+}
 .node-type-projects .main-container #block-system-main .group-footer .comment-form {
   max-width: 900px;
   margin: auto;
   order: 0;
   margin-bottom: 30px;
+  width: 100%;
 }
 .node-type-projects .main-container #block-system-main .group-footer .comment-form label {
   font-weight: 500;
@@ -11793,6 +11924,9 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   color: white;
   width: 130px;
   float: left;
+}
+[dir=ltr] .node-type-projects .main-container #block-system-main .group-footer .comment-form .form-actions button {
+  float: right;
 }
 .node-type-projects .main-container #block-system-main .group-footer .field-name-post-date {
   left: 70px;
@@ -12569,10 +12703,14 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   top: 0px;
   padding: 40px 0;
   right: calc(50% - 50vw + 8.5px);
-  background: url(/sites/default/files/field/images/insta/node-122.jpg);
+  background: url(url(/sites/default/files/styles/1366x500/public/tadbir_photo_2_1.jpg?itok=7BepqhID));
   background-position: center;
   background-size: cover;
   position: relative;
+}
+.i18n-en .header-style {
+  left: calc(50% - 50vw + 8.5px);
+  right: unset;
 }
 @media (pointer:none), (pointer:coarse), (hover:none), (hover:on-demand) {
   .header-style {
@@ -12607,6 +12745,10 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     float: right;
   }
 }
+.i18n-en .views-exposed-form .views-exposed-widget {
+  padding: 0.5em 0 0 1em;
+}
+
 @font-face {
   font-family: "mat";
   src: url("../fonts/material/material.eot");

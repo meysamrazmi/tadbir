@@ -7,6 +7,8 @@ $tabletx:             "screen and (max-width: #{767px})";
 $normalx:             "screen and (max-width: #{$screen-md-min})";
 $widex:               "screen and (max-width: #{$screen-lg-min})";
 $mobile:              "(pointer:none), (pointer:coarse), (hover:none), (hover:on-demand)";
+$ltr:                 "[dir='ltr'] &";
+
 @import url('/sites/all/libraries/persiandatepicker/persian-datepicker.min.css');
 // Drop shadows.
 @mixin box-shadow($shadow) {
@@ -26,6 +28,9 @@ $mobile:              "(pointer:none), (pointer:coarse), (hover:none), (hover:on
       }
     }
   }
+}
+.main-container.container {
+  min-height: calc(100vh - 660px);
 }
 .alert-success {
   z-index: 6;
@@ -2312,6 +2317,10 @@ a {
     height: 220px!important;
     float: right;
     margin-left: 15px;
+    .i18n-en & {
+      float: left;
+      margin: 0 15px 0 0;
+    }
     @media (max-width: 600px) {
       float: none !important;
     }
@@ -2351,6 +2360,10 @@ a {
       float: right;
       min-width: 250px;
       margin-left: 25px;
+      .i18n-en & {
+        float: left;
+        margin: 0 25px 0 0;
+      }
       @media (max-width: 600px) {
         float: none !important;
         margin-left: 0!important;
@@ -2378,6 +2391,9 @@ a {
     }
     .views-field-created{
       float: left;
+      .i18n-en & {
+        float: right;
+      }
       @media (max-width: 600px) {
         display: none !important;
       }
@@ -2422,7 +2438,6 @@ a {
   #block-system-main{
     margin-top: 15px;
     .view-content{
-      max-width: 1000px;
       width: 100%;
       align-items: start;
       margin: auto;
@@ -2448,6 +2463,10 @@ a {
           float: left;
           padding: 15px 0 0 15px;
           color: #848080;
+          #{$ltr} {
+            float: right;
+            padding: 15px 15px 0 0;
+          }
         }
         .views-field-field-image-video{
           .field-content{
@@ -2455,17 +2474,18 @@ a {
             &:after{
               content: url("/sites/all/themes/nutland/images/play.png");
               position: absolute;
-              top: 50%;
-              right: 50%;
-              transform: translate(25%, -25%);
-              background: none!important;
+              top: calc(50% - 25px);
+              right: calc(50% - 25px);
+              left: unset;
+              background: none !important;
+              width: 65px;
+              height: 65px;
             }
           }
         }
         .views-field-field-video-category, .views-field-field-category{
           padding: 15px;
           font-weight: bold;
-          text-align: right;
           a{
             color: #00247c;
             text-decoration: none;
@@ -2474,7 +2494,9 @@ a {
         .views-field-title{
           padding: 0 15px 15px 0;
           font-weight: bold;
-          text-align: right;
+          #{$ltr} {
+            padding: 0 0 15px 15px;
+          }
           a{
             color: #000000;
             text-decoration: none;
@@ -2772,6 +2794,9 @@ a {
   #block-system-main{
      .col-md-3, .col-md-9{
       float: right;
+       #{$ltr} {
+         float: left;
+       }
     }
     form{
       max-width: 950px;
@@ -2795,6 +2820,10 @@ a {
           color: #00247a;
           margin-right: 5px;
           font-weight: bold;
+          #{$ltr} {
+            margin-right: unset;
+            margin-left: 5px;
+          }
         }
       }
       .webform-progressbar:after{
@@ -2806,15 +2835,22 @@ a {
         width: 4px;
         height: 600px;
         background: white;
+        #{$ltr} {
+          right: 0;
+          left: unset;
+        }
       }
       .webform-component--txt9, .webform-component--txt8, .webform-component--txt7{
         float: left!important;
+        #{$ltr} {
+          float: right!important;
+        }
       }
       .control-label{
         font-weight: 300!important;
       }
       .form-control{
-        padding:6px 10px;
+        padding: 6px 10px;
         background-color: #fff;
         background-clip: padding-box;
         border: 1px solid #ced4da;
@@ -2825,6 +2861,11 @@ a {
         text-align: left;
         margin-left: 15px;
         padding-top: 15px;
+        #{$ltr} {
+          text-align: right;
+          margin-right: 15px;
+          margin-left: unset;
+        }
         button{
           background-color: #00247a!important;
           border-color: #00247a!important;
@@ -2856,6 +2897,9 @@ a {
     }
     .webform-component--txt7, .webform-component--txt8, .webform-component--txt9{
       float: left !important;
+      #{$ltr} {
+        float: right !important;
+      }
     }
     .form-actions button{
       width: 70px!important;
@@ -2886,6 +2930,10 @@ a {
       .current {
         background-color: #00247a !IMPORTANT;
         margin-right: -1px !important;
+        #{$ltr} {
+          margin-right: unset !important;
+          margin-left: -1px !important;
+        }
         .webform-progressbar-page-label{
           font-size: 14px !IMPORTANT;
           position: relative;
@@ -2898,6 +2946,9 @@ a {
       .webform-progressbar{
         padding: 10px 5px 0 20px;
         border-bottom: 15px solid white;
+        #{$ltr} {
+          padding: 10px 20px 0 5px;
+        }
         &:after{
           background: none!important;
         }
@@ -2924,6 +2975,10 @@ a {
       border-bottom-left-radius: 25px;
       border-left: 2px solid;
       text-align: center;
+      #{$ltr} {
+        border-right: 2px solid;
+        border-left: 0;
+      }
     }
     .links{
       text-align: center;
@@ -2964,6 +3019,10 @@ a {
         position: absolute;
         left: 1%;
         top: 8%;
+        #{$ltr} {
+          right: 1%;
+          left: unset;
+        }
         &:hover{
           .field-items{
             opacity: 1;
@@ -2972,6 +3031,10 @@ a {
         .field-items{
           margin-left: 30px;
           opacity: 0;
+          #{$ltr} {
+            margin-left: unset;
+            margin-right: 30px;
+          }
         }
         &:before{
           content: url(/sites/all/themes/nutland/images/share.png);
@@ -2981,12 +3044,19 @@ a {
           font-size: 24px;
           color: #6b6b6b;
           cursor: pointer;
+          #{$ltr} {
+            margin-left: unset;
+            margin-right: 5px;
+          }
         }
       }
       .field-name-post-date{
         .even{
           float: left;
           color: #a2a2a2;
+          #{$ltr} {
+            float: right;
+          }
         }
       }
       .field-name-field-article-category{
@@ -3087,7 +3157,7 @@ a {
               h4{
                 margin: 0 0 0 75px;
                 white-space: nowrap;
-                [dir="ltr"] &{
+                #{$ltr}{
                   margin: 0 75px 0 0;
                 }
               }
@@ -3131,7 +3201,7 @@ a {
             margin-top:20px;
             margin: 40px 0;
             text-align: right;
-            [dir="ltr"] & {
+            #{$ltr} {
               text-align: left;
             }
             .control-label{
@@ -3149,7 +3219,7 @@ a {
             }
             .webform-component--name, .webform-component--email{
               margin-left: 2%;
-              [dir="ltr"] & {
+              #{$ltr} {
                 margin-left: 0px;
                 margin-right: 2%;
               }
@@ -3165,7 +3235,7 @@ a {
               width: 130px;
               float: left;
               position: relative;
-              [dir="ltr"] & {
+              #{$ltr} {
                 float: right;
               }
             }
@@ -3621,7 +3691,7 @@ a {
         background: #ccc;
         top: 15px;
         left: 10px;
-        [dir="ltr"] & {
+        #{$ltr} {
           left: unset;
           right: 10px;
         }
@@ -3654,6 +3724,11 @@ a {
           position: absolute;
           left: 45px;
           top: -5px;
+          #{$ltr} {
+            right: 45px;
+            left: unset;
+            margin: 0 30px 0 0;
+          }
         }
         &:before{
           content: url(/sites/all/themes/nutland/images/share.png);
@@ -3663,7 +3738,7 @@ a {
           font-size: 24px;
           color: #6b6b6b;
           cursor: pointer;
-          [dir="ltr"] & {
+          #{$ltr} {
             left: unset;
             right: 0;
           }
@@ -3673,7 +3748,7 @@ a {
         .even{
           float: left;
           color: #a2a2a2;
-          [dir="ltr"] & {
+          #{$ltr} {
             float: right;
           }
         }
@@ -3689,7 +3764,7 @@ a {
           border-bottom: 2px solid #a0a0a0;
           margin-bottom: 25px;
           padding: 0 0 15px 30px;
-          [dir="ltr"] & {
+          #{$ltr} {
             padding: 0 30px 15px 0;
           }
         }
@@ -3720,7 +3795,7 @@ a {
           background: #ccc;
           top: 12px;
           left: 10px;
-          [dir="ltr"] & {
+          #{$ltr} {
             left: unset;
             right: 10px;
           }
@@ -3763,7 +3838,7 @@ a {
             color: white;
             width: 130px;
             float: left;
-            [dir="ltr"] & {
+            #{$ltr} {
               float: right;
             }
           }
@@ -3773,6 +3848,10 @@ a {
         left: 70px;
         position: relative;
         top: -20px;
+        #{$ltr} {
+          right: 70px;
+          left: unset;
+        }
       }
       .group-header{
         padding-top: 15px;
@@ -3805,6 +3884,9 @@ a {
               font-family: "Glyphicons Halflings";
               transition: all 0.4s ease-in-out;
               transform: translate(-10px, -20px);
+              #{$ltr} {
+                transform: translate(10px, -20px);
+              }
             }
           }
         }
@@ -3813,6 +3895,11 @@ a {
           float: left;
           top: 29px;
           left: 15px;
+          #{$ltr} {
+            float: right;
+            left: unset;
+            right: 15px;
+          }
           a{
             &:before{
               color: black !important;
@@ -3944,6 +4031,9 @@ a {
     text-align: left;
     margin: auto;
     width: 100%;
+    #{$ltr} {
+      text-align: right;
+    }
   }
   .view{
     display: flex;
@@ -3974,6 +4064,9 @@ a {
         border-radius: 0;
         margin: 0 5px;
         float: right;
+        #{$ltr} {
+          float: left;
+        }
       }
     }
     .view-filters{
@@ -4016,6 +4109,10 @@ a {
               left: 20px;
               top: 5px;
               color: #807d7d;
+              #{$ltr} {
+                right: 20px;
+                left: unset;
+              }
             }
             display: inline-flex;
           }
@@ -4030,6 +4127,10 @@ a {
         padding: 5px 15px !important;
         width: 100vw;
         margin-right: calc(50% - 50vw);
+        #{$ltr} {
+          margin-left: calc(50% - 50vw);
+          margin-right: 0;
+        }
         .form-item-created-min, .form-item-created-max{
           width: 50%!important;
         }
@@ -4052,6 +4153,10 @@ a {
             background: #BFBFBF;
             right: 65px;
             top: 20px;
+            #{$ltr} {
+              left: 65px;
+              right: unset;
+            }
           }
           &:after{
             content: "\e056";
@@ -4060,6 +4165,11 @@ a {
             left: 0;
             margin-left: 15px;
             font-weight: normal;
+            #{$ltr} {
+              right: 0;
+              left: unset;
+              margin: 0 15px 0 0;
+            }
           }
         }
       }
@@ -4381,6 +4491,9 @@ a {
             margin-right: -24px;
             font-size: 28px;
             line-height: 2;
+            #{$ltr} {
+              margin: 0 0 0 -24px;
+            }
           }
         }
       }
@@ -4428,9 +4541,6 @@ a {
           @media (max-width: 767px){
             flex-direction: column;
           }
-          .field-item{
-
-          }
           .content{
             .field-name-field-title{
               font-weight: bold;
@@ -4440,6 +4550,10 @@ a {
               float: right;
               margin-left: 20px;
               height: 90px;
+              #{$ltr} {
+                float: left;
+                margin: 0 20px 0 0;
+              }
               img{
                 width: 64px;
               }
@@ -4509,7 +4623,10 @@ a {
       .group-footer{
         max-width: 1100px;
         margin: auto;
-        .field-label{
+        .field-label {
+          display: none;
+        }
+        .block-title {
           display: block!important;
           color: #00247a;
           font-size: 18px;
@@ -4517,6 +4634,7 @@ a {
           position: relative;
           overflow: hidden;
           padding: 0 10px;
+          font-weight: bold;
           &:after{
             content: '';
             position: absolute;
@@ -4526,6 +4644,9 @@ a {
             background: #ccc;
             top: 15px;
             margin-right: 10px;
+            #{$ltr} {
+              margin: 0 0 0 10px;
+            }
           }
         }
         .items{
@@ -4545,9 +4666,6 @@ a {
               text-decoration: none;
             }
           }
-        }
-        h2.title.comment-form{
-          opacity: 0;
         }
         #comments{
           display: flex;
@@ -4572,6 +4690,9 @@ a {
             background: #ccc;
             top: 12px;
             margin-right: 10px;
+            #{$ltr} {
+              margin: 0 0 0 10px;
+            }
           }
         }
         .comment-form{
@@ -4579,6 +4700,7 @@ a {
           margin: auto;
           order: 0;
           margin-bottom:30px;
+          width: 100%;
           label {
             font-weight: 500;
             color: #666666;
@@ -4603,13 +4725,16 @@ a {
             display: none !important;
           }
           .form-actions{
-          button{
+            button{
               background-color: #00247a !important;
               border-color: #00247a !important;
               border-radius: 0;
               color: white;
               width: 130px;
               float: left;
+              #{$ltr} {
+                float: right;
+              }
             }
           }
         }
@@ -4773,7 +4898,7 @@ a {
           margin-right: 50%;
           transform: translateX(50%);
           min-width: 100vw;
-          [dir="ltr"] & {
+          #{$ltr} {
             margin-right: unset;
             margin-left: 50%;
             transform: translateX(-50%);
@@ -4915,7 +5040,7 @@ a {
             margin-right: -24px;
             font-size: 28px;
             line-height: 2;
-            [dir="ltr"] & {
+            #{$ltr} {
               margin-right: 0px;
               margin-left: -24px;
             }
@@ -5430,10 +5555,14 @@ a {
   top: 0px;
   padding: 40px 0;
   right: calc(50% - 50vw + 8.5px);
-  background: url(/sites/default/files/field/images/insta/node-122.jpg);
+  background: url(url(/sites/default/files/styles/1366x500/public/tadbir_photo_2_1.jpg?itok=7BepqhID));
   background-position: center;
   background-size: cover;
   position: relative;
+  .i18n-en & {
+    left: calc(50% - 50vw + 8.5px);
+    right: unset;
+  }
   @media #{$mobile}{
     width: 100vw;
     right: calc(50% - 50vw);
@@ -5468,5 +5597,11 @@ a {
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
       float: right;
     }
+  }
+}
+
+.i18n-en {
+  .views-exposed-form .views-exposed-widget {
+    padding: .5em 0 0 1em;
   }
 }
