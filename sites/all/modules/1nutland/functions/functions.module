@@ -61,6 +61,15 @@ function functions_menu() {
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
+
+  $items['admin/developer'] = array(
+    'title' => t('developer page'),
+    'description' => t('developer page'),
+    'page callback' => 'developer',
+    'access arguments' => array('administer modules'),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
@@ -480,4 +489,8 @@ function prepare_for_contextual($element){
       print drupal_render($build);
     }
   }
+}
+
+function developer(){
+
 }

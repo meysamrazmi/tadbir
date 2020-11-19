@@ -1425,7 +1425,7 @@ a {
     ul{
       height: 85px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: stretch;
       margin: 0 0 0 0px;
       padding: 0;
@@ -5603,5 +5603,35 @@ a {
 .i18n-en {
   .views-exposed-form .views-exposed-widget {
     padding: .5em 0 0 1em;
+  }
+}
+
+
+.region-navigation{
+  .block-search {
+    display: none;
+  }
+}
+
+
+.social-share {
+  &:before{
+    content: "\f497";
+    font-family: mat;
+    font-size: 25px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+  }
+  display: flex;
+  justify-content: flex-end;
+
+  ul {
+    list-style: none;
+
+    li
+    {
+      display: none;
+    }
   }
 }

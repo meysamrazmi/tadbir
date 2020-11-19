@@ -8712,7 +8712,7 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 #navbar .left-menu ul {
   height: 85px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: stretch;
   margin: 0 0 0 0px;
   padding: 0;
@@ -12747,6 +12747,29 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
 }
 .i18n-en .views-exposed-form .views-exposed-widget {
   padding: 0.5em 0 0 1em;
+}
+
+.region-navigation .block-search {
+  display: none;
+}
+
+.social-share {
+  display: flex;
+  justify-content: flex-end;
+}
+.social-share:before {
+  content: "";
+  font-family: mat;
+  font-size: 25px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+.social-share ul {
+  list-style: none;
+}
+.social-share ul li {
+  display: none;
 }
 
 @font-face {
