@@ -49,15 +49,15 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
       <?php endif; ?>
       <div class="left-menu">
         <ul>
-<!--          <li class="grob">-->
-<!--            <i class="mdi mdi-magnify"></i>-->
-<!--          </li>-->
-<!--          <li class="hidden-xs d-none">-->
-<!--            <select id="lang">-->
-<!--              <option value="فارسی">فارسی</option>-->
-<!--              <option value="انگلیسی">انگلیسی</option>-->
-<!--            </select>-->
-<!--          </li>-->
+          <li class="grob">
+            <i class="mdi mdi-magnify"></i>
+          </li>
+          <li class="hidden-xs d-none">
+            <select id="lang">
+              <option value="فارسی">فارسی</option>
+              <option value="انگلیسی">انگلیسی</option>
+            </select>
+          </li>
           <li class="hidden-xs subset-link">
             <a>
               <?php
@@ -68,7 +68,11 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
           </li>
         </ul>
       </div>
-<!--      <div class="form-search-menu">-->
+      <div class="form-search-menu">
+        <?php
+        $block = module_invoke('search', 'block_view', 'search');
+        print render($block);
+        ?>
 <!--        <form action="/search/node" method="get" accept-charset="UTF-8">-->
 <!--          <div>-->
 <!--            <div class="form-item form-item-query form-type-textfield form-group">-->
@@ -79,7 +83,7 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
 <!--            </button>-->
 <!--          </div>-->
 <!--        </form>-->
-<!--      </div>-->
+      </div>
     <?php endif; ?>
   </div>
 </header>
