@@ -77,7 +77,7 @@ $lang = $language->language;
       <div class="container">
         <p class="text-center">
           <a class="name-co" href="/" target="_blank" style="border-bottom: 1px solid #fff;width: 430px;margin: auto;max-width: 100%;">
-            <?php echo $lang == 'fa' ? 'تمامی حقوق متعلق به گروه توسعه اقتصادی تدبیر می باشد' : 'All Rights Reserved Ror TADBIR ECONOMIC DEVELOPMENT GROUP';?>
+            <?php echo $lang == 'fa' ? 'تمام حقوق این سایت، به گروه توسعه‌ی اقتصادی تدبیر، تعلق دارد' : 'All Rights Reserved Ror TADBIR ECONOMIC DEVELOPMENT GROUP';?>
           </a>
           <a class="name-co" href="https://www.tusi.co/" target="_blank" style="direction: ltr; margin-top: 5px;">
             <span style="padding: 10px 10px 0 0;"> Design and Development by</span> <img src="/sites/all/themes/nutland/images/tusi.svg" style="width: 40px;filter: brightness(1);vertical-align: top;display: inline-block;">

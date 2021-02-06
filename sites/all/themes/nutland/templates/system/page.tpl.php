@@ -134,7 +134,7 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
 <?php endif; ?>
 <script src="/sites/all/themes/nutland/js/aos.min.js"></script>
 <script>
-  const $ = jQuery
+  var $ = jQuery
   $(document).ready(function () {
     $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
       items: 2,
