@@ -10744,6 +10744,20 @@ html.js fieldset.collapsed {
 .page-user h1.page-header {
   display: none; }
 
+.page-user-password #password-policy-password-tab .form-type-password-confirm {
+  height: 200px;
+}
+.page-user-password #password-policy-password-tab .form-type-password-confirm .help-block.password-help {
+  display: block;
+  width: 100%;
+  text-align: left;
+  left: auto;
+  top: 60px;
+}
+.page-user-password #password-policy-password-tab .form-type-password-confirm .help-block.password-help ul {
+  list-style: none;
+}
+
 i.mdi {
   vertical-align: middle;
   font-size: 20px;
