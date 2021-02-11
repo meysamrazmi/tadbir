@@ -367,7 +367,7 @@ function costum_collection_left_image($item) {
   $rand = 'img-'. rand(100, 999);
   $output = render($item['field_title']) ."
       <div class=\"container left_image\">
-        <div class=\"col-sm-4 left $rand\">
+        <div class=\"col-sm-4 left {$rand}\">
           ". render($item['field_images']) ."
         </div>
         <div class=\"col-sm-8 right has-border\">
@@ -458,10 +458,10 @@ function costum_collection_main_header($item) {
 }
 
 function alter_image_style(&$item){
-  if(isset($item['field_image_size']['#items'][0]['value'])){
+  if(!empty($item['field_image_size'][0]['#markup'])){
     foreach($item['field_images'] as $key => $val){
       if(strpos($key, '#') === false){
-        $item['field_images'][$key]['#image_style'] = $item['field_image_size']['#items'][0]['value'];
+        $item['field_images'][$key]['#image_style'] = $item['field_image_size'][0]['#markup'];
       }
     }
   }
