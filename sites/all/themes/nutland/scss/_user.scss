@@ -268,3 +268,22 @@ html.js fieldset.collapsed {
 .page-user h1.page-header {
   display: none;
 }
+
+
+.page-user-password #password-policy-password-tab{
+  .form-type-password-confirm{
+    height: 200px;
+
+    .help-block.password-help {
+      display: block;
+      width: 100%;
+      text-align: left;
+      left: auto;
+      top: 60px;
+
+      ul{
+        list-style: none;
+      }
+    }
+  }
+}

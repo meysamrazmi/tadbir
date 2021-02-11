@@ -61,6 +61,15 @@ function functions_menu() {
     'access arguments' => array('access content'),
     'type' => MENU_CALLBACK,
   );
+
+  $items['admin/developer'] = array(
+    'title' => t('developer page'),
+    'description' => t('developer page'),
+    'page callback' => 'developer',
+    'access arguments' => array('administer modules'),
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
 }
 
@@ -73,6 +82,37 @@ function functions_init(){
 	$aliases = explode('/', $path);
   drupal_add_js(array('UID' => $user->uid), 'setting');
 
+}
+
+/**
+ * Implements hook_node_delete().
+ */
+function functions_node_delete($node) {
+  if (in_array($node->nid, array(
+    1,3,5,6,7,8,9,
+    10,
+    20,21,29,
+    31,32,33,34,35,36,39,
+    44,48,
+    59,
+    61,62,63,64,65,67,68,
+    74,75,
+    91,92,93,
+    110,
+    122,
+    140,141,142,143,
+    155,156,157,158,
+    160,161,162,163,164,165,166,169,
+    170,171,172,173,175,176,177,178,179,
+    180,183,184,
+    190,191,
+    ))) {
+    try {
+      $node->status = 0;
+      node_save($node);
+    } catch (Exception $e) {}
+    return;
+  }
 }
 
 /**
@@ -480,4 +520,8 @@ function prepare_for_contextual($element){
       print drupal_render($build);
     }
   }
+}
+
+function developer(){
+
 }

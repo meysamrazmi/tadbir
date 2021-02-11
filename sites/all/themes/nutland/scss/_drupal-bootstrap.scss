@@ -1425,7 +1425,7 @@ a {
     ul{
       height: 85px;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-items: stretch;
       margin: 0 0 0 0px;
       padding: 0;
@@ -3003,6 +3003,67 @@ a {
     }
   }
 }
+
+
+.social-share {
+  position: absolute;
+  left: 0;
+  display: flex;
+  flex-direction: row-reverse;
+  transition: background 0.3s ease 0.3s, width 0.3s ease 0s;
+  width: 40px;
+  overflow: hidden;
+  border-radius: 50px;
+  #{$ltr} {
+    right: 0;
+    left: unset;
+  }
+  &:before{
+    content: "\f497";
+    font-family: mat;
+    font-size: 25px;
+    width: 40px;
+    text-align: center;
+  }
+  &:hover {
+    background: #eee;
+    padding-right: 15px;
+    width: 200px;
+    transition: background 0.3s ease 0s, width 0.3s ease 0.3s;
+    #{$ltr} {
+      padding-left: 15px;
+      padding-right: 0;
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    li {
+      a {
+        margin: 0;
+        width: 30px;
+        height: 30px;
+        background: none;
+        text-indent: unset;
+        font-size: 0;
+        text-align: center;
+        &:before {
+          font-family: 'mat';
+          font-size: 27px;
+          line-height: 30px;
+        }
+        &.social-share-linkedin:before { content: "\f33c"; color: #0077b5;}
+        &.social-share-facebook:before { content: "\f20d"; color: #3b5998;}
+        &.social-share-reddit:before { content: "\f44d"; color: #ff4500;}
+        &.social-share-twitter:before { content: "\f544"; color: #08a0e9;}
+        &.social-share-telegram:before { content: "\f501"; color: #0088cc;}
+      }
+    }
+  }
+}
 //article and other pages
 .node-type-article, .node-type-projects, .node-type-custom{
   background: white;
@@ -3015,41 +3076,6 @@ a {
   }
   #block-system-main{
     .group-header{
-      .field-type-addthis{
-        position: absolute;
-        left: 1%;
-        top: 8%;
-        #{$ltr} {
-          right: 1%;
-          left: unset;
-        }
-        &:hover{
-          .field-items{
-            opacity: 1;
-          }
-        }
-        .field-items{
-          margin-left: 30px;
-          opacity: 0;
-          #{$ltr} {
-            margin-left: unset;
-            margin-right: 30px;
-          }
-        }
-        &:before{
-          content: url(/sites/all/themes/nutland/images/share.png);
-          position: absolute;
-          left: 0;
-          margin-left: 5px;
-          font-size: 24px;
-          color: #6b6b6b;
-          cursor: pointer;
-          #{$ltr} {
-            margin-left: unset;
-            margin-right: 5px;
-          }
-        }
-      }
       .field-name-post-date{
         .even{
           float: left;
