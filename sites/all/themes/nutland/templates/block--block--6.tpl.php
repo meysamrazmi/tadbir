@@ -35,7 +35,7 @@ $lang = $language->language;
     top: 0px;
     padding: 40px 0;
     right: calc(50% - 50vw);
-    background: url("/sites/all/themes/nutland/images/sktemplate1.jpg");
+    background: url("/sites/default/files/styles/1366x670/public/hamkari.jpg?itok=urXq2Sz-");
     background-position: center;
     background-size: cover;
   }
