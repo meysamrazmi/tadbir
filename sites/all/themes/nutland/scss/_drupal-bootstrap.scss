@@ -3286,7 +3286,7 @@ a {
             }
           }
         }
-        .social{
+        .social {
           text-align: -webkit-center;
           margin: 50px 0 -100px 0;
           .list{
@@ -3297,11 +3297,21 @@ a {
               margin: 1px 10px;
               text-decoration: none;
             }
-            li{
-              list-style: none;
-              &:before{
-                font-family: icomoon !important;
-                content: "\e997";
+            i {
+              background: #eee;
+              width: 50px;
+              height: 50px;
+              line-height: 50px;
+              font-size: 32px;
+              border-radius: 50%;
+              &.mdi-telegram {
+                color: #2196f3;
+              }
+              &.mdi-instagram {
+                color: #e91e63;
+              }
+              &.mdi-facebook-messenger {
+                color: #9dc756;;
               }
             }
           }

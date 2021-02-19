@@ -111,11 +111,9 @@ $lang = $language->language;
     <h4 class="hbottom"><?php echo $lang == 'fa' ? 'گروه اقتصادی تدبیر در شبکه های اجتماعی :' : 'Social Media:';?></h4>
     <div class="social">
       <ul class="list" style="padding-right: 0px;">
-        <a href=""> <li class="social1"></li></a>
-        <a href=""> <li class="social2"></li></a>
-        <a href=""> <li class="social3"></li></a>
-        <a href=""> <li class="social4"></li></a>
-        <a href=""> <li class="social5"></li></a>
+        <a href="https://t.me/Tadbir_Group" target="_blank"><i class="mdi mdi-telegram"></i></a>
+        <a href="https://instagram.com/tadbir_group?r=nametag" target="_blank"><i class="mdi mdi-instagram"></i></a>
+        <a href="https://igap.net/Tadbir_Group" target="_blank"><i class="mdi mdi-facebook-messenger"></i></a>
       </ul>
     </div>
   </section>
