@@ -19,7 +19,7 @@ $lang = $language->language;
       <div class="container" style="padding: 25px 10px;">
         <div class="caption_slide">
           <div class="caption_write">
-            <h1><?php echo $lang == 'fa' ? 'مرکز عکس ها' : 'Images';?></h1>
+            <h1><?php echo $lang == 'fa' ? 'گالری تصاویر' : 'Images';?></h1>
           </div>
         </div>
       </div>

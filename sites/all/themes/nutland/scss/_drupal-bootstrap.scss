@@ -1886,13 +1886,13 @@ a {
     text-align: center;
     margin: 50px 0;
     color: #fff;
-    section{
+    section {
       padding: 70px 0;
-      .container{
-        .article{
+      .container {
+        .article {
           border: 1px solid #fff;
           padding: 20px 0;
-          p{
+          &:not(.no-border) p {
             border: 2px solid #fff;
             border-width: 0 2px;
             line-height: 2;
@@ -1900,6 +1900,10 @@ a {
             padding: 0 30px;
             margin: 0 -3px;
             text-align: justify;
+          }
+          &.no-border p {
+            padding: 0 15px;
+            line-height: 1.8;
           }
           .sub-item {
             margin: 30px 0 0;
@@ -1993,9 +1997,24 @@ a {
         }
       }
     }
+    .view-projects .more-link a {
+      color: #fff;
+      background: #253a76;
+      display: block;
+      width: 130px;
+      text-align: center;
+      line-height: 2.5;
+      margin-right: auto;
+      margin-left: 15px;
+      #{$ltr} {
+        margin-left: auto;
+        margin-right: 15px;
+      }
+    }
   }
   #jobs{
     margin-bottom: 30px;
+    margin-top: 100px;
     .col-md-2{
       padding-right: 0;
     }
@@ -4029,7 +4048,7 @@ a {
           flex-wrap: wrap;
           justify-content: space-between;
           .field-item{
-            margin: 3px 0px;
+            margin: 3px 0.5%;
             width: 24%;
             @media (max-width: 767px) {
               width: 32.5% !important;

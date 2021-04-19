@@ -126,7 +126,7 @@ $lang = $language->language;
   <div class="row" id="sectionText">
     <section>
       <div class="container">
-        <div class="article">
+        <div class="article no-border">
           <h3 style="font-weight: bold"><?php print $node13->title; ?></h3>
           <div class="sub-item">
             <div class="col-sm-4 contextual-links-region">
