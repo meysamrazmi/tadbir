@@ -28,10 +28,10 @@ $lang = $language->language;
           <a href="/" class="logo_footer">
             <?php
             if($lang == 'fa'){
-              echo '<img src="http://tadbir.offerbama.com/sites/default/files/logo-header.png" alt="گروه توسعه اقتصادی تدبیر" title="گروه توسعه اقتصادی تدبیر">';
+              echo '<img src="/sites/default/files/logo-header.png" alt="گروه توسعه اقتصادی تدبیر" title="گروه توسعه اقتصادی تدبیر">';
             }
             else {
-              echo '<img src="http://tadbir.offerbama.com/sites/default/files/logo-header.png" alt="TADBIR ECONOMIC DEVELOPMENT GROUP" title="TADBIR ECONOMIC DEVELOPMENT GROUP">';
+              echo '<img src="/sites/default/files/logo-header.png" alt="TADBIR ECONOMIC DEVELOPMENT GROUP" title="TADBIR ECONOMIC DEVELOPMENT GROUP">';
             }
             ?>
           </a>
