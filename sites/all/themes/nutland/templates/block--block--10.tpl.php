@@ -4,7 +4,8 @@ $lang = $language->language;
 ?>
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
-  <div id="block4">
+  <?php print render($title_prefix); ?>
+  <div id="block10">
     <section id="sectionBanner">
       <div class="container" style="padding: 25px 10px;">
         <div class="caption_slide">
@@ -15,14 +16,14 @@ $lang = $language->language;
       </div>
     </section>
   </div>
+  <?php print render($title_suffix); ?>
 
 </section>
 <?php
-$node = node_load(93);
+  $node = node_load(122);
 ?>
 <style>
-  #block-block-4{
-    position: relative;
+  #block-block-10{
     width: 100vw;
     top: 0px;
     padding: 40px 0;
@@ -30,23 +31,23 @@ $node = node_load(93);
     background: url(<?php echo isset($node->field_image['und'][0])? file_create_url($node->field_image['und'][0]['uri']) : '';?>);
     background-position: center;
     background-size: cover;
+    position: relative;
   }
-  .i18n-en #block-block-4{
+  .i18n-en #block-block-10{
     right: unset;
     left: calc(50% - 50vw);
   }
-
-  #block-block-4:before{
+  #block10{
+    z-index: 5;
+    position: relative;
+  }
+  #block-block-10:before{
     content: " ";
     background: rgba(0,0,0,0.5);
     position: absolute;
     top: 0;
     height: 100%;
     width: 100%;
-  }
-  #block4{
-    z-index: 5;
-    position: relative;
   }
   #sectionBanner .container{
     max-width: 1000px;
@@ -70,12 +71,13 @@ $node = node_load(93);
     color: #fff
   }
   .caption_write {
-    padding: 22px
+    padding: 13px;
+    margin-top: 10px;
   }
   .caption_write {
     border-right: 4px solid #fff;
     border-left: 4px solid #fff;
-    margin-right: -4px
+    margin-right: -4px;
   }
   .i18n-en .caption_write {
     margin-right: 0;

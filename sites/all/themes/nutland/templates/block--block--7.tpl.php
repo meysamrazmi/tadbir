@@ -5,26 +5,18 @@ $lang = $language->language;
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
-    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
-  <?php endif;?>
-  <?php print render($title_suffix); ?>
-
-
-  <?php
-  ?>
   <div id="block7">
-
     <section id="sectionBanner">
       <div class="container" style="padding: 25px 10px;">
         <div class="caption_slide">
           <div class="caption_write">
-            <h1><?php echo $lang == 'fa' ? 'گالری تصاویر' : 'Images';?></h1>
+            <h1><?php if ($title) print $title; ?></h1>
           </div>
         </div>
       </div>
     </section>
   </div>
+  <?php print render($title_suffix); ?>
 
 </section>
 <?php

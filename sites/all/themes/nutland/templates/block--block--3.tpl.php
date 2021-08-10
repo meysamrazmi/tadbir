@@ -5,44 +5,22 @@ $lang = $language->language;
 <section id="<?php print $block_html_id; ?>" class="<?php print $classes; ?> clearfix"<?php print $attributes; ?>>
 
   <?php print render($title_prefix); ?>
-  <?php if ($title): ?>
-    <h2<?php print $title_attributes; ?>><?php print $title; ?></h2>
-  <?php endif;?>
-  <?php print render($title_suffix); ?>
-
   <div id="block3">
     <section id="sectionBanner">
       <div class="container" style="padding: 25px 10px;">
         <div class="caption_slide">
           <div class="caption_write">
-            <?php
-              $alias = drupal_get_path_alias();
-              switch ($alias){
-                case 'projects':
-                  print "<h1>". ($lang == 'fa' ? 'پروژه ها' : 'Projects') ."</h1>";
-                  break;
-                case 'news':
-                  print "<h1>". ($lang == 'fa' ? 'مرکز اخبار' : 'News') ."</h1>";
-                  break;
-              }
-            ?>
+            <h1><?php if ($title) print $title; ?></h1>
           </div>
         </div>
       </div>
     </section>
   </div>
+  <?php print render($title_suffix); ?>
 
 </section>
 <?php
   $node = node_load(91);
-  switch ($alias){
-    case 'projects':
-      $node = node_load(122);
-      break;
-    case 'news':
-      $node = node_load(91);
-      break;
-  }
 ?>
 <style>
   #block-block-3{
