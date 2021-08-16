@@ -89,7 +89,7 @@ function select2_permission() {
 }
 
 /**
- * Implements hook_libraries_info ().
+ * Implements hook_libraries_info().
  *
  * For defining external libraries.
  */

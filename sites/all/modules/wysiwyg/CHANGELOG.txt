@@ -81,8 +81,8 @@ Wysiwyg 7.x-2.0, 2010-01-06
 #612954 by sun: Reverted 'buttons' change in profile configuration form.
 #975546 by TwoD, sun: Fixed markItUp CSS loaded with wrong weight.
 #659428 by TwoD, sun: Fixed editor is attached to disabled text format widgets.
-#975490 by Gábor Hojtsy: Updated for 'group' API change in drupal_add_js().
-#974604 by CrookedNumber, Gábor Hojtsy: Fixed theme CSS not loaded in editors.
+#975490 by Gï¿½bor Hojtsy: Updated for 'group' API change in drupal_add_js().
+#974604 by CrookedNumber, Gï¿½bor Hojtsy: Fixed theme CSS not loaded in editors.
 #931374 by TwoD, ksenzee: Updated for text format schema change.
 #826914 by catch, sun: Added database cache for wysiwyg_profile_load().
 #941230 by sun: Fixed missing Configuration link on Modules page.

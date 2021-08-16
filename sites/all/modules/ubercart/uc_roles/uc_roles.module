@@ -48,7 +48,7 @@ function uc_roles_cron() {
 
     // Cleanup if user or role was deleted already.
     if (!$account || !in_array($expiration->rid, array_keys($account->roles))) {
-      // uc_roles_delete($expiration, $expiration->rid, TRUE);
+      uc_roles_delete($expiration, $expiration->rid, TRUE);
     }
 
     // Role expired.
@@ -309,7 +309,7 @@ function uc_roles_user_presave(&$edit, $account, $category) {
     $edit['roles'][$edit['new_role_add']] = _uc_roles_get_name($edit['new_role_add']);
 
     // Reset the new role form.
-    // $edit['new_role'] = $edit['new_role_add'] = $edit['new_role_add_qty'] = $edit['new_role_add_granularity'] = NULL;
+    $edit['new_role'] = $edit['new_role_add'] = $edit['new_role_add_qty'] = $edit['new_role_add_granularity'] = NULL;
   }
 
   // Check if any temporary role actions were taken.
@@ -337,7 +337,7 @@ function uc_roles_user_presave(&$edit, $account, $category) {
     $allowed_uc_roles = _uc_roles_get_choices();
     foreach ($account->roles as $rid => $role) {
       if (isset($allowed_uc_roles[$rid]) && !$edit['roles'][$rid]) {
-        //uc_roles_delete($account, $rid);
+        uc_roles_delete($account, $rid);
       }
     }
   }
@@ -1043,7 +1043,7 @@ function uc_roles_revoke(&$account, $rid, $silent = FALSE) {
   $account = user_save($account, array('roles' => $roles_list));
 
   // Remove our record of the expiration.
-  //uc_roles_delete($account, $rid, $silent);
+  uc_roles_delete($account, $rid, $silent);
 
   $role_name = db_query("SELECT name FROM {role} WHERE rid = :rid", array(':rid' => $rid))->fetchField();
 
