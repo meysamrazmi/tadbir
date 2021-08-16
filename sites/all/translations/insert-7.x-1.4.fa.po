@@ -1,0 +1,22 @@
+# Persian, Farsi translation of Insert (7.x-1.4)
+# Copyright (c) 2017 by the Persian, Farsi translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Insert (7.x-1.4)\n"
+"POT-Creation-Date: 2017-09-17 14:44+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Persian, Farsi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Original image"
+msgstr "تصویر اصلی"
+msgid "Select all"
+msgstr "انتخاب همه"
+msgid "Allowed HTML tags"
+msgstr "برچسب‌های مجاز HTML"
+msgid "pixels"
+msgstr "پیکسل"

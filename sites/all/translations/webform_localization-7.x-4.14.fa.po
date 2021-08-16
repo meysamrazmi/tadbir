@@ -1,0 +1,26 @@
+# Persian, Farsi translation of Webform Localization (7.x-4.14)
+# Copyright (c) 2018 by the Persian, Farsi translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Webform Localization (7.x-4.14)\n"
+"POT-Creation-Date: 2018-06-04 22:44+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Persian, Farsi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "here"
+msgstr "اینجا"
+msgid "Webform"
+msgstr "فرم ساز"
+msgid "debug"
+msgstr "اشکال‌زدایی"
+msgid "Context"
+msgstr "زمینه"
+msgid "Translate"
+msgstr "ترجمه"
+msgid "Original text"
+msgstr "متن اصلی"

@@ -145,7 +145,6 @@ $(".view-filters").ready(function(){
         $(this).addClass('onn');
         $(this).blur();
         let a = moment($(this).val(), 'YYYY-MM-DD').format('jYYYY-jMM-jDD');
-        console.log(a);
         $(this).persianDatepicker({
           showGregorianDate: true,
           // selectedDate: a,
@@ -156,6 +155,16 @@ $(".view-filters").ready(function(){
     });
 
   });
+
+  // $("#views-exposed-form-news-page .views-widget").ready(function () {
+  //   // $('.form-item-created-min > input').attr("disabled", true)
+  //
+  //   var id = $('.form-item-created-min > input').attr('id')
+  //   $('.form-item-created-min > input').attr('id', id+'-1')
+  //   $('.form-item-created-min > input').clone().addClass('hidden').attr('id', id).insertAfter("#edit-created-min-1");
+  //
+  // })
+
 });
 //birthday
 
@@ -166,7 +175,6 @@ $(".page-node-5").ready(function(){
         $(this).addClass('onn');
         $(this).blur();
         let a = moment($(this).val(), 'YYYY-MM-DD').format('jYYYY-jMM-jDD');
-        console.log(a);
         $(this).persianDatepicker({
           showGregorianDate: true,
           // selectedDate: a,

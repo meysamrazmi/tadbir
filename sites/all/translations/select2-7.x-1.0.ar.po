@@ -1,0 +1,20 @@
+# Arabic translation of Select 2 (7.x-1.0)
+# Copyright (c) 2015 by the Arabic translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Select 2 (7.x-1.0)\n"
+"POT-Creation-Date: 2015-12-12 11:45+0000\n"
+"PO-Revision-Date: YYYY-mm-DD HH:MM+ZZZZ\n"
+"Language-Team: Arabic\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=((n==1)?(0):((n==0)?(1):((n==2)?(2):((((n%100)>=3)&&((n%100)<=10))?(3):((((n%100)>=11)&&((n%100)<=99))?(4):5)))));\n"
+
+msgid "User interface"
+msgstr "واجهة المستخدم"
+msgid "Caches cleared."
+msgstr "تم مسح ذاكرات التخزين الموقت."
+msgid "%name must be a positive integer."
+msgstr "يجب أن يكون %name عدداً صحيحاً موجباً."
