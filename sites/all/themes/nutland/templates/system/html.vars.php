@@ -66,6 +66,10 @@ function nutland_preprocess_html(array &$variables) {
       $variables['body_attributes_array']['class'][] = 'navbar-is-static-top';
       break;
   }
+
+  if (drupal_is_front_page()) {
+    $variables['head_title'] = check_plain(variable_get('site_name'));
+  }
 }
 
 /**

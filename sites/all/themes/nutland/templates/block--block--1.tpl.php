@@ -42,7 +42,7 @@ $lang = $language->language;
               <?php render_contextual_link_by_nid($node1->nid);?>
               <div class="card-body">
                 <p class="text-justify">
-                  <?php print $node1->body[$lang][0]['value']; ?>
+                  <?php print reset($node1->body)[0]['value']; ?>
                 </p>
               </div>
             </article>
@@ -67,7 +67,7 @@ $lang = $language->language;
               <div class="">
                 <h4 class="card-title"><?php echo $lang == 'fa' ? 'اطلاعات تماس' : 'CONTACT';?></h4>
               </div>
-              <address class="card-body card-address"><?php echo $node2->body[$lang][0]['value'];?></address>
+              <address class="card-body card-address"><?php echo reset($node2->body)[0]['value'];?></address>
             </article>
           </div>
         </div>

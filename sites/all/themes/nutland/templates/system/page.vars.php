@@ -91,6 +91,10 @@ function nutland_preprocess_page(array &$variables) {
   else {
     $variables['navbar_classes_array'][] = 'navbar-default';
   }
+
+  if (drupal_is_front_page()) {
+    $variables['head_title'] = check_plain(variable_get('site_name'));
+  }
 }
 
 /**

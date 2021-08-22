@@ -12,7 +12,7 @@ if(!function_exists('in_array_r')) {
 
 function mdump($var, $depth = 0){
 	global $user;
-	if($user->uid == 1){
+	if($user->uid == 86){
     if($depth > 0){
       $new_array = array_map(function ($v) use ($depth) {
         return parse($v, "...", $depth);
