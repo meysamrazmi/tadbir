@@ -6336,7 +6336,7 @@ ul.pagination li > a.progress-disabled {
   color: #777777;
   font-size: 120%; }
   .form-autocomplete .glyphicon.glyphicon-spin {
-    color: #337ab7; }
+    color: #ccb873; }
 .form-autocomplete .input-group-addon {
   background-color: white; }
 
@@ -8749,11 +8749,11 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     height: auto !important; }
   .node-type-news #block-views-videos-block-1 .views-row, .node-type-news #block-views-news-block-1 .views-row, .node-type-news .view-display-id-block_1 .views-row, .node-type-news .view-id-article .views-row, .node-type-article #block-views-videos-block-1 .views-row, .node-type-article #block-views-news-block-1 .views-row, .node-type-article .view-display-id-block_1 .views-row, .node-type-article .view-id-article .views-row, .node-type-videos #block-views-videos-block-1 .views-row, .node-type-videos #block-views-news-block-1 .views-row, .node-type-videos .view-display-id-block_1 .views-row, .node-type-videos .view-id-article .views-row, .node-type-gallery #block-views-videos-block-1 .views-row, .node-type-gallery #block-views-news-block-1 .views-row, .node-type-gallery .view-display-id-block_1 .views-row, .node-type-gallery .view-id-article .views-row {
     width: calc(33% - 15px);
+    vertical-align: top;
     display: inline-block;
     overflow: hidden;
     margin: 6px;
-    background: whitesmoke;
-    height: 290px; }
+    background: whitesmoke; }
     .node-type-news #block-views-videos-block-1 .views-row .views-field-title, .node-type-news #block-views-news-block-1 .views-row .views-field-title, .node-type-news .view-display-id-block_1 .views-row .views-field-title, .node-type-news .view-id-article .views-row .views-field-title, .node-type-article #block-views-videos-block-1 .views-row .views-field-title, .node-type-article #block-views-news-block-1 .views-row .views-field-title, .node-type-article .view-display-id-block_1 .views-row .views-field-title, .node-type-article .view-id-article .views-row .views-field-title, .node-type-videos #block-views-videos-block-1 .views-row .views-field-title, .node-type-videos #block-views-news-block-1 .views-row .views-field-title, .node-type-videos .view-display-id-block_1 .views-row .views-field-title, .node-type-videos .view-id-article .views-row .views-field-title, .node-type-gallery #block-views-videos-block-1 .views-row .views-field-title, .node-type-gallery #block-views-news-block-1 .views-row .views-field-title, .node-type-gallery .view-display-id-block_1 .views-row .views-field-title, .node-type-gallery .view-id-article .views-row .views-field-title {
       padding: 15px; }
       .node-type-news #block-views-videos-block-1 .views-row .views-field-title a, .node-type-news #block-views-news-block-1 .views-row .views-field-title a, .node-type-news .view-display-id-block_1 .views-row .views-field-title a, .node-type-news .view-id-article .views-row .views-field-title a, .node-type-article #block-views-videos-block-1 .views-row .views-field-title a, .node-type-article #block-views-news-block-1 .views-row .views-field-title a, .node-type-article .view-display-id-block_1 .views-row .views-field-title a, .node-type-article .view-id-article .views-row .views-field-title a, .node-type-videos #block-views-videos-block-1 .views-row .views-field-title a, .node-type-videos #block-views-news-block-1 .views-row .views-field-title a, .node-type-videos .view-display-id-block_1 .views-row .views-field-title a, .node-type-videos .view-id-article .views-row .views-field-title a, .node-type-gallery #block-views-videos-block-1 .views-row .views-field-title a, .node-type-gallery #block-views-news-block-1 .views-row .views-field-title a, .node-type-gallery .view-display-id-block_1 .views-row .views-field-title a, .node-type-gallery .view-id-article .views-row .views-field-title a {
@@ -8764,7 +8764,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
     .node-type-news .views-row, .node-type-article .views-row, .node-type-videos .views-row, .node-type-gallery .views-row {
       width: 96% !important; }
       .node-type-news .views-row .items, .node-type-article .views-row .items, .node-type-videos .views-row .items, .node-type-gallery .views-row .items {
-        height: 150px !important;
         width: 100%;
         overflow: hidden; } }
   @media (max-width: 767px) and (min-width: 320px) {
@@ -8776,9 +8775,6 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
       text-align: -webkit-center; }
       .node-type-news .view-display-id-block_1 .view-content .views-row, .node-type-article .view-display-id-block_1 .view-content .views-row, .node-type-videos .view-display-id-block_1 .view-content .views-row, .node-type-gallery .view-display-id-block_1 .view-content .views-row {
         height: auto !important; } }
-  @media (min-width: 768px) and (max-width: 1200px) {
-    .node-type-news .view-display-id-block_1 .view-content .views-row, .node-type-article .view-display-id-block_1 .view-content .views-row, .node-type-videos .view-display-id-block_1 .view-content .views-row, .node-type-gallery .view-display-id-block_1 .view-content .views-row {
-      height: 225px !important; } }
 
 .node-type-gallery #block-system-main .field-name-body {
   text-align: justify;
@@ -8791,18 +8787,22 @@ a.icon-after .glyphicon, a .glyphicon.icon-after {
   margin-bottom: 40px; }
   @media (max-width: 767px) {
     .node-type-gallery #block-system-main .group-middle .field-name-field-images {
-      width: calc(100vw - 4px);
-      margin-right: calc(50% - 50vw + 2px); } }
+      width: calc(100vw - 8px);
+      margin-right: calc(50% - 50vw + 4px); } }
   .node-type-gallery #block-system-main .group-middle .field-name-field-images .field-items {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; }
+    flex-wrap: wrap; }
     .node-type-gallery #block-system-main .group-middle .field-name-field-images .field-items .field-item {
       margin: 3px 0.5%;
       width: 24%; }
       @media (max-width: 767px) {
         .node-type-gallery #block-system-main .group-middle .field-name-field-images .field-items .field-item {
-          width: 32.5% !important; } }
+          width: 32.3% !important; } }
+      @media all and (max-width: 500px) {
+        .node-type-gallery #block-system-main .group-middle .field-name-field-images .field-items .field-item {
+          width: 100% !important; }
+          .node-type-gallery #block-system-main .group-middle .field-name-field-images .field-items .field-item img {
+            margin: auto; } }
 @media (min-width: 1200px) and (max-width: 1366px) {
   .node-type-gallery #block-system-main .group-middle {
     min-width: 1173px; } }

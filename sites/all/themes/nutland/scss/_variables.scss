@@ -1,6 +1,7 @@
 $brand-primary: #ccb873;
 $x768: 'all and (max-width: 768px)';
 $x600: 'all and (max-width: 600px)';
+$x500: 'all and (max-width: 500px)';
 
 @mixin flex($dir:'', $align:'', $justify:''){
   display: flex;
