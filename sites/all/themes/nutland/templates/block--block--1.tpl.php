@@ -16,13 +16,13 @@ $lang = $language->language;
     $node1 = node_load(29);
     $node2 = node_load(110);
   }
-  if($lang == 'en'){
-    $node1 = node_load(29);
-    $node2 = node_load(110);
+  else if($lang == 'en'){
+    $node1 = node_load(172);
+    $node2 = node_load(173);
   }
   else {
     $node1 = node_load(312);
-    $node2 = node_load(110);
+    $node2 = node_load(313);
   }
   ?>
   <footer id="footer">
@@ -30,14 +30,8 @@ $lang = $language->language;
       <div class="container">
         <div class="card-header">
           <a href="/" class="logo_footer">
-            <?php
-            if($lang == 'fa'){
-              echo '<img src="/sites/default/files/logo-header.png" alt="گروه توسعه اقتصادی تدبیر" title="گروه توسعه اقتصادی تدبیر">';
-            }
-            else {
-              echo '<img src="/sites/default/files/logo-header.png" alt="TADBIR ECONOMIC DEVELOPMENT GROUP" title="TADBIR ECONOMIC DEVELOPMENT GROUP">';
-            }
-            ?>
+            <img src="/sites/default/files/logo-header.png" alt="<?php echo t('TADBIR ECONOMIC DEVELOPMENT GROUP'); ?>"
+                 title="<?php echo t('TADBIR ECONOMIC DEVELOPMENT GROUP'); ?>">
           </a>
         </div>
         <div class="row mx-n4">
@@ -55,7 +49,7 @@ $lang = $language->language;
             <article class="cards card-none">
               <?php render_contextual_link_by_menu('menu-footer');?>
               <div class="">
-                <h4 class="card-title"><?php echo $lang == 'fa' ? 'دسترسی سریع' : 'LINKS';?></h4>
+                <h4 class="card-title"><?php echo t('LINKS'); ?></h4>
               </div>
               <div class="card-bod">
                 <?php
@@ -69,7 +63,7 @@ $lang = $language->language;
             <article class="cards card-none contextual-links-region">
               <?php render_contextual_link_by_nid($node2->nid);?>
               <div class="">
-                <h4 class="card-title"><?php echo $lang == 'fa' ? 'اطلاعات تماس' : 'CONTACT';?></h4>
+                <h4 class="card-title"><?php echo t('CONTACT'); ?></h4>
               </div>
               <address class="card-body card-address"><?php echo reset($node2->body)[0]['value'];?></address>
             </article>
@@ -81,7 +75,7 @@ $lang = $language->language;
       <div class="container">
         <p class="text-center">
           <a class="name-co" href="/" target="_blank" style="border-bottom: 1px solid #fff;width: 430px;margin: auto;max-width: 100%;">
-            <?php echo $lang == 'fa' ? 'تمام حقوق این سایت، به گروه توسعه‌ی اقتصادی تدبیر تعلق دارد.' : 'All Rights Reserved Ror TADBIR ECONOMIC DEVELOPMENT GROUP';?>
+            <?php echo t('All Rights Reserved Ror TADBIR ECONOMIC DEVELOPMENT GROUP'); ?>
           </a>
           <a class="name-co" href="https://www.tusi.co/" target="_blank" style="direction: ltr; margin-top: 5px;">
             <span style="padding: 10px 10px 0 0;"> Design and Development by</span> <img src="/sites/all/themes/nutland/images/tusi.svg" style="width: 40px;filter: brightness(1);vertical-align: top;display: inline-block;">

@@ -269,6 +269,7 @@ html {
 }
 body {
   background-color: white !important;
+  &.i18n-ar,
   &.i18n-fa {
     font-family: fanum !important;
   }
@@ -1142,6 +1143,7 @@ a {
   margin-top: auto;
   position: relative;
   z-index: 5;
+  .i18n-ar,
   .i18n-fa {
     .col-md-3, .col-md-4, .col-md-5{
       float: right;
@@ -5642,6 +5644,7 @@ a {
 }
 
 @media #{$normal} {
+  .i18n-ar,
   .i18n-fa{
     .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
       float: right;
@@ -5649,6 +5652,7 @@ a {
   }
 }
 @media #{$tablet} {
+  .i18n-ar,
   .i18n-fa{
     .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12 {
       float: right;
