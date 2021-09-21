@@ -47,16 +47,21 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
           <img src="<?php print $logo; ?>" alt="<?php print t('Home'); ?>" class="py-2"/>
         </a>
       <?php endif; ?>
+      <select id="menu-lang">
+        <option <?php if($lang == 'fa') echo 'selected'?> value="fa" >فارسی</option>
+        <option <?php if($lang == 'en') echo 'selected'?> value="en">English</option>
+      </select>
       <div class="left-menu">
         <ul>
-          <li class="grob">
-            <i class="mdi mdi-magnify"></i>
+          <li class="hidden-xs grob lang-grob">
+            <span class="lang-selector">فا/En</span>
+            <div id="lang-select">
+              <span class="<?php if($lang == 'fa') echo 'active'?>" data-val="fa">فارسی</span>
+              <span class="<?php if($lang == 'en') echo 'active'?>" data-val="en">English</span>
+            </div>
           </li>
-          <li class="hidden-xs d-none">
-            <select id="lang">
-              <option value="فارسی">فارسی</option>
-              <option value="انگلیسی">انگلیسی</option>
-            </select>
+          <li class="grob search-grob">
+            <i class="mdi mdi-magnify"></i>
           </li>
           <li class="hidden-xs subset-link">
             <a>
@@ -140,6 +145,10 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
 <script>
   var $ = jQuery
   $(document).ready(function () {
+    if (Drupal.settings.pathPrefix == '') {
+      Drupal.settings.pathPrefix = 'fa/'
+    }
+
     $(".view-slideshow .view-content").addClass('owl-carousel owl-theme').owlCarousel({
       items: 2,
       rtl: !(Drupal.settings.hasOwnProperty('pathPrefix') && Drupal.settings.pathPrefix == 'en/'),
@@ -157,5 +166,20 @@ drupal_add_css(drupal_get_path('theme', 'nutland') . '/css/owl.theme.default.min
       player.play();
     }
     $('.owl-carousel').click(videoPlay)
+
+    var prefix = Drupal.settings.pathPrefix.split('/')[0]
+    $('#menu-lang').on('change', function() {
+      if ($(this).val() !== prefix) {
+        let location = $(this).val() == 'fa' ? '/' : ('/' + $(this).val())
+        // console.log(location)
+        window.location.href = location
+      }
+    })
+    $('#lang-select').on('click', 'span', function() {
+      if ($(this).data('val') !== prefix) {
+        let location = $(this).data('val') == 'fa' ? '/' : ('/' + $(this).data('val'))
+        window.location.href = location
+      }
+    })
   });
 </script>

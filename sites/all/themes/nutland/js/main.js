@@ -72,12 +72,21 @@ $(document).ready(function(){
       }, 50)
     })
   })
-  $(".left-menu ul li.grob").click(function(){
+  $(".left-menu ul li.search-grob").click(function(){
     $(this).find('i').toggleClass("mdi-close mdi-magnify");
     $(".form-search-menu").toggleClass("open");
     $('#useroverlay').toggleClass("open");
     $('body').toggleClass("search-open");
   });
+  $(".left-menu ul li.lang-grob .lang-selector").click(function(){
+    $(this).parent().toggleClass("open");
+  });
+  $(document).bind('click', function(e) {
+    if(!$(e.target).is('.lang-selector')) {
+      $(".left-menu ul li.lang-grob").removeClass('open')
+    }
+  });
+
   //close alert box
   $( "body .close" ).click(function() {
     $(".alert-block").hide();

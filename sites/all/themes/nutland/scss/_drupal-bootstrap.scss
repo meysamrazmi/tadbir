@@ -1302,14 +1302,14 @@ a {
   }
   .navbar-collapse {
     z-index: 100;
-    max-width: calc(100% - 245px - 220px);
+    max-width: calc(100% - 245px - 270px);
     margin-right: 1.5%;
     .i18n-en & {
       margin-right: 0;
       margin-left: 1.5%;
     }
     @media (max-width: 899px) and (min-width: 768px){
-      max-width: calc(100% - 245px - 180px);
+      max-width: calc(100% - 245px - 230px);
     }
     @media (max-width: 767px){
       margin: 0;
@@ -1341,7 +1341,7 @@ a {
           white-space: nowrap;
           position: relative;
           display: block;
-          padding: 10px 15px;
+          padding: 10px 12px;
           &:after{
             content: "";
             position: absolute;
@@ -1422,9 +1422,9 @@ a {
     position: relative;
     overflow-x: hidden;
     @media (min-width: 1440px){
-      width: 350px;
+      width: 360px;
       .subset-link {
-        min-width: 300px !important;
+        min-width: 250px !important;
       }
     }
     ul{
@@ -1444,6 +1444,28 @@ a {
         align-items: center;
         &.grob{
           background: #F2F2F2;
+          border: 1px solid #ccc;
+          border-width: 0 1px;
+          margin-left: -1px;
+          &.lang-grob {
+            position: relative;
+            width: 70px;
+            span {
+              cursor: pointer;
+            }
+            .lang-selector {
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+              height: 100%;
+              display: flex;
+              z-index: 1;
+              background: #F2F2F2;
+            }
+            &.open .lang-selector {
+              z-index: -1;
+            }
+          }
         }
         &:hover{
           i , a{
@@ -1457,7 +1479,7 @@ a {
           display: flex;
           .i18n-en & {
             margin-right: 0px;
-            margin-left: 10px;
+            margin-left: 5px;
           }
         }
         a{
@@ -1468,11 +1490,63 @@ a {
           border: none;
           outline: none;
           font-weight: bold;
-          margin-right:5px ;
+          width: 40px;
+          margin: auto;
+          background: transparent;
+          color: #888;
         }
       }
     }
   }
+  #menu-lang {
+    display: none;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    z-index: 101;
+    width: 90px;
+    height: 30px;
+    color: #767676;
+    border: 1px solid #ccc;
+    outline: none;
+    background: #fff;
+    .i18n-en & {
+      left: unset;
+      right: 30px;
+    }
+  }
+  &.resp #menu-lang {
+    display: inline-block;
+    @media (min-width: 767px) {
+      display: none;
+    }
+  }
+  #lang-select {
+    position: absolute;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    background: #F2F2F2;
+    width: 58px;
+    right: 0;
+    text-align: center;
+    padding: 0px 4px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    span {
+      padding: 5px 0;
+      line-height: 25px;
+      &:first-child {
+        border-bottom: 2px solid #ccc;
+      }
+      &.active {
+        font-weight: bold;
+      }
+    }
+  }
+
   @media (max-width: 767px) {
     .navbar-collapse{
       #block-system-main-menu{
@@ -1636,7 +1710,7 @@ a {
       }
     }
     .left-menu{
-      width: 160px !important;
+      width: 220px !important;
       li{
         min-width: 40px!important;
       }
@@ -2592,13 +2666,13 @@ a {
       left: unset;
     }
     @media (max-width: 899px) and (min-width: 768px){
-      left: 160px;
+      left: 170px;
       width: calc(100vw - 250px - 180px);
       .fixed & {
         width: calc(100vw - 250px - 170px);
       }
       .i18n-en & {
-        right: 160px;
+        right: 170px;
         left: unset;
       }
     }
@@ -2611,13 +2685,13 @@ a {
       }
     }
     @media (min-width: 1440px){
-      left: 350px;
-      width: calc(100vw - 350px - 280px);
+      left: 300px;
+      width: calc(100vw - 300px - 280px);
       .fixed & {
-        width: calc(100vw - 250px - 370px);
+        width: calc(100vw - 200px - 370px);
       }
       .i18n-en & {
-        right: 350px;
+        right: 300px;
         left: unset;
       }
     }
@@ -5664,4 +5738,8 @@ a {
   .views-exposed-form .views-exposed-widget {
     padding: .5em 0 0 1em;
   }
+}
+.field-name-body {
+  max-width: 100vw;
+  overflow: auto;
 }
